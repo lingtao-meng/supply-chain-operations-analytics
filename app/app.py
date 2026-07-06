@@ -22,6 +22,10 @@ DB_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "supply_chain.db
 
 @st.cache_resource
 def load_data():
+    if not os.path.exists(DB_PATH):
+        st.error(f"数据库未找到: {DB_PATH}")
+        st.info("请先运行: python python/01_data_cleaning.py && python python/02_load_to_db.py")
+        st.stop()
     conn = sqlite3.connect(DB_PATH)
     df = pd.read_sql("""
         SELECT f.*, s.shipping_mode, s.delivery_status AS ship_status,
@@ -62,15 +66,17 @@ mask = (
 )
 dff = df[mask]
 
+if len(dff) == 0:
+    st.warning("当前筛选条件下无数据，请调整筛选器。")
+    st.stop()
+
 # ── 计算KPI ──────────────────────────────────────
-total_orders   = len(dff)
+total_orders   = dff["order_id"].nunique()      # 去重订单数
 on_time_pct    = dff["on_time"].mean() * 100
 avg_days       = dff["days_shipping_real"].mean()
 total_revenue  = dff["order_total_value"].sum()
-total_profit   = dff["order_item_profit"].sum()
 delayed_orders = dff["is_delayed"].sum()
 revenue_risk   = dff[dff["is_delayed"] == 1]["order_total_value"].sum()
-avg_delay_late = dff[dff["is_delayed"] == 1]["delay_days"].mean()
 
 # ── 页面导航 ─────────────────────────────────────
 st.sidebar.markdown("---")
@@ -147,7 +153,9 @@ if page == "📊 交付绩效":
 
     # 底部: 延迟分布
     st.subheader("延迟等级分布")
-    delay_dist = dff["delay_category"].value_counts().reindex(["On Time", "1-3 Days", "4-7 Days", "8+ Days"])
+    delay_dist = dff["delay_category"].value_counts()
+    expected = ["On Time", "1-3 Days", "4-7 Days", "8+ Days"]
+    delay_dist = delay_dist.reindex([c for c in expected if c in delay_dist.index])
     cols = st.columns(4)
     for i, (cat, count) in enumerate(delay_dist.items()):
         pct = count / total_orders * 100
