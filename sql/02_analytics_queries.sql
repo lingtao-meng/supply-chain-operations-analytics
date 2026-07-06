@@ -125,9 +125,9 @@ GROUP BY delay_category
 ORDER BY
     CASE delay_category
         WHEN 'On Time'       THEN 1
-        WHEN '1-3 Days Late' THEN 2
-        WHEN '4-7 Days Late' THEN 3
-        WHEN '8+ Days Late'  THEN 4
+        WHEN '1-3 Days' THEN 2
+        WHEN '4-7 Days' THEN 3
+        WHEN '8+ Days'  THEN 4
         ELSE 5
     END;
 
