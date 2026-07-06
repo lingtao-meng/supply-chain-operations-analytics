@@ -84,6 +84,10 @@ supply-chain-operations-analytics/
 ├── sql/
 │   ├── 01_create_schema.sql      # DDL: 5维1事实 + 6索引
 │   └── 02_analytics_queries.sql  # 10条核心分析查询
+├── tests/
+│   └── test_sql_queries.py       # SQL 查询自动化测试
+├── images/
+│   └── *.png                      # 仪表板截图
 ├── powerbi/
 │   └── DAX_MEASURES.md           # Power BI DAX度量参考 (Mac备选)
 ├── data/
@@ -137,6 +141,18 @@ streamlit run app/app.py
 
 ---
 
+## 📸 仪表板预览
+
+| 交付绩效 | 运输分析 |
+|:---:|:---:|
+| ![月度趋势](images/01_月度准时率趋势.png) | ![运输对比](images/02_运输方式对比.png) |
+| **市场差距** | **运输×市场热力图** |
+| ![市场](images/03_市场区域差距.png) | ![热力图](images/04_运输市场热力图.png) |
+| **延迟 Pareto** | **因素关联强度** |
+| ![Pareto](images/05_延迟Pareto分析.png) | ![因素](images/06_因素关联强度.png) |
+
+---
+
 ## 📈 关键发现
 
 | 洞察 | 数据 | 业务含义 |
@@ -149,7 +165,25 @@ streamlit run app/app.py
 
 ---
 
+## 🧪 测试
+
+```bash
+# 验证全部 10 条 SQL 查询
+python tests/test_sql_queries.py
+```
+
+---
+
 ## 🛠 技术栈
+
+| 层 | 技术 |
+|---|------|
+| 数据清洗 | Python (pandas, numpy) |
+| 数据库 | SQLite3 |
+| SQL 分析 | 窗口函数 / CTE / 子查询 / 聚合 / 排名函数 |
+| 可视化 | Streamlit + Plotly |
+| 深度分析 | Jupyter Notebook |
+| 测试 | Python unittest-style SQL validation |
 
 | 层 | 技术 |
 |---|------|
