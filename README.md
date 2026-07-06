@@ -23,22 +23,13 @@
 
 ## 项目结构
 
-```
-app/app.py                          Streamlit 仪表板（5 页）
-python/
-  01_data_cleaning.py               数据清洗 + 特征工程
-  02_load_to_db.py                  星型模型入库
-sql/
-  01_create_schema.sql              建表 DDL + 索引
-  02_analytics_queries.sql          10 条分析查询
-notebooks/
-  supply_chain_deep_analysis.ipynb  深度分析 + ROI 估算
-tests/
-  test_sql_queries.py               SQL 查询验证
-images/                             仪表板截图
-requirements.txt
-setup.sh                            一键初始化
-```
+`app/app.py` — Streamlit 仪表板  
+`python/` — 数据清洗和入库脚本  
+`sql/` — 建表 DDL 和 10 条分析查询  
+`notebooks/` — Jupyter 深度分析  
+`tests/` — SQL 查询验证  
+`images/` — 仪表板截图  
+`setup.sh` — 一键初始化
 
 ---
 
