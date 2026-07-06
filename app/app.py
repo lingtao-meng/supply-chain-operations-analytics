@@ -18,6 +18,14 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# 自定义样式
+st.markdown("""
+<style>
+    .stMetric { border-left: 3px solid #1f77b4; padding-left: 10px; }
+    .stExpander { border: 1px solid #e0e0e0; border-radius: 8px; }
+</style>
+""", unsafe_allow_html=True)
+
 # ═══════════════════════════════════════════════════════
 # 0. 自动初始化：下载数据 → 清洗 → 建库
 # ═══════════════════════════════════════════════════════
@@ -251,11 +259,85 @@ avg_days       = dff["days_shipping_real"].mean()
 delayed_orders = dff["is_delayed"].sum()
 revenue_risk   = dff.loc[dff["is_delayed"] == 1, "order_total_value"].sum()
 
+# ── 自动洞察生成 ──────────────────────────────────
+@st.cache_data
+def generate_insights(_dff):
+    """基于筛选后数据生成业务洞察文本"""
+    insights = []
+
+    # 最佳/最差运输方式
+    mode_ot = _dff.groupby("shipping_mode")["on_time"].mean() * 100
+    best_mode = mode_ot.idxmax()
+    worst_mode = mode_ot.idxmin()
+    insights.append({
+        "title": "🚚 运输方式差异",
+        "text": f"**{best_mode}** 准时率最高（{mode_ot[best_mode]:.1f}%），**{worst_mode}** 最低（{mode_ot[worst_mode]:.1f}%），差距达 {mode_ot[best_mode]-mode_ot[worst_mode]:.1f} 个百分点。",
+        "action": f"建议审查 {worst_mode} 的SLA承诺是否合理，或优化其物流执行流程。"
+    })
+
+    # 市场差距
+    mkt_ot = _dff.groupby("market")["on_time"].mean() * 100
+    if len(mkt_ot) > 1:
+        top_mkt = mkt_ot.idxmax()
+        bottom_mkt = mkt_ot.idxmin()
+        gap = mkt_ot[top_mkt] - mkt_ot[bottom_mkt]
+        insights.append({
+            "title": "🌍 市场区域差距",
+            "text": f"**{top_mkt}** 准时率最高（{mkt_ot[top_mkt]:.1f}%），**{bottom_mkt}** 最低（{mkt_ot[bottom_mkt]:.1f}%），区域差距 {gap:.1f} 个百分点。",
+            "action": f"建议针对 {bottom_mkt} 市场评估物流基础设施瓶颈，考虑区域仓储或承运商切换。"
+        })
+
+    # 延迟集中度
+    delayed = _dff[_dff["is_delayed"] == 1]
+    if len(delayed) > 0:
+        pct_1_3 = (delayed["delay_days"] <= 3).mean() * 100
+        insights.append({
+            "title": "⏱️ 延迟集中度",
+            "text": f"延迟订单中 **{pct_1_3:.0f}%** 集中在1-3天范围内，属于轻微延迟。",
+            "action": "轻微延迟占主导说明流程优化空间大——可能通过改进分拣、打包或最后一公里配送来消除大部分延迟。" if pct_1_3 > 40 else "严重延迟占比较高，需排查系统性瓶颈。"
+        })
+
+    # 收入风险
+    at_risk = _dff.loc[_dff["is_delayed"] == 1, "order_total_value"].sum()
+    total = _dff["order_total_value"].sum()
+    if total > 0:
+        risk_pct = at_risk / total * 100
+        insights.append({
+            "title": "💰 收入风险",
+            "text": f"延迟订单涉及 **${at_risk:,.0f}** 收入（占总收入 {risk_pct:.1f}%），处于财务风险敞口。",
+            "action": f"若将准时率提升10个百分点，预计可回收约 ${at_risk * 0.1:,.0f} 的风险敞口。"
+        })
+
+    # 趋势判断
+    if "year_month" in _dff.columns:
+        recent = _dff[_dff["year_month"] >= _dff["year_month"].max()].groupby("year_month")["on_time"].mean().mean() * 100
+        earlier = _dff[_dff["year_month"] < _dff["year_month"].max()].groupby("year_month")["on_time"].mean().mean() * 100
+        if not np.isnan(recent) and not np.isnan(earlier):
+            direction = "上升" if recent > earlier else "下降"
+            insights.append({
+                "title": "📈 趋势判断",
+                "text": f"最近月度准时率均值为 **{recent:.1f}%**，较此前 **{earlier:.1f}%** {direction}了 {abs(recent-earlier):.1f} 个百分点。",
+                "action": "趋势向好，继续保持并扩大改善措施。" if direction == "上升" else "趋势恶化，需立即排查近期变更或外部因素。"
+            })
+
+    return insights
+
+auto_insights = generate_insights(dff)
+
 # ═══════════════════════════════════════════════════════
 # PAGE 1: 交付绩效
 # ═══════════════════════════════════════════════════════
 if page == "📊 交付绩效":
     st.title("交付绩效 Overview")
+
+    # 自动洞察面板
+    with st.expander("💡 自动洞察 — 基于当前筛选数据", expanded=True):
+        cols = st.columns(len(auto_insights))
+        for i, ins in enumerate(auto_insights):
+            with cols[i % len(cols)]:
+                st.markdown(f"**{ins['title']}**")
+                st.markdown(ins["text"])
+                st.caption(f"→ {ins['action']}")
 
     c1, c2, c3, c4, c5 = st.columns(5)
     c1.metric("总订单", f"{total_orders:,}")
@@ -463,6 +545,49 @@ elif page == "🔍 延迟根因":
             yaxis_title="准时率 (%)", legend=dict(orientation="h"))
         st.plotly_chart(fig, use_container_width=True)
 
+    # 相关性分析
+    st.markdown("---")
+    st.subheader("🔬 延迟因素关联分析")
+    st.caption("按时率与各维度特征的交叉统计，识别最强延迟驱动因素")
+
+    # 计算各维度的准时率差异（极差 = max - min）
+    def compute_ot_range(group_col, df):
+        ot = df.groupby(group_col)["on_time"].mean() * 100
+        return ot.max() - ot.min(), ot.to_dict()
+
+    factor_rows = []
+    for col, label in [("shipping_mode","运输方式"), ("market","市场区域"),
+                        ("order_weekday","星期"), ("order_quarter","季度"),
+                        ("department_name","部门")]:
+        rng, dist = compute_ot_range(col, dff)
+        best = max(dist, key=dist.get)
+        worst = min(dist, key=dist.get)
+        factor_rows.append({
+            "因素": label, "准时率极差(%)": round(rng, 1),
+            "最优": f"{best} ({dist[best]:.1f}%)",
+            "最差": f"{worst} ({dist[worst]:.1f}%)",
+            "影响强度": "🔴 高" if rng > 20 else "🟡 中" if rng > 10 else "🟢 低"
+        })
+
+    factor_df = pd.DataFrame(factor_rows).sort_values("准时率极差(%)", ascending=False)
+
+    c1, c2 = st.columns([1, 1])
+    with c1:
+        st.dataframe(factor_df, use_container_width=True, hide_index=True,
+            column_config={"影响强度": st.column_config.TextColumn(width="small")})
+
+    with c2:
+        fig = go.Figure(go.Bar(
+            x=factor_df["准时率极差(%)"], y=factor_df["因素"],
+            orientation="h", text=factor_df["准时率极差(%)"].astype(str)+"%",
+            textposition="outside",
+            marker_color=["#d62728" if v > 20 else "#ff7f0e" if v > 10 else "#2ca02c"
+                          for v in factor_df["准时率极差(%)"]]
+        ))
+        fig.update_layout(height=300, xaxis_title="准时率极差 (%)",
+            title="各因素对准时率的影响强度（极差越大=影响越大）")
+        st.plotly_chart(fig, use_container_width=True)
+
 # ═══════════════════════════════════════════════════════
 # PAGE 5: 数据概览
 # ═══════════════════════════════════════════════════════
@@ -531,3 +656,12 @@ elif page == "📐 数据概览":
 with st.sidebar:
     st.markdown("---")
     st.caption(f"仪表板就绪 | {len(df_clean):,}条数据 | SQLite + Streamlit + Plotly")
+
+    # 导出筛选数据
+    csv = dff.to_csv(index=False).encode("utf-8")
+    st.download_button(
+        label="📥 导出筛选数据 (CSV)",
+        data=csv,
+        file_name=f"supply_chain_filtered_{len(dff)}rows.csv",
+        mime="text/csv"
+    )
