@@ -96,6 +96,7 @@ python tests/test_sql_queries.py
 | ![月度趋势](images/01_月度准时率趋势.png) | ![运输对比](images/02_运输方式对比.png) |
 | ![市场差距](images/03_市场区域差距.png) | ![热力图](images/04_运输市场热力图.png) |
 | ![Pareto](images/05_延迟Pareto分析.png) | ![因素关联](images/06_因素关联强度.png) |
+| ![品类收入](images/07_品类收入排名.png) | ![季度趋势](images/08_季度趋势.png) |
 
 ---
 
