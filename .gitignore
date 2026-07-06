@@ -1,0 +1,5 @@
+data/*.db
+data/*.csv
+__pycache__/
+*.pyc
+.DS_Store
