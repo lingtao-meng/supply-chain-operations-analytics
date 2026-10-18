@@ -242,7 +242,7 @@ SELECT
     ROUND(SUM(order_total_value), 0)                                          AS total_revenue,
     ROUND(SUM(order_item_profit), 0)                                          AS total_profit,
     ROUND(AVG(order_total_value), 2)                                          AS avg_order_value,
-    COUNT(DISTINCT customer_id)                                               AS unique_customers,
+    COUNT(DISTINCT f.customer_id)                                             AS unique_customers,
     ROUND(AVG(CASE WHEN is_delayed = 1 THEN delay_days END), 1)              AS avg_delay_when_late,
     ROUND(SUM(CASE WHEN is_delayed = 1 THEN order_total_value END), 0)       AS revenue_at_risk,
     ROUND(AVG(benefit_per_order), 2)                                          AS avg_benefit_per_order,

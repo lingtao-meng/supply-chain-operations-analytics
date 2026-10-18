@@ -114,8 +114,11 @@ python tests/test_sql_queries.py
 
 ```bash
 python tests/test_kpis.py        # 无需 pytest
-pytest tests/test_kpis.py -q     # 或按标准方式跑
+python tests/test_sql_syntax.py  # 用空库验证 DDL + 10 条查询的语法与列名
+pytest tests/ -q                 # 或按标准方式跑
 ```
+
+> `test_sql_syntax.py` 上线第一次跑就抓到个真 bug：Q10 里的 `COUNT(DISTINCT customer_id)` 在四表 join 后是**歧义列**，直接执行会报错。已修。
 
 ## 技术栈
 
