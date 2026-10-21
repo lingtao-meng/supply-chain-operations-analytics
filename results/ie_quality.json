@@ -1,0 +1,84 @@
+{
+  "data": "/Users/liaomeixi/.cache/kagglehub/datasets/evilspirit05/datasupplychain/versions/1/DataCoSupplyChainDataset.csv",
+  "p_chart": {
+    "period_freq": "M",
+    "periods": 37,
+    "pbar": 0.5469950531522998,
+    "laney_factor": 1.253608895895515,
+    "standard_p_out_of_control": 1,
+    "out_of_control": 0,
+    "we_rule1": 0,
+    "we_rule2": 0,
+    "we_rule3": 0
+  },
+  "capability": [
+    {
+      "shipping_mode": "Same Day",
+      "promised_days": 0.0,
+      "mean_transit_days": 0.0,
+      "std_transit_days": 0.0,
+      "yield": 1.0,
+      "ppk": null,
+      "sigma_level_1_5_shift": 7.497807019601637,
+      "dpmo": 0.0,
+      "n": 9737,
+      "note": "zero variance"
+    },
+    {
+      "shipping_mode": "Standard Class",
+      "promised_days": 4.0,
+      "mean_transit_days": 3.995907268542579,
+      "std_transit_days": 1.4172657131772435,
+      "yield": 0.6023182864355185,
+      "ppk": 0.0009625886003280934,
+      "sigma_level_1_5_shift": 1.7593523035507745,
+      "dpmo": 397681.71356448147,
+      "n": 107752,
+      "note": ""
+    },
+    {
+      "shipping_mode": "Second Class",
+      "promised_days": 2.0,
+      "mean_transit_days": 3.9908280327124035,
+      "std_transit_days": 1.4158996284706553,
+      "yield": 0.2026919582008178,
+      "ppk": -0.4686838889521054,
+      "sigma_level_1_5_shift": 0.6679556584915834,
+      "dpmo": 797308.0417991822,
+      "n": 35216,
+      "note": ""
+    },
+    {
+      "shipping_mode": "First Class",
+      "promised_days": 1.0,
+      "mean_transit_days": 2.0,
+      "std_transit_days": 0.0,
+      "yield": 0.0,
+      "ppk": null,
+      "sigma_level_1_5_shift": -4.4978070150076865,
+      "dpmo": 1000000.0,
+      "n": 27814,
+      "note": "zero variance"
+    }
+  ],
+  "pareto": [
+    {
+      "Shipping Mode": "Standard Class",
+      "late_orders": 42851,
+      "share": 0.43396493928683555,
+      "cumulative_share": 0.43396493928683555
+    },
+    {
+      "Shipping Mode": "Second Class",
+      "late_orders": 28078,
+      "share": 0.2843543339781048,
+      "cumulative_share": 0.7183192732649404
+    },
+    {
+      "Shipping Mode": "First Class",
+      "late_orders": 27814,
+      "share": 0.2816807267350597,
+      "cumulative_share": 1.0
+    }
+  ]
+}

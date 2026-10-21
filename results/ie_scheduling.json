@@ -1,0 +1,61 @@
+{
+  "orders": 27078,
+  "capacity_units_per_day": 348,
+  "test_fraction": 0.15,
+  "results": [
+    {
+      "rule": "FCFS",
+      "orders": 27078,
+      "on_time_rate": 0.9101853903537928,
+      "avg_tardiness": 0.11898958564148017,
+      "late_avg_tardiness": 1.3248355263157894,
+      "max_tardiness": 3,
+      "avg_flow_days": 0.9385109683137602,
+      "avg_wip_orders": 107.6822033898305,
+      "utilization": 0.5832590170432025,
+      "incomplete": 0
+    },
+    {
+      "rule": "EDD",
+      "orders": 27078,
+      "on_time_rate": 1.0,
+      "avg_tardiness": 0.0,
+      "late_avg_tardiness": 0.0,
+      "max_tardiness": 0,
+      "avg_flow_days": 0.9343378388359553,
+      "avg_wip_orders": 107.20338983050847,
+      "utilization": 0.5832590170432025,
+      "incomplete": 0
+    },
+    {
+      "rule": "SPT",
+      "orders": 27078,
+      "on_time_rate": 0.9423517246473152,
+      "avg_tardiness": 0.2785286948814536,
+      "late_avg_tardiness": 4.831518257527226,
+      "max_tardiness": 10,
+      "avg_flow_days": 0.4658394268409779,
+      "avg_wip_orders": 53.44915254237288,
+      "utilization": 0.5832590170432025,
+      "incomplete": 0
+    },
+    {
+      "rule": "CR",
+      "orders": 27078,
+      "on_time_rate": 1.0,
+      "avg_tardiness": 0.0,
+      "late_avg_tardiness": 0.0,
+      "max_tardiness": 0,
+      "avg_flow_days": 1.2552995051333187,
+      "avg_wip_orders": 144.02966101694915,
+      "utilization": 0.5832590170432025,
+      "incomplete": 0
+    }
+  ],
+  "staffing": {
+    "units_per_worker": 40,
+    "target_utilization": 0.85,
+    "peak_workers": 12,
+    "median_workers": 3.5
+  }
+}
