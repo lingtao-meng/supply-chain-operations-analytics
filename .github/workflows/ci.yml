@@ -20,3 +20,21 @@ jobs:
 
       - name: SQL syntax + schema test (in-memory, no data needed)
         run: python tests/test_sql_syntax.py
+  ie:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install analysis dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: IE analysis tests
+        run: |
+          python tests/test_ie_quality.py
+          python tests/test_ie_scheduling.py
