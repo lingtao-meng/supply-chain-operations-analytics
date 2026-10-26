@@ -53,6 +53,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install pandas numpy matplotlib
 
+      - name: Compile express module
+        working-directory: express
+        run: python -m compileall -q src scripts
+
       - name: Express hub tests
         working-directory: express
         run: python tests/test_hub.py
