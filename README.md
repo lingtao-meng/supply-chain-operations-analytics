@@ -5,7 +5,12 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit)](https://streamlit.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![CI](https://github.com/lingtao-meng/supply-chain-operations-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/lingtao-meng/supply-chain-operations-analytics/actions/workflows/ci.yml)
 
-用 DataCo 全球供应链数据集（180K+ 订单，53 个字段）做的运营分析项目。从数据清洗、星型建模、SQL 查询到 Streamlit 仪表板，整套流程都覆盖了。
+这个仓库现在有两块：
+
+- **DataCo 运营分析**（根目录）：180K+ 订单，SQLite 星型模型、10 条 SQL、Streamlit 仪表板，加上 Laney p′、Ppk、Pareto 和派工仿真。
+- **快递中转场分拣线 IE**（`express/`）：五工位时间研究、山积图/线平衡、排队仿真、峰值用工和单票成本。
+
+一块偏“看数据、找问题”，一块偏“下现场、算产能”，合起来是运营分析 + IE 改善。
 
 ---
 
@@ -46,6 +51,13 @@ pip install -r requirements.txt
 # 先跑数据清洗（需要先下载 DataCo 数据集，改一下 INPUT_PATH）
 python python/01_data_cleaning.py
 python python/02_load_to_db.py
+
+# 快递分拣线 IE 模块
+cd express
+pip install -r requirements.txt
+python scripts/run_analysis.py
+python tests/test_hub.py
+cd ..
 
 # 启动仪表板
 streamlit run app/app.py
@@ -152,6 +164,17 @@ python python/04_ie_scheduling.py --capacity 300   # 容量敏感性
 ```
 
 ---
+
+## 快递分拣线 IE 模块
+
+`express/` 是一个独立的分拣线案例：卸车 → 供包 → 扫描 → 分拣 → 装车，五工位、8 小时班次、基准 220 件/小时、峰值 286 件/小时。
+
+- 基准线平衡率 75%，瓶颈在供包，线产能 276 件/小时
+- 峰值时准时率掉到 26.2%，平均流程 14.5 分钟
+- 在供包加 1 人：平衡率只到 78%，但线产能 331 件/小时，准时率回到 89.6%，单票成本只涨 7.7%
+- 平时加同一个人：成本涨 12.7%，收益很小
+
+详细结果、图和“怎么换现场数据”见 [`express/README.md`](express/README.md)。
 
 ## 截图
 
