@@ -1,0 +1,6 @@
+station,work_content_sec,cv,operators,availability
+unload,18.0,0.25,2,0.92
+induct,12.0,0.20,1,0.92
+scan,8.0,0.15,1,0.92
+sort,6.0,0.10,1,0.92
+load,20.0,0.25,2,0.92

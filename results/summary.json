@@ -1,0 +1,67 @@
+{
+  "assumptions": {
+    "shift_hours": 8,
+    "service_target_min": 5.0,
+    "labor_rate_per_hour": 25.0,
+    "equipment_per_parcel": 0.1,
+    "time_study": "/Users/liaomeixi/Documents/deepseek-harness/default-workspace/gh-projects/express-hub-ie/data/time_study.csv"
+  },
+  "scenarios": [
+    {
+      "scenario": "base",
+      "arrival_per_hour": 220.0,
+      "operators": 7,
+      "bottleneck": "induct",
+      "balance_rate": 0.75,
+      "line_capacity_per_hour": 276.0,
+      "throughput_per_hour": 225.69452070024383,
+      "avg_flow_min": 1.7469637176021262,
+      "p95_flow_min": 3.1783450678766036,
+      "on_time_rate": 1.0,
+      "overtime_min": 0.9155298198727906,
+      "cost_per_parcel": 0.876122411808703
+    },
+    {
+      "scenario": "peak",
+      "arrival_per_hour": 286.0,
+      "operators": 7,
+      "bottleneck": "induct",
+      "balance_rate": 0.75,
+      "line_capacity_per_hour": 276.0,
+      "throughput_per_hour": 275.9465039452149,
+      "avg_flow_min": 14.505586358751128,
+      "p95_flow_min": 23.865077310933113,
+      "on_time_rate": 0.2618006993006993,
+      "overtime_min": 17.487730546696547,
+      "cost_per_parcel": 0.7453272819675688
+    },
+    {
+      "scenario": "peak_improved",
+      "arrival_per_hour": 286.0,
+      "operators": 8,
+      "bottleneck": "load",
+      "balance_rate": 0.78,
+      "line_capacity_per_hour": 331.2,
+      "throughput_per_hour": 285.25627042718185,
+      "avg_flow_min": 2.4166648298419715,
+      "p95_flow_min": 5.808755387208406,
+      "on_time_rate": 0.895541958041958,
+      "overtime_min": 1.2514718586838474,
+      "cost_per_parcel": 0.8020355591317392
+    },
+    {
+      "scenario": "base_improved",
+      "arrival_per_hour": 220.0,
+      "operators": 8,
+      "bottleneck": "load",
+      "balance_rate": 0.78,
+      "line_capacity_per_hour": 331.2,
+      "throughput_per_hour": 225.73104080308752,
+      "avg_flow_min": 1.4021910865800757,
+      "p95_flow_min": 2.0429667818589614,
+      "on_time_rate": 1.0,
+      "overtime_min": 0.8377244611340454,
+      "cost_per_parcel": 0.9867819913243063
+    }
+  ]
+}
