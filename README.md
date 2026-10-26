@@ -31,10 +31,11 @@
 ## 项目结构
 
 `app/app.py` — Streamlit 仪表板  
+`express/` — 快递分拣线 IE（时间研究、线平衡、仿真）  
 `python/` — 数据清洗和入库脚本  
 `sql/` — 建表 DDL 和 10 条分析查询  
 `notebooks/` — Jupyter 深度分析  
-`tests/` — SQL 查询验证  
+`tests/` — SQL / IE 测试  
 `images/` — 仪表板截图  
 `setup.sh` — 一键初始化
 
