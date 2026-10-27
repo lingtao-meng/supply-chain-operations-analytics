@@ -1,5 +1,7 @@
 # 快递中转场分拣线：线平衡、产能与峰值用工
 
+[![CI](https://github.com/lingtao-meng/supply-chain-operations-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/lingtao-meng/supply-chain-operations-analytics/actions/workflows/ci.yml)
+
 这是一个 IE 方法案例，不是顺丰的实测数据。时间研究参数是示例，换成你现场测的数据，同一套流程就能出山积图、平衡率、瓶颈、加班和单票成本。
 
 我想回答的问题很具体：**一条分拣线，瓶颈在哪？峰值来了要加几个人？加在哪个工位？加了之后成本涨多少、时效回来多少？**
