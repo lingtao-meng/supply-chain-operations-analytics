@@ -11,6 +11,8 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from dataclasses import replace
+from itertools import product
 from pathlib import Path
 
 import numpy as np
@@ -30,6 +32,9 @@ RED = "#b23a48"
 MUTED = "#9aa6ad"
 GRID = "#e8e8e8"
 
+REPLICATIONS = 30
+GRID_REPLICATIONS = 5
+GRID_OPERATORS = (1, 2, 3)
 SCENARIOS = [
     ("base", 220.0, None),
     ("peak", 286.0, None),
@@ -150,6 +155,71 @@ def plot_backlog(results: dict, images: Path) -> None:
     plt.close(fig)
 
 
+def _summarise(values):
+    values = np.asarray(values, dtype=float)
+    mean = float(values.mean())
+    half = float(1.96 * values.std(ddof=1) / np.sqrt(len(values))) if len(values) > 1 else 0.0
+    return mean, mean - half, mean + half
+
+
+def staffing_grid(base, rate: float, replications: int, seed: int) -> pd.DataFrame:
+    rows = []
+    for combo in product(GRID_OPERATORS, repeat=len(base)):
+        stations = [replace(station, operators=n) for station, n in zip(base, combo)]
+        metrics = line_metrics(stations)
+        runs = [simulate(stations, rate, seed=seed + i) for i in range(replications)]
+        cost = np.array([r.cost_per_parcel for r in runs])
+        on_time = np.array([r.on_time_rate for r in runs])
+        rows.append({
+            "config": "-".join(str(n) for n in combo),
+            "operators": sum(combo),
+            "balance_rate": metrics.balance_rate,
+            "line_capacity_per_hour": metrics.capacity_per_hour,
+            "bottleneck": metrics.bottleneck,
+            "cost_per_parcel": float(cost.mean()),
+            "cost_ci_low": float(cost.mean() - 1.96 * cost.std(ddof=1) / np.sqrt(len(cost))),
+            "cost_ci_high": float(cost.mean() + 1.96 * cost.std(ddof=1) / np.sqrt(len(cost))),
+            "on_time_rate": float(on_time.mean()),
+            "on_time_ci_low": float(on_time.mean() - 1.96 * on_time.std(ddof=1) / np.sqrt(len(on_time))),
+            "on_time_ci_high": float(on_time.mean() + 1.96 * on_time.std(ddof=1) / np.sqrt(len(on_time))),
+            "avg_flow_min": float(np.mean([r.avg_flow_min for r in runs])),
+            "overtime_min": float(np.mean([r.overtime_min for r in runs])),
+        })
+    return pd.DataFrame(rows)
+
+
+def pareto_frontier(grid: pd.DataFrame) -> pd.DataFrame:
+    out = []
+    best_on_time = -1.0
+    for _, row in grid.sort_values(["cost_per_parcel", "on_time_rate"], ascending=[True, False]).iterrows():
+        if row["on_time_rate"] > best_on_time + 1e-12:
+            out.append(row)
+            best_on_time = float(row["on_time_rate"])
+    return pd.DataFrame(out)
+
+
+def plot_pareto(grid: pd.DataFrame, frontier: pd.DataFrame, images: Path) -> None:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    _style()
+    fig, ax = plt.subplots(figsize=(7.8, 4.6))
+    ax.scatter(grid["cost_per_parcel"], grid["on_time_rate"] * 100, s=18, color=MUTED, alpha=0.55, label="243 staffing plans")
+    ax.plot(frontier["cost_per_parcel"], frontier["on_time_rate"] * 100, color=TEAL, marker="o", linewidth=2, label="Pareto frontier")
+    for _, row in frontier.iterrows():
+        ax.annotate(row["config"], (row["cost_per_parcel"], row["on_time_rate"] * 100), fontsize=6.5, xytext=(3, 3), textcoords="offset points")
+    ax.set_xlabel("cost per parcel (USD)")
+    ax.set_ylabel("on-time within 5 min (%)")
+    ax.set_title("Staffing plans: cost vs service (peak 286/h)", loc="left")
+    ax.grid(axis="y")
+    for side in ("top", "right"):
+        ax.spines[side].set_visible(False)
+    ax.legend(fontsize=7)
+    fig.tight_layout()
+    fig.savefig(images / "staffing_pareto.png", dpi=160, bbox_inches="tight")
+    plt.close(fig)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--time-study", default=str(ROOT / "data" / "time_study.csv"))
@@ -165,24 +235,18 @@ def main() -> int:
     for name, rate, change in SCENARIOS:
         stations = base if change is None else with_operator(base, change[0], change[1])
         metrics = line_metrics(stations)
-        sim = simulate(stations, rate, seed=args.seed)
+        runs = [simulate(stations, rate, seed=args.seed + i) for i in range(REPLICATIONS)]
+        sim = runs[0]
         results[name] = sim
-        rows.append(
-            {
-                "scenario": name,
-                "arrival_per_hour": rate,
-                "operators": sim.total_operators,
-                "bottleneck": metrics.bottleneck,
-                "balance_rate": metrics.balance_rate,
-                "line_capacity_per_hour": metrics.capacity_per_hour,
-                "throughput_per_hour": sim.throughput_per_hour,
-                "avg_flow_min": sim.avg_flow_min,
-                "p95_flow_min": sim.p95_flow_min,
-                "on_time_rate": sim.on_time_rate,
-                "overtime_min": sim.overtime_min,
-                "cost_per_parcel": sim.cost_per_parcel,
-            }
-        )
+        row = {"scenario": name, "arrival_per_hour": rate, "operators": sim.total_operators,
+               "bottleneck": metrics.bottleneck, "balance_rate": metrics.balance_rate,
+               "line_capacity_per_hour": metrics.capacity_per_hour, "replications": REPLICATIONS}
+        for key in ("throughput_per_hour", "avg_flow_min", "p95_flow_min", "on_time_rate", "overtime_min", "cost_per_parcel"):
+            mean, lo, hi = _summarise([getattr(r, key) for r in runs])
+            row[key] = mean
+            row[f"{key}_ci_low"] = lo
+            row[f"{key}_ci_high"] = hi
+        rows.append(row)
         for station, cycle in zip(stations, metrics.effective_cycles):
             balance_rows.append(
                 {
@@ -216,8 +280,22 @@ def main() -> int:
 
     print(table.to_string(index=False))
 
+    grid = staffing_grid(base, 286.0, GRID_REPLICATIONS, args.seed)
+    grid.to_csv(RESULTS / "staffing_grid.csv", index=False)
+    frontier = pareto_frontier(grid)
+    frontier.to_csv(RESULTS / "staffing_pareto.csv", index=False)
+    summary["staffing_grid"] = {
+        "configs": len(grid),
+        "replications": GRID_REPLICATIONS,
+        "best_cost_meeting_90pct": float(grid[grid["on_time_rate"] >= 0.90]["cost_per_parcel"].min()) if (grid["on_time_rate"] >= 0.90).any() else None,
+        "pareto_configs": frontier["config"].tolist(),
+    }
+    (RESULTS / "summary.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False, default=float), encoding="utf-8")
+    print(f"staffing grid: {len(grid)} configs, pareto {len(frontier)}")
+
     metrics_base = line_metrics(base)
     metrics_improved = line_metrics(improved)
+    plot_pareto(grid, frontier, IMAGES)
     plot_yamazumi(base, improved, metrics_base, metrics_improved, IMAGES)
     plot_scenarios(table, IMAGES)
     plot_backlog(results, IMAGES)
