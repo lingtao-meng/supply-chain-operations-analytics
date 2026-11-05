@@ -119,6 +119,8 @@ def buffer_layout(loads: list[int], policy: str) -> tuple[int, ...]:
 
 def reliability_lower(hits: int, runs: int) -> float:
     """One-sided 95% Wilson lower bound on the simulated hit probability."""
+    if hits == 0:
+        return 0.0
     observed = hits / runs
     z = norm.ppf(0.95)
     center = observed + z * z / (2 * runs)
@@ -238,6 +240,10 @@ def run_study() -> tuple[list[dict], list[dict], dict]:
         ),
         "validation": validation,
     }
+    # Keep the full precision for policy screening and normalize the exported bounds.
+    for row in [*summary, *validation]:
+        if row["hit_lower95"] is not None:
+            row["hit_lower95"] = round(row["hit_lower95"], 8)
     return summary, station_rows, decision
 
 
