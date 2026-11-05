@@ -40,6 +40,8 @@ jobs:
           python tests/test_ie_scheduling.py
           python manufacturing/test_line_balance.py
           python manufacturing/line_balance.py --output-dir "$RUNNER_TEMP/line-balance"
+          python manufacturing/test_shift_capacity.py
+          python manufacturing/shift_capacity.py --output-dir "$RUNNER_TEMP/shift-capacity"
 
   express:
     runs-on: ubuntu-latest

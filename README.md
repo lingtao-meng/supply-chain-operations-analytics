@@ -170,7 +170,7 @@ python python/04_ie_scheduling.py --capacity 300   # 容量敏感性
 
 给定工序用时、前置关系与目标节拍，比较最长工序优先（LCR）、位置权重法（RPW）和 MILP。Mitchell 基准在节拍 15 时，LCR 需要 9 个工位，RPW 和 MILP 需要 8 个工位，平衡率由 77.78% 提高到 87.50%。在同样 8 个工位下，MILP 的峰值负荷由 RPW 的 15 降到 14。
 
-[数据来源、求解模型和结果](manufacturing/README.md)包含两个公开基准的工位分配表和节拍敏感性图。
+[数据来源、求解模型和结果](manufacturing/README.md)包含两个公开基准的工位分配表和节拍敏感性图。[班次产能验证](manufacturing/CAPACITY_STUDY.md)进一步对比人员与缓冲受限时的产量达标风险。
 
 ```bash
 python manufacturing/line_balance.py
