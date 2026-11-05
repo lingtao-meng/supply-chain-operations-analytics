@@ -8,7 +8,7 @@
 这个仓库包含三个方向：
 
 - **DataCo 运营分析**（根目录）：180K+ 订单，SQLite 星型模型、10 条 SQL、Streamlit 仪表板，加上 Laney p′、Ppk、Pareto 和派工仿真。
-- **制造 IE 装配线平衡**（[`manufacturing/`](manufacturing/)）：用公开工序基准比较两种排工法和 MILP，输出工位配置、瓶颈和节拍敏感性。
+- **制造 IE 装配线与班次产能优化**（[`manufacturing/`](manufacturing/)）：用三套公开基准做工位分配、缓冲选址、班产验收和改线比较。
 - **快递中转场分拣线 IE**（`express/`）：五工位时间研究案例、山积图/线平衡、排队仿真、峰值用工和单票成本。
 
 ---
@@ -170,7 +170,7 @@ python python/04_ie_scheduling.py --capacity 300   # 容量敏感性
 
 给定工序用时、前置关系与目标节拍，比较最长工序优先（LCR）、位置权重法（RPW）和 MILP。Mitchell 基准在节拍 15 时，LCR 需要 9 个工位，RPW 和 MILP 需要 8 个工位，平衡率由 77.78% 提高到 87.50%。在同样 8 个工位下，MILP 的峰值负荷由 RPW 的 15 降到 14。
 
-[数据来源、求解模型和结果](manufacturing/README.md)包含两个公开基准的工位分配表和节拍敏感性图。[班次产能验证](manufacturing/CAPACITY_STUDY.md)进一步对比人员与缓冲受限时的产量达标风险。
+在 Mitchell 的 8 工位、3 缓冲位案例中，分支定界把设计班产认证到 1,590 件，1,570 件的计划目标通过独立仿真验收。另用 Jackson 检验工序异常时的改线方案，用 Buxey 检验缓冲位置能否跨产线复用。 [制造 IE 项目入口](manufacturing/README.md)
 
 ```bash
 python manufacturing/line_balance.py

@@ -1,0 +1,449 @@
+{
+  "configuration": {
+    "shift_seconds": 25200,
+    "required_reliability": 0.95,
+    "scenario_cv_pct": [
+      [
+        20,
+        0
+      ],
+      [
+        20,
+        3
+      ]
+    ],
+    "stress_cv_pct": [
+      20,
+      5
+    ],
+    "design_seed": 20261115,
+    "design_runs": 120,
+    "validation_seed": 20261116,
+    "validation_runs": 180,
+    "confirmation_seed": 20261117,
+    "confirmation_runs": 300,
+    "stress_seed": 20261118,
+    "evaluation_limit": 6000,
+    "confirmation_family_alpha": 0.05,
+    "confirmation_family_size": 6
+  },
+  "cases": [
+    {
+      "case": "Buxey",
+      "staff": 8,
+      "nominal_cycle": 41,
+      "buffer_budget": 3,
+      "feasible_plans": 5720,
+      "same_budget_combinations": 200200,
+      "unique_simulated_combinations": 11755,
+      "transferred_layout": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "design_certificate": {
+        "lower": 529,
+        "upper": 557,
+        "gap_units": 28,
+        "checkpoints": [
+          {
+            "additional_evaluations": 0,
+            "lower": 529,
+            "upper": 561
+          },
+          {
+            "additional_evaluations": 100,
+            "lower": 529,
+            "upper": 560
+          },
+          {
+            "additional_evaluations": 500,
+            "lower": 529,
+            "upper": 559
+          },
+          {
+            "additional_evaluations": 1000,
+            "lower": 529,
+            "upper": 559
+          },
+          {
+            "additional_evaluations": 2500,
+            "lower": 529,
+            "upper": 558
+          },
+          {
+            "additional_evaluations": 5000,
+            "lower": 529,
+            "upper": 557
+          },
+          {
+            "additional_evaluations": 6000,
+            "lower": 529,
+            "upper": 557
+          }
+        ]
+      },
+      "common_comparison_target": 520,
+      "results": [
+        {
+          "policy": "transferred_positions",
+          "station_tasks": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              7,
+              6,
+              9,
+              12,
+              4,
+              10
+            ],
+            [
+              5,
+              14,
+              15,
+              19
+            ],
+            [
+              8,
+              16,
+              18
+            ],
+            [
+              13,
+              11,
+              21,
+              22
+            ],
+            [
+              26,
+              25,
+              27,
+              17
+            ],
+            [
+              20,
+              23
+            ],
+            [
+              24,
+              28,
+              29
+            ]
+          ],
+          "station_loads": [
+            41,
+            41,
+            40,
+            40,
+            40,
+            40,
+            41,
+            41
+          ],
+          "layout": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "design_capacity": 528,
+          "independent_validation": {
+            "target": 528,
+            "validation_hits": [
+              180,
+              177
+            ],
+            "worst_lower95": 0.959032,
+            "passes": true,
+            "validation_capacity": 531,
+            "validation_worst_mean": 560.42
+          },
+          "planning_confirmation": {
+            "target": 520,
+            "validation_hits": [
+              300,
+              300
+            ],
+            "worst_lower95": 0.991062,
+            "passes": true,
+            "validation_capacity": 535,
+            "validation_worst_mean": 562.47,
+            "simultaneous_lower95_by_scenario": [
+              0.984168,
+              0.984168
+            ],
+            "passes_simultaneous_confirmation": true
+          },
+          "confirmation_at_common_target": {
+            "target": 520,
+            "validation_hits": [
+              300,
+              300
+            ],
+            "worst_lower95": 0.991062,
+            "passes": true,
+            "validation_capacity": 535,
+            "validation_worst_mean": 562.47
+          },
+          "stress_at_common_target": {
+            "target": 520,
+            "validation_hits": [
+              283
+            ],
+            "worst_lower95": 0.917156,
+            "passes": false,
+            "validation_capacity": 507,
+            "validation_worst_mean": 565.1
+          }
+        },
+        {
+          "policy": "optimize_buffers_only",
+          "station_tasks": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              7,
+              6,
+              9,
+              12,
+              4,
+              10
+            ],
+            [
+              5,
+              14,
+              15,
+              19
+            ],
+            [
+              8,
+              16,
+              18
+            ],
+            [
+              13,
+              11,
+              21,
+              22
+            ],
+            [
+              26,
+              25,
+              27,
+              17
+            ],
+            [
+              20,
+              23
+            ],
+            [
+              24,
+              28,
+              29
+            ]
+          ],
+          "station_loads": [
+            41,
+            41,
+            40,
+            40,
+            40,
+            40,
+            41,
+            41
+          ],
+          "layout": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "design_capacity": 529,
+          "independent_validation": {
+            "target": 529,
+            "validation_hits": [
+              180,
+              177
+            ],
+            "worst_lower95": 0.959032,
+            "passes": true,
+            "validation_capacity": 532,
+            "validation_worst_mean": 562.49
+          },
+          "planning_confirmation": {
+            "target": 520,
+            "validation_hits": [
+              300,
+              300
+            ],
+            "worst_lower95": 0.991062,
+            "passes": true,
+            "validation_capacity": 536,
+            "validation_worst_mean": 564.38,
+            "simultaneous_lower95_by_scenario": [
+              0.984168,
+              0.984168
+            ],
+            "passes_simultaneous_confirmation": true
+          },
+          "confirmation_at_common_target": {
+            "target": 520,
+            "validation_hits": [
+              300,
+              300
+            ],
+            "worst_lower95": 0.991062,
+            "passes": true,
+            "validation_capacity": 536,
+            "validation_worst_mean": 564.38
+          },
+          "stress_at_common_target": {
+            "target": 520,
+            "validation_hits": [
+              287
+            ],
+            "worst_lower95": 0.932908,
+            "passes": false,
+            "validation_capacity": 509,
+            "validation_worst_mean": 567.15
+          }
+        },
+        {
+          "policy": "optimize_assignment_and_buffers",
+          "station_tasks": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              7,
+              6,
+              9,
+              12,
+              4,
+              10
+            ],
+            [
+              5,
+              14,
+              15,
+              19
+            ],
+            [
+              8,
+              16,
+              18
+            ],
+            [
+              13,
+              11,
+              21,
+              22
+            ],
+            [
+              26,
+              25,
+              27,
+              17
+            ],
+            [
+              20,
+              23
+            ],
+            [
+              24,
+              28,
+              29
+            ]
+          ],
+          "station_loads": [
+            41,
+            41,
+            40,
+            40,
+            40,
+            40,
+            41,
+            41
+          ],
+          "layout": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "design_capacity": 529,
+          "independent_validation": {
+            "target": 529,
+            "validation_hits": [
+              180,
+              177
+            ],
+            "worst_lower95": 0.959032,
+            "passes": true,
+            "validation_capacity": 532,
+            "validation_worst_mean": 562.49
+          },
+          "planning_confirmation": {
+            "target": 520,
+            "validation_hits": [
+              300,
+              300
+            ],
+            "worst_lower95": 0.991062,
+            "passes": true,
+            "validation_capacity": 536,
+            "validation_worst_mean": 564.38,
+            "simultaneous_lower95_by_scenario": [
+              0.984168,
+              0.984168
+            ],
+            "passes_simultaneous_confirmation": true
+          },
+          "confirmation_at_common_target": {
+            "target": 520,
+            "validation_hits": [
+              300,
+              300
+            ],
+            "worst_lower95": 0.991062,
+            "passes": true,
+            "validation_capacity": 536,
+            "validation_worst_mean": 564.38
+          },
+          "stress_at_common_target": {
+            "target": 520,
+            "validation_hits": [
+              287
+            ],
+            "worst_lower95": 0.932908,
+            "passes": false,
+            "validation_capacity": 509,
+            "validation_worst_mean": 567.15
+          }
+        }
+      ]
+    }
+  ]
+}

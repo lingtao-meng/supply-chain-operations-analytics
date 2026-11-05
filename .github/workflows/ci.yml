@@ -66,6 +66,11 @@ jobs:
       - name: Install certification dependencies
         run: python -m pip install numpy scipy -r manufacturing/requirements-search.txt
 
+      - name: Verify Buxey transfer experiment
+        run: |
+          python manufacturing/transfer_validation.py --output "$RUNNER_TEMP/transfer_validation.json"
+          cmp manufacturing/results/transfer_validation.json "$RUNNER_TEMP/transfer_validation.json"
+
       - name: Verify search certificates
         run: |
           python manufacturing/test_certified_search.py
