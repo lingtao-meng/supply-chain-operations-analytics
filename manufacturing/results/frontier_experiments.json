@@ -1,0 +1,221 @@
+{
+  "configuration": {
+    "shift_seconds": 25200,
+    "required_reliability": 0.95,
+    "design_scenarios_cv_pct": [
+      [
+        20,
+        0
+      ],
+      [
+        20,
+        3
+      ]
+    ],
+    "design_runs": 120,
+    "validation_runs": 180,
+    "design_seed": 20261109,
+    "validation_seed": 20261110,
+    "confirmation_runs": 300,
+    "confirmation_seed": 20261111,
+    "planning_target_rule": "round down to tens after subtracting 1% from min(design_capacity, validation_capacity)",
+    "beam_width": 16
+  },
+  "searches": [
+    {
+      "case": "Jackson",
+      "method": "exact",
+      "plans": 209,
+      "layouts": 27,
+      "candidates": 5643,
+      "per_gap_max": 2,
+      "nominal_cycle": 14
+    },
+    {
+      "case": "Jackson",
+      "method": "beam",
+      "plans": 17,
+      "layouts": 27,
+      "candidates": 459,
+      "per_gap_max": 2,
+      "nominal_cycle": 14
+    },
+    {
+      "case": "Mitchell",
+      "method": "beam",
+      "plans": 17,
+      "layouts": 128,
+      "candidates": 2176,
+      "per_gap_max": 1,
+      "nominal_cycle": 15
+    }
+  ],
+  "shock": {
+    "case": "Jackson",
+    "task": 4,
+    "duration_multiplier": 1.4,
+    "target": 1780,
+    "policies": {
+      "retain": {
+        "station_tasks": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            7,
+            9,
+            11
+          ]
+        ],
+        "layout": [
+          0,
+          0,
+          0
+        ],
+        "slots": 0,
+        "design_capacity": 1675,
+        "design_target_met": false,
+        "target": 1780,
+        "validation_hits": [
+          1,
+          64
+        ],
+        "worst_lower95": 0.00124,
+        "passes": false,
+        "validation_capacity": 1665,
+        "validation_worst_mean": 1760.71
+      },
+      "buffers_only": {
+        "station_tasks": [
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            7,
+            9,
+            11
+          ]
+        ],
+        "layout": [
+          1,
+          1,
+          0
+        ],
+        "slots": 2,
+        "design_capacity": 1734,
+        "design_target_met": false,
+        "target": 1780,
+        "validation_hits": [
+          180,
+          138
+        ],
+        "worst_lower95": 0.711098,
+        "passes": false,
+        "validation_capacity": 1720,
+        "validation_worst_mean": 1820.61
+      },
+      "reassign_only": {
+        "station_tasks": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            8,
+            10
+          ],
+          [
+            7,
+            9,
+            11
+          ]
+        ],
+        "layout": [
+          0,
+          0,
+          0
+        ],
+        "slots": 0,
+        "design_capacity": 1726,
+        "design_target_met": false,
+        "target": 1780,
+        "validation_hits": [
+          180,
+          136
+        ],
+        "worst_lower95": 0.699338,
+        "passes": false,
+        "validation_capacity": 1720,
+        "validation_worst_mean": 1819.41
+      },
+      "joint": {
+        "station_tasks": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            8,
+            10
+          ],
+          [
+            7,
+            9,
+            11
+          ]
+        ],
+        "layout": [
+          1,
+          0,
+          0
+        ],
+        "slots": 1,
+        "design_capacity": 1789,
+        "design_target_met": true,
+        "target": 1780,
+        "validation_hits": [
+          180,
+          176
+        ],
+        "worst_lower95": 0.95142,
+        "passes": true,
+        "validation_capacity": 1786,
+        "validation_worst_mean": 1886.69
+      }
+    }
+  }
+}

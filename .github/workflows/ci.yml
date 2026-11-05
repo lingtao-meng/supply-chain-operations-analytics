@@ -44,6 +44,8 @@ jobs:
           python manufacturing/shift_capacity.py --output-dir "$RUNNER_TEMP/shift-capacity"
           python manufacturing/test_optimize_buffers.py
           python manufacturing/optimize_buffers.py --output-dir "$RUNNER_TEMP/jackson-buffer"
+          python manufacturing/test_capacity_frontier.py
+          python manufacturing/capacity_frontier.py --output-dir "$RUNNER_TEMP/capacity-frontier"
 
   express:
     runs-on: ubuntu-latest

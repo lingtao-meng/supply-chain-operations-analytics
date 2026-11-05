@@ -26,17 +26,21 @@ Plan = tuple[tuple[int, ...], ...]
 Layout = tuple[int, ...]
 
 
+def predecessor_ideals(case: Case) -> list[frozenset[int]]:
+    ideals = [frozenset()]
+    for task in case.order:
+        ideals.extend([done | {task} for done in ideals if case.predecessors[task] <= done])
+    return sorted(ideals, key=lambda done: (len(done), sorted(done)))
+
+
 def enumerate_plans(case: Case, cycle: int, staff: int) -> list[Plan]:
     """Split the DAG into nonempty stations using nested predecessor-closed sets."""
     case.check_cycle(cycle)
     if not 1 <= staff <= len(case.task_times):
         raise ValueError("station count must be between one and the number of tasks")
-    ideals = [frozenset()]
-    for task in case.order:
-        ideals.extend([done | {task} for done in ideals if case.predecessors[task] <= done])
+    ideals = predecessor_ideals(case)
     all_tasks = frozenset(case.order)
     prefix_load = {done: sum(map(case.duration, done)) for done in ideals}
-    ordered_ideals = sorted(ideals, key=lambda done: (len(done), sorted(done)))
     plans = []
 
     def visit(done: frozenset[int], stations: Plan) -> None:
@@ -45,7 +49,7 @@ def enumerate_plans(case: Case, cycle: int, staff: int) -> list[Plan]:
             if done < all_tasks and prefix_load[all_tasks] - prefix_load[done] <= cycle:
                 plans.append((*stations, tuple(task for task in case.order if task not in done)))
             return
-        for next_done in ordered_ideals:
+        for next_done in ideals:
             if (done < next_done < all_tasks and prefix_load[next_done] - prefix_load[done] <= cycle
                     and len(all_tasks - next_done) >= remaining - 1
                     and prefix_load[all_tasks] - prefix_load[next_done] <= cycle * (remaining - 1)):

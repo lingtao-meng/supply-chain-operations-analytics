@@ -39,8 +39,13 @@ def demand_completion_times(service: np.ndarray, buffers: tuple[int, ...]) -> np
     return _flow_shop(service, buffers, None)
 
 
+def shift_output_counts(service: np.ndarray, buffers: tuple[int, ...], duration: float) -> np.ndarray:
+    """Count completed products without accumulating per-station time metrics."""
+    return _flow_shop(service, buffers, duration, measure_stations=False)
+
+
 def _flow_shop(
-    service: np.ndarray, buffers: tuple[int, ...], duration: float | None,
+    service: np.ndarray, buffers: tuple[int, ...], duration: float | None, *, measure_stations: bool = True,
 ) -> np.ndarray | tuple[np.ndarray, np.ndarray]:
     if service.ndim != 3 or not all(service.shape) or not np.isfinite(service).all() or (service <= 0).any():
         raise ValueError("service must contain finite positive times for products, stations and replications")
@@ -48,14 +53,16 @@ def _flow_shop(
     if len(buffers) != station_count - 1 or any(type(b) is not int or b < 0 for b in buffers):
         raise ValueError("provide one nonnegative integer buffer per station gap")
     track_shift = duration is not None
+    track_stations = track_shift and measure_stations
     if track_shift and (not np.isfinite(duration) or duration <= 0):
         raise ValueError("shift duration must be finite and positive")
     exits = np.zeros((station_count, replications))
     history_length = 1 + max(buffers, default=0)
     prior_starts = np.zeros((history_length, station_count, replications))
     output = np.zeros(replications, dtype=int)
-    busy = np.zeros_like(exits)
-    blocked = np.zeros_like(exits)
+    if track_stations:
+        busy = np.zeros_like(exits)
+        blocked = np.zeros_like(exits)
 
     for product, workloads in enumerate(service):
         if track_shift and (exits[0] >= duration).all():
@@ -76,7 +83,7 @@ def _flow_shop(
                     departure = np.maximum(finish, prior_starts[(product - buffer) % history_length, station + 1])
             start_slot[station] = start
             exits[station] = upstream = departure
-            if track_shift:
+            if track_stations:
                 busy[station] += np.minimum(finish, duration) - np.minimum(start, duration)
                 blocked[station] += np.minimum(departure, duration) - np.minimum(finish, duration)
         if track_shift:
@@ -86,6 +93,8 @@ def _flow_shop(
         return exits[-1]
     if (exits[0] < duration).any():
         raise ValueError("the input workload ends before the shift; supply more products")
+    if not track_stations:
+        return output
     idle = np.maximum(0, duration - busy - blocked)
     return output, np.stack((busy, blocked, idle), axis=-1) / duration
 
