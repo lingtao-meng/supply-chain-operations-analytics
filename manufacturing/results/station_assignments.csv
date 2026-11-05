@@ -1,0 +1,309 @@
+case,cycle,method,station,tasks_in_order,load,idle,bottleneck
+Jackson,7,LCR,1,1 5,7,0,1
+Jackson,7,LCR,2,4,7,0,1
+Jackson,7,LCR,3,3 2,7,0,1
+Jackson,7,LCR,4,7 6,5,2,0
+Jackson,7,LCR,5,8,6,1,0
+Jackson,7,LCR,6,9,5,2,0
+Jackson,7,LCR,7,10,5,2,0
+Jackson,7,LCR,8,11,4,3,0
+Jackson,7,RPW,1,1 5,7,0,1
+Jackson,7,RPW,2,2 3,7,0,1
+Jackson,7,RPW,3,4,7,0,1
+Jackson,7,RPW,4,6 7,5,2,0
+Jackson,7,RPW,5,8,6,1,0
+Jackson,7,RPW,6,9,5,2,0
+Jackson,7,RPW,7,10,5,2,0
+Jackson,7,RPW,8,11,4,3,0
+Jackson,7,MILP,1,1 5,7,0,1
+Jackson,7,MILP,2,3,5,2,0
+Jackson,7,MILP,3,4,7,0,1
+Jackson,7,MILP,4,2 7,5,2,0
+Jackson,7,MILP,5,6 9,7,0,1
+Jackson,7,MILP,6,8,6,1,0
+Jackson,7,MILP,7,10,5,2,0
+Jackson,7,MILP,8,11,4,3,0
+Jackson,8,LCR,1,1 2,8,0,1
+Jackson,8,LCR,2,4 5,8,0,1
+Jackson,8,LCR,3,3 7,8,0,1
+Jackson,8,LCR,4,9 6,7,1,0
+Jackson,8,LCR,5,8,6,2,0
+Jackson,8,LCR,6,10,5,3,0
+Jackson,8,LCR,7,11,4,4,0
+Jackson,8,RPW,1,1 2,8,0,1
+Jackson,8,RPW,2,4 5,8,0,1
+Jackson,8,RPW,3,3 6,7,1,0
+Jackson,8,RPW,4,8,6,2,0
+Jackson,8,RPW,5,7 9,8,0,1
+Jackson,8,RPW,6,10,5,3,0
+Jackson,8,RPW,7,11,4,4,0
+Jackson,8,MILP,1,1 2,8,0,1
+Jackson,8,MILP,2,4 5,8,0,1
+Jackson,8,MILP,3,3 7,8,0,1
+Jackson,8,MILP,4,6 8,8,0,1
+Jackson,8,MILP,5,10,5,3,0
+Jackson,8,MILP,6,9,5,3,0
+Jackson,8,MILP,7,11,4,4,0
+Jackson,9,LCR,1,1 2 5,9,0,1
+Jackson,9,LCR,2,4 6,9,0,1
+Jackson,9,LCR,3,8,6,3,0
+Jackson,9,LCR,4,3 7,8,1,0
+Jackson,9,LCR,5,9,5,4,0
+Jackson,9,LCR,6,10 11,9,0,1
+Jackson,9,RPW,1,1 2 5,9,0,1
+Jackson,9,RPW,2,4 6,9,0,1
+Jackson,9,RPW,3,3 7,8,1,0
+Jackson,9,RPW,4,8,6,3,0
+Jackson,9,RPW,5,9,5,4,0
+Jackson,9,RPW,6,10 11,9,0,1
+Jackson,9,MILP,1,1 2,8,1,0
+Jackson,9,MILP,2,6 8,8,1,0
+Jackson,9,MILP,3,4 5,8,1,0
+Jackson,9,MILP,4,3 7,8,1,0
+Jackson,9,MILP,5,10,5,4,0
+Jackson,9,MILP,6,9 11,9,0,1
+Jackson,10,LCR,1,1 2 6,10,0,1
+Jackson,10,LCR,2,4 5,8,2,0
+Jackson,10,LCR,3,8,6,4,0
+Jackson,10,LCR,4,3 10,10,0,1
+Jackson,10,LCR,5,7 9,8,2,0
+Jackson,10,LCR,6,11,4,6,0
+Jackson,10,RPW,1,1 2 6,10,0,1
+Jackson,10,RPW,2,4 5,8,2,0
+Jackson,10,RPW,3,3 7,8,2,0
+Jackson,10,RPW,4,8,6,4,0
+Jackson,10,RPW,5,9 10,10,0,1
+Jackson,10,RPW,6,11,4,6,0
+Jackson,10,MILP,1,1 5,7,3,0
+Jackson,10,MILP,2,2 6 8,10,0,1
+Jackson,10,MILP,3,3 10,10,0,1
+Jackson,10,MILP,4,4 7,10,0,1
+Jackson,10,MILP,5,9 11,9,1,0
+Jackson,11,LCR,1,1 3,11,0,1
+Jackson,11,LCR,2,4 2 6,11,0,1
+Jackson,11,LCR,3,8 10,11,0,1
+Jackson,11,LCR,4,5 7 9,9,2,0
+Jackson,11,LCR,5,11,4,7,0
+Jackson,11,RPW,1,1 2 6 5,11,0,1
+Jackson,11,RPW,2,4,7,4,0
+Jackson,11,RPW,3,3 8,11,0,1
+Jackson,11,RPW,4,7 9,8,3,0
+Jackson,11,RPW,5,10 11,9,2,0
+Jackson,11,MILP,1,1 2 5,9,2,0
+Jackson,11,MILP,2,6 8,8,3,0
+Jackson,11,MILP,3,3 10,10,1,1
+Jackson,11,MILP,4,4 7,10,1,1
+Jackson,11,MILP,5,9 11,9,2,0
+Jackson,12,LCR,1,1 3 5,12,0,1
+Jackson,12,LCR,2,4 7 2,12,0,1
+Jackson,12,LCR,3,9 6,7,5,0
+Jackson,12,LCR,4,8 10,11,1,0
+Jackson,12,LCR,5,11,4,8,0
+Jackson,12,RPW,1,1 2 6 5,11,1,0
+Jackson,12,RPW,2,4 3,12,0,1
+Jackson,12,RPW,3,8 7,9,3,0
+Jackson,12,RPW,4,9 10,10,2,0
+Jackson,12,RPW,5,11,4,8,0
+Jackson,12,MILP,1,1 3 5,12,0,1
+Jackson,12,MILP,2,2 6 8,10,2,0
+Jackson,12,MILP,3,4 10,12,0,1
+Jackson,12,MILP,4,7 9 11,12,0,1
+Jackson,13,LCR,1,1 4,13,0,1
+Jackson,13,LCR,2,3 2 6 5 7,13,0,1
+Jackson,13,LCR,3,8 9,11,2,0
+Jackson,13,LCR,4,10 11,9,4,0
+Jackson,13,RPW,1,1 2 3,13,0,1
+Jackson,13,RPW,2,4 6 5 7,13,0,1
+Jackson,13,RPW,3,8 9,11,2,0
+Jackson,13,RPW,4,10 11,9,4,0
+Jackson,13,MILP,1,1 3,11,2,0
+Jackson,13,MILP,2,2 5 6 8,11,2,0
+Jackson,13,MILP,3,4 10,12,1,1
+Jackson,13,MILP,4,7 9 11,12,1,1
+Jackson,14,LCR,1,1 4 5,14,0,1
+Jackson,14,LCR,2,3 7 9,13,1,0
+Jackson,14,LCR,3,2 6 8,10,4,0
+Jackson,14,LCR,4,10 11,9,5,0
+Jackson,14,RPW,1,1 2 3 5,14,0,1
+Jackson,14,RPW,2,4 6 7,12,2,0
+Jackson,14,RPW,3,8 9,11,3,0
+Jackson,14,RPW,4,10 11,9,5,0
+Jackson,14,MILP,1,1 2 6,10,4,0
+Jackson,14,MILP,2,3 4,12,2,1
+Jackson,14,MILP,3,5 8 10,12,2,1
+Jackson,14,MILP,4,7 9 11,12,2,1
+Mitchell,13,LCR,1,1 3,13,0,1
+Mitchell,13,LCR,2,4 2,8,5,0
+Mitchell,13,LCR,3,5 6,13,0,1
+Mitchell,13,LCR,4,7 14,11,2,0
+Mitchell,13,LCR,5,8 9 10,13,0,1
+Mitchell,13,LCR,6,21 13 12,13,0,1
+Mitchell,13,LCR,7,11 15 18,13,0,1
+Mitchell,13,LCR,8,16 19,5,8,0
+Mitchell,13,LCR,9,17,13,0,1
+Mitchell,13,LCR,10,20,3,10,0
+Mitchell,13,RPW,1,1 3,13,0,1
+Mitchell,13,RPW,2,4 2,8,5,0
+Mitchell,13,RPW,3,5 6,13,0,1
+Mitchell,13,RPW,4,7 14,11,2,0
+Mitchell,13,RPW,5,8 9 10,13,0,1
+Mitchell,13,RPW,6,11 12 15 16,12,1,0
+Mitchell,13,RPW,7,13 18 19,12,1,0
+Mitchell,13,RPW,8,17,13,0,1
+Mitchell,13,RPW,9,21 20,10,3,0
+Mitchell,13,MILP,1,1 3,13,0,1
+Mitchell,13,MILP,2,2 4,8,5,0
+Mitchell,13,MILP,3,5 6,13,0,1
+Mitchell,13,MILP,4,7 14,11,2,0
+Mitchell,13,MILP,5,8 9 12,13,0,1
+Mitchell,13,MILP,6,21 10 13,13,0,1
+Mitchell,13,MILP,7,11 15 16,11,2,0
+Mitchell,13,MILP,8,17,13,0,1
+Mitchell,13,MILP,9,18 19 20,10,3,0
+Mitchell,14,LCR,1,1 3,13,1,0
+Mitchell,14,LCR,2,4 5,14,0,1
+Mitchell,14,LCR,3,7 6,12,2,0
+Mitchell,14,LCR,4,8 9 10 12,14,0,1
+Mitchell,14,LCR,5,13 2 11 14,14,0,1
+Mitchell,14,LCR,6,21 15,12,2,0
+Mitchell,14,LCR,7,18 16 19,10,4,0
+Mitchell,14,LCR,8,17,13,1,0
+Mitchell,14,LCR,9,20,3,11,0
+Mitchell,14,RPW,1,1 3,13,1,0
+Mitchell,14,RPW,2,4 5,14,0,1
+Mitchell,14,RPW,3,7 6,12,2,0
+Mitchell,14,RPW,4,8 9 10 12,14,0,1
+Mitchell,14,RPW,5,11 15 13,13,1,0
+Mitchell,14,RPW,6,16 2 18 14,14,0,1
+Mitchell,14,RPW,7,17,13,1,0
+Mitchell,14,RPW,8,21 20 19,12,2,0
+Mitchell,14,MILP,1,1 3,13,1,0
+Mitchell,14,MILP,2,4 5,14,0,1
+Mitchell,14,MILP,3,6 7,12,2,0
+Mitchell,14,MILP,4,8 9,12,2,0
+Mitchell,14,MILP,5,2 21 10 11,14,0,1
+Mitchell,14,MILP,6,12 13 15 16,14,0,1
+Mitchell,14,MILP,7,17,13,1,0
+Mitchell,14,MILP,8,14 18 19 20,13,1,0
+Mitchell,15,LCR,1,1 3,13,2,0
+Mitchell,15,LCR,2,4 5,14,1,0
+Mitchell,15,LCR,3,7 6 2,15,0,1
+Mitchell,15,LCR,4,8 21,14,1,0
+Mitchell,15,LCR,5,9 13 11 10 12,15,0,1
+Mitchell,15,LCR,6,15 18 14 19,15,0,1
+Mitchell,15,LCR,7,16,3,12,0
+Mitchell,15,LCR,8,17,13,2,0
+Mitchell,15,LCR,9,20,3,12,0
+Mitchell,15,RPW,1,1 3,13,2,0
+Mitchell,15,RPW,2,4 5,14,1,0
+Mitchell,15,RPW,3,7 6 2,15,0,1
+Mitchell,15,RPW,4,8 9 11,15,0,1
+Mitchell,15,RPW,5,10 12 15 13 16,15,0,1
+Mitchell,15,RPW,6,17,13,2,0
+Mitchell,15,RPW,7,18 21 14,15,0,1
+Mitchell,15,RPW,8,20 19,5,10,0
+Mitchell,15,MILP,1,1 3,13,2,0
+Mitchell,15,MILP,2,4 5,14,1,1
+Mitchell,15,MILP,3,7 14,11,4,0
+Mitchell,15,MILP,4,2 6 8,14,1,1
+Mitchell,15,MILP,5,9 11 12 13,14,1,1
+Mitchell,15,MILP,6,10 15 16 18,14,1,1
+Mitchell,15,MILP,7,17,13,2,0
+Mitchell,15,MILP,8,21 19 20,12,3,0
+Mitchell,16,LCR,1,1 3 2,16,0,1
+Mitchell,16,LCR,2,4 5,14,2,0
+Mitchell,16,LCR,3,7 21,15,1,0
+Mitchell,16,LCR,4,6 8 9,16,0,1
+Mitchell,16,LCR,5,13 11 14 10 12,13,3,0
+Mitchell,16,LCR,6,15 18 16 19,15,1,0
+Mitchell,16,LCR,7,17 20,16,0,1
+Mitchell,16,RPW,1,1 3 2,16,0,1
+Mitchell,16,RPW,2,4 5,14,2,0
+Mitchell,16,RPW,3,7 6 14,15,1,0
+Mitchell,16,RPW,4,8 9 11 10,16,0,1
+Mitchell,16,RPW,5,12 15 13 16,14,2,0
+Mitchell,16,RPW,6,17 20,16,0,1
+Mitchell,16,RPW,7,18 21 19,14,2,0
+Mitchell,16,MILP,1,1 2 3,16,0,1
+Mitchell,16,MILP,2,4 5,14,2,0
+Mitchell,16,MILP,3,21 7,15,1,0
+Mitchell,16,MILP,4,6 8 9,16,0,1
+Mitchell,16,MILP,5,10 11 12 13 15,15,1,0
+Mitchell,16,MILP,6,14 16 18 19,13,3,0
+Mitchell,16,MILP,7,17 20,16,0,1
+Mitchell,17,LCR,1,1 3 2,16,1,0
+Mitchell,17,LCR,2,4 5,14,3,0
+Mitchell,17,LCR,3,7 21,15,2,0
+Mitchell,17,LCR,4,6 8 9 10,17,0,1
+Mitchell,17,LCR,5,13 11 14 12 15,17,0,1
+Mitchell,17,LCR,6,18 16 19,10,7,0
+Mitchell,17,LCR,7,17 20,16,1,0
+Mitchell,17,RPW,1,1 3 2,16,1,0
+Mitchell,17,RPW,2,4 5,14,3,0
+Mitchell,17,RPW,3,7 6 14,15,2,0
+Mitchell,17,RPW,4,8 9 11 10 12,17,0,1
+Mitchell,17,RPW,5,15 13 16,13,4,0
+Mitchell,17,RPW,6,17 20,16,1,0
+Mitchell,17,RPW,7,18 21 19,14,3,0
+Mitchell,17,MILP,1,1 2 3,16,1,1
+Mitchell,17,MILP,2,4 5,14,3,0
+Mitchell,17,MILP,3,6 7 14,15,2,0
+Mitchell,17,MILP,4,21 8,14,3,0
+Mitchell,17,MILP,5,9 10 11 12 15,15,2,0
+Mitchell,17,MILP,6,13 16 18 19,15,2,0
+Mitchell,17,MILP,7,17 20,16,1,1
+Mitchell,18,LCR,1,1 3 4,18,0,1
+Mitchell,18,LCR,2,5 7,17,1,0
+Mitchell,18,LCR,3,6 8 9 10 12,18,0,1
+Mitchell,18,LCR,4,13 2 21 11,18,0,1
+Mitchell,18,LCR,5,15 18 14 16 19,18,0,1
+Mitchell,18,LCR,6,17 20,16,2,0
+Mitchell,18,RPW,1,1 3 4,18,0,1
+Mitchell,18,RPW,2,5 7,17,1,0
+Mitchell,18,RPW,3,6 8 9 10 12,18,0,1
+Mitchell,18,RPW,4,11 15 13 16,16,2,0
+Mitchell,18,RPW,5,17 2,16,2,0
+Mitchell,18,RPW,6,18 21 14 20,18,0,1
+Mitchell,18,RPW,7,19,2,16,0
+Mitchell,18,MILP,1,1 2 3,16,2,0
+Mitchell,18,MILP,2,4 5 6,18,0,1
+Mitchell,18,MILP,3,21 7 14,18,0,1
+Mitchell,18,MILP,4,8 9 10 11 12,17,1,0
+Mitchell,18,MILP,5,13 15 16 18,18,0,1
+Mitchell,18,MILP,6,17 19 20,18,0,1
+Mitchell,19,LCR,1,1 3 4,18,1,0
+Mitchell,19,LCR,2,5 7,17,2,0
+Mitchell,19,LCR,3,6 8 9 2,19,0,1
+Mitchell,19,LCR,4,21 13 11 14 10,19,0,1
+Mitchell,19,LCR,5,12 15 18 16 19,16,3,0
+Mitchell,19,LCR,6,17 20,16,3,0
+Mitchell,19,RPW,1,1 3 4,18,1,0
+Mitchell,19,RPW,2,5 7,17,2,0
+Mitchell,19,RPW,3,6 8 9 11,19,0,1
+Mitchell,19,RPW,4,10 12 15 13 16 2,18,1,0
+Mitchell,19,RPW,5,17 18,18,1,0
+Mitchell,19,RPW,6,21 14 20 19,15,4,0
+Mitchell,19,MILP,1,1 2 3,16,3,0
+Mitchell,19,MILP,2,4 5 6,18,1,1
+Mitchell,19,MILP,3,21 7 14,18,1,1
+Mitchell,19,MILP,4,8 9 10 11 12,17,2,0
+Mitchell,19,MILP,5,13 15 16 18,18,1,1
+Mitchell,19,MILP,6,17 19 20,18,1,1
+Mitchell,20,LCR,1,1 3 4,18,2,0
+Mitchell,20,LCR,2,5 7 2,20,0,1
+Mitchell,20,LCR,3,21 6 8,18,2,0
+Mitchell,20,LCR,4,9 13 11 14 10 12,18,2,0
+Mitchell,20,LCR,5,15 18 16 19,15,5,0
+Mitchell,20,LCR,6,17 20,16,4,0
+Mitchell,20,RPW,1,1 3 4,18,2,0
+Mitchell,20,RPW,2,5 7 2,20,0,1
+Mitchell,20,RPW,3,6 8 9 11 10,20,0,1
+Mitchell,20,RPW,4,12 15 13 16 18,19,1,0
+Mitchell,20,RPW,5,17 21,20,0,1
+Mitchell,20,RPW,6,14 20 19,8,12,0
+Mitchell,20,MILP,1,1 3 4,18,2,1
+Mitchell,20,MILP,2,2 5 6,16,4,0
+Mitchell,20,MILP,3,21 7 14,18,2,1
+Mitchell,20,MILP,4,8 9 10 13,18,2,1
+Mitchell,20,MILP,5,11 12 15 16 18,17,3,0
+Mitchell,20,MILP,6,17 19 20,18,2,1

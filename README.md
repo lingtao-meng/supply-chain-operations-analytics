@@ -5,12 +5,11 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit)](https://streamlit.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![CI](https://github.com/lingtao-meng/supply-chain-operations-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/lingtao-meng/supply-chain-operations-analytics/actions/workflows/ci.yml)
 
-这个仓库现在有两块：
+这个仓库包含三个方向：
 
 - **DataCo 运营分析**（根目录）：180K+ 订单，SQLite 星型模型、10 条 SQL、Streamlit 仪表板，加上 Laney p′、Ppk、Pareto 和派工仿真。
-- **快递中转场分拣线 IE**（`express/`）：五工位时间研究、山积图/线平衡、排队仿真、峰值用工和单票成本。
-
-一块偏“看数据、找问题”，一块偏“下现场、算产能”，合起来是运营分析 + IE 改善。
+- **制造 IE 装配线平衡**（[`manufacturing/`](manufacturing/)）：用公开工序基准比较两种排工法和 MILP，输出工位配置、瓶颈和节拍敏感性。
+- **快递中转场分拣线 IE**（`express/`）：五工位时间研究案例、山积图/线平衡、排队仿真、峰值用工和单票成本。
 
 ---
 
@@ -31,6 +30,7 @@
 ## 项目结构
 
 `app/app.py` — Streamlit 仪表板  
+`manufacturing/` — 装配线工序分配、工位负荷与节拍敏感性  
 `express/` — 快递分拣线 IE（时间研究、线平衡、仿真）  
 `python/` — 数据清洗和入库脚本  
 `sql/` — 建表 DDL 和 10 条分析查询  
@@ -165,6 +165,16 @@ python python/04_ie_scheduling.py --capacity 300   # 容量敏感性
 ```
 
 ---
+
+## 制造 IE 装配线平衡
+
+给定工序用时、前置关系与目标节拍，比较最长工序优先（LCR）、位置权重法（RPW）和 MILP。Mitchell 基准在节拍 15 时，LCR 需要 9 个工位，RPW 和 MILP 需要 8 个工位，平衡率由 77.78% 提高到 87.50%。在同样 8 个工位下，MILP 的峰值负荷由 RPW 的 15 降到 14。
+
+[数据来源、求解模型和结果](manufacturing/README.md)包含两个公开基准的工位分配表和节拍敏感性图。
+
+```bash
+python manufacturing/line_balance.py
+```
 
 ## 快递分拣线 IE 模块
 
