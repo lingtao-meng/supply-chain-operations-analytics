@@ -1,0 +1,561 @@
+{
+  "case": "Jackson",
+  "shift_seconds": 25200,
+  "demand": 1780,
+  "integer_design_cycle": 14,
+  "staff": 4,
+  "per_gap_max": 2,
+  "required_reliability": 0.95,
+  "design_seed": 20261107,
+  "design_runs": 120,
+  "design_scenarios": [
+    [
+      20,
+      0
+    ],
+    [
+      20,
+      3
+    ]
+  ],
+  "validation_seed": 20261108,
+  "validation_runs": 180,
+  "feasible_station_plans": 209,
+  "possible_station_buffer_combinations": 5643,
+  "screened_combinations": 209,
+  "designs": {
+    "rpw_no_buffer": {
+      "station_tasks": [
+        [
+          1,
+          2,
+          3,
+          5
+        ],
+        [
+          4,
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "station_loads": [
+        14,
+        12,
+        11,
+        9
+      ],
+      "buffer_layout": [
+        0,
+        0,
+        0
+      ],
+      "buffer_slots": 0,
+      "validation": [
+        {
+          "task_cv_pct": 20,
+          "shift_cv_pct": 0,
+          "runs": 180,
+          "hits": 0,
+          "hit_lower95": 0.0,
+          "mean_output": 1765.03,
+          "p05_output": 1757.0,
+          "mean_shortfall": 14.97,
+          "station_processing_blocked_idle_pct": [
+            [
+              98.19,
+              1.81,
+              0.0
+            ],
+            [
+              84.13,
+              1.3,
+              14.57
+            ],
+            [
+              77.07,
+              0.27,
+              22.66
+            ],
+            [
+              63.04,
+              0.0,
+              36.96
+            ]
+          ]
+        },
+        {
+          "task_cv_pct": 20,
+          "shift_cv_pct": 3,
+          "runs": 180,
+          "hits": 73,
+          "hit_lower95": 0.347189,
+          "mean_output": 1769.48,
+          "p05_output": 1698.9,
+          "mean_shortfall": 25.03,
+          "station_processing_blocked_idle_pct": [
+            [
+              98.19,
+              1.81,
+              0.0
+            ],
+            [
+              84.13,
+              1.3,
+              14.57
+            ],
+            [
+              77.07,
+              0.27,
+              22.65
+            ],
+            [
+              63.04,
+              0.0,
+              36.96
+            ]
+          ]
+        },
+        {
+          "task_cv_pct": 20,
+          "shift_cv_pct": 5,
+          "runs": 180,
+          "hits": 81,
+          "hit_lower95": 0.390196,
+          "mean_output": 1774.1,
+          "p05_output": 1660.7,
+          "mean_shortfall": 35.08,
+          "station_processing_blocked_idle_pct": [
+            [
+              98.19,
+              1.81,
+              0.0
+            ],
+            [
+              84.13,
+              1.3,
+              14.57
+            ],
+            [
+              77.07,
+              0.27,
+              22.66
+            ],
+            [
+              63.04,
+              0.0,
+              36.96
+            ]
+          ]
+        }
+      ]
+    },
+    "milp_no_buffer": {
+      "station_tasks": [
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          8,
+          10
+        ],
+        [
+          7,
+          9,
+          11
+        ]
+      ],
+      "station_loads": [
+        10,
+        12,
+        12,
+        12
+      ],
+      "buffer_layout": [
+        0,
+        0,
+        0
+      ],
+      "buffer_slots": 0,
+      "validation": [
+        {
+          "task_cv_pct": 20,
+          "shift_cv_pct": 0,
+          "runs": 180,
+          "hits": 180,
+          "hit_lower95": 0.985192,
+          "mean_output": 1896.21,
+          "p05_output": 1889.0,
+          "mean_shortfall": 0.0,
+          "station_processing_blocked_idle_pct": [
+            [
+              75.37,
+              24.63,
+              0.0
+            ],
+            [
+              90.38,
+              9.3,
+              0.32
+            ],
+            [
+              90.36,
+              4.97,
+              4.67
+            ],
+            [
+              90.31,
+              0.0,
+              9.69
+            ]
+          ]
+        },
+        {
+          "task_cv_pct": 20,
+          "shift_cv_pct": 3,
+          "runs": 180,
+          "hits": 178,
+          "hit_lower95": 0.966982,
+          "mean_output": 1901.08,
+          "p05_output": 1824.0,
+          "mean_shortfall": 0.26,
+          "station_processing_blocked_idle_pct": [
+            [
+              75.37,
+              24.63,
+              0.0
+            ],
+            [
+              90.38,
+              9.3,
+              0.32
+            ],
+            [
+              90.36,
+              4.97,
+              4.67
+            ],
+            [
+              90.31,
+              0.0,
+              9.69
+            ]
+          ]
+        },
+        {
+          "task_cv_pct": 20,
+          "shift_cv_pct": 5,
+          "runs": 180,
+          "hits": 172,
+          "hit_lower95": 0.92284,
+          "mean_output": 1906.01,
+          "p05_output": 1781.0,
+          "mean_shortfall": 2.27,
+          "station_processing_blocked_idle_pct": [
+            [
+              75.37,
+              24.63,
+              0.0
+            ],
+            [
+              90.38,
+              9.3,
+              0.32
+            ],
+            [
+              90.36,
+              4.97,
+              4.67
+            ],
+            [
+              90.31,
+              0.0,
+              9.69
+            ]
+          ]
+        }
+      ]
+    },
+    "transfer_milp_uniform_1": {
+      "station_tasks": [
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          8,
+          10
+        ],
+        [
+          7,
+          9,
+          11
+        ]
+      ],
+      "station_loads": [
+        10,
+        12,
+        12,
+        12
+      ],
+      "buffer_layout": [
+        1,
+        1,
+        1
+      ],
+      "buffer_slots": 3,
+      "validation": [
+        {
+          "task_cv_pct": 20,
+          "shift_cv_pct": 0,
+          "runs": 180,
+          "hits": 180,
+          "hit_lower95": 0.985192,
+          "mean_output": 2055.22,
+          "p05_output": 2048.0,
+          "mean_shortfall": 0.0,
+          "station_processing_blocked_idle_pct": [
+            [
+              81.76,
+              18.24,
+              0.0
+            ],
+            [
+              98.0,
+              1.96,
+              0.04
+            ],
+            [
+              97.96,
+              0.85,
+              1.2
+            ],
+            [
+              97.89,
+              0.0,
+              2.11
+            ]
+          ]
+        },
+        {
+          "task_cv_pct": 20,
+          "shift_cv_pct": 3,
+          "runs": 180,
+          "hits": 180,
+          "hit_lower95": 0.985192,
+          "mean_output": 2060.42,
+          "p05_output": 1976.9,
+          "mean_shortfall": 0.0,
+          "station_processing_blocked_idle_pct": [
+            [
+              81.76,
+              18.24,
+              0.0
+            ],
+            [
+              98.0,
+              1.96,
+              0.04
+            ],
+            [
+              97.96,
+              0.85,
+              1.2
+            ],
+            [
+              97.89,
+              0.0,
+              2.11
+            ]
+          ]
+        },
+        {
+          "task_cv_pct": 20,
+          "shift_cv_pct": 5,
+          "runs": 180,
+          "hits": 180,
+          "hit_lower95": 0.985192,
+          "mean_output": 2065.85,
+          "p05_output": 1928.0,
+          "mean_shortfall": 0.0,
+          "station_processing_blocked_idle_pct": [
+            [
+              81.76,
+              18.24,
+              0.0
+            ],
+            [
+              98.0,
+              1.96,
+              0.04
+            ],
+            [
+              97.96,
+              0.85,
+              1.2
+            ],
+            [
+              97.89,
+              0.0,
+              2.11
+            ]
+          ]
+        }
+      ]
+    },
+    "optimized": {
+      "station_tasks": [
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          7,
+          9,
+          11
+        ]
+      ],
+      "station_loads": [
+        12,
+        11,
+        11,
+        12
+      ],
+      "buffer_layout": [
+        0,
+        0,
+        0
+      ],
+      "buffer_slots": 0,
+      "validation": [
+        {
+          "task_cv_pct": 20,
+          "shift_cv_pct": 0,
+          "runs": 180,
+          "hits": 180,
+          "hit_lower95": 0.985192,
+          "mean_output": 1949.84,
+          "p05_output": 1943.0,
+          "mean_shortfall": 0.0,
+          "station_processing_blocked_idle_pct": [
+            [
+              93.0,
+              7.0,
+              0.0
+            ],
+            [
+              85.19,
+              8.7,
+              6.11
+            ],
+            [
+              85.17,
+              8.46,
+              6.37
+            ],
+            [
+              92.87,
+              0.0,
+              7.13
+            ]
+          ]
+        },
+        {
+          "task_cv_pct": 20,
+          "shift_cv_pct": 3,
+          "runs": 180,
+          "hits": 180,
+          "hit_lower95": 0.985192,
+          "mean_output": 1954.8,
+          "p05_output": 1876.95,
+          "mean_shortfall": 0.0,
+          "station_processing_blocked_idle_pct": [
+            [
+              93.0,
+              7.0,
+              0.0
+            ],
+            [
+              85.19,
+              8.69,
+              6.12
+            ],
+            [
+              85.17,
+              8.46,
+              6.37
+            ],
+            [
+              92.87,
+              0.0,
+              7.13
+            ]
+          ]
+        },
+        {
+          "task_cv_pct": 20,
+          "shift_cv_pct": 5,
+          "runs": 180,
+          "hits": 178,
+          "hit_lower95": 0.966982,
+          "mean_output": 1959.99,
+          "p05_output": 1832.0,
+          "mean_shortfall": 0.64,
+          "station_processing_blocked_idle_pct": [
+            [
+              93.0,
+              7.0,
+              0.0
+            ],
+            [
+              85.19,
+              8.7,
+              6.11
+            ],
+            [
+              85.17,
+              8.46,
+              6.37
+            ],
+            [
+              92.87,
+              0.0,
+              7.13
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "passes_independent_screen": true
+}

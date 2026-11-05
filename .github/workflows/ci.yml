@@ -42,6 +42,8 @@ jobs:
           python manufacturing/line_balance.py --output-dir "$RUNNER_TEMP/line-balance"
           python manufacturing/test_shift_capacity.py
           python manufacturing/shift_capacity.py --output-dir "$RUNNER_TEMP/shift-capacity"
+          python manufacturing/test_optimize_buffers.py
+          python manufacturing/optimize_buffers.py --output-dir "$RUNNER_TEMP/jackson-buffer"
 
   express:
     runs-on: ubuntu-latest

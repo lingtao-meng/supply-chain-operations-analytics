@@ -31,12 +31,24 @@ def simulate_shift(service: np.ndarray, buffers: tuple[int, ...], duration: floa
     service axes are product, station, and replication. Jobs share the station order.
     Buffers hold waiting jobs only. A blocked job stays on its upstream station.
     """
+    return _flow_shop(service, buffers, duration)
+
+
+def demand_completion_times(service: np.ndarray, buffers: tuple[int, ...]) -> np.ndarray:
+    """Time at which the last input product clears the line in each replication."""
+    return _flow_shop(service, buffers, None)
+
+
+def _flow_shop(
+    service: np.ndarray, buffers: tuple[int, ...], duration: float | None,
+) -> np.ndarray | tuple[np.ndarray, np.ndarray]:
     if service.ndim != 3 or not all(service.shape) or not np.isfinite(service).all() or (service <= 0).any():
         raise ValueError("service must contain finite positive times for products, stations and replications")
     _, station_count, replications = service.shape
     if len(buffers) != station_count - 1 or any(type(b) is not int or b < 0 for b in buffers):
         raise ValueError("provide one nonnegative integer buffer per station gap")
-    if not np.isfinite(duration) or duration <= 0:
+    track_shift = duration is not None
+    if track_shift and (not np.isfinite(duration) or duration <= 0):
         raise ValueError("shift duration must be finite and positive")
     exits = np.zeros((station_count, replications))
     history_length = 1 + max(buffers, default=0)
@@ -46,7 +58,7 @@ def simulate_shift(service: np.ndarray, buffers: tuple[int, ...], duration: floa
     blocked = np.zeros_like(exits)
 
     for product, workloads in enumerate(service):
-        if (exits[0] >= duration).all():
+        if track_shift and (exits[0] >= duration).all():
             break
         upstream = 0.0
         start_slot = prior_starts[product % history_length]
@@ -64,10 +76,14 @@ def simulate_shift(service: np.ndarray, buffers: tuple[int, ...], duration: floa
                     departure = np.maximum(finish, prior_starts[(product - buffer) % history_length, station + 1])
             start_slot[station] = start
             exits[station] = upstream = departure
-            busy[station] += np.minimum(finish, duration) - np.minimum(start, duration)
-            blocked[station] += np.minimum(departure, duration) - np.minimum(finish, duration)
-        output += exits[-1] <= duration
+            if track_shift:
+                busy[station] += np.minimum(finish, duration) - np.minimum(start, duration)
+                blocked[station] += np.minimum(departure, duration) - np.minimum(finish, duration)
+        if track_shift:
+            output += exits[-1] <= duration
 
+    if not track_shift:
+        return exits[-1]
     if (exits[0] < duration).any():
         raise ValueError("the input workload ends before the shift; supply more products")
     idle = np.maximum(0, duration - busy - blocked)
