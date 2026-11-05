@@ -11,7 +11,7 @@ from pathlib import Path
 
 import numpy as np
 
-from line_balance import ROOT, Case, greedy, verify
+from line_balance import ROOT, Case, greedy, reference_plans, verify
 from shift_capacity import (
     DESIGN_REPLICATIONS, DESIGN_SCENARIOS, REQUIRED_RELIABILITY, SHIFT_SECONDS, VALIDATION_REPLICATIONS,
     demand_completion_times, lognormal_multiplier, reliability_lower, simulate_shift,
@@ -76,9 +76,7 @@ def scenarios(case: Case, pairs: tuple, jobs: int, runs: int, seed: int):
 
 
 def frozen_milp(case: Case, cycle: int) -> Plan:
-    with (ROOT / "results" / "station_assignments.csv").open(encoding="utf-8", newline="") as stream:
-        return tuple(tuple(map(int, row["tasks_in_order"].split())) for row in csv.DictReader(stream)
-                     if row["case"] == case.name and row["method"] == "MILP" and int(row["cycle"]) == cycle)
+    return tuple(tuple(tasks) for tasks in reference_plans(case, cycle)["MILP"])
 
 
 def run_study() -> tuple[dict, list[dict]]:

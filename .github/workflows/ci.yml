@@ -47,12 +47,22 @@ jobs:
           python tests/test_ie_scheduling.py
           python manufacturing/test_line_balance.py
           python manufacturing/line_balance.py --output-dir "$RUNNER_TEMP/line-balance"
+          cmp manufacturing/results/method_comparison.csv "$RUNNER_TEMP/line-balance/method_comparison.csv"
           python manufacturing/test_shift_capacity.py
           python manufacturing/shift_capacity.py --output-dir "$RUNNER_TEMP/shift-capacity"
+          for name in shift_capacity.csv station_time_losses.csv shift_decision.json; do
+            cmp "manufacturing/results/$name" "$RUNNER_TEMP/shift-capacity/$name"
+          done
           python manufacturing/test_optimize_buffers.py
           python manufacturing/optimize_buffers.py --output-dir "$RUNNER_TEMP/jackson-buffer"
+          for name in jackson_buffer_screen.csv jackson_buffer_decision.json; do
+            cmp "manufacturing/results/$name" "$RUNNER_TEMP/jackson-buffer/$name"
+          done
           python manufacturing/test_capacity_frontier.py
           python manufacturing/capacity_frontier.py --output-dir "$RUNNER_TEMP/capacity-frontier"
+          for name in capacity_frontier.csv frontier_experiments.json; do
+            cmp "manufacturing/results/$name" "$RUNNER_TEMP/capacity-frontier/$name"
+          done
 
   certified-search:
     runs-on: ubuntu-latest

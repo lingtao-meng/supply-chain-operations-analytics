@@ -35,7 +35,7 @@
       "buffer_budget": 3,
       "feasible_plans": 5720,
       "same_budget_combinations": 200200,
-      "unique_simulated_combinations": 11755,
+      "unique_simulated_combinations": 11752,
       "transferred_layout": [
         1,
         0,
@@ -45,44 +45,47 @@
         1,
         0
       ],
+      "warm_start_plans": 24,
+      "warm_start_evaluations": 805,
+      "branch_evaluations": 5192,
       "design_certificate": {
-        "lower": 529,
+        "lower": 533,
         "upper": 557,
-        "gap_units": 28,
+        "gap_units": 24,
         "checkpoints": [
           {
             "additional_evaluations": 0,
-            "lower": 529,
+            "lower": 533,
             "upper": 561
           },
           {
             "additional_evaluations": 100,
-            "lower": 529,
+            "lower": 533,
             "upper": 560
           },
           {
             "additional_evaluations": 500,
-            "lower": 529,
+            "lower": 533,
             "upper": 559
           },
           {
             "additional_evaluations": 1000,
-            "lower": 529,
+            "lower": 533,
             "upper": 559
           },
           {
             "additional_evaluations": 2500,
-            "lower": 529,
+            "lower": 533,
             "upper": 558
           },
           {
             "additional_evaluations": 5000,
-            "lower": 529,
+            "lower": 533,
             "upper": 557
           },
           {
-            "additional_evaluations": 6000,
-            "lower": 529,
+            "additional_evaluations": 5192,
+            "lower": 533,
             "upper": 557
           }
         ]
@@ -344,32 +347,32 @@
             [
               5,
               14,
-              15,
-              19
+              8,
+              13
             ],
             [
-              8,
+              26,
+              15,
               16,
               18
             ],
             [
-              13,
-              11,
+              27,
+              19,
+              11
+            ],
+            [
               21,
+              17,
+              20,
               22
             ],
             [
-              26,
+              23,
+              24
+            ],
+            [
               25,
-              27,
-              17
-            ],
-            [
-              20,
-              23
-            ],
-            [
-              24,
               28,
               29
             ]
@@ -377,33 +380,33 @@
           "station_loads": [
             41,
             41,
-            40,
-            40,
-            40,
+            41,
             40,
             41,
+            40,
+            39,
             41
           ],
           "layout": [
             0,
             1,
             0,
-            0,
             1,
             0,
-            1
+            1,
+            0
           ],
-          "design_capacity": 529,
+          "design_capacity": 533,
           "independent_validation": {
-            "target": 529,
+            "target": 533,
             "validation_hits": [
               180,
               177
             ],
             "worst_lower95": 0.959032,
             "passes": true,
-            "validation_capacity": 532,
-            "validation_worst_mean": 562.49
+            "validation_capacity": 535,
+            "validation_worst_mean": 565.31
           },
           "planning_confirmation": {
             "target": 520,
@@ -413,8 +416,8 @@
             ],
             "worst_lower95": 0.991062,
             "passes": true,
-            "validation_capacity": 536,
-            "validation_worst_mean": 564.38,
+            "validation_capacity": 539,
+            "validation_worst_mean": 567.24,
             "simultaneous_lower95_by_scenario": [
               0.984168,
               0.984168
@@ -429,8 +432,8 @@
             ],
             "worst_lower95": 0.991062,
             "passes": true,
-            "validation_capacity": 536,
-            "validation_worst_mean": 564.38
+            "validation_capacity": 539,
+            "validation_worst_mean": 567.24
           },
           "stress_at_common_target": {
             "target": 520,
@@ -439,8 +442,8 @@
             ],
             "worst_lower95": 0.932908,
             "passes": false,
-            "validation_capacity": 509,
-            "validation_worst_mean": 567.15
+            "validation_capacity": 511,
+            "validation_worst_mean": 569.82
           }
         }
       ]

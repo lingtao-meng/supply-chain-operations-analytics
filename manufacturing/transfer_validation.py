@@ -19,6 +19,7 @@ STAFF, BUDGET = 8, 3
 DESIGN_RUNS, VALIDATION_RUNS, CONFIRMATION_RUNS = 120, 180, 300
 DESIGN_SEED, VALIDATION_SEED, CONFIRMATION_SEED, STRESS_SEED = 20261115, 20261116, 20261117, 20261118
 EVALUATION_LIMIT = 6000
+WARM_START_PLANS = 24
 
 
 def run_study() -> dict:
@@ -43,9 +44,17 @@ def run_study() -> dict:
     full = (1 << gaps) - 1
     print(f"{len(plans)} feasible station plans, {len(masks)} layouts with {BUDGET} slots", flush=True)
     roots = [simulator.score(index, full) for index in range(len(plans))]
-    certificate = solve_budget(simulator, BUDGET, gaps, roots, (static, baseline_mask), EVALUATION_LIMIT)
+    before_search = len(simulator.scores)
+    # Use part of the same evaluation budget to find feasible layouts early.
+    promising = sorted(range(len(plans)), key=lambda index: (-roots[index], index))[:WARM_START_PLANS]
+    warm_start = max(((index, mask) for index in promising for mask in masks),
+                     key=lambda key: (simulator.score(*key), -key[0], -key[1]))
+    static_seed = (static, baseline_mask)
+    seed = max((static_seed, warm_start), key=lambda key: simulator.score(*key))
+    warm_evaluations = len(simulator.scores) - before_search
+    certificate = solve_budget(simulator, BUDGET, gaps, roots, seed, EVALUATION_LIMIT - warm_evaluations)
     print(f"joint search [{certificate.lower}, {certificate.upper}], "
-          f"{certificate.evaluations} additional evaluations", flush=True)
+          f"{warm_evaluations + certificate.evaluations} additional evaluations", flush=True)
 
     options = {
         "transferred_positions": (static, transferred_mask),
@@ -92,6 +101,8 @@ def run_study() -> dict:
             "case": case.name, "staff": STAFF, "nominal_cycle": cycle, "buffer_budget": BUDGET,
             "feasible_plans": len(plans), "same_budget_combinations": len(plans) * comb(gaps, BUDGET),
             "unique_simulated_combinations": len(simulator.scores), "transferred_layout": transferred,
+            "warm_start_plans": len(promising), "warm_start_evaluations": warm_evaluations,
+            "branch_evaluations": certificate.evaluations,
             "design_certificate": {"lower": certificate.lower, "upper": certificate.upper,
                                    "gap_units": certificate.upper - certificate.lower,
                                    "checkpoints": certificate.checkpoints},

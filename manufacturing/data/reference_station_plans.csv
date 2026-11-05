@@ -1,0 +1,30 @@
+case,cycle,method,station,tasks_in_order
+Jackson,14,MILP,1,1 2 6
+Jackson,14,MILP,2,3 4
+Jackson,14,MILP,3,5 8 10
+Jackson,14,MILP,4,7 9 11
+Mitchell,15,LCR,1,1 3
+Mitchell,15,LCR,2,4 5
+Mitchell,15,LCR,3,7 6 2
+Mitchell,15,LCR,4,8 21
+Mitchell,15,LCR,5,9 13 11 10 12
+Mitchell,15,LCR,6,15 18 14 19
+Mitchell,15,LCR,7,16
+Mitchell,15,LCR,8,17
+Mitchell,15,LCR,9,20
+Mitchell,15,RPW,1,1 3
+Mitchell,15,RPW,2,4 5
+Mitchell,15,RPW,3,7 6 2
+Mitchell,15,RPW,4,8 9 11
+Mitchell,15,RPW,5,10 12 15 13 16
+Mitchell,15,RPW,6,17
+Mitchell,15,RPW,7,18 21 14
+Mitchell,15,RPW,8,20 19
+Mitchell,15,MILP,1,1 3
+Mitchell,15,MILP,2,4 5
+Mitchell,15,MILP,3,7 14
+Mitchell,15,MILP,4,2 6 8
+Mitchell,15,MILP,5,9 11 12 13
+Mitchell,15,MILP,6,10 15 16 18
+Mitchell,15,MILP,7,17
+Mitchell,15,MILP,8,21 19 20

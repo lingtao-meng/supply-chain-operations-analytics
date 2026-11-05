@@ -1,5 +1,7 @@
 # 制造 IE｜装配线平衡与工位配置
 
+![装配线工位、缓冲与班次验收](assets/assembly-line.svg)
+
 给定工序用时、先后关系、班产目标和资源上限，先核定工位与瓶颈，再比较缓冲位置，最后用独立班次验收。项目用三套公开基准分别检验产线分工、缓冲决策和异常后的改线范围。
 
 | 制造 IE 问题 | 方案和验收结果 |
@@ -65,4 +67,5 @@ python manufacturing/test_line_balance.py
 
 - [method_comparison.csv](results/method_comparison.csv) 给出 16 个节拍情景 × 3 种方法的工位数、峰值负荷、平衡率和空闲时间。
 - [station_assignments.csv](results/station_assignments.csv) 列出每个工位的工序执行顺序、负荷、空闲和瓶颈标记。同一目标下可能有多套等价分配。
+- [reference_station_plans.csv](data/reference_station_plans.csv) 固定班次仿真使用的参考分工。重新求解静态排工时，求解器可能返回另一套等价分配。仿真仍从这份独立输入读取工序顺序。
 - 用 `--data 路径` 可以读取相同结构的工序数据。工序编号从 1 开始，工时和节拍均为正整数，先后关系必须无环。用 `--output-dir 路径` 可单独保存结果。

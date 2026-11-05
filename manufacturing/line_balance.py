@@ -98,6 +98,27 @@ def verify(case: Case, cycle: int, stations: list[list[int]]) -> list[int]:
     return loads
 
 
+def reference_plans(case: Case, cycle: int) -> dict[str, list[list[int]]]:
+    """Read the fixed station assignments used to compare simulation policies."""
+    groups: dict[str, list[tuple[int, list[int]]]] = {}
+    with (ROOT / "data" / "reference_station_plans.csv").open(encoding="utf-8", newline="") as stream:
+        for row in csv.DictReader(stream):
+            if row["case"] == case.name and int(row["cycle"]) == cycle:
+                groups.setdefault(row["method"], []).append(
+                    (int(row["station"]), list(map(int, row["tasks_in_order"].split())))
+                )
+    if not groups:
+        raise ValueError(f"no reference station plans for {case.name} at cycle {cycle}")
+    plans = {}
+    for method, indexed in groups.items():
+        numbers, stations = zip(*sorted(indexed, key=lambda row: row[0]))
+        if list(numbers) != list(range(1, len(stations) + 1)):
+            raise ValueError(f"invalid reference station numbering for {case.name} {method}")
+        plans[method] = list(stations)
+        verify(case, cycle, plans[method])
+    return plans
+
+
 def optimize(case: Case, cycle: int, max_stations: int) -> list[list[int]]:
     """Minimize active stations, then minimize the heaviest station's workload."""
     case.check_cycle(cycle)

@@ -64,6 +64,8 @@ def layout_for(mask: int, gaps: int) -> Layout:
 
 
 def mask_for(layout: Layout) -> int:
+    if any(bit not in (0, 1) for bit in layout):
+        raise ValueError("binary buffer layouts may only contain 0 or 1")
     return sum(bit << i for i, bit in enumerate(layout))
 
 
@@ -205,7 +207,7 @@ def case_study(
         plan, layout, expected = references[budget]
         index = plan_indices[plan]
         mask = mask_for(layout)
-        if any(bit not in (0, 1) for bit in layout) or sum(layout) > budget:
+        if len(layout) != gaps or sum(layout) > budget:
             raise ValueError("reference uses a layout outside the binary budget")
         if simulator.score(index, mask) != expected:
             raise AssertionError("accelerated simulation does not reproduce the saved reference")

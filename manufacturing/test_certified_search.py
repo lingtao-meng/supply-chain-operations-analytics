@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from certified_search import add_confirmation_bounds, binary_output_counts, layout_for, solve_budget
+from certified_search import add_confirmation_bounds, binary_output_counts, layout_for, mask_for, solve_budget
 from shift_capacity import shift_output_counts
 
 
@@ -20,6 +20,11 @@ class ToyScores:
 
 
 class TestCertifiedSearch(unittest.TestCase):
+    def test_binary_layout_rejects_values_that_alias_another_gap(self):
+        self.assertEqual(mask_for((0, 1, 0)), 2)
+        with self.assertRaises(ValueError):
+            mask_for((2, 0, 0))
+
     def test_accelerated_recurrence_matches_reference_for_every_layout(self):
         rng = np.random.default_rng(802)
         service = rng.uniform(0.3, 3, (90, 5, 24))

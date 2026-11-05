@@ -1,7 +1,11 @@
 import json
+import shutil
+import tempfile
 import unittest
+from pathlib import Path
+from unittest.mock import patch
 
-from line_balance import ROOT, Case, analyze, verify
+from line_balance import ROOT, Case, analyze, reference_plans, verify
 
 
 class TestLineBalance(unittest.TestCase):
@@ -45,6 +49,19 @@ class TestLineBalance(unittest.TestCase):
             with self.subTest(plan=bad_plan), self.assertRaises(ValueError):
                 verify(case, 3, bad_plan)
         self.assertEqual(verify(case, 3, [[1], [2]]), [2, 2])
+
+    def test_simulation_reference_is_available_without_solver_outputs(self):
+        case = next(case for case in self.cases if case.name == "Mitchell")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "data").mkdir()
+            shutil.copyfile(ROOT / "data" / "reference_station_plans.csv",
+                            root / "data" / "reference_station_plans.csv")
+            with patch("line_balance.ROOT", root):
+                plans = reference_plans(case, 15)
+        self.assertEqual(set(plans), {"LCR", "RPW", "MILP"})
+        self.assertEqual(plans["MILP"][2], [7, 14])
+        self.assertEqual(plans["MILP"][3], [2, 6, 8])
 
     def test_invalid_case_inputs(self):
         with self.assertRaisesRegex(ValueError, "longest task"):

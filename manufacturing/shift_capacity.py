@@ -11,7 +11,7 @@ from pathlib import Path
 import numpy as np
 from scipy.stats import norm, t
 
-from line_balance import ROOT, Case, verify
+from line_balance import ROOT, Case, reference_plans, verify
 
 SHIFT_SECONDS = 7 * 60 * 60
 DEMAND = 1650
@@ -151,13 +151,7 @@ def run_study() -> tuple[list[dict], list[dict], dict]:
     records = json.loads((ROOT / "data" / "benchmarks.json").read_text(encoding="utf-8"))
     case = Case(**next(record for record in records if record["name"] == "Mitchell"))
     cycle = floor(SHIFT_SECONDS / DEMAND)
-    # Freeze the compared station sequences so solver tie-breaking cannot change the experiment.
-    with (ROOT / "results" / "station_assignments.csv").open(encoding="utf-8", newline="") as stream:
-        plans: dict[str, list[list[int]]] = {}
-        for row in csv.DictReader(stream):
-            if row["case"] == case.name and int(row["cycle"]) == cycle:
-                tasks = list(map(int, row["tasks_in_order"].split()))
-                plans.setdefault(row["method"], []).append(tasks)
+    plans = reference_plans(case, cycle)
     loads = {name: verify(case, cycle, stations) for name, stations in plans.items()}
 
     jobs = 2 * ceil(SHIFT_SECONDS / min(map(max, loads.values())))
