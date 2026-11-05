@@ -34,6 +34,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Verify reconfiguration results
+        run: |
+          python manufacturing/test_reconfiguration.py
+          python manufacturing/reconfiguration.py --output-dir "$RUNNER_TEMP/reconfiguration"
+          cmp manufacturing/results/reconfiguration_frontier.csv "$RUNNER_TEMP/reconfiguration/reconfiguration_frontier.csv"
+          cmp manufacturing/results/reconfiguration_decisions.json "$RUNNER_TEMP/reconfiguration/reconfiguration_decisions.json"
+
       - name: IE analysis tests
         run: |
           python tests/test_ie_quality.py

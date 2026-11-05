@@ -1,0 +1,346 @@
+{
+  "case": "Jackson",
+  "staff": 4,
+  "shift_seconds": 25200,
+  "nominal_cycle": 14,
+  "per_gap_max": 2,
+  "slow_task": 4,
+  "target": 1780,
+  "design_slowdown_pct": 45,
+  "check_slowdown_pct": [
+    0,
+    40,
+    45,
+    50,
+    60
+  ],
+  "scenario_cv_pct": [
+    [
+      20,
+      0
+    ],
+    [
+      20,
+      3
+    ]
+  ],
+  "design_seed": 20261112,
+  "design_runs": 120,
+  "validation_seed": 20261113,
+  "validation_runs": 300,
+  "candidates": 5643,
+  "design_feasible_candidates": 128,
+  "design_pareto_resources": [
+    [
+      1,
+      2
+    ]
+  ],
+  "options": {
+    "incumbent": {
+      "station_tasks": [
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          7,
+          9,
+          11
+        ]
+      ],
+      "nominal_loads": [
+        12,
+        11,
+        11,
+        12
+      ],
+      "moved_task_ids": [],
+      "layout": [
+        0,
+        0,
+        0
+      ],
+      "slots": 0,
+      "design_capacity": 1628,
+      "validation": [
+        {
+          "slowdown_pct": 0,
+          "target": 1780,
+          "validation_hits": [
+            300,
+            300
+          ],
+          "worst_lower95": 0.991062,
+          "passes": true,
+          "validation_capacity": 1846,
+          "validation_worst_mean": 1950.21
+        },
+        {
+          "slowdown_pct": 40,
+          "target": 1780,
+          "validation_hits": [
+            0,
+            115
+          ],
+          "worst_lower95": 0.0,
+          "passes": false,
+          "validation_capacity": 1671,
+          "validation_worst_mean": 1762.97
+        },
+        {
+          "slowdown_pct": 45,
+          "target": 1780,
+          "validation_hits": [
+            0,
+            52
+          ],
+          "worst_lower95": 0.0,
+          "passes": false,
+          "validation_capacity": 1641,
+          "validation_worst_mean": 1731.17
+        },
+        {
+          "slowdown_pct": 50,
+          "target": 1780,
+          "validation_hits": [
+            0,
+            18
+          ],
+          "worst_lower95": 0.0,
+          "passes": false,
+          "validation_capacity": 1610,
+          "validation_worst_mean": 1698.71
+        },
+        {
+          "slowdown_pct": 60,
+          "target": 1780,
+          "validation_hits": [
+            0,
+            1
+          ],
+          "worst_lower95": 0.0,
+          "passes": false,
+          "validation_capacity": 1548,
+          "validation_worst_mean": 1633.47
+        }
+      ],
+      "passes_uncertainty_limit": false
+    },
+    "previous_point_estimate_repair": {
+      "station_tasks": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          8,
+          10
+        ],
+        [
+          7,
+          9,
+          11
+        ]
+      ],
+      "nominal_loads": [
+        13,
+        9,
+        12,
+        12
+      ],
+      "moved_task_ids": [
+        2,
+        5
+      ],
+      "layout": [
+        1,
+        0,
+        0
+      ],
+      "slots": 1,
+      "design_capacity": 1764,
+      "validation": [
+        {
+          "slowdown_pct": 0,
+          "target": 1780,
+          "validation_hits": [
+            300,
+            299
+          ],
+          "worst_lower95": 0.985199,
+          "passes": true,
+          "validation_capacity": 1827,
+          "validation_worst_mean": 1926.89
+        },
+        {
+          "slowdown_pct": 40,
+          "target": 1780,
+          "validation_hits": [
+            300,
+            293
+          ],
+          "worst_lower95": 0.957512,
+          "passes": true,
+          "validation_capacity": 1792,
+          "validation_worst_mean": 1889.04
+        },
+        {
+          "slowdown_pct": 45,
+          "target": 1780,
+          "validation_hits": [
+            300,
+            289
+          ],
+          "worst_lower95": 0.940948,
+          "passes": false,
+          "validation_capacity": 1777,
+          "validation_worst_mean": 1873.05
+        },
+        {
+          "slowdown_pct": 50,
+          "target": 1780,
+          "validation_hits": [
+            300,
+            277
+          ],
+          "worst_lower95": 0.894113,
+          "passes": false,
+          "validation_capacity": 1758,
+          "validation_worst_mean": 1853.4
+        },
+        {
+          "slowdown_pct": 60,
+          "target": 1780,
+          "validation_hits": [
+            300,
+            207
+          ],
+          "worst_lower95": 0.644545,
+          "passes": false,
+          "validation_capacity": 1711,
+          "validation_worst_mean": 1804.47
+        }
+      ],
+      "passes_uncertainty_limit": false
+    },
+    "pareto_1_moves_2_slots": {
+      "station_tasks": [
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          6,
+          8,
+          10
+        ],
+        [
+          7,
+          9,
+          11
+        ]
+      ],
+      "nominal_loads": [
+        12,
+        9,
+        13,
+        12
+      ],
+      "moved_task_ids": [
+        6
+      ],
+      "layout": [
+        0,
+        1,
+        1
+      ],
+      "slots": 2,
+      "design_capacity": 1793,
+      "validation": [
+        {
+          "slowdown_pct": 0,
+          "target": 1780,
+          "validation_hits": [
+            300,
+            299
+          ],
+          "worst_lower95": 0.985199,
+          "passes": true,
+          "validation_capacity": 1839,
+          "validation_worst_mean": 1934.97
+        },
+        {
+          "slowdown_pct": 40,
+          "target": 1780,
+          "validation_hits": [
+            300,
+            299
+          ],
+          "worst_lower95": 0.985199,
+          "passes": true,
+          "validation_capacity": 1819,
+          "validation_worst_mean": 1917.05
+        },
+        {
+          "slowdown_pct": 45,
+          "target": 1780,
+          "validation_hits": [
+            300,
+            296
+          ],
+          "worst_lower95": 0.970633,
+          "passes": true,
+          "validation_capacity": 1803,
+          "validation_worst_mean": 1902.44
+        },
+        {
+          "slowdown_pct": 50,
+          "target": 1780,
+          "validation_hits": [
+            300,
+            292
+          ],
+          "worst_lower95": 0.953295,
+          "passes": true,
+          "validation_capacity": 1784,
+          "validation_worst_mean": 1881.18
+        },
+        {
+          "slowdown_pct": 60,
+          "target": 1780,
+          "validation_hits": [
+            300,
+            246
+          ],
+          "worst_lower95": 0.780706,
+          "passes": false,
+          "validation_capacity": 1728,
+          "validation_worst_mean": 1823.94
+        }
+      ],
+      "passes_uncertainty_limit": true
+    }
+  }
+}

@@ -43,7 +43,7 @@ MILP 用二元变量 `x[i,s]` 表示工序 `i` 是否分配到工位 `s`，`y[s]
 
 [Mitchell 班次产能验证](CAPACITY_STUDY.md) · [Jackson 联合优化与独立复核](JACKSON_OPTIMIZATION.md) · [标准工时与试产复核表](PILOT_CHECKLIST.md)
 
-进一步按缓冲预算搜索可验收的班产目标，对照完整枚举与快速搜索，并检验关键工序变慢后的调整策略。 [产能边界与工序扰动](CAPACITY_FRONTIER.md)
+进一步按缓冲预算搜索可验收的班产目标，对照完整枚举与快速搜索，并检验关键工序变慢后的调整策略。 [产能边界与工序扰动](CAPACITY_FRONTIER.md) · [工时偏差下的最小改线](RECONFIGURATION.md)
 
 ## 复现
 
