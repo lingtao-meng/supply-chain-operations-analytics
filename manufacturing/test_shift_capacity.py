@@ -2,7 +2,9 @@ import unittest
 
 import numpy as np
 
-from shift_capacity import buffer_layout, choose_design, deterministic_output, reliability_lower, simulate_shift
+from shift_capacity import (
+    buffer_layout, choose_design, demand_completion_times, deterministic_output, reliability_lower, simulate_shift,
+)
 
 
 class TestShiftCapacity(unittest.TestCase):
@@ -29,6 +31,28 @@ class TestShiftCapacity(unittest.TestCase):
     def test_short_workload_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "supply more"):
             simulate_shift(np.ones((3, 2, 1)), (0,), 20)
+
+    def test_outage_pauses_remaining_work_only(self):
+        service = np.asarray([2, 3, 4, 7], dtype=float)[None, None, :]
+        np.testing.assert_array_equal(demand_completion_times(service, ()), [2, 3, 4, 7])
+        np.testing.assert_array_equal(
+            demand_completion_times(service, (), outage=(0, 3, 6)), [2, 3, 7, 10],
+        )
+
+    def test_outage_allows_material_to_wait_on_a_free_station(self):
+        service = np.asarray([[2, 1], [2, 1], [4, 1], [4, 1]])[:, :, None]
+        # The first job reaches station 2 during its outage [1, 5). A waiting
+        # slot allows the fourth job to start earlier on station 1.
+        np.testing.assert_array_equal(demand_completion_times(service, (0,), outage=(1, 1, 5)), [15])
+        np.testing.assert_array_equal(demand_completion_times(service, (1,), outage=(1, 1, 5)), [13])
+
+    def test_outage_before_processing_and_invalid_window(self):
+        service = np.asarray([[8, 2]])[:, :, None]
+        np.testing.assert_array_equal(demand_completion_times(service, (0,), outage=(1, 1, 7)), [10])
+        np.testing.assert_array_equal(demand_completion_times(service, (0,), outage=(1, 7, 11)), [13])
+        for outage in ((2, 1, 5), (0, 2, 2), (0, 1, float("inf"))):
+            with self.assertRaisesRegex(ValueError, "outage requires"):
+                demand_completion_times(service, (0,), outage=outage)
 
     def test_buffer_budget_and_reliability_screen(self):
         self.assertEqual(sum(buffer_layout([13, 14, 11, 14, 14, 14, 13, 12], "targeted_1")), 7)

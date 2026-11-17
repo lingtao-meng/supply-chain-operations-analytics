@@ -34,9 +34,12 @@ def simulate_shift(service: np.ndarray, buffers: tuple[int, ...], duration: floa
     return _flow_shop(service, buffers, duration)
 
 
-def demand_completion_times(service: np.ndarray, buffers: tuple[int, ...]) -> np.ndarray:
-    """Time at which the last input product clears the line in each replication."""
-    return _flow_shop(service, buffers, None)
+def demand_completion_times(
+    service: np.ndarray, buffers: tuple[int, ...], *,
+    outage: tuple[int, float, float] | None = None,
+) -> np.ndarray:
+    """Return target completion times, optionally pausing one station on [start, end)."""
+    return _flow_shop(service, buffers, None, outage=outage)
 
 
 def shift_output_counts(service: np.ndarray, buffers: tuple[int, ...], duration: float) -> np.ndarray:
@@ -46,12 +49,19 @@ def shift_output_counts(service: np.ndarray, buffers: tuple[int, ...], duration:
 
 def _flow_shop(
     service: np.ndarray, buffers: tuple[int, ...], duration: float | None, *, measure_stations: bool = True,
+    outage: tuple[int, float, float] | None = None,
 ) -> np.ndarray | tuple[np.ndarray, np.ndarray]:
     if service.ndim != 3 or not all(service.shape) or not np.isfinite(service).all() or (service <= 0).any():
         raise ValueError("service must contain finite positive times for products, stations and replications")
     _, station_count, replications = service.shape
     if len(buffers) != station_count - 1 or any(type(b) is not int or b < 0 for b in buffers):
         raise ValueError("provide one nonnegative integer buffer per station gap")
+    stopped_station = -1
+    if outage is not None:
+        stopped_station, stop_start, stop_end = outage
+        if (type(stopped_station) is not int or not 0 <= stopped_station < station_count
+                or not np.isfinite([stop_start, stop_end]).all() or not 0 <= stop_start < stop_end):
+            raise ValueError("outage requires a valid zero-based station and 0 <= start < end")
     track_shift = duration is not None
     track_stations = track_shift and measure_stations
     if track_shift and (not np.isfinite(duration) or duration <= 0):
@@ -72,6 +82,11 @@ def _flow_shop(
         for station, load in enumerate(workloads):
             start = np.maximum(upstream, exits[station])
             finish = start + load
+            if station == stopped_station:
+                # Material may enter a free station during the stop. Processing
+                # pauses, then resumes from the remaining work after restart.
+                overlap = (start < stop_end) & (finish > stop_start)
+                finish += np.where(overlap, stop_end - np.maximum(start, stop_start), 0)
             departure = finish
             if station + 1 < station_count:
                 buffer = buffers[station]
