@@ -3,7 +3,8 @@ import unittest
 import numpy as np
 
 from shift_capacity import (
-    buffer_layout, choose_design, demand_completion_times, deterministic_output, reliability_lower, simulate_shift,
+    buffer_layout, choose_design, demand_completion_times, deterministic_output,
+    recovery_shift, reliability_lower, simulate_shift, station_trace,
 )
 
 
@@ -53,6 +54,23 @@ class TestShiftCapacity(unittest.TestCase):
         for outage in ((2, 1, 5), (0, 2, 2), (0, 1, float("inf"))):
             with self.assertRaisesRegex(ValueError, "outage requires"):
                 demand_completion_times(service, (0,), outage=outage)
+
+    def test_recovery_counts_waiting_items_only_and_clips_to_shift(self):
+        service = np.asarray([[1, 5], [1, 1], [5, 1], [10, 10]])[:, :, None]
+        counts, waiting = recovery_shift(service, (1,), 4, (1, 9, 10))
+        np.testing.assert_array_equal(counts, [0])
+        # Job 2 enters the buffer at 2, waits through the cutoff at 4,
+        # and enters station 2 at 6. Active jobs are excluded from waiting WIP.
+        np.testing.assert_allclose(waiting, [0.5])
+        counts, waiting = recovery_shift(service, (0,), 4, (1, 9, 10))
+        np.testing.assert_array_equal(counts, [0])
+        np.testing.assert_array_equal(waiting, [0])
+
+    def test_station_trace_matches_outage_target_completion(self):
+        service = np.asarray([[2, 1], [2, 1], [4, 1], [4, 1]])[:, :, None]
+        trace = station_trace(service, (1,), (1, 1, 5))
+        np.testing.assert_array_equal(trace[0, 1], [2, 6, 6])
+        np.testing.assert_array_equal(trace[-1, 1], [12, 13, 13])
 
     def test_buffer_budget_and_reliability_screen(self):
         self.assertEqual(sum(buffer_layout([13, 14, 11, 14, 14, 14, 13, 12], "targeted_1")), 7)

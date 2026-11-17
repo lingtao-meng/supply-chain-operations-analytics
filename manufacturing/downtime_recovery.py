@@ -33,13 +33,15 @@ def minimum_hits(runs: int, alpha: float) -> int:
     return int(next(count for count, bound in zip(counts, lower) if bound >= REQUIRED_RELIABILITY))
 
 
-def completion_matrix(work: np.ndarray, layout: Layout, stop_minutes: int) -> np.ndarray:
+def completion_matrix(
+    work: np.ndarray, layout: Layout, stop_minutes: int, starts: tuple[int, ...] = OUTAGE_STARTS,
+) -> np.ndarray:
     """Use the same task-time draws for all station/start combinations."""
     if stop_minutes == 0:
         return demand_completion_times(work, layout)[None, :]
     return np.stack([
         demand_completion_times(work, layout, outage=(station, start * 60, (start + stop_minutes) * 60))
-        for station, start in product(range(work.shape[1]), OUTAGE_STARTS)
+        for station, start in product(range(work.shape[1]), starts)
     ])
 
 

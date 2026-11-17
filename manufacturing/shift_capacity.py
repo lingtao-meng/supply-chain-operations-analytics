@@ -47,9 +47,28 @@ def shift_output_counts(service: np.ndarray, buffers: tuple[int, ...], duration:
     return _flow_shop(service, buffers, duration, measure_stations=False)
 
 
+def recovery_shift(
+    service: np.ndarray, buffers: tuple[int, ...], duration: float, outage: tuple[int, float, float],
+) -> tuple[np.ndarray, np.ndarray]:
+    """Return shift output and time-average occupancy of waiting slots."""
+    return _flow_shop(service, buffers, duration, measure_stations=False, outage=outage, measure_buffers=True)
+
+
+def station_trace(
+    service: np.ndarray, buffers: tuple[int, ...], outage: tuple[int, float, float],
+) -> np.ndarray:
+    """Record admission, completion and departure for each job in one replication."""
+    if service.ndim != 3 or service.shape[2] != 1:
+        raise ValueError("trace requires exactly one replication")
+    trace = np.empty((*service.shape[:2], 3))
+    _flow_shop(service, buffers, None, outage=outage, trace=trace)
+    return trace
+
+
 def _flow_shop(
     service: np.ndarray, buffers: tuple[int, ...], duration: float | None, *, measure_stations: bool = True,
     outage: tuple[int, float, float] | None = None,
+    measure_buffers: bool = False, trace: np.ndarray | None = None,
 ) -> np.ndarray | tuple[np.ndarray, np.ndarray]:
     if service.ndim != 3 or not all(service.shape) or not np.isfinite(service).all() or (service <= 0).any():
         raise ValueError("service must contain finite positive times for products, stations and replications")
@@ -70,6 +89,8 @@ def _flow_shop(
     history_length = 1 + max(buffers, default=0)
     prior_starts = np.zeros((history_length, station_count, replications))
     output = np.zeros(replications, dtype=int)
+    if measure_buffers:
+        waiting_time = np.zeros(replications)
     if track_stations:
         busy = np.zeros_like(exits)
         blocked = np.zeros_like(exits)
@@ -81,6 +102,8 @@ def _flow_shop(
         start_slot = prior_starts[product % history_length]
         for station, load in enumerate(workloads):
             start = np.maximum(upstream, exits[station])
+            if measure_buffers and station:
+                waiting_time += np.minimum(start, duration) - np.minimum(upstream, duration)
             finish = start + load
             if station == stopped_station:
                 # Material may enter a free station during the stop. Processing
@@ -98,6 +121,8 @@ def _flow_shop(
                     departure = np.maximum(finish, prior_starts[(product - buffer) % history_length, station + 1])
             start_slot[station] = start
             exits[station] = upstream = departure
+            if trace is not None:
+                trace[product, station] = start[0], finish[0], departure[0]
             if track_stations:
                 busy[station] += np.minimum(finish, duration) - np.minimum(start, duration)
                 blocked[station] += np.minimum(departure, duration) - np.minimum(finish, duration)
@@ -108,6 +133,8 @@ def _flow_shop(
         return exits[-1]
     if (exits[0] < duration).any():
         raise ValueError("the input workload ends before the shift; supply more products")
+    if measure_buffers:
+        return output, waiting_time / duration
     if not track_stations:
         return output
     idle = np.maximum(0, duration - busy - blocked)
