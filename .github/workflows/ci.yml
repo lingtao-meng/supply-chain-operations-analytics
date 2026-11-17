@@ -53,6 +53,14 @@ jobs:
           for name in shift_capacity.csv station_time_losses.csv shift_decision.json; do
             cmp "manufacturing/results/$name" "$RUNNER_TEMP/shift-capacity/$name"
           done
+          python manufacturing/downtime_recovery.py --output-dir "$RUNNER_TEMP/downtime"
+          for name in downtime_scenarios.csv downtime_decision.json; do
+            cmp "manufacturing/results/$name" "$RUNNER_TEMP/downtime/$name"
+          done
+          python manufacturing/buffer_holdout.py --output-dir "$RUNNER_TEMP/buffer-holdout"
+          for name in buffer_holdout.csv buffer_holdout.json buffer_holdout_timeline.svg; do
+            cmp "manufacturing/results/$name" "$RUNNER_TEMP/buffer-holdout/$name"
+          done
           python manufacturing/test_optimize_buffers.py
           python manufacturing/optimize_buffers.py --output-dir "$RUNNER_TEMP/jackson-buffer"
           for name in jackson_buffer_screen.csv jackson_buffer_decision.json; do
