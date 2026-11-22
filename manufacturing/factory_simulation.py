@@ -12,7 +12,7 @@ from staggered_support import HISTORY, trigger
 
 ENTRY, ASSEMBLED, INSPECTED, HANDOFF, REPAIR_START, REPAIR_END, TEST_START, END, HELPER = range(9)
 SETUP_SECONDS = (24, 0, 0, 55, 0, 0, 32, 0)
-DISPATCH = {"fifo": 0, "ready": 1, "campaign": 2}
+DISPATCH = {"fifo": 0, "ready": 1, "campaign": 2, "current_ready": 3, "reserve_old": 4}
 MAINTENANCE_STATION = 3
 
 
@@ -63,6 +63,7 @@ class Simulation:
     parallel_used: np.ndarray
     floor_stats: np.ndarray
     delivery_stats: np.ndarray
+    station_seconds: np.ndarray
 
 
 @njit(cache=True)
@@ -73,7 +74,7 @@ def _allocate(buckets, begin, end):
 
 
 @njit(cache=True)
-def _select(heads, free, orders, kits, last, run, max_run, rule):
+def _select(heads, free, orders, kits, last, run, max_run, rule, contested=0):
     a, b = heads
     if a < 0 or b < 0:
         return max(a, b), -1
@@ -82,6 +83,10 @@ def _select(heads, free, orders, kits, last, run, max_run, rule):
         return by_order, -1
     ready_a, ready_b = kits[a] <= free, kits[b] <= free
     if ready_a and ready_b:
+        if rule >= 3 and orders[a] != orders[b]:
+            older, newer = (a, b) if orders[a] < orders[b] else (b, a)
+            if orders[older] + SHIFT_SECONDS <= free < orders[newer] + SHIFT_SECONDS:
+                return (older if rule == 4 and contested % 3 == 0 else newer), -2
         if rule == 2 and orders[a] == orders[b] and last >= 0:
             same = heads[last]
             return (same if run < max_run else heads[1-last]), -1
@@ -107,7 +112,7 @@ def _start_outside_maintenance(begin, duration, maintenance):
 
 @njit(cache=True)
 def _line(work, sku, orders, kits, routes, windows, setup_times, waiting_places, transfer, return_bin,
-          testers, repair_seconds, test_seconds, rule, max_run, maintenance=None, parallel_available=None, floor=None):
+          testers, repair_seconds, test_seconds, rule, max_run, maintenance=None, parallel_available=None, floor=None, diagnose=False):
     """Replay resources in processing order, keeping chronological clocks per stage."""
     jobs, stations = work.shape
     stream = (np.flatnonzero(sku == 0), np.flatnonzero(sku == 1))
@@ -162,9 +167,13 @@ def _line(work, sku, orders, kits, routes, windows, setup_times, waiting_places,
                 day = int(time // SHIFT_SECONDS)
                 if day < DAYS:
                     delivery_stats[day, 0] += 1
+    station_seconds = np.zeros((DAYS, stations+1, 5))
+    contested = 0
     previous, run = -1, 0
     for index in range(jobs):
-        job, open_override = _select(heads, exits[0], orders, ready, previous, run, max_run, rule)
+        job, open_override = _select(heads, exits[0], orders, ready, previous, run, max_run, rule, contested)
+        if open_override == -2:
+            contested += 1
         model = sku[job]
         positions[model] += 1
         pos = positions[model]
@@ -180,17 +189,22 @@ def _line(work, sku, orders, kits, routes, windows, setup_times, waiting_places,
                 delay = setup_times[station] if floor is None else floor[2][previous, station]
             duration = delay + work[job, station]
             alternate = False
+            calendar_wait = 0.
             if station == MAINTENANCE_STATION:
                 if parallel_available is not None:
                     queue_ready = max(arrival, prior_starts[station])
                     begin = max(queue_ready, exits[station])
                     delay = setup_times[station] if primary_model >= 0 and primary_model != model else 0
+                    if delay and floor is not None:
+                        delay = floor[2][primary_model, station]
                     duration = delay + work[job, station]
                 primary_start = begin
                 if maintenance is not None:
                     primary_start = _start_outside_maintenance(begin, duration, maintenance)
                 if parallel_available is not None:
                     alt_delay = setup_times[station] if parallel_model >= 0 and parallel_model != model else 0
+                    if alt_delay and floor is not None:
+                        alt_delay = floor[2][parallel_model, station]
                     alt_duration = alt_delay + work[job, station]
                     alt_start = _start_outside_maintenance(max(queue_ready, parallel_exit), alt_duration,
                                                           parallel_maintenance)
@@ -199,11 +213,13 @@ def _line(work, sku, orders, kits, routes, windows, setup_times, waiting_places,
                             and alt_start + alt_duration <= (day+1)*SHIFT_SECONDS
                             and alt_start + alt_duration < primary_start + duration):
                         begin, delay, duration = alt_start, alt_delay, alt_duration
+                        calendar_wait = alt_start - max(queue_ready, parallel_exit)
                         parallel_model, alternate = model, True
                         parallel_used[job] = True
                     else:
                         primary_model = model
                 if not alternate:
+                    calendar_wait = primary_start - begin
                     if primary_start > begin:
                         _allocate(maintenance_wait, begin, primary_start)
                     begin = primary_start
@@ -241,6 +257,9 @@ def _line(work, sku, orders, kits, routes, windows, setup_times, waiting_places,
                     available = exits[station+1]
                 elif index >= slots:
                     available = start_ring[(index-slots) % len(start_ring), station+1]
+                # Parallel benches use one FIFO exit lane into the next buffer.
+                if station == MAINTENANCE_STATION and parallel_available is not None:
+                    available = max(available, merge_exit)
                 arrival = max(finish, available) + travel
                 _allocate(floor_stats[:, station, 3], arrival-travel, arrival)
             else:
@@ -249,6 +268,15 @@ def _line(work, sku, orders, kits, routes, windows, setup_times, waiting_places,
                 # A later unit may finish first but waits on its bench for the FIFO merge.
                 arrival = max(arrival, merge_exit)
                 merge_exit = arrival
+            if diagnose:
+                bench = stations if alternate else station
+                ledger = station_seconds[:, bench]
+                travel_time = 0. if floor is None or station == stations-1 else floor[1][station]
+                _allocate(ledger[:, 0], begin+delay, finish)
+                _allocate(ledger[:, 1], begin, begin+delay)
+                _allocate(ledger[:, 2], finish, arrival-travel_time)
+                _allocate(ledger[:, 3], arrival-travel_time, arrival)
+                _allocate(ledger[:, 4], begin-calendar_wait, begin)
             if alternate:
                 parallel_exit = arrival
             else:
@@ -303,7 +331,7 @@ def _line(work, sku, orders, kits, routes, windows, setup_times, waiting_places,
         exits[stations] = handoff
         run = run+1 if previous == model else 1
         previous = model
-    return trace, setups, kit_wait, changeovers, maintenance_wait, maintenance_operations, parallel_used, floor_stats, delivery_stats
+    return trace, setups, kit_wait, changeovers, maintenance_wait, maintenance_operations, parallel_used, floor_stats, delivery_stats, station_seconds
 
 
 def _calendar(scenario, plant, shift_index, request):
@@ -337,7 +365,7 @@ def _request(trace, orders, routes, day):
     return int(checks[hits[0]]+RESPONSE) if len(hits) else latest
 
 
-def simulate(scenario, plant, maintenance=None, parallel_available=None, floor=None):
+def simulate(scenario, plant, maintenance=None, parallel_available=None, floor=None, diagnose=False):
     """Dispatch qualified helpers using completed inspections at each five-minute check."""
     if min(plant.waiting_places, plant.testers, plant.max_run, plant.repair_seconds, plant.test_seconds) < 1:
         raise ValueError("positive space, staffing durations and testing capacity are required")
@@ -359,8 +387,10 @@ def simulate(scenario, plant, maintenance=None, parallel_available=None, floor=N
     if plant.setup:
         n = min(len(setup), len(SETUP_SECONDS))
         setup[:n] = SETUP_SECONDS[:n]
-    if floor is not None and (parallel_available is not None or scenario.work.shape[1] != 8):
-        raise ValueError("the floor extension models the serial eight-station layout")
+    if floor is not None and scenario.work.shape[1] != 8:
+        raise ValueError("the floor extension requires eight stations")
+    if floor is not None and parallel_available is not None and floor.buffers[2] == 0:
+        raise ValueError("parallel intake requires at least one shared staging position")
     floor_arrays = None if floor is None else floor.arrays(setup, scenario.work.shape[1])
     kits = (np.maximum(scenario.orders, scenario.kits - 60*plant.kit_advance)
             if plant.kits else scenario.orders)
@@ -372,7 +402,7 @@ def simulate(scenario, plant, maintenance=None, parallel_available=None, floor=N
         outputs = _line(
             scenario.work, scenario.sku, scenario.orders, kits, scenario.routes, windows, setup,
             plant.waiting_places, plant.transfer, plant.return_bin, plant.testers, plant.repair_seconds,
-            plant.test_seconds, DISPATCH[plant.kit_dispatch], plant.max_run, maintenance, parallel_available, floor_arrays,
+            plant.test_seconds, DISPATCH[plant.kit_dispatch], plant.max_run, maintenance, parallel_available, floor_arrays, diagnose,
         )
         return outputs, windows
 
@@ -386,5 +416,5 @@ def simulate(scenario, plant, maintenance=None, parallel_available=None, floor=N
     booked = np.zeros(DAYS)
     for start, end in windows:
         _allocate(booked, start, end)
-    trace, setups, kit_wait, changes, station_wait, operations, parallel_used, floor_stats, delivery_stats = outputs
-    return Simulation(trace, setups, kit_wait, booked, windows, changes, station_wait, operations, parallel_used, floor_stats, delivery_stats)
+    trace, setups, kit_wait, changes, station_wait, operations, parallel_used, floor_stats, delivery_stats, station_seconds = outputs
+    return Simulation(trace, setups, kit_wait, booked, windows, changes, station_wait, operations, parallel_used, floor_stats, delivery_stats, station_seconds)

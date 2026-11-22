@@ -195,6 +195,14 @@ jobs:
             cmp "manufacturing/results/factory_floor_study.$ext" "$RUNNER_TEMP/factory-floor/factory_floor_study.$ext"
           done
 
+      - name: Verify task transfers, cohort backlog and delivery commitments
+        run: |
+          python manufacturing/test_factory_rebalance.py
+          python manufacturing/factory_rebalance.py --output-dir "$RUNNER_TEMP/factory-rebalance"
+          for ext in json csv; do
+            cmp "manufacturing/results/factory_rebalance.$ext" "$RUNNER_TEMP/factory-rebalance/factory_rebalance.$ext"
+          done
+
   express:
     runs-on: ubuntu-latest
     steps:

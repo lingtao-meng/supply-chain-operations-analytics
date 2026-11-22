@@ -97,7 +97,7 @@ def staff_windows(rng: np.random.Generator) -> tuple[np.ndarray, np.ndarray]:
     return baseline, trained
 
 
-def sample(case: Case, plan: list[list[int]], seed: np.random.SeedSequence) -> Scenario:
+def sample(case: Case, plan: list[list[int]], seed: np.random.SeedSequence, *, task_blocks=None) -> Scenario:
     """Generate one matched four-shift trajectory with job-linked quality and kits."""
     workload_seed, quality_seed, material_seed, staff_seed = seed.spawn(4)
     workload = np.random.default_rng(workload_seed)
@@ -111,6 +111,12 @@ def sample(case: Case, plan: list[list[int]], seed: np.random.SeedSequence) -> S
         _, task_times = next(scenarios(case, ((TASK_CV, SHIFT_CV),), LOT, 1, task_seed))
         station_times = workloads_for(task_times, plan)[:, :, 0] * FAST_FACTOR
         station_times[sku == 1] *= variant
+        if task_blocks is not None:
+            # Keep each job's sampled task time and its original SKU adjustment across moves.
+            block = task_times[:, :, 0] * FAST_FACTOR
+            for station, tasks in enumerate(plan):
+                block[np.ix_(sku == 1, np.asarray(tasks)-1)] *= variant[station]
+            task_blocks.append(block)
         work.append(station_times)
 
         risk = shift in ADVERSE
