@@ -1,0 +1,4836 @@
+{
+  "case": "Mitchell",
+  "assembly_tasks": [
+    [
+      1,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      2,
+      6,
+      8
+    ],
+    [
+      9,
+      11,
+      12,
+      13
+    ],
+    [
+      10,
+      15,
+      16,
+      18
+    ],
+    [
+      17
+    ],
+    [
+      21,
+      19,
+      20
+    ]
+  ],
+  "assembly_buffer_slots": 7,
+  "shift_seconds": 25200,
+  "target_good_units": 1650,
+  "defect_pct": 18,
+  "reference_units": 1900,
+  "pulse_minutes_on_reference_clock": 120,
+  "pulse_failure_share_pct": 65,
+  "task_cv_pct": 20,
+  "shift_cv_pct": 3,
+  "fast_time_factor": 0.93,
+  "crews": {
+    "long": {
+      "helpers": 1,
+      "start_minute": 180,
+      "minutes_per_helper": 240
+    },
+    "peak": {
+      "helpers": 2,
+      "start_minute": 300,
+      "minutes_per_helper": 120
+    }
+  },
+  "design": {
+    "runs": 300,
+    "seeds": [
+      2026112226,
+      2026112227
+    ],
+    "pulses_on_reference_clock": {
+      "early": 35,
+      "middle": 145,
+      "late": 260,
+      "latest": 290
+    },
+    "candidates": [
+      {
+        "name": "long_i0_r0",
+        "crew": "long",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0,
+        "worst_hits": 0,
+        "worst_shortfall_total": 147359,
+        "released_total": 1657866
+      },
+      {
+        "name": "long_i0_r4",
+        "crew": "long",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4,
+        "worst_hits": 0,
+        "worst_shortfall_total": 127037,
+        "released_total": 1761753
+      },
+      {
+        "name": "long_i1_r3",
+        "crew": "long",
+        "area_slots": 4,
+        "inspection_slots": 1,
+        "rework_slots": 3,
+        "worst_hits": 0,
+        "worst_shortfall_total": 128124,
+        "released_total": 1757342
+      },
+      {
+        "name": "long_i2_r2",
+        "crew": "long",
+        "area_slots": 4,
+        "inspection_slots": 2,
+        "rework_slots": 2,
+        "worst_hits": 0,
+        "worst_shortfall_total": 129535,
+        "released_total": 1750403
+      },
+      {
+        "name": "long_i3_r1",
+        "crew": "long",
+        "area_slots": 4,
+        "inspection_slots": 3,
+        "rework_slots": 1,
+        "worst_hits": 0,
+        "worst_shortfall_total": 132364,
+        "released_total": 1734857
+      },
+      {
+        "name": "long_i4_r0",
+        "crew": "long",
+        "area_slots": 4,
+        "inspection_slots": 4,
+        "rework_slots": 0,
+        "worst_hits": 0,
+        "worst_shortfall_total": 143595,
+        "released_total": 1676308
+      },
+      {
+        "name": "long_i0_r8",
+        "crew": "long",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8,
+        "worst_hits": 0,
+        "worst_shortfall_total": 121684,
+        "released_total": 1777818
+      },
+      {
+        "name": "long_i2_r6",
+        "crew": "long",
+        "area_slots": 8,
+        "inspection_slots": 2,
+        "rework_slots": 6,
+        "worst_hits": 0,
+        "worst_shortfall_total": 123713,
+        "released_total": 1771464
+      },
+      {
+        "name": "long_i4_r4",
+        "crew": "long",
+        "area_slots": 8,
+        "inspection_slots": 4,
+        "rework_slots": 4,
+        "worst_hits": 0,
+        "worst_shortfall_total": 125810,
+        "released_total": 1764564
+      },
+      {
+        "name": "long_i6_r2",
+        "crew": "long",
+        "area_slots": 8,
+        "inspection_slots": 6,
+        "rework_slots": 2,
+        "worst_hits": 0,
+        "worst_shortfall_total": 128311,
+        "released_total": 1754391
+      },
+      {
+        "name": "long_i8_r0",
+        "crew": "long",
+        "area_slots": 8,
+        "inspection_slots": 8,
+        "rework_slots": 0,
+        "worst_hits": 0,
+        "worst_shortfall_total": 142174,
+        "released_total": 1682663
+      },
+      {
+        "name": "long_i0_r12",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12,
+        "worst_hits": 0,
+        "worst_shortfall_total": 116392,
+        "released_total": 1793284
+      },
+      {
+        "name": "long_i1_r11",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 1,
+        "rework_slots": 11,
+        "worst_hits": 0,
+        "worst_shortfall_total": 117359,
+        "released_total": 1790025
+      },
+      {
+        "name": "long_i2_r10",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 2,
+        "rework_slots": 10,
+        "worst_hits": 0,
+        "worst_shortfall_total": 118411,
+        "released_total": 1786780
+      },
+      {
+        "name": "long_i3_r9",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 3,
+        "rework_slots": 9,
+        "worst_hits": 0,
+        "worst_shortfall_total": 119430,
+        "released_total": 1783444
+      },
+      {
+        "name": "long_i4_r8",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 4,
+        "rework_slots": 8,
+        "worst_hits": 0,
+        "worst_shortfall_total": 120500,
+        "released_total": 1780305
+      },
+      {
+        "name": "long_i5_r7",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 5,
+        "rework_slots": 7,
+        "worst_hits": 0,
+        "worst_shortfall_total": 121515,
+        "released_total": 1776985
+      },
+      {
+        "name": "long_i6_r6",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 6,
+        "rework_slots": 6,
+        "worst_hits": 0,
+        "worst_shortfall_total": 122559,
+        "released_total": 1773839
+      },
+      {
+        "name": "long_i7_r5",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 7,
+        "rework_slots": 5,
+        "worst_hits": 0,
+        "worst_shortfall_total": 123559,
+        "released_total": 1770506
+      },
+      {
+        "name": "long_i8_r4",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 8,
+        "rework_slots": 4,
+        "worst_hits": 0,
+        "worst_shortfall_total": 124663,
+        "released_total": 1767075
+      },
+      {
+        "name": "long_i9_r3",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 9,
+        "rework_slots": 3,
+        "worst_hits": 0,
+        "worst_shortfall_total": 125712,
+        "released_total": 1763163
+      },
+      {
+        "name": "long_i10_r2",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 10,
+        "rework_slots": 2,
+        "worst_hits": 0,
+        "worst_shortfall_total": 127156,
+        "released_total": 1757600
+      },
+      {
+        "name": "long_i11_r1",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 11,
+        "rework_slots": 1,
+        "worst_hits": 0,
+        "worst_shortfall_total": 129939,
+        "released_total": 1744574
+      },
+      {
+        "name": "long_i12_r0",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 12,
+        "rework_slots": 0,
+        "worst_hits": 0,
+        "worst_shortfall_total": 141015,
+        "released_total": 1687119
+      },
+      {
+        "name": "long_i0_r24",
+        "crew": "long",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24,
+        "worst_hits": 0,
+        "worst_shortfall_total": 100548,
+        "released_total": 1841226
+      },
+      {
+        "name": "long_i6_r18",
+        "crew": "long",
+        "area_slots": 24,
+        "inspection_slots": 6,
+        "rework_slots": 18,
+        "worst_hits": 0,
+        "worst_shortfall_total": 106699,
+        "released_total": 1820723
+      },
+      {
+        "name": "long_i12_r12",
+        "crew": "long",
+        "area_slots": 24,
+        "inspection_slots": 12,
+        "rework_slots": 12,
+        "worst_hits": 0,
+        "worst_shortfall_total": 112862,
+        "released_total": 1800430
+      },
+      {
+        "name": "long_i18_r6",
+        "crew": "long",
+        "area_slots": 24,
+        "inspection_slots": 18,
+        "rework_slots": 6,
+        "worst_hits": 0,
+        "worst_shortfall_total": 119044,
+        "released_total": 1780835
+      },
+      {
+        "name": "long_i24_r0",
+        "crew": "long",
+        "area_slots": 24,
+        "inspection_slots": 24,
+        "rework_slots": 0,
+        "worst_hits": 0,
+        "worst_shortfall_total": 137818,
+        "released_total": 1696295
+      },
+      {
+        "name": "long_i0_r48",
+        "crew": "long",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48,
+        "worst_hits": 0,
+        "worst_shortfall_total": 68940,
+        "released_total": 1945196
+      },
+      {
+        "name": "long_i12_r36",
+        "crew": "long",
+        "area_slots": 48,
+        "inspection_slots": 12,
+        "rework_slots": 36,
+        "worst_hits": 0,
+        "worst_shortfall_total": 81235,
+        "released_total": 1900900
+      },
+      {
+        "name": "long_i24_r24",
+        "crew": "long",
+        "area_slots": 48,
+        "inspection_slots": 24,
+        "rework_slots": 24,
+        "worst_hits": 0,
+        "worst_shortfall_total": 93572,
+        "released_total": 1855688
+      },
+      {
+        "name": "long_i36_r12",
+        "crew": "long",
+        "area_slots": 48,
+        "inspection_slots": 36,
+        "rework_slots": 12,
+        "worst_hits": 0,
+        "worst_shortfall_total": 105971,
+        "released_total": 1813522
+      },
+      {
+        "name": "long_i48_r0",
+        "crew": "long",
+        "area_slots": 48,
+        "inspection_slots": 48,
+        "rework_slots": 0,
+        "worst_hits": 0,
+        "worst_shortfall_total": 133454,
+        "released_total": 1705235
+      },
+      {
+        "name": "peak_i0_r0",
+        "crew": "peak",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0,
+        "worst_hits": 0,
+        "worst_shortfall_total": 201185,
+        "released_total": 1602037
+      },
+      {
+        "name": "peak_i0_r4",
+        "crew": "peak",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4,
+        "worst_hits": 0,
+        "worst_shortfall_total": 189465,
+        "released_total": 1721089
+      },
+      {
+        "name": "peak_i1_r3",
+        "crew": "peak",
+        "area_slots": 4,
+        "inspection_slots": 1,
+        "rework_slots": 3,
+        "worst_hits": 0,
+        "worst_shortfall_total": 190214,
+        "released_total": 1715443
+      },
+      {
+        "name": "peak_i2_r2",
+        "crew": "peak",
+        "area_slots": 4,
+        "inspection_slots": 2,
+        "rework_slots": 2,
+        "worst_hits": 0,
+        "worst_shortfall_total": 191237,
+        "released_total": 1705949
+      },
+      {
+        "name": "peak_i3_r1",
+        "crew": "peak",
+        "area_slots": 4,
+        "inspection_slots": 3,
+        "rework_slots": 1,
+        "worst_hits": 0,
+        "worst_shortfall_total": 193020,
+        "released_total": 1686040
+      },
+      {
+        "name": "peak_i4_r0",
+        "crew": "peak",
+        "area_slots": 4,
+        "inspection_slots": 4,
+        "rework_slots": 0,
+        "worst_hits": 0,
+        "worst_shortfall_total": 198832,
+        "released_total": 1623335
+      },
+      {
+        "name": "peak_i0_r8",
+        "crew": "peak",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8,
+        "worst_hits": 0,
+        "worst_shortfall_total": 185718,
+        "released_total": 1740191
+      },
+      {
+        "name": "peak_i2_r6",
+        "crew": "peak",
+        "area_slots": 8,
+        "inspection_slots": 2,
+        "rework_slots": 6,
+        "worst_hits": 0,
+        "worst_shortfall_total": 186911,
+        "released_total": 1734860
+      },
+      {
+        "name": "peak_i4_r4",
+        "crew": "peak",
+        "area_slots": 8,
+        "inspection_slots": 4,
+        "rework_slots": 4,
+        "worst_hits": 0,
+        "worst_shortfall_total": 188200,
+        "released_total": 1727566
+      },
+      {
+        "name": "peak_i6_r2",
+        "crew": "peak",
+        "area_slots": 8,
+        "inspection_slots": 6,
+        "rework_slots": 2,
+        "worst_hits": 0,
+        "worst_shortfall_total": 189975,
+        "released_total": 1712967
+      },
+      {
+        "name": "peak_i8_r0",
+        "crew": "peak",
+        "area_slots": 8,
+        "inspection_slots": 8,
+        "rework_slots": 0,
+        "worst_hits": 0,
+        "worst_shortfall_total": 197591,
+        "released_total": 1630159
+      },
+      {
+        "name": "peak_i0_r12",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12,
+        "worst_hits": 0,
+        "worst_shortfall_total": 181926,
+        "released_total": 1754206
+      },
+      {
+        "name": "peak_i1_r11",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 1,
+        "rework_slots": 11,
+        "worst_hits": 0,
+        "worst_shortfall_total": 182594,
+        "released_total": 1751954
+      },
+      {
+        "name": "peak_i2_r10",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 2,
+        "rework_slots": 10,
+        "worst_hits": 0,
+        "worst_shortfall_total": 183217,
+        "released_total": 1749681
+      },
+      {
+        "name": "peak_i3_r9",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 3,
+        "rework_slots": 9,
+        "worst_hits": 0,
+        "worst_shortfall_total": 183845,
+        "released_total": 1747311
+      },
+      {
+        "name": "peak_i4_r8",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 4,
+        "rework_slots": 8,
+        "worst_hits": 0,
+        "worst_shortfall_total": 184518,
+        "released_total": 1744678
+      },
+      {
+        "name": "peak_i5_r7",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 5,
+        "rework_slots": 7,
+        "worst_hits": 0,
+        "worst_shortfall_total": 185115,
+        "released_total": 1742076
+      },
+      {
+        "name": "peak_i6_r6",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 6,
+        "rework_slots": 6,
+        "worst_hits": 0,
+        "worst_shortfall_total": 185746,
+        "released_total": 1739279
+      },
+      {
+        "name": "peak_i7_r5",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 7,
+        "rework_slots": 5,
+        "worst_hits": 0,
+        "worst_shortfall_total": 186429,
+        "released_total": 1735951
+      },
+      {
+        "name": "peak_i8_r4",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 8,
+        "rework_slots": 4,
+        "worst_hits": 0,
+        "worst_shortfall_total": 187045,
+        "released_total": 1732133
+      },
+      {
+        "name": "peak_i9_r3",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 9,
+        "rework_slots": 3,
+        "worst_hits": 0,
+        "worst_shortfall_total": 187777,
+        "released_total": 1726763
+      },
+      {
+        "name": "peak_i10_r2",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 10,
+        "rework_slots": 2,
+        "worst_hits": 0,
+        "worst_shortfall_total": 188779,
+        "released_total": 1717481
+      },
+      {
+        "name": "peak_i11_r1",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 11,
+        "rework_slots": 1,
+        "worst_hits": 0,
+        "worst_shortfall_total": 190577,
+        "released_total": 1697865
+      },
+      {
+        "name": "peak_i12_r0",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 12,
+        "rework_slots": 0,
+        "worst_hits": 0,
+        "worst_shortfall_total": 196425,
+        "released_total": 1634250
+      },
+      {
+        "name": "peak_i0_r24",
+        "crew": "peak",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24,
+        "worst_hits": 0,
+        "worst_shortfall_total": 170723,
+        "released_total": 1790684
+      },
+      {
+        "name": "peak_i6_r18",
+        "crew": "peak",
+        "area_slots": 24,
+        "inspection_slots": 6,
+        "rework_slots": 18,
+        "worst_hits": 0,
+        "worst_shortfall_total": 174582,
+        "released_total": 1778584
+      },
+      {
+        "name": "peak_i12_r12",
+        "crew": "peak",
+        "area_slots": 24,
+        "inspection_slots": 12,
+        "rework_slots": 12,
+        "worst_hits": 0,
+        "worst_shortfall_total": 178411,
+        "released_total": 1765123
+      },
+      {
+        "name": "peak_i18_r6",
+        "crew": "peak",
+        "area_slots": 24,
+        "inspection_slots": 18,
+        "rework_slots": 6,
+        "worst_hits": 0,
+        "worst_shortfall_total": 182261,
+        "released_total": 1749421
+      },
+      {
+        "name": "peak_i24_r0",
+        "crew": "peak",
+        "area_slots": 24,
+        "inspection_slots": 24,
+        "rework_slots": 0,
+        "worst_hits": 0,
+        "worst_shortfall_total": 193140,
+        "released_total": 1640428
+      },
+      {
+        "name": "peak_i0_r48",
+        "crew": "peak",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48,
+        "worst_hits": 0,
+        "worst_shortfall_total": 141138,
+        "released_total": 1857814
+      },
+      {
+        "name": "peak_i12_r36",
+        "crew": "peak",
+        "area_slots": 48,
+        "inspection_slots": 12,
+        "rework_slots": 36,
+        "worst_hits": 0,
+        "worst_shortfall_total": 154875,
+        "released_total": 1833122
+      },
+      {
+        "name": "peak_i24_r24",
+        "crew": "peak",
+        "area_slots": 48,
+        "inspection_slots": 24,
+        "rework_slots": 24,
+        "worst_hits": 0,
+        "worst_shortfall_total": 163807,
+        "released_total": 1809050
+      },
+      {
+        "name": "peak_i36_r12",
+        "crew": "peak",
+        "area_slots": 48,
+        "inspection_slots": 36,
+        "rework_slots": 12,
+        "worst_hits": 0,
+        "worst_shortfall_total": 171949,
+        "released_total": 1779854
+      },
+      {
+        "name": "peak_i48_r0",
+        "crew": "peak",
+        "area_slots": 48,
+        "inspection_slots": 48,
+        "rework_slots": 0,
+        "worst_hits": 0,
+        "worst_shortfall_total": 189533,
+        "released_total": 1644408
+      }
+    ],
+    "selected": [
+      {
+        "name": "long_i0_r0",
+        "crew": "long",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0
+      },
+      {
+        "name": "long_i0_r4",
+        "crew": "long",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4
+      },
+      {
+        "name": "long_i0_r8",
+        "crew": "long",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8
+      },
+      {
+        "name": "long_i0_r12",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12
+      },
+      {
+        "name": "long_i0_r24",
+        "crew": "long",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24
+      },
+      {
+        "name": "long_i0_r48",
+        "crew": "long",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48
+      },
+      {
+        "name": "peak_i0_r0",
+        "crew": "peak",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0
+      },
+      {
+        "name": "peak_i0_r4",
+        "crew": "peak",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4
+      },
+      {
+        "name": "peak_i0_r8",
+        "crew": "peak",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8
+      },
+      {
+        "name": "peak_i0_r12",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12
+      },
+      {
+        "name": "peak_i0_r24",
+        "crew": "peak",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24
+      },
+      {
+        "name": "peak_i0_r48",
+        "crew": "peak",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48
+      }
+    ]
+  },
+  "holdout": {
+    "runs": 600,
+    "seeds": [
+      2026112228,
+      2026112229
+    ],
+    "pulses_on_reference_clock": {
+      "uniform": null,
+      "early": 50,
+      "middle": 165,
+      "late": 275,
+      "latest": 300
+    },
+    "alpha": 0.0005555555555555556,
+    "required_hits": 587,
+    "results": [
+      {
+        "name": "long_i0_r0",
+        "crew": "long",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0,
+        "scenario": "uniform",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1539.547,
+          "assembly_transferred": 1539.143,
+          "first_inspected": 1538.538,
+          "first_pass": 1261.617,
+          "rework_released": 187.49,
+          "scrap": 88.255,
+          "pending_before_inspection": 0.605,
+          "pending_to_rework": 0.362,
+          "pending_rework": 0.815,
+          "released": 1449.107,
+          "assembly_last_blocked_seconds": 7146.062,
+          "inspection_blocked_seconds": 5682.477
+        },
+        "mean_shortfall": 200.893
+      },
+      {
+        "name": "long_i0_r0",
+        "crew": "long",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1283.727,
+          "assembly_transferred": 1283.57,
+          "first_inspected": 1282.76,
+          "first_pass": 995.173,
+          "rework_released": 195.283,
+          "scrap": 91.662,
+          "pending_before_inspection": 0.81,
+          "pending_to_rework": 0.117,
+          "pending_rework": 0.525,
+          "released": 1190.457,
+          "assembly_last_blocked_seconds": 9992.857,
+          "inspection_blocked_seconds": 8826.463
+        },
+        "mean_shortfall": 459.543
+      },
+      {
+        "name": "long_i0_r0",
+        "crew": "long",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0,
+        "scenario": "middle",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1480.42,
+          "assembly_transferred": 1480.262,
+          "first_inspected": 1479.44,
+          "first_pass": 1174.358,
+          "rework_released": 207.023,
+          "scrap": 97.485,
+          "pending_before_inspection": 0.822,
+          "pending_to_rework": 0.1,
+          "pending_rework": 0.473,
+          "released": 1381.382,
+          "assembly_last_blocked_seconds": 7793.009,
+          "inspection_blocked_seconds": 6410.404
+        },
+        "mean_shortfall": 268.618
+      },
+      {
+        "name": "long_i0_r0",
+        "crew": "long",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0,
+        "scenario": "late",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1590.662,
+          "assembly_transferred": 1589.95,
+          "first_inspected": 1589.632,
+          "first_pass": 1338.695,
+          "rework_released": 169.403,
+          "scrap": 79.868,
+          "pending_before_inspection": 0.318,
+          "pending_to_rework": 0.678,
+          "pending_rework": 0.987,
+          "released": 1508.098,
+          "assembly_last_blocked_seconds": 6178.109,
+          "inspection_blocked_seconds": 4769.885
+        },
+        "mean_shortfall": 141.902
+      },
+      {
+        "name": "long_i0_r0",
+        "crew": "long",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0,
+        "scenario": "latest",
+        "hits": 2,
+        "adjusted_lower": 5.6e-05,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1632.592,
+          "assembly_transferred": 1631.852,
+          "first_inspected": 1631.562,
+          "first_pass": 1399.732,
+          "rework_released": 156.658,
+          "scrap": 73.477,
+          "pending_before_inspection": 0.29,
+          "pending_to_rework": 0.707,
+          "pending_rework": 0.988,
+          "released": 1556.39,
+          "assembly_last_blocked_seconds": 5583.157,
+          "inspection_blocked_seconds": 4159.194
+        },
+        "mean_shortfall": 93.623
+      },
+      {
+        "name": "long_i0_r4",
+        "crew": "long",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4,
+        "scenario": "uniform",
+        "hits": 186,
+        "adjusted_lower": 0.250263,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1718.868,
+          "assembly_transferred": 1718.798,
+          "first_inspected": 1717.902,
+          "first_pass": 1408.62,
+          "rework_released": 209.235,
+          "scrap": 98.453,
+          "pending_before_inspection": 0.897,
+          "pending_to_rework": 0.008,
+          "pending_rework": 1.585,
+          "released": 1617.855,
+          "assembly_last_blocked_seconds": 4060.751,
+          "inspection_blocked_seconds": 2679.163
+        },
+        "mean_shortfall": 44.505
+      },
+      {
+        "name": "long_i0_r4",
+        "crew": "long",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1359.898,
+          "assembly_transferred": 1359.843,
+          "first_inspected": 1358.935,
+          "first_pass": 1064.675,
+          "rework_released": 199.877,
+          "scrap": 93.712,
+          "pending_before_inspection": 0.908,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.672,
+          "released": 1264.552,
+          "assembly_last_blocked_seconds": 8757.619,
+          "inspection_blocked_seconds": 7603.713
+        },
+        "mean_shortfall": 385.448
+      },
+      {
+        "name": "long_i0_r4",
+        "crew": "long",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4,
+        "scenario": "middle",
+        "hits": 6,
+        "adjusted_lower": 0.001651,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1619.117,
+          "assembly_transferred": 1619.057,
+          "first_inspected": 1618.173,
+          "first_pass": 1301.038,
+          "rework_released": 215.27,
+          "scrap": 101.233,
+          "pending_before_inspection": 0.883,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.632,
+          "released": 1516.308,
+          "assembly_last_blocked_seconds": 5495.208,
+          "inspection_blocked_seconds": 4150.292
+        },
+        "mean_shortfall": 133.862
+      },
+      {
+        "name": "long_i0_r4",
+        "crew": "long",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4,
+        "scenario": "late",
+        "hits": 28,
+        "adjusted_lower": 0.023383,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1689.045,
+          "assembly_transferred": 1688.373,
+          "first_inspected": 1688.022,
+          "first_pass": 1396.265,
+          "rework_released": 193.865,
+          "scrap": 92.302,
+          "pending_before_inspection": 0.352,
+          "pending_to_rework": 0.64,
+          "pending_rework": 4.95,
+          "released": 1590.13,
+          "assembly_last_blocked_seconds": 4444.033,
+          "inspection_blocked_seconds": 3091.859
+        },
+        "mean_shortfall": 60.845
+      },
+      {
+        "name": "long_i0_r4",
+        "crew": "long",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4,
+        "scenario": "latest",
+        "hits": 200,
+        "adjusted_lower": 0.272129,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1726.35,
+          "assembly_transferred": 1725.695,
+          "first_inspected": 1725.355,
+          "first_pass": 1455.058,
+          "rework_released": 179.56,
+          "scrap": 85.182,
+          "pending_before_inspection": 0.34,
+          "pending_to_rework": 0.645,
+          "pending_rework": 4.91,
+          "released": 1634.618,
+          "assembly_last_blocked_seconds": 3885.831,
+          "inspection_blocked_seconds": 2527.255
+        },
+        "mean_shortfall": 23.132
+      },
+      {
+        "name": "long_i0_r8",
+        "crew": "long",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8,
+        "scenario": "uniform",
+        "hits": 287,
+        "adjusted_lower": 0.411604,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1749.655,
+          "assembly_transferred": 1749.597,
+          "first_inspected": 1748.692,
+          "first_pass": 1433.778,
+          "rework_released": 212.96,
+          "scrap": 100.182,
+          "pending_before_inspection": 0.905,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.772,
+          "released": 1646.738,
+          "assembly_last_blocked_seconds": 3577.532,
+          "inspection_blocked_seconds": 2197.268
+        },
+        "mean_shortfall": 27.892
+      },
+      {
+        "name": "long_i0_r8",
+        "crew": "long",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1378.135,
+          "assembly_transferred": 1378.088,
+          "first_inspected": 1377.172,
+          "first_pass": 1081.36,
+          "rework_released": 200.96,
+          "scrap": 94.21,
+          "pending_before_inspection": 0.917,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.642,
+          "released": 1282.32,
+          "assembly_last_blocked_seconds": 8505.05,
+          "inspection_blocked_seconds": 7343.316
+        },
+        "mean_shortfall": 367.68
+      },
+      {
+        "name": "long_i0_r8",
+        "crew": "long",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8,
+        "scenario": "middle",
+        "hits": 13,
+        "adjusted_lower": 0.007244,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1638.083,
+          "assembly_transferred": 1638.025,
+          "first_inspected": 1637.122,
+          "first_pass": 1318.437,
+          "rework_released": 216.348,
+          "scrap": 101.763,
+          "pending_before_inspection": 0.903,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.573,
+          "released": 1534.785,
+          "assembly_last_blocked_seconds": 5221.369,
+          "inspection_blocked_seconds": 3870.539
+        },
+        "mean_shortfall": 115.642
+      },
+      {
+        "name": "long_i0_r8",
+        "crew": "long",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8,
+        "scenario": "late",
+        "hits": 46,
+        "adjusted_lower": 0.045754,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1702.672,
+          "assembly_transferred": 1702.008,
+          "first_inspected": 1701.658,
+          "first_pass": 1404.455,
+          "rework_released": 194.198,
+          "scrap": 93.488,
+          "pending_before_inspection": 0.35,
+          "pending_to_rework": 0.64,
+          "pending_rework": 8.877,
+          "released": 1598.653,
+          "assembly_last_blocked_seconds": 4233.466,
+          "inspection_blocked_seconds": 2880.492
+        },
+        "mean_shortfall": 53.055
+      },
+      {
+        "name": "long_i0_r8",
+        "crew": "long",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8,
+        "scenario": "latest",
+        "hits": 251,
+        "adjusted_lower": 0.353179,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1739.813,
+          "assembly_transferred": 1739.187,
+          "first_inspected": 1738.798,
+          "first_pass": 1463.042,
+          "rework_released": 179.857,
+          "scrap": 86.393,
+          "pending_before_inspection": 0.388,
+          "pending_to_rework": 0.602,
+          "pending_rework": 8.905,
+          "released": 1642.898,
+          "assembly_last_blocked_seconds": 3676.742,
+          "inspection_blocked_seconds": 2318.11
+        },
+        "mean_shortfall": 18.107
+      },
+      {
+        "name": "long_i0_r12",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12,
+        "scenario": "uniform",
+        "hits": 373,
+        "adjusted_lower": 0.555063,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1777.032,
+          "assembly_transferred": 1776.982,
+          "first_inspected": 1776.058,
+          "first_pass": 1456.353,
+          "rework_released": 216.327,
+          "scrap": 101.777,
+          "pending_before_inspection": 0.923,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.602,
+          "released": 1672.68,
+          "assembly_last_blocked_seconds": 3162.241,
+          "inspection_blocked_seconds": 1780.354
+        },
+        "mean_shortfall": 16.572
+      },
+      {
+        "name": "long_i0_r12",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1396.237,
+          "assembly_transferred": 1396.182,
+          "first_inspected": 1395.267,
+          "first_pass": 1097.807,
+          "rework_released": 202.04,
+          "scrap": 94.72,
+          "pending_before_inspection": 0.915,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.7,
+          "released": 1299.847,
+          "assembly_last_blocked_seconds": 8255.113,
+          "inspection_blocked_seconds": 7085.703
+        },
+        "mean_shortfall": 350.153
+      },
+      {
+        "name": "long_i0_r12",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12,
+        "scenario": "middle",
+        "hits": 21,
+        "adjusted_lower": 0.015423,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1656.207,
+          "assembly_transferred": 1656.155,
+          "first_inspected": 1655.257,
+          "first_pass": 1335.04,
+          "rework_released": 217.392,
+          "scrap": 102.198,
+          "pending_before_inspection": 0.898,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.627,
+          "released": 1552.432,
+          "assembly_last_blocked_seconds": 4959.381,
+          "inspection_blocked_seconds": 3602.59
+        },
+        "mean_shortfall": 98.477
+      },
+      {
+        "name": "long_i0_r12",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12,
+        "scenario": "late",
+        "hits": 65,
+        "adjusted_lower": 0.071129,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1715.105,
+          "assembly_transferred": 1714.43,
+          "first_inspected": 1714.077,
+          "first_pass": 1412.052,
+          "rework_released": 194.207,
+          "scrap": 94.392,
+          "pending_before_inspection": 0.353,
+          "pending_to_rework": 0.637,
+          "pending_rework": 12.79,
+          "released": 1606.258,
+          "assembly_last_blocked_seconds": 4045.536,
+          "inspection_blocked_seconds": 2691.029
+        },
+        "mean_shortfall": 46.512
+      },
+      {
+        "name": "long_i0_r12",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12,
+        "scenario": "latest",
+        "hits": 299,
+        "adjusted_lower": 0.431293,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1752.003,
+          "assembly_transferred": 1751.357,
+          "first_inspected": 1750.997,
+          "first_pass": 1470.157,
+          "rework_released": 179.858,
+          "scrap": 87.428,
+          "pending_before_inspection": 0.36,
+          "pending_to_rework": 0.627,
+          "pending_rework": 12.927,
+          "released": 1650.015,
+          "assembly_last_blocked_seconds": 3493.766,
+          "inspection_blocked_seconds": 2132.92
+        },
+        "mean_shortfall": 14.28
+      },
+      {
+        "name": "long_i0_r24",
+        "crew": "long",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24,
+        "scenario": "uniform",
+        "hits": 556,
+        "adjusted_lower": 0.885681,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1847.98,
+          "assembly_transferred": 1847.918,
+          "first_inspected": 1847.02,
+          "first_pass": 1514.653,
+          "rework_released": 224.907,
+          "scrap": 105.833,
+          "pending_before_inspection": 0.898,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.627,
+          "released": 1739.56,
+          "assembly_last_blocked_seconds": 2096.083,
+          "inspection_blocked_seconds": 705.321
+        },
+        "mean_shortfall": 1.908
+      },
+      {
+        "name": "long_i0_r24",
+        "crew": "long",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1450.662,
+          "assembly_transferred": 1450.603,
+          "first_inspected": 1449.712,
+          "first_pass": 1147.542,
+          "rework_released": 205.257,
+          "scrap": 96.27,
+          "pending_before_inspection": 0.892,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.643,
+          "released": 1352.798,
+          "assembly_last_blocked_seconds": 7503.902,
+          "inspection_blocked_seconds": 6310.938
+        },
+        "mean_shortfall": 297.202
+      },
+      {
+        "name": "long_i0_r24",
+        "crew": "long",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24,
+        "scenario": "middle",
+        "hits": 111,
+        "adjusted_lower": 0.136616,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1710.557,
+          "assembly_transferred": 1710.498,
+          "first_inspected": 1709.59,
+          "first_pass": 1384.63,
+          "rework_released": 220.698,
+          "scrap": 103.612,
+          "pending_before_inspection": 0.908,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.65,
+          "released": 1605.328,
+          "assembly_last_blocked_seconds": 4149.969,
+          "inspection_blocked_seconds": 2782.88
+        },
+        "mean_shortfall": 50.538
+      },
+      {
+        "name": "long_i0_r24",
+        "crew": "long",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24,
+        "scenario": "late",
+        "hits": 155,
+        "adjusted_lower": 0.202512,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1753.838,
+          "assembly_transferred": 1753.275,
+          "first_inspected": 1752.818,
+          "first_pass": 1436.715,
+          "rework_released": 194.217,
+          "scrap": 97.235,
+          "pending_before_inspection": 0.457,
+          "pending_to_rework": 0.53,
+          "pending_rework": 24.122,
+          "released": 1630.932,
+          "assembly_last_blocked_seconds": 3472.698,
+          "inspection_blocked_seconds": 2109.014
+        },
+        "mean_shortfall": 28.542
+      },
+      {
+        "name": "long_i0_r24",
+        "crew": "long",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24,
+        "scenario": "latest",
+        "hits": 434,
+        "adjusted_lower": 0.660412,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1789.087,
+          "assembly_transferred": 1788.463,
+          "first_inspected": 1788.068,
+          "first_pass": 1492.19,
+          "rework_released": 179.858,
+          "scrap": 90.553,
+          "pending_before_inspection": 0.395,
+          "pending_to_rework": 0.593,
+          "pending_rework": 24.873,
+          "released": 1672.048,
+          "assembly_last_blocked_seconds": 2937.418,
+          "inspection_blocked_seconds": 1570.301
+        },
+        "mean_shortfall": 6.033
+      },
+      {
+        "name": "long_i0_r48",
+        "crew": "long",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48,
+        "scenario": "uniform",
+        "hits": 596,
+        "adjusted_lower": 0.974296,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1893.425,
+          "assembly_transferred": 1893.37,
+          "first_inspected": 1892.46,
+          "first_pass": 1551.873,
+          "rework_released": 230.375,
+          "scrap": 108.458,
+          "pending_before_inspection": 0.91,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.753,
+          "released": 1782.248,
+          "assembly_last_blocked_seconds": 1414.147,
+          "inspection_blocked_seconds": 20.235
+        },
+        "mean_shortfall": 0.05
+      },
+      {
+        "name": "long_i0_r48",
+        "crew": "long",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48,
+        "scenario": "early",
+        "hits": 1,
+        "adjusted_lower": 1e-06,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1559.453,
+          "assembly_transferred": 1559.392,
+          "first_inspected": 1558.5,
+          "first_pass": 1246.608,
+          "rework_released": 211.86,
+          "scrap": 99.382,
+          "pending_before_inspection": 0.892,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.65,
+          "released": 1458.468,
+          "assembly_last_blocked_seconds": 6005.854,
+          "inspection_blocked_seconds": 4764.554
+        },
+        "mean_shortfall": 191.568
+      },
+      {
+        "name": "long_i0_r48",
+        "crew": "long",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48,
+        "scenario": "middle",
+        "hits": 512,
+        "adjusted_lower": 0.801084,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1817.258,
+          "assembly_transferred": 1817.207,
+          "first_inspected": 1816.3,
+          "first_pass": 1481.637,
+          "rework_released": 227.307,
+          "scrap": 106.668,
+          "pending_before_inspection": 0.907,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.688,
+          "released": 1708.943,
+          "assembly_last_blocked_seconds": 2549.326,
+          "inspection_blocked_seconds": 1165.9
+        },
+        "mean_shortfall": 3.618
+      },
+      {
+        "name": "long_i0_r48",
+        "crew": "long",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48,
+        "scenario": "late",
+        "hits": 459,
+        "adjusted_lower": 0.70463,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1843.495,
+          "assembly_transferred": 1843.318,
+          "first_inspected": 1842.517,
+          "first_pass": 1506.433,
+          "rework_released": 194.217,
+          "scrap": 101.328,
+          "pending_before_inspection": 0.802,
+          "pending_to_rework": 0.133,
+          "pending_rework": 40.405,
+          "released": 1700.65,
+          "assembly_last_blocked_seconds": 2160.057,
+          "inspection_blocked_seconds": 773.205
+        },
+        "mean_shortfall": 6.46
+      },
+      {
+        "name": "long_i0_r48",
+        "crew": "long",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48,
+        "scenario": "latest",
+        "hits": 571,
+        "adjusted_lower": 0.916376,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1858.268,
+          "assembly_transferred": 1857.775,
+          "first_inspected": 1857.253,
+          "first_pass": 1533.898,
+          "rework_released": 179.858,
+          "scrap": 96.122,
+          "pending_before_inspection": 0.522,
+          "pending_to_rework": 0.455,
+          "pending_rework": 46.92,
+          "released": 1713.757,
+          "assembly_last_blocked_seconds": 1910.521,
+          "inspection_blocked_seconds": 530.27
+        },
+        "mean_shortfall": 0.707
+      },
+      {
+        "name": "peak_i0_r0",
+        "crew": "peak",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0,
+        "scenario": "uniform",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1430.953,
+          "assembly_transferred": 1430.598,
+          "first_inspected": 1429.975,
+          "first_pass": 1172.76,
+          "rework_released": 174.04,
+          "scrap": 82.087,
+          "pending_before_inspection": 0.623,
+          "pending_to_rework": 0.317,
+          "pending_rework": 0.772,
+          "released": 1346.8,
+          "assembly_last_blocked_seconds": 8349.114,
+          "inspection_blocked_seconds": 7007.655
+        },
+        "mean_shortfall": 303.2
+      },
+      {
+        "name": "peak_i0_r0",
+        "crew": "peak",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1106.105,
+          "assembly_transferred": 1105.938,
+          "first_inspected": 1105.145,
+          "first_pass": 833.535,
+          "rework_released": 184.403,
+          "scrap": 86.595,
+          "pending_before_inspection": 0.793,
+          "pending_to_rework": 0.117,
+          "pending_rework": 0.495,
+          "released": 1017.938,
+          "assembly_last_blocked_seconds": 12112.221,
+          "inspection_blocked_seconds": 11103.216
+        },
+        "mean_shortfall": 632.062
+      },
+      {
+        "name": "peak_i0_r0",
+        "crew": "peak",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0,
+        "scenario": "middle",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1391.877,
+          "assembly_transferred": 1391.703,
+          "first_inspected": 1390.89,
+          "first_pass": 1093.657,
+          "rework_released": 201.743,
+          "scrap": 94.897,
+          "pending_before_inspection": 0.813,
+          "pending_to_rework": 0.12,
+          "pending_rework": 0.473,
+          "released": 1295.4,
+          "assembly_last_blocked_seconds": 8835.481,
+          "inspection_blocked_seconds": 7531.476
+        },
+        "mean_shortfall": 354.6
+      },
+      {
+        "name": "peak_i0_r0",
+        "crew": "peak",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0,
+        "scenario": "late",
+        "hits": 2,
+        "adjusted_lower": 5.6e-05,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1656.625,
+          "assembly_transferred": 1655.903,
+          "first_inspected": 1655.602,
+          "first_pass": 1377.48,
+          "rework_released": 187.793,
+          "scrap": 88.647,
+          "pending_before_inspection": 0.302,
+          "pending_to_rework": 0.695,
+          "pending_rework": 0.987,
+          "released": 1565.273,
+          "assembly_last_blocked_seconds": 5592.255,
+          "inspection_blocked_seconds": 4066.799
+        },
+        "mean_shortfall": 84.758
+      },
+      {
+        "name": "peak_i0_r0",
+        "crew": "peak",
+        "area_slots": 0,
+        "inspection_slots": 0,
+        "rework_slots": 0,
+        "scenario": "latest",
+        "hits": 42,
+        "adjusted_lower": 0.040608,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1677.207,
+          "assembly_transferred": 1676.49,
+          "first_inspected": 1676.183,
+          "first_pass": 1426.142,
+          "rework_released": 169.038,
+          "scrap": 79.342,
+          "pending_before_inspection": 0.307,
+          "pending_to_rework": 0.687,
+          "pending_rework": 0.975,
+          "released": 1595.18,
+          "assembly_last_blocked_seconds": 5234.272,
+          "inspection_blocked_seconds": 3717.38
+        },
+        "mean_shortfall": 56.197
+      },
+      {
+        "name": "peak_i0_r4",
+        "crew": "peak",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4,
+        "scenario": "uniform",
+        "hits": 7,
+        "adjusted_lower": 0.002297,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1591.46,
+          "assembly_transferred": 1591.408,
+          "first_inspected": 1590.513,
+          "first_pass": 1304.162,
+          "rework_released": 193.755,
+          "scrap": 91.252,
+          "pending_before_inspection": 0.895,
+          "pending_to_rework": 0.002,
+          "pending_rework": 1.343,
+          "released": 1497.917,
+          "assembly_last_blocked_seconds": 5946.129,
+          "inspection_blocked_seconds": 4585.497
+        },
+        "mean_shortfall": 152.607
+      },
+      {
+        "name": "peak_i0_r4",
+        "crew": "peak",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1152.642,
+          "assembly_transferred": 1152.568,
+          "first_inspected": 1151.657,
+          "first_pass": 875.797,
+          "rework_released": 187.338,
+          "scrap": 87.883,
+          "pending_before_inspection": 0.912,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.638,
+          "released": 1063.135,
+          "assembly_last_blocked_seconds": 11273.288,
+          "inspection_blocked_seconds": 10292.957
+        },
+        "mean_shortfall": 586.865
+      },
+      {
+        "name": "peak_i0_r4",
+        "crew": "peak",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4,
+        "scenario": "middle",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1488.098,
+          "assembly_transferred": 1488.05,
+          "first_inspected": 1487.135,
+          "first_pass": 1181.4,
+          "rework_released": 207.415,
+          "scrap": 97.662,
+          "pending_before_inspection": 0.915,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.658,
+          "released": 1388.815,
+          "assembly_last_blocked_seconds": 6924.843,
+          "inspection_blocked_seconds": 5728.46
+        },
+        "mean_shortfall": 261.185
+      },
+      {
+        "name": "peak_i0_r4",
+        "crew": "peak",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4,
+        "scenario": "late",
+        "hits": 566,
+        "adjusted_lower": 0.905976,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1807.13,
+          "assembly_transferred": 1806.978,
+          "first_inspected": 1806.145,
+          "first_pass": 1473.917,
+          "rework_released": 224.445,
+          "scrap": 105.687,
+          "pending_before_inspection": 0.833,
+          "pending_to_rework": 0.092,
+          "pending_rework": 2.005,
+          "released": 1698.362,
+          "assembly_last_blocked_seconds": 2789.905,
+          "inspection_blocked_seconds": 1387.162
+        },
+        "mean_shortfall": 0.71
+      },
+      {
+        "name": "peak_i0_r4",
+        "crew": "peak",
+        "area_slots": 4,
+        "inspection_slots": 0,
+        "rework_slots": 4,
+        "scenario": "latest",
+        "hits": 596,
+        "adjusted_lower": 0.974296,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1861.362,
+          "assembly_transferred": 1861.023,
+          "first_inspected": 1860.368,
+          "first_pass": 1535.685,
+          "rework_released": 217.718,
+          "scrap": 102.887,
+          "pending_before_inspection": 0.655,
+          "pending_to_rework": 0.295,
+          "pending_rework": 3.783,
+          "released": 1753.403,
+          "assembly_last_blocked_seconds": 2031.694,
+          "inspection_blocked_seconds": 605.867
+        },
+        "mean_shortfall": 0.063
+      },
+      {
+        "name": "peak_i0_r8",
+        "crew": "peak",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8,
+        "scenario": "uniform",
+        "hits": 27,
+        "adjusted_lower": 0.022212,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1624.243,
+          "assembly_transferred": 1624.172,
+          "first_inspected": 1623.26,
+          "first_pass": 1331.012,
+          "rework_released": 197.785,
+          "scrap": 93.145,
+          "pending_before_inspection": 0.912,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.318,
+          "released": 1528.797,
+          "assembly_last_blocked_seconds": 5448.301,
+          "inspection_blocked_seconds": 4084.481
+        },
+        "mean_shortfall": 122.952
+      },
+      {
+        "name": "peak_i0_r8",
+        "crew": "peak",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1165.767,
+          "assembly_transferred": 1165.717,
+          "first_inspected": 1164.79,
+          "first_pass": 887.69,
+          "rework_released": 188.105,
+          "scrap": 88.287,
+          "pending_before_inspection": 0.927,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.708,
+          "released": 1075.795,
+          "assembly_last_blocked_seconds": 11086.868,
+          "inspection_blocked_seconds": 10102.687
+        },
+        "mean_shortfall": 574.205
+      },
+      {
+        "name": "peak_i0_r8",
+        "crew": "peak",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8,
+        "scenario": "middle",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1504.687,
+          "assembly_transferred": 1504.627,
+          "first_inspected": 1503.712,
+          "first_pass": 1196.522,
+          "rework_released": 208.407,
+          "scrap": 98.125,
+          "pending_before_inspection": 0.915,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.658,
+          "released": 1404.928,
+          "assembly_last_blocked_seconds": 6663.257,
+          "inspection_blocked_seconds": 5467.019
+        },
+        "mean_shortfall": 245.072
+      },
+      {
+        "name": "peak_i0_r8",
+        "crew": "peak",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8,
+        "scenario": "late",
+        "hits": 589,
+        "adjusted_lower": 0.956294,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1827.72,
+          "assembly_transferred": 1827.657,
+          "first_inspected": 1826.778,
+          "first_pass": 1491.727,
+          "rework_released": 226.66,
+          "scrap": 106.69,
+          "pending_before_inspection": 0.878,
+          "pending_to_rework": 0.02,
+          "pending_rework": 1.682,
+          "released": 1718.387,
+          "assembly_last_blocked_seconds": 2435.923,
+          "inspection_blocked_seconds": 1040.008
+        },
+        "mean_shortfall": 0.222
+      },
+      {
+        "name": "peak_i0_r8",
+        "crew": "peak",
+        "area_slots": 8,
+        "inspection_slots": 0,
+        "rework_slots": 8,
+        "scenario": "latest",
+        "hits": 598,
+        "adjusted_lower": 0.980285,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1877.498,
+          "assembly_transferred": 1877.323,
+          "first_inspected": 1876.515,
+          "first_pass": 1546.382,
+          "rework_released": 220.328,
+          "scrap": 104.435,
+          "pending_before_inspection": 0.808,
+          "pending_to_rework": 0.117,
+          "pending_rework": 5.253,
+          "released": 1766.71,
+          "assembly_last_blocked_seconds": 1714.438,
+          "inspection_blocked_seconds": 304.067
+        },
+        "mean_shortfall": 0.027
+      },
+      {
+        "name": "peak_i0_r12",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12,
+        "scenario": "uniform",
+        "hits": 64,
+        "adjusted_lower": 0.069762,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1652.003,
+          "assembly_transferred": 1651.937,
+          "first_inspected": 1651.033,
+          "first_pass": 1353.858,
+          "rework_released": 201.135,
+          "scrap": 94.67,
+          "pending_before_inspection": 0.903,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.37,
+          "released": 1554.993,
+          "assembly_last_blocked_seconds": 5026.609,
+          "inspection_blocked_seconds": 3661.588
+        },
+        "mean_shortfall": 98.65
+      },
+      {
+        "name": "peak_i0_r12",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1178.542,
+          "assembly_transferred": 1178.507,
+          "first_inspected": 1177.62,
+          "first_pass": 899.418,
+          "rework_released": 188.917,
+          "scrap": 88.655,
+          "pending_before_inspection": 0.887,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.63,
+          "released": 1088.335,
+          "assembly_last_blocked_seconds": 10915.282,
+          "inspection_blocked_seconds": 9924.788
+        },
+        "mean_shortfall": 561.665
+      },
+      {
+        "name": "peak_i0_r12",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12,
+        "scenario": "middle",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1517.575,
+          "assembly_transferred": 1517.535,
+          "first_inspected": 1516.637,
+          "first_pass": 1208.32,
+          "rework_released": 209.212,
+          "scrap": 98.452,
+          "pending_before_inspection": 0.898,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.653,
+          "released": 1417.532,
+          "assembly_last_blocked_seconds": 6486.743,
+          "inspection_blocked_seconds": 5284.458
+        },
+        "mean_shortfall": 232.468
+      },
+      {
+        "name": "peak_i0_r12",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12,
+        "scenario": "late",
+        "hits": 592,
+        "adjusted_lower": 0.963667,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1840.465,
+          "assembly_transferred": 1840.395,
+          "first_inspected": 1839.482,
+          "first_pass": 1503.043,
+          "rework_released": 227.522,
+          "scrap": 107.158,
+          "pending_before_inspection": 0.913,
+          "pending_to_rework": 0.003,
+          "pending_rework": 1.755,
+          "released": 1730.565,
+          "assembly_last_blocked_seconds": 2247.913,
+          "inspection_blocked_seconds": 849.344
+        },
+        "mean_shortfall": 0.142
+      },
+      {
+        "name": "peak_i0_r12",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 0,
+        "rework_slots": 12,
+        "scenario": "latest",
+        "hits": 599,
+        "adjusted_lower": 0.98365,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1884.518,
+          "assembly_transferred": 1884.413,
+          "first_inspected": 1883.552,
+          "first_pass": 1551.322,
+          "rework_released": 220.797,
+          "scrap": 104.945,
+          "pending_before_inspection": 0.862,
+          "pending_to_rework": 0.055,
+          "pending_rework": 6.433,
+          "released": 1772.118,
+          "assembly_last_blocked_seconds": 1578.771,
+          "inspection_blocked_seconds": 175.163
+        },
+        "mean_shortfall": 0.012
+      },
+      {
+        "name": "peak_i0_r24",
+        "crew": "peak",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24,
+        "scenario": "uniform",
+        "hits": 249,
+        "adjusted_lower": 0.349962,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1734.373,
+          "assembly_transferred": 1734.322,
+          "first_inspected": 1733.435,
+          "first_pass": 1421.288,
+          "rework_released": 211.407,
+          "scrap": 99.367,
+          "pending_before_inspection": 0.887,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.373,
+          "released": 1632.695,
+          "assembly_last_blocked_seconds": 3784.939,
+          "inspection_blocked_seconds": 2410.242
+        },
+        "mean_shortfall": 40.222
+      },
+      {
+        "name": "peak_i0_r24",
+        "crew": "peak",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1216.855,
+          "assembly_transferred": 1216.8,
+          "first_inspected": 1215.887,
+          "first_pass": 934.32,
+          "rework_released": 191.225,
+          "scrap": 89.728,
+          "pending_before_inspection": 0.913,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.613,
+          "released": 1125.545,
+          "assembly_last_blocked_seconds": 10392.713,
+          "inspection_blocked_seconds": 9383.872
+        },
+        "mean_shortfall": 524.455
+      },
+      {
+        "name": "peak_i0_r24",
+        "crew": "peak",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24,
+        "scenario": "middle",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1555.17,
+          "assembly_transferred": 1555.107,
+          "first_inspected": 1554.21,
+          "first_pass": 1242.555,
+          "rework_released": 211.522,
+          "scrap": 99.522,
+          "pending_before_inspection": 0.897,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.612,
+          "released": 1454.077,
+          "assembly_last_blocked_seconds": 5984.139,
+          "inspection_blocked_seconds": 4762.555
+        },
+        "mean_shortfall": 195.923
+      },
+      {
+        "name": "peak_i0_r24",
+        "crew": "peak",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24,
+        "scenario": "late",
+        "hits": 594,
+        "adjusted_lower": 0.968829,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1869.577,
+          "assembly_transferred": 1869.53,
+          "first_inspected": 1868.615,
+          "first_pass": 1529.127,
+          "rework_released": 229.16,
+          "scrap": 107.998,
+          "pending_before_inspection": 0.915,
+          "pending_to_rework": 0.0,
+          "pending_rework": 2.33,
+          "released": 1758.287,
+          "assembly_last_blocked_seconds": 1811.948,
+          "inspection_blocked_seconds": 406.86
+        },
+        "mean_shortfall": 0.1
+      },
+      {
+        "name": "peak_i0_r24",
+        "crew": "peak",
+        "area_slots": 24,
+        "inspection_slots": 0,
+        "rework_slots": 24,
+        "scenario": "latest",
+        "hits": 599,
+        "adjusted_lower": 0.98365,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1892.628,
+          "assembly_transferred": 1892.578,
+          "first_inspected": 1891.678,
+          "first_pass": 1557.477,
+          "rework_released": 220.998,
+          "scrap": 105.38,
+          "pending_before_inspection": 0.9,
+          "pending_to_rework": 0.008,
+          "pending_rework": 7.815,
+          "released": 1778.475,
+          "assembly_last_blocked_seconds": 1429.633,
+          "inspection_blocked_seconds": 33.831
+        },
+        "mean_shortfall": 0.012
+      },
+      {
+        "name": "peak_i0_r48",
+        "crew": "peak",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48,
+        "scenario": "uniform",
+        "hits": 573,
+        "adjusted_lower": 0.920595,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1862.245,
+          "assembly_transferred": 1862.178,
+          "first_inspected": 1861.277,
+          "first_pass": 1526.358,
+          "rework_released": 226.882,
+          "scrap": 106.708,
+          "pending_before_inspection": 0.902,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.328,
+          "released": 1753.24,
+          "assembly_last_blocked_seconds": 1873.302,
+          "inspection_blocked_seconds": 483.516
+        },
+        "mean_shortfall": 1.06
+      },
+      {
+        "name": "peak_i0_r48",
+        "crew": "peak",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1305.435,
+          "assembly_transferred": 1305.38,
+          "first_inspected": 1304.482,
+          "first_pass": 1015.035,
+          "rework_released": 196.542,
+          "scrap": 92.235,
+          "pending_before_inspection": 0.898,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.67,
+          "released": 1211.577,
+          "assembly_last_blocked_seconds": 9197.011,
+          "inspection_blocked_seconds": 8143.845
+        },
+        "mean_shortfall": 438.423
+      },
+      {
+        "name": "peak_i0_r48",
+        "crew": "peak",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48,
+        "scenario": "middle",
+        "hits": 1,
+        "adjusted_lower": 1e-06,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1631.01,
+          "assembly_transferred": 1630.95,
+          "first_inspected": 1630.042,
+          "first_pass": 1311.89,
+          "rework_released": 215.972,
+          "scrap": 101.54,
+          "pending_before_inspection": 0.908,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.64,
+          "released": 1527.862,
+          "assembly_last_blocked_seconds": 4966.887,
+          "inspection_blocked_seconds": 3705.633
+        },
+        "mean_shortfall": 122.172
+      },
+      {
+        "name": "peak_i0_r48",
+        "crew": "peak",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48,
+        "scenario": "late",
+        "hits": 595,
+        "adjusted_lower": 0.971515,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1892.715,
+          "assembly_transferred": 1892.665,
+          "first_inspected": 1891.752,
+          "first_pass": 1548.99,
+          "rework_released": 230.315,
+          "scrap": 108.86,
+          "pending_before_inspection": 0.913,
+          "pending_to_rework": 0.0,
+          "pending_rework": 3.587,
+          "released": 1779.305,
+          "assembly_last_blocked_seconds": 1428.387,
+          "inspection_blocked_seconds": 32.797
+        },
+        "mean_shortfall": 0.08
+      },
+      {
+        "name": "peak_i0_r48",
+        "crew": "peak",
+        "area_slots": 48,
+        "inspection_slots": 0,
+        "rework_slots": 48,
+        "scenario": "latest",
+        "hits": 599,
+        "adjusted_lower": 0.98365,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1894.753,
+          "assembly_transferred": 1894.697,
+          "first_inspected": 1893.79,
+          "first_pass": 1559.173,
+          "rework_released": 221.012,
+          "scrap": 105.47,
+          "pending_before_inspection": 0.907,
+          "pending_to_rework": 0.0,
+          "pending_rework": 8.135,
+          "released": 1780.185,
+          "assembly_last_blocked_seconds": 1395.242,
+          "inspection_blocked_seconds": 0.946
+        },
+        "mean_shortfall": 0.012
+      },
+      {
+        "name": "long_i6_r6",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 6,
+        "rework_slots": 6,
+        "scenario": "uniform",
+        "hits": 261,
+        "adjusted_lower": 0.369311,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1741.835,
+          "assembly_transferred": 1741.833,
+          "first_inspected": 1740.788,
+          "first_pass": 1427.35,
+          "rework_released": 212.008,
+          "scrap": 99.733,
+          "pending_before_inspection": 1.045,
+          "pending_to_rework": 0.003,
+          "pending_rework": 1.693,
+          "released": 1639.358,
+          "assembly_last_blocked_seconds": 2622.985,
+          "inspection_blocked_seconds": 2618.82
+        },
+        "mean_shortfall": 31.682
+      },
+      {
+        "name": "long_i6_r6",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 6,
+        "rework_slots": 6,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1375.185,
+          "assembly_transferred": 1375.185,
+          "first_inspected": 1374.172,
+          "first_pass": 1078.608,
+          "rework_released": 200.773,
+          "scrap": 94.142,
+          "pending_before_inspection": 1.013,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.648,
+          "released": 1279.382,
+          "assembly_last_blocked_seconds": 7897.162,
+          "inspection_blocked_seconds": 7613.589
+        },
+        "mean_shortfall": 370.618
+      },
+      {
+        "name": "long_i6_r6",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 6,
+        "rework_slots": 6,
+        "scenario": "middle",
+        "hits": 9,
+        "adjusted_lower": 0.003773,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1635.09,
+          "assembly_transferred": 1635.09,
+          "first_inspected": 1634.078,
+          "first_pass": 1315.617,
+          "rework_released": 216.175,
+          "scrap": 101.667,
+          "pending_before_inspection": 1.012,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.62,
+          "released": 1531.792,
+          "assembly_last_blocked_seconds": 4406.915,
+          "inspection_blocked_seconds": 4164.375
+        },
+        "mean_shortfall": 118.577
+      },
+      {
+        "name": "long_i6_r6",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 6,
+        "rework_slots": 6,
+        "scenario": "late",
+        "hits": 35,
+        "adjusted_lower": 0.031821,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1702.473,
+          "assembly_transferred": 1701.818,
+          "first_inspected": 1695.512,
+          "first_pass": 1400.805,
+          "rework_released": 194.182,
+          "scrap": 92.97,
+          "pending_before_inspection": 6.307,
+          "pending_to_rework": 0.64,
+          "pending_rework": 6.915,
+          "released": 1594.987,
+          "assembly_last_blocked_seconds": 3241.46,
+          "inspection_blocked_seconds": 3095.39
+        },
+        "mean_shortfall": 56.347
+      },
+      {
+        "name": "long_i6_r6",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 6,
+        "rework_slots": 6,
+        "scenario": "latest",
+        "hits": 229,
+        "adjusted_lower": 0.317959,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1739.535,
+          "assembly_transferred": 1738.922,
+          "first_inspected": 1732.658,
+          "first_pass": 1459.37,
+          "rework_released": 179.855,
+          "scrap": 85.883,
+          "pending_before_inspection": 6.263,
+          "pending_to_rework": 0.61,
+          "pending_rework": 6.94,
+          "released": 1639.225,
+          "assembly_last_blocked_seconds": 2615.385,
+          "inspection_blocked_seconds": 2510.148
+        },
+        "mean_shortfall": 20.277
+      },
+      {
+        "name": "long_i12_r0",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 12,
+        "rework_slots": 0,
+        "scenario": "uniform",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1592.752,
+          "assembly_transferred": 1592.525,
+          "first_inspected": 1582.738,
+          "first_pass": 1297.74,
+          "rework_released": 193.007,
+          "scrap": 90.838,
+          "pending_before_inspection": 9.787,
+          "pending_to_rework": 0.338,
+          "pending_rework": 0.815,
+          "released": 1490.747,
+          "assembly_last_blocked_seconds": 5552.745,
+          "inspection_blocked_seconds": 5963.58
+        },
+        "mean_shortfall": 159.253
+      },
+      {
+        "name": "long_i12_r0",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 12,
+        "rework_slots": 0,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1307.945,
+          "assembly_transferred": 1307.937,
+          "first_inspected": 1305.478,
+          "first_pass": 1015.952,
+          "rework_released": 196.647,
+          "scrap": 92.298,
+          "pending_before_inspection": 2.458,
+          "pending_to_rework": 0.095,
+          "pending_rework": 0.487,
+          "released": 1212.598,
+          "assembly_last_blocked_seconds": 9018.19,
+          "inspection_blocked_seconds": 8977.856
+        },
+        "mean_shortfall": 437.402
+      },
+      {
+        "name": "long_i12_r0",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 12,
+        "rework_slots": 0,
+        "scenario": "middle",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1523.533,
+          "assembly_transferred": 1523.525,
+          "first_inspected": 1520.007,
+          "first_pass": 1211.315,
+          "rework_released": 209.457,
+          "scrap": 98.613,
+          "pending_before_inspection": 3.518,
+          "pending_to_rework": 0.1,
+          "pending_rework": 0.522,
+          "released": 1420.772,
+          "assembly_last_blocked_seconds": 6485.796,
+          "inspection_blocked_seconds": 6627.654
+        },
+        "mean_shortfall": 229.228
+      },
+      {
+        "name": "long_i12_r0",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 12,
+        "rework_slots": 0,
+        "scenario": "late",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1628.76,
+          "assembly_transferred": 1628.027,
+          "first_inspected": 1615.75,
+          "first_pass": 1353.992,
+          "rework_released": 176.765,
+          "scrap": 83.295,
+          "pending_before_inspection": 12.277,
+          "pending_to_rework": 0.708,
+          "pending_rework": 0.99,
+          "released": 1530.757,
+          "assembly_last_blocked_seconds": 4691.065,
+          "inspection_blocked_seconds": 5157.864
+        },
+        "mean_shortfall": 119.243
+      },
+      {
+        "name": "long_i12_r0",
+        "crew": "long",
+        "area_slots": 12,
+        "inspection_slots": 12,
+        "rework_slots": 0,
+        "scenario": "latest",
+        "hits": 8,
+        "adjusted_lower": 0.003008,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1670.377,
+          "assembly_transferred": 1669.68,
+          "first_inspected": 1657.392,
+          "first_pass": 1414.847,
+          "rework_released": 163.97,
+          "scrap": 76.897,
+          "pending_before_inspection": 12.288,
+          "pending_to_rework": 0.688,
+          "pending_rework": 0.99,
+          "released": 1578.817,
+          "assembly_last_blocked_seconds": 4014.197,
+          "inspection_blocked_seconds": 4545.924
+        },
+        "mean_shortfall": 71.285
+      },
+      {
+        "name": "long_unlimited",
+        "crew": "long",
+        "area_slots": null,
+        "inspection_slots": null,
+        "rework_slots": null,
+        "scenario": "uniform",
+        "hits": 596,
+        "adjusted_lower": 0.974296,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1894.937,
+          "assembly_transferred": 1894.937,
+          "first_inspected": 1893.908,
+          "first_pass": 1553.063,
+          "rework_released": 230.548,
+          "scrap": 108.55,
+          "pending_before_inspection": 1.028,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.747,
+          "released": 1783.612,
+          "assembly_last_blocked_seconds": 0.0,
+          "inspection_blocked_seconds": 0.0
+        },
+        "mean_shortfall": 0.05
+      },
+      {
+        "name": "long_unlimited",
+        "crew": "long",
+        "area_slots": null,
+        "inspection_slots": null,
+        "rework_slots": null,
+        "scenario": "early",
+        "hits": 596,
+        "adjusted_lower": 0.974296,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1894.937,
+          "assembly_transferred": 1894.937,
+          "first_inspected": 1893.908,
+          "first_pass": 1550.617,
+          "rework_released": 232.827,
+          "scrap": 109.372,
+          "pending_before_inspection": 1.028,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.093,
+          "released": 1783.443,
+          "assembly_last_blocked_seconds": 0.0,
+          "inspection_blocked_seconds": 0.0
+        },
+        "mean_shortfall": 0.043
+      },
+      {
+        "name": "long_unlimited",
+        "crew": "long",
+        "area_slots": null,
+        "inspection_slots": null,
+        "rework_slots": null,
+        "scenario": "middle",
+        "hits": 595,
+        "adjusted_lower": 0.971515,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1894.937,
+          "assembly_transferred": 1894.937,
+          "first_inspected": 1893.908,
+          "first_pass": 1550.58,
+          "rework_released": 232.568,
+          "scrap": 109.357,
+          "pending_before_inspection": 1.028,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.403,
+          "released": 1783.148,
+          "assembly_last_blocked_seconds": 0.0,
+          "inspection_blocked_seconds": 0.0
+        },
+        "mean_shortfall": 0.062
+      },
+      {
+        "name": "long_unlimited",
+        "crew": "long",
+        "area_slots": null,
+        "inspection_slots": null,
+        "rework_slots": null,
+        "scenario": "late",
+        "hits": 572,
+        "adjusted_lower": 0.918481,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1894.937,
+          "assembly_transferred": 1894.937,
+          "first_inspected": 1893.908,
+          "first_pass": 1550.77,
+          "rework_released": 194.228,
+          "scrap": 102.785,
+          "pending_before_inspection": 1.028,
+          "pending_to_rework": 0.0,
+          "pending_rework": 46.125,
+          "released": 1744.998,
+          "assembly_last_blocked_seconds": 0.0,
+          "inspection_blocked_seconds": 0.0
+        },
+        "mean_shortfall": 1.12
+      },
+      {
+        "name": "long_unlimited",
+        "crew": "long",
+        "area_slots": null,
+        "inspection_slots": null,
+        "rework_slots": null,
+        "scenario": "latest",
+        "hits": 584,
+        "adjusted_lower": 0.944643,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1894.937,
+          "assembly_transferred": 1894.937,
+          "first_inspected": 1893.908,
+          "first_pass": 1559.273,
+          "rework_released": 179.872,
+          "scrap": 98.435,
+          "pending_before_inspection": 1.028,
+          "pending_to_rework": 0.0,
+          "pending_rework": 56.328,
+          "released": 1739.145,
+          "assembly_last_blocked_seconds": 0.0,
+          "inspection_blocked_seconds": 0.0
+        },
+        "mean_shortfall": 0.407
+      },
+      {
+        "name": "peak_i6_r6",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 6,
+        "rework_slots": 6,
+        "scenario": "uniform",
+        "hits": 24,
+        "adjusted_lower": 0.018764,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1615.897,
+          "assembly_transferred": 1615.897,
+          "first_inspected": 1614.858,
+          "first_pass": 1324.107,
+          "rework_released": 196.737,
+          "scrap": 92.677,
+          "pending_before_inspection": 1.038,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.338,
+          "released": 1520.843,
+          "assembly_last_blocked_seconds": 4747.165,
+          "inspection_blocked_seconds": 4703.574
+        },
+        "mean_shortfall": 130.378
+      },
+      {
+        "name": "peak_i6_r6",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 6,
+        "rework_slots": 6,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1165.622,
+          "assembly_transferred": 1165.622,
+          "first_inspected": 1164.637,
+          "first_pass": 887.572,
+          "rework_released": 188.105,
+          "scrap": 88.285,
+          "pending_before_inspection": 0.985,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.675,
+          "released": 1075.677,
+          "assembly_last_blocked_seconds": 10561.801,
+          "inspection_blocked_seconds": 10312.601
+        },
+        "mean_shortfall": 574.323
+      },
+      {
+        "name": "peak_i6_r6",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 6,
+        "rework_slots": 6,
+        "scenario": "middle",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1504.365,
+          "assembly_transferred": 1504.365,
+          "first_inspected": 1503.35,
+          "first_pass": 1196.202,
+          "rework_released": 208.403,
+          "scrap": 98.112,
+          "pending_before_inspection": 1.015,
+          "pending_to_rework": 0.0,
+          "pending_rework": 0.633,
+          "released": 1404.605,
+          "assembly_last_blocked_seconds": 5797.865,
+          "inspection_blocked_seconds": 5706.874
+        },
+        "mean_shortfall": 245.395
+      },
+      {
+        "name": "peak_i6_r6",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 6,
+        "rework_slots": 6,
+        "scenario": "late",
+        "hits": 587,
+        "adjusted_lower": 0.951556,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1827.423,
+          "assembly_transferred": 1827.407,
+          "first_inspected": 1825.25,
+          "first_pass": 1490.397,
+          "rework_released": 226.583,
+          "scrap": 106.637,
+          "pending_before_inspection": 2.157,
+          "pending_to_rework": 0.025,
+          "pending_rework": 1.608,
+          "released": 1716.98,
+          "assembly_last_blocked_seconds": 1242.274,
+          "inspection_blocked_seconds": 1299.6
+        },
+        "mean_shortfall": 0.273
+      },
+      {
+        "name": "peak_i6_r6",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 6,
+        "rework_slots": 6,
+        "scenario": "latest",
+        "hits": 598,
+        "adjusted_lower": 0.980285,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1877.302,
+          "assembly_transferred": 1877.168,
+          "first_inspected": 1874.047,
+          "first_pass": 1544.658,
+          "rework_released": 220.215,
+          "scrap": 104.263,
+          "pending_before_inspection": 3.122,
+          "pending_to_rework": 0.21,
+          "pending_rework": 4.7,
+          "released": 1764.873,
+          "assembly_last_blocked_seconds": 430.089,
+          "inspection_blocked_seconds": 483.914
+        },
+        "mean_shortfall": 0.027
+      },
+      {
+        "name": "peak_i12_r0",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 12,
+        "rework_slots": 0,
+        "scenario": "uniform",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1460.638,
+          "assembly_transferred": 1460.615,
+          "first_inspected": 1456.813,
+          "first_pass": 1194.685,
+          "rework_released": 177.415,
+          "scrap": 83.597,
+          "pending_before_inspection": 3.802,
+          "pending_to_rework": 0.328,
+          "pending_rework": 0.788,
+          "released": 1372.1,
+          "assembly_last_blocked_seconds": 7272.859,
+          "inspection_blocked_seconds": 7241.643
+        },
+        "mean_shortfall": 277.9
+      },
+      {
+        "name": "peak_i12_r0",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 12,
+        "rework_slots": 0,
+        "scenario": "early",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1124.77,
+          "assembly_transferred": 1124.77,
+          "first_inspected": 1122.835,
+          "first_pass": 849.525,
+          "rework_released": 185.583,
+          "scrap": 87.108,
+          "pending_before_inspection": 1.935,
+          "pending_to_rework": 0.12,
+          "pending_rework": 0.498,
+          "released": 1035.108,
+          "assembly_last_blocked_seconds": 11376.331,
+          "inspection_blocked_seconds": 11267.167
+        },
+        "mean_shortfall": 614.892
+      },
+      {
+        "name": "peak_i12_r0",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 12,
+        "rework_slots": 0,
+        "scenario": "middle",
+        "hits": 0,
+        "adjusted_lower": 0.0,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1422.675,
+          "assembly_transferred": 1422.668,
+          "first_inspected": 1418.39,
+          "first_pass": 1118.658,
+          "rework_released": 203.362,
+          "scrap": 95.77,
+          "pending_before_inspection": 4.278,
+          "pending_to_rework": 0.108,
+          "pending_rework": 0.492,
+          "released": 1322.02,
+          "assembly_last_blocked_seconds": 7712.107,
+          "inspection_blocked_seconds": 7902.63
+        },
+        "mean_shortfall": 327.98
+      },
+      {
+        "name": "peak_i12_r0",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 12,
+        "rework_slots": 0,
+        "scenario": "late",
+        "hits": 28,
+        "adjusted_lower": 0.023383,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1710.055,
+          "assembly_transferred": 1709.375,
+          "first_inspected": 1697.165,
+          "first_pass": 1401.865,
+          "rework_released": 199.648,
+          "scrap": 93.96,
+          "pending_before_inspection": 12.21,
+          "pending_to_rework": 0.712,
+          "pending_rework": 0.98,
+          "released": 1601.513,
+          "assembly_last_blocked_seconds": 3953.873,
+          "inspection_blocked_seconds": 4516.558
+        },
+        "mean_shortfall": 48.772
+      },
+      {
+        "name": "peak_i12_r0",
+        "crew": "peak",
+        "area_slots": 12,
+        "inspection_slots": 12,
+        "rework_slots": 0,
+        "scenario": "latest",
+        "hits": 206,
+        "adjusted_lower": 0.281553,
+        "passes": false,
+        "means": {
+          "assembly_processed": 1737.888,
+          "assembly_transferred": 1737.177,
+          "first_inspected": 1724.97,
+          "first_pass": 1454.99,
+          "rework_released": 182.578,
+          "scrap": 85.685,
+          "pending_before_inspection": 12.207,
+          "pending_to_rework": 0.725,
+          "pending_rework": 0.992,
+          "released": 1637.568,
+          "assembly_last_blocked_seconds": 3404.995,
+          "inspection_blocked_seconds": 4120.938
+        },
+        "mean_shortfall": 19.705
+      },
+      {
+        "name": "peak_unlimited",
+        "crew": "peak",
+        "area_slots": null,
+        "inspection_slots": null,
+        "rework_slots": null,
+        "scenario": "uniform",
+        "hits": 596,
+        "adjusted_lower": 0.974296,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1894.937,
+          "assembly_transferred": 1894.937,
+          "first_inspected": 1893.908,
+          "first_pass": 1553.063,
+          "rework_released": 230.813,
+          "scrap": 108.602,
+          "pending_before_inspection": 1.028,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.43,
+          "released": 1783.877,
+          "assembly_last_blocked_seconds": 0.0,
+          "inspection_blocked_seconds": 0.0
+        },
+        "mean_shortfall": 0.047
+      },
+      {
+        "name": "peak_unlimited",
+        "crew": "peak",
+        "area_slots": null,
+        "inspection_slots": null,
+        "rework_slots": null,
+        "scenario": "early",
+        "hits": 596,
+        "adjusted_lower": 0.974296,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1894.937,
+          "assembly_transferred": 1894.937,
+          "first_inspected": 1893.908,
+          "first_pass": 1550.617,
+          "rework_released": 232.89,
+          "scrap": 109.393,
+          "pending_before_inspection": 1.028,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.008,
+          "released": 1783.507,
+          "assembly_last_blocked_seconds": 0.0,
+          "inspection_blocked_seconds": 0.0
+        },
+        "mean_shortfall": 0.043
+      },
+      {
+        "name": "peak_unlimited",
+        "crew": "peak",
+        "area_slots": null,
+        "inspection_slots": null,
+        "rework_slots": null,
+        "scenario": "middle",
+        "hits": 595,
+        "adjusted_lower": 0.971515,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1894.937,
+          "assembly_transferred": 1894.937,
+          "first_inspected": 1893.908,
+          "first_pass": 1550.58,
+          "rework_released": 232.633,
+          "scrap": 109.375,
+          "pending_before_inspection": 1.028,
+          "pending_to_rework": 0.0,
+          "pending_rework": 1.32,
+          "released": 1783.213,
+          "assembly_last_blocked_seconds": 0.0,
+          "inspection_blocked_seconds": 0.0
+        },
+        "mean_shortfall": 0.062
+      },
+      {
+        "name": "peak_unlimited",
+        "crew": "peak",
+        "area_slots": null,
+        "inspection_slots": null,
+        "rework_slots": null,
+        "scenario": "late",
+        "hits": 595,
+        "adjusted_lower": 0.971515,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1894.937,
+          "assembly_transferred": 1894.937,
+          "first_inspected": 1893.908,
+          "first_pass": 1550.77,
+          "rework_released": 230.332,
+          "scrap": 108.942,
+          "pending_before_inspection": 1.028,
+          "pending_to_rework": 0.0,
+          "pending_rework": 3.865,
+          "released": 1781.102,
+          "assembly_last_blocked_seconds": 0.0,
+          "inspection_blocked_seconds": 0.0
+        },
+        "mean_shortfall": 0.08
+      },
+      {
+        "name": "peak_unlimited",
+        "crew": "peak",
+        "area_slots": null,
+        "inspection_slots": null,
+        "rework_slots": null,
+        "scenario": "latest",
+        "hits": 599,
+        "adjusted_lower": 0.98365,
+        "passes": true,
+        "means": {
+          "assembly_processed": 1894.937,
+          "assembly_transferred": 1894.937,
+          "first_inspected": 1893.908,
+          "first_pass": 1559.273,
+          "rework_released": 221.018,
+          "scrap": 105.477,
+          "pending_before_inspection": 1.028,
+          "pending_to_rework": 0.0,
+          "pending_rework": 8.14,
+          "released": 1780.292,
+          "assembly_last_blocked_seconds": 0.0,
+          "inspection_blocked_seconds": 0.0
+        },
+        "mean_shortfall": 0.012
+      }
+    ],
+    "vs_unlimited": [
+      {
+        "policy": "long_i0_r0",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 334.505,
+          "ci95": [
+            330.227,
+            338.783
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r0",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 592.987,
+          "ci95": [
+            588.345,
+            597.629
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r0",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 401.767,
+          "ci95": [
+            397.145,
+            406.388
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r0",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 236.9,
+          "ci95": [
+            233.301,
+            240.499
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r0",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 182.755,
+          "ci95": [
+            179.862,
+            185.648
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r4",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 165.757,
+          "ci95": [
+            161.225,
+            170.288
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r4",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 518.892,
+          "ci95": [
+            514.33,
+            523.454
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r4",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 266.84,
+          "ci95": [
+            262.32,
+            271.36
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r4",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 154.868,
+          "ci95": [
+            151.661,
+            158.076
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r4",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 104.527,
+          "ci95": [
+            102.094,
+            106.96
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r8",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 136.873,
+          "ci95": [
+            132.157,
+            141.59
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r8",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 501.123,
+          "ci95": [
+            496.585,
+            505.662
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r8",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 248.363,
+          "ci95": [
+            243.858,
+            252.868
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r8",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 146.345,
+          "ci95": [
+            143.189,
+            149.501
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r8",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 96.247,
+          "ci95": [
+            93.837,
+            98.657
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r12",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 110.932,
+          "ci95": [
+            106.157,
+            115.706
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r12",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 483.597,
+          "ci95": [
+            479.082,
+            488.111
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r12",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 230.717,
+          "ci95": [
+            226.244,
+            235.189
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r12",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 138.74,
+          "ci95": [
+            135.591,
+            141.889
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r12",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 89.13,
+          "ci95": [
+            86.718,
+            91.542
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r24",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 44.052,
+          "ci95": [
+            40.214,
+            47.89
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r24",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 430.645,
+          "ci95": [
+            426.201,
+            435.089
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r24",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 177.82,
+          "ci95": [
+            173.416,
+            182.224
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r24",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 114.067,
+          "ci95": [
+            110.943,
+            117.19
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r24",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 67.097,
+          "ci95": [
+            64.671,
+            69.522
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r48",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 1.363,
+          "ci95": [
+            0.703,
+            2.024
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r48",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 324.975,
+          "ci95": [
+            320.674,
+            329.276
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r48",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 74.205,
+          "ci95": [
+            70.239,
+            78.171
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r48",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 44.348,
+          "ci95": [
+            41.42,
+            47.277
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i0_r48",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 25.388,
+          "ci95": [
+            23.301,
+            27.476
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r0",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 437.077,
+          "ci95": [
+            432.267,
+            441.887
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r0",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 765.568,
+          "ci95": [
+            761.292,
+            769.845
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r0",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 487.813,
+          "ci95": [
+            483.666,
+            491.961
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r0",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 215.828,
+          "ci95": [
+            212.36,
+            219.297
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r0",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 185.112,
+          "ci95": [
+            182.037,
+            188.186
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r4",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 285.96,
+          "ci95": [
+            279.81,
+            292.11
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r4",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 720.372,
+          "ci95": [
+            716.456,
+            724.287
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r4",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 394.398,
+          "ci95": [
+            390.894,
+            397.903
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r4",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 82.74,
+          "ci95": [
+            79.648,
+            85.832
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r4",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 26.888,
+          "ci95": [
+            25.035,
+            28.741
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r8",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 255.08,
+          "ci95": [
+            248.627,
+            261.533
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r8",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 707.712,
+          "ci95": [
+            703.798,
+            711.625
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r8",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 378.285,
+          "ci95": [
+            374.774,
+            381.796
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r8",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 62.715,
+          "ci95": [
+            59.703,
+            65.727
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r8",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 13.582,
+          "ci95": [
+            12.038,
+            15.126
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r12",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 228.883,
+          "ci95": [
+            222.343,
+            235.424
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r12",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 695.172,
+          "ci95": [
+            691.251,
+            699.092
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r12",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 365.682,
+          "ci95": [
+            362.159,
+            369.205
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r12",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 50.537,
+          "ci95": [
+            47.619,
+            53.454
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r12",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 8.173,
+          "ci95": [
+            6.877,
+            9.469
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r24",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 151.182,
+          "ci95": [
+            144.685,
+            157.678
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r24",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 657.962,
+          "ci95": [
+            654.053,
+            661.87
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r24",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 329.137,
+          "ci95": [
+            325.617,
+            332.656
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r24",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 22.815,
+          "ci95": [
+            20.523,
+            25.107
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r24",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 1.817,
+          "ci95": [
+            1.163,
+            2.471
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r48",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 30.637,
+          "ci95": [
+            26.723,
+            34.551
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r48",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 571.93,
+          "ci95": [
+            566.966,
+            576.894
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r48",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 255.352,
+          "ci95": [
+            251.817,
+            258.886
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r48",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 1.797,
+          "ci95": [
+            1.144,
+            2.449
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i0_r48",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 0.107,
+          "ci95": [
+            -0.005,
+            0.218
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "policy": "long_i6_r6",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 144.253,
+          "ci95": [
+            139.602,
+            148.904
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i6_r6",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 504.062,
+          "ci95": [
+            499.511,
+            508.613
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i6_r6",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 251.357,
+          "ci95": [
+            246.835,
+            255.878
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i6_r6",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 150.012,
+          "ci95": [
+            146.848,
+            153.175
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i6_r6",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 99.92,
+          "ci95": [
+            97.496,
+            102.344
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i12_r0",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 292.865,
+          "ci95": [
+            287.641,
+            298.089
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i12_r0",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 570.845,
+          "ci95": [
+            566.042,
+            575.648
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i12_r0",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 362.377,
+          "ci95": [
+            357.143,
+            367.611
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i12_r0",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 214.242,
+          "ci95": [
+            210.255,
+            218.228
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "long_i12_r0",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 160.328,
+          "ci95": [
+            157.108,
+            163.549
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i6_r6",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 263.033,
+          "ci95": [
+            256.643,
+            269.424
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i6_r6",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 707.83,
+          "ci95": [
+            703.91,
+            711.75
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i6_r6",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 378.608,
+          "ci95": [
+            375.09,
+            382.126
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i6_r6",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 64.122,
+          "ci95": [
+            61.042,
+            67.201
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i6_r6",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 15.418,
+          "ci95": [
+            13.781,
+            17.055
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i12_r0",
+        "scenario": "uniform",
+        "loss_vs_unlimited_staging": {
+          "mean": 411.777,
+          "ci95": [
+            406.587,
+            416.967
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i12_r0",
+        "scenario": "early",
+        "loss_vs_unlimited_staging": {
+          "mean": 748.398,
+          "ci95": [
+            743.985,
+            752.812
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i12_r0",
+        "scenario": "middle",
+        "loss_vs_unlimited_staging": {
+          "mean": 461.193,
+          "ci95": [
+            456.426,
+            465.96
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i12_r0",
+        "scenario": "late",
+        "loss_vs_unlimited_staging": {
+          "mean": 179.588,
+          "ci95": [
+            175.156,
+            184.021
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "policy": "peak_i12_r0",
+        "scenario": "latest",
+        "loss_vs_unlimited_staging": {
+          "mean": 142.723,
+          "ci95": [
+            138.711,
+            146.736
+          ],
+          "lower_above_zero": true
+        }
+      }
+    ],
+    "same_budget_layout": [
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i0_r12",
+        "scenario": "uniform",
+        "paired_release_gain": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i6_r6",
+        "scenario": "uniform",
+        "paired_release_gain": {
+          "mean": 33.322,
+          "ci95": [
+            32.51,
+            34.133
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i12_r0",
+        "scenario": "uniform",
+        "paired_release_gain": {
+          "mean": 181.933,
+          "ci95": [
+            178.524,
+            185.343
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i0_r12",
+        "scenario": "early",
+        "paired_release_gain": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i6_r6",
+        "scenario": "early",
+        "paired_release_gain": {
+          "mean": 20.465,
+          "ci95": [
+            20.333,
+            20.597
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i12_r0",
+        "scenario": "early",
+        "paired_release_gain": {
+          "mean": 87.248,
+          "ci95": [
+            86.136,
+            88.361
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i0_r12",
+        "scenario": "middle",
+        "paired_release_gain": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i6_r6",
+        "scenario": "middle",
+        "paired_release_gain": {
+          "mean": 20.64,
+          "ci95": [
+            20.502,
+            20.778
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i12_r0",
+        "scenario": "middle",
+        "paired_release_gain": {
+          "mean": 131.66,
+          "ci95": [
+            129.712,
+            133.608
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i0_r12",
+        "scenario": "late",
+        "paired_release_gain": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i6_r6",
+        "scenario": "late",
+        "paired_release_gain": {
+          "mean": 11.272,
+          "ci95": [
+            10.815,
+            11.729
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i12_r0",
+        "scenario": "late",
+        "paired_release_gain": {
+          "mean": 75.502,
+          "ci95": [
+            73.743,
+            77.26
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i0_r12",
+        "scenario": "latest",
+        "paired_release_gain": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i6_r6",
+        "scenario": "latest",
+        "paired_release_gain": {
+          "mean": 10.79,
+          "ci95": [
+            10.395,
+            11.185
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "long_i0_r12",
+        "baseline": "long_i12_r0",
+        "scenario": "latest",
+        "paired_release_gain": {
+          "mean": 71.198,
+          "ci95": [
+            69.58,
+            72.816
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i0_r12",
+        "scenario": "uniform",
+        "paired_release_gain": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i6_r6",
+        "scenario": "uniform",
+        "paired_release_gain": {
+          "mean": 34.15,
+          "ci95": [
+            33.265,
+            35.035
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i12_r0",
+        "scenario": "uniform",
+        "paired_release_gain": {
+          "mean": 182.893,
+          "ci95": [
+            180.014,
+            185.773
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i0_r12",
+        "scenario": "early",
+        "paired_release_gain": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i6_r6",
+        "scenario": "early",
+        "paired_release_gain": {
+          "mean": 12.658,
+          "ci95": [
+            12.438,
+            12.878
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i12_r0",
+        "scenario": "early",
+        "paired_release_gain": {
+          "mean": 53.227,
+          "ci95": [
+            52.332,
+            54.122
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i0_r12",
+        "scenario": "middle",
+        "paired_release_gain": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i6_r6",
+        "scenario": "middle",
+        "paired_release_gain": {
+          "mean": 12.927,
+          "ci95": [
+            12.675,
+            13.178
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i12_r0",
+        "scenario": "middle",
+        "paired_release_gain": {
+          "mean": 95.512,
+          "ci95": [
+            93.764,
+            97.26
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i0_r12",
+        "scenario": "late",
+        "paired_release_gain": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i6_r6",
+        "scenario": "late",
+        "paired_release_gain": {
+          "mean": 13.585,
+          "ci95": [
+            13.183,
+            13.987
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i12_r0",
+        "scenario": "late",
+        "paired_release_gain": {
+          "mean": 129.052,
+          "ci95": [
+            126.884,
+            131.219
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i0_r12",
+        "scenario": "latest",
+        "paired_release_gain": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i6_r6",
+        "scenario": "latest",
+        "paired_release_gain": {
+          "mean": 7.245,
+          "ci95": [
+            6.694,
+            7.796
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "selected": "peak_i0_r12",
+        "baseline": "peak_i12_r0",
+        "scenario": "latest",
+        "paired_release_gain": {
+          "mean": 134.55,
+          "ci95": [
+            131.291,
+            137.809
+          ],
+          "lower_above_zero": true
+        }
+      }
+    ]
+  },
+  "early_risk_support": {
+    "known_condition": "The higher-risk lot is scheduled in the early part of the shift before dispatch.",
+    "layout": [
+      0,
+      12
+    ],
+    "helpers": 2,
+    "minutes_per_helper": 120,
+    "reference_start_minute": 300,
+    "selected_start_minute": 90,
+    "reference": "peak_i0_r12",
+    "selected": "early_090_i0_r12",
+    "design": {
+      "runs": 300,
+      "seeds": [
+        2026112230,
+        2026112231
+      ],
+      "pulses_on_reference_clock": {
+        "d035": 35,
+        "d065": 65,
+        "d095": 95
+      },
+      "options": [
+        {
+          "start_minute": 0,
+          "worst_hits": 0,
+          "worst_shortfall_total": 191318,
+          "released_total": 1133975
+        },
+        {
+          "start_minute": 15,
+          "worst_hits": 0,
+          "worst_shortfall_total": 154964,
+          "released_total": 1245327
+        },
+        {
+          "start_minute": 30,
+          "worst_hits": 0,
+          "worst_shortfall_total": 116983,
+          "released_total": 1354674
+        },
+        {
+          "start_minute": 45,
+          "worst_hits": 1,
+          "worst_shortfall_total": 79745,
+          "released_total": 1437457
+        },
+        {
+          "start_minute": 60,
+          "worst_hits": 32,
+          "worst_shortfall_total": 43050,
+          "released_total": 1498636
+        },
+        {
+          "start_minute": 75,
+          "worst_hits": 132,
+          "worst_shortfall_total": 14697,
+          "released_total": 1531493
+        },
+        {
+          "start_minute": 90,
+          "worst_hits": 153,
+          "worst_shortfall_total": 4816,
+          "released_total": 1541214
+        },
+        {
+          "start_minute": 105,
+          "worst_hits": 60,
+          "worst_shortfall_total": 13540,
+          "released_total": 1523359
+        },
+        {
+          "start_minute": 300,
+          "worst_hits": 0,
+          "worst_shortfall_total": 180785,
+          "released_total": 1020046
+        }
+      ]
+    },
+    "holdout": {
+      "runs": 600,
+      "seeds": [
+        2026112232,
+        2026112233
+      ],
+      "pulses_on_reference_clock": {
+        "e020": 20,
+        "e050": 50,
+        "e080": 80
+      },
+      "alpha": 0.008333333333333333,
+      "required_hits": 583,
+      "results": [
+        {
+          "name": "peak_i0_r12",
+          "crew": "peak",
+          "area_slots": 12,
+          "inspection_slots": 0,
+          "rework_slots": 12,
+          "scenario": "e020",
+          "hits": 0,
+          "adjusted_lower": 0.0,
+          "passes": false,
+          "means": {
+            "assembly_processed": 1091.997,
+            "assembly_transferred": 1091.952,
+            "first_inspected": 1091.042,
+            "first_pass": 820.605,
+            "rework_released": 183.458,
+            "scrap": 86.37,
+            "pending_before_inspection": 0.91,
+            "pending_to_rework": 0.0,
+            "pending_rework": 0.608,
+            "released": 1004.063,
+            "assembly_last_blocked_seconds": 12042.197,
+            "inspection_blocked_seconds": 11106.288
+          },
+          "mean_shortfall": 645.937
+        },
+        {
+          "name": "peak_i0_r12",
+          "crew": "peak",
+          "area_slots": 12,
+          "inspection_slots": 0,
+          "rework_slots": 12,
+          "scenario": "e050",
+          "hits": 0,
+          "adjusted_lower": 0.0,
+          "passes": false,
+          "means": {
+            "assembly_processed": 1179.412,
+            "assembly_transferred": 1179.372,
+            "first_inspected": 1178.453,
+            "first_pass": 900.51,
+            "rework_released": 188.518,
+            "scrap": 88.792,
+            "pending_before_inspection": 0.918,
+            "pending_to_rework": 0.0,
+            "pending_rework": 0.633,
+            "released": 1089.028,
+            "assembly_last_blocked_seconds": 10903.13,
+            "inspection_blocked_seconds": 9912.576
+          },
+          "mean_shortfall": 560.972
+        },
+        {
+          "name": "peak_i0_r12",
+          "crew": "peak",
+          "area_slots": 12,
+          "inspection_slots": 0,
+          "rework_slots": 12,
+          "scenario": "e080",
+          "hits": 0,
+          "adjusted_lower": 0.0,
+          "passes": false,
+          "means": {
+            "assembly_processed": 1267.148,
+            "assembly_transferred": 1267.1,
+            "first_inspected": 1266.212,
+            "first_pass": 980.67,
+            "rework_released": 193.592,
+            "scrap": 91.35,
+            "pending_before_inspection": 0.888,
+            "pending_to_rework": 0.0,
+            "pending_rework": 0.6,
+            "released": 1174.262,
+            "assembly_last_blocked_seconds": 9762.096,
+            "inspection_blocked_seconds": 8714.691
+          },
+          "mean_shortfall": 475.738
+        },
+        {
+          "name": "early_090_i0_r12",
+          "crew": "early_090",
+          "area_slots": 12,
+          "inspection_slots": 0,
+          "rework_slots": 12,
+          "scenario": "e020",
+          "hits": 114,
+          "adjusted_lower": 0.153106,
+          "passes": false,
+          "means": {
+            "assembly_processed": 1711.673,
+            "assembly_transferred": 1711.607,
+            "first_inspected": 1710.708,
+            "first_pass": 1385.593,
+            "rework_released": 220.09,
+            "scrap": 103.925,
+            "pending_before_inspection": 0.898,
+            "pending_to_rework": 0.0,
+            "pending_rework": 1.1,
+            "released": 1605.683,
+            "assembly_last_blocked_seconds": 3953.488,
+            "inspection_blocked_seconds": 2631.648
+          },
+          "mean_shortfall": 48.633
+        },
+        {
+          "name": "early_090_i0_r12",
+          "crew": "early_090",
+          "area_slots": 12,
+          "inspection_slots": 0,
+          "rework_slots": 12,
+          "scenario": "e050",
+          "hits": 487,
+          "adjusted_lower": 0.770486,
+          "passes": false,
+          "means": {
+            "assembly_processed": 1800.51,
+            "assembly_transferred": 1800.455,
+            "first_inspected": 1799.56,
+            "first_pass": 1466.468,
+            "rework_released": 225.485,
+            "scrap": 106.372,
+            "pending_before_inspection": 0.895,
+            "pending_to_rework": 0.0,
+            "pending_rework": 1.235,
+            "released": 1691.953,
+            "assembly_last_blocked_seconds": 2785.384,
+            "inspection_blocked_seconds": 1410.202
+          },
+          "mean_shortfall": 4.245
+        },
+        {
+          "name": "early_090_i0_r12",
+          "crew": "early_090",
+          "area_slots": 12,
+          "inspection_slots": 0,
+          "rework_slots": 12,
+          "scenario": "e080",
+          "hits": 593,
+          "adjusted_lower": 0.973039,
+          "passes": true,
+          "means": {
+            "assembly_processed": 1880.72,
+            "assembly_transferred": 1880.657,
+            "first_inspected": 1879.743,
+            "first_pass": 1538.615,
+            "rework_released": 230.42,
+            "scrap": 108.917,
+            "pending_before_inspection": 0.913,
+            "pending_to_rework": 0.0,
+            "pending_rework": 1.792,
+            "released": 1769.035,
+            "assembly_last_blocked_seconds": 1658.775,
+            "inspection_blocked_seconds": 251.539
+          },
+          "mean_shortfall": 0.38
+        }
+      ],
+      "paired_release_gain": {
+        "e020": {
+          "mean": 601.62,
+          "ci95": [
+            599.376,
+            603.864
+          ],
+          "lower_above_zero": true
+        },
+        "e050": {
+          "mean": 602.925,
+          "ci95": [
+            600.71,
+            605.14
+          ],
+          "lower_above_zero": true
+        },
+        "e080": {
+          "mean": 594.773,
+          "ci95": [
+            591.994,
+            597.552
+          ],
+          "lower_above_zero": true
+        }
+      }
+    }
+  }
+}

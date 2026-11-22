@@ -1,0 +1,509 @@
+{
+  "design": [
+    160,
+    2026112241
+  ],
+  "holdout": [
+    400,
+    2026112243
+  ],
+  "scores": {
+    "fixed_0": [
+      7,
+      -186213,
+      -228280
+    ],
+    "fixed_5": [
+      10,
+      -182583,
+      -224256
+    ],
+    "fixed_10": [
+      11,
+      -178423,
+      -219680
+    ],
+    "fixed_15": [
+      14,
+      -174207,
+      -215044
+    ],
+    "fixed_20": [
+      18,
+      -169074,
+      -209508
+    ],
+    "fixed_25": [
+      23,
+      -164393,
+      -204204
+    ],
+    "fixed_30": [
+      27,
+      -159263,
+      -198341
+    ],
+    "fixed_35": [
+      32,
+      -154166,
+      -192662
+    ],
+    "fixed_40": [
+      41,
+      -149249,
+      -187001
+    ],
+    "fixed_45": [
+      48,
+      -144626,
+      -181509
+    ],
+    "fixed_50": [
+      55,
+      -139572,
+      -175615
+    ],
+    "fixed_55": [
+      59,
+      -134805,
+      -170295
+    ],
+    "fixed_60": [
+      67,
+      -130390,
+      -165373
+    ],
+    "fixed_65": [
+      67,
+      -126371,
+      -161073
+    ],
+    "fixed_70": [
+      70,
+      -122574,
+      -157225
+    ],
+    "fixed_75": [
+      76,
+      -119115,
+      -153684
+    ],
+    "fixed_80": [
+      79,
+      -115621,
+      -149786
+    ],
+    "fixed_85": [
+      76,
+      -112692,
+      -146778
+    ],
+    "fixed_90": [
+      74,
+      -109270,
+      -143399
+    ],
+    "fixed_95": [
+      70,
+      -106215,
+      -140417
+    ],
+    "fixed_100": [
+      66,
+      -103333,
+      -137645
+    ],
+    "fixed_105": [
+      62,
+      -101061,
+      -135469
+    ],
+    "fixed_110": [
+      64,
+      -98874,
+      -133160
+    ],
+    "fixed_115": [
+      60,
+      -97266,
+      -131446
+    ],
+    "fixed_120": [
+      60,
+      -95472,
+      -129551
+    ],
+    "fixed_125": [
+      59,
+      -93694,
+      -127792
+    ],
+    "fixed_130": [
+      53,
+      -91733,
+      -125901
+    ],
+    "fixed_135": [
+      53,
+      -90292,
+      -124561
+    ],
+    "fixed_140": [
+      53,
+      -88763,
+      -122855
+    ],
+    "fixed_145": [
+      49,
+      -87709,
+      -121612
+    ],
+    "fixed_150": [
+      44,
+      -86497,
+      -120328
+    ],
+    "fixed_155": [
+      39,
+      -85720,
+      -119504
+    ],
+    "fixed_160": [
+      38,
+      -84310,
+      -117981
+    ],
+    "fixed_165": [
+      39,
+      -82583,
+      -116146
+    ],
+    "fixed_170": [
+      40,
+      -80594,
+      -113985
+    ],
+    "fixed_175": [
+      42,
+      -78341,
+      -111511
+    ],
+    "fixed_180": [
+      43,
+      -76097,
+      -108887
+    ],
+    "fixed_185": [
+      46,
+      -74458,
+      -106987
+    ],
+    "fixed_190": [
+      51,
+      -72953,
+      -105300
+    ],
+    "fixed_195": [
+      57,
+      -72037,
+      -104103
+    ],
+    "fixed_200": [
+      54,
+      -71719,
+      -103592
+    ],
+    "fixed_205": [
+      53,
+      -71654,
+      -103385
+    ],
+    "fixed_210": [
+      57,
+      -72653,
+      -104162
+    ],
+    "fixed_215": [
+      55,
+      -73760,
+      -105058
+    ],
+    "fixed_220": [
+      43,
+      -74425,
+      -105699
+    ],
+    "fixed_225": [
+      45,
+      -74960,
+      -106057
+    ],
+    "fixed_230": [
+      45,
+      -76117,
+      -107132
+    ],
+    "fixed_235": [
+      46,
+      -77733,
+      -108825
+    ],
+    "fixed_240": [
+      50,
+      -79791,
+      -110946
+    ],
+    "fixed_245": [
+      53,
+      -81879,
+      -112996
+    ],
+    "fixed_250": [
+      54,
+      -84341,
+      -115434
+    ],
+    "fixed_255": [
+      55,
+      -87145,
+      -118060
+    ],
+    "fixed_260": [
+      53,
+      -90259,
+      -121285
+    ],
+    "fixed_265": [
+      50,
+      -93432,
+      -124599
+    ],
+    "fixed_270": [
+      46,
+      -96925,
+      -128199
+    ],
+    "fixed_275": [
+      44,
+      -100544,
+      -132010
+    ],
+    "fixed_280": [
+      41,
+      -104296,
+      -136078
+    ],
+    "fixed_285": [
+      41,
+      -108130,
+      -140208
+    ],
+    "fixed_290": [
+      36,
+      -112099,
+      -144470
+    ],
+    "fixed_295": [
+      34,
+      -116259,
+      -148929
+    ],
+    "fixed_300": [
+      32,
+      -120434,
+      -153435
+    ],
+    "queue_2": [
+      75,
+      -118640,
+      -151521
+    ],
+    "queue_4": [
+      231,
+      -30880,
+      -45163
+    ],
+    "queue_6": [
+      293,
+      -3663,
+      -11888
+    ],
+    "queue_8": [
+      294,
+      -1920,
+      -10321
+    ],
+    "queue_10": [
+      290,
+      -1643,
+      -11158
+    ],
+    "queue_12": [
+      286,
+      -1960,
+      -12609
+    ]
+  },
+  "selected": [
+    [
+      "fixed",
+      80
+    ],
+    [
+      "queue",
+      8
+    ]
+  ],
+  "fixed_shortfall_control": [
+    "fixed",
+    205
+  ],
+  "target": 1650,
+  "lot": 1850,
+  "results": {
+    "1": {
+      "fixed": {
+        "hits": 400,
+        "mean_on_time": 1819.23,
+        "mean_backlog": 7.18,
+        "mean_physical_good": 1819.23,
+        "mean_late_good": 0.0,
+        "mean_helper_busy_min": 0.0
+      },
+      "queue": {
+        "hits": 400,
+        "mean_on_time": 1819.23,
+        "mean_backlog": 7.18,
+        "mean_physical_good": 1819.23,
+        "mean_late_good": 0.0,
+        "mean_helper_busy_min": 0.0
+      },
+      "fixed_shortfall_control": {
+        "hits": 400,
+        "mean_on_time": 1819.23,
+        "mean_backlog": 7.18,
+        "mean_physical_good": 1819.23,
+        "mean_late_good": 0.0,
+        "mean_helper_busy_min": 0.0
+      },
+      "paired_vs_shortfall_control": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "paired_on_time_delta": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "2": {
+      "fixed": {
+        "hits": 105,
+        "mean_on_time": 1421.88,
+        "mean_backlog": 340.26,
+        "mean_physical_good": 1428.973,
+        "mean_late_good": 7.093,
+        "mean_helper_busy_min": 111.805
+      },
+      "queue": {
+        "hits": 379,
+        "mean_on_time": 1719.44,
+        "mean_backlog": 24.832,
+        "mean_physical_good": 1726.533,
+        "mean_late_good": 7.093,
+        "mean_helper_busy_min": 219.94
+      },
+      "fixed_shortfall_control": {
+        "hits": 113,
+        "mean_on_time": 1556.013,
+        "mean_backlog": 194.963,
+        "mean_physical_good": 1563.105,
+        "mean_late_good": 7.093,
+        "mean_helper_busy_min": 173.52
+      },
+      "paired_vs_shortfall_control": [
+        163.428,
+        150.744,
+        176.111
+      ],
+      "paired_on_time_delta": [
+        297.56,
+        276.504,
+        318.616
+      ]
+    },
+    "3": {
+      "fixed": {
+        "hits": 25,
+        "mean_on_time": 1064.01,
+        "mean_backlog": 724.212,
+        "mean_physical_good": 1385.523,
+        "mean_late_good": 321.512,
+        "mean_helper_busy_min": 82.0
+      },
+      "queue": {
+        "hits": 360,
+        "mean_on_time": 1702.62,
+        "mean_backlog": 42.225,
+        "mean_physical_good": 1726.572,
+        "mean_late_good": 23.953,
+        "mean_helper_busy_min": 219.61
+      },
+      "fixed_shortfall_control": {
+        "hits": 23,
+        "mean_on_time": 1379.562,
+        "mean_backlog": 383.145,
+        "mean_physical_good": 1566.943,
+        "mean_late_good": 187.38,
+        "mean_helper_busy_min": 152.88
+      },
+      "paired_vs_shortfall_control": [
+        323.058,
+        306.015,
+        340.1
+      ],
+      "paired_on_time_delta": [
+        638.61,
+        606.228,
+        670.992
+      ]
+    },
+    "4": {
+      "fixed": {
+        "hits": 46,
+        "mean_on_time": 736.418,
+        "mean_backlog": 1104.545,
+        "mean_physical_good": 1415.325,
+        "mean_late_good": 678.908,
+        "mean_helper_busy_min": 0.0
+      },
+      "queue": {
+        "hits": 393,
+        "mean_on_time": 1794.513,
+        "mean_backlog": 32.758,
+        "mean_physical_good": 1834.983,
+        "mean_late_good": 40.47,
+        "mean_helper_busy_min": 0.0
+      },
+      "fixed_shortfall_control": {
+        "hits": 84,
+        "mean_on_time": 1353.858,
+        "mean_backlog": 479.325,
+        "mean_physical_good": 1717.385,
+        "mean_late_good": 363.527,
+        "mean_helper_busy_min": 0.0
+      },
+      "paired_vs_shortfall_control": [
+        440.655,
+        404.789,
+        476.521
+      ],
+      "paired_on_time_delta": [
+        1058.095,
+        1004.936,
+        1111.254
+      ]
+    }
+  }
+}

@@ -8,7 +8,7 @@
 这个仓库包含三个方向：
 
 - **DataCo 运营分析**（根目录）：180K+ 订单，SQLite 星型模型、10 条 SQL、Streamlit 仪表板，加上 Laney p′、Ppk、Pareto 和派工仿真。
-- **制造 IE 装配线与班次产能优化**（[`manufacturing/`](manufacturing/)）：用三套公开基准做工位分配、缓冲选址、班产验收和改线比较。
+- **制造 IE 装配线与班次产能优化**（[`manufacturing/`](manufacturing/)）：用四套公开基准做工位分配、缓冲选址、班产验收和改线比较。
 - **快递中转场分拣线 IE**（`express/`）：五工位时间研究案例、山积图/线平衡、排队仿真、峰值用工和单票成本。
 
 ---
@@ -171,6 +171,14 @@ python python/04_ie_scheduling.py --capacity 300   # 容量敏感性
 给定工序用时、前置关系与目标节拍，比较最长工序优先（LCR）、位置权重法（RPW）和 MILP。Mitchell 基准在节拍 15 时，LCR 需要 9 个工位，RPW 和 MILP 需要 8 个工位，平衡率由 77.78% 提高到 87.50%。在同样 8 个工位下，MILP 的峰值负荷由 RPW 的 15 降到 14。
 
 在 Mitchell 的 8 工位、3 缓冲位案例中，分支定界把设计班产认证到 1,590 件，1,570 件的计划目标通过独立仿真验收。另用 Jackson 检验工序异常时的改线方案，用 Buxey 检验缓冲位置能否跨产线复用。 [制造 IE 项目入口](manufacturing/README.md)
+
+同一工序连续偏慢时，Mitchell 已验收的班产目标需要重新核定。Jackson 的补充实验计算了设备修复后的质量放行等待预算，并将等待超时换算成需补的净生产时间。 [连续慢件与班产承诺](manufacturing/PERSISTENT_WORKLOADS.md) · [复机放行等待预算](manufacturing/RESTART_RELEASE.md)
+
+合格班产实验把首检、离线返工、报废和班末待处理接入装配完工记录，在同一用工增量下比较增配首检位和返工位。 [合格班产与返工配置](manufacturing/GOOD_OUTPUT.md)
+
+返工支援进一步比较了等人时时间安排、并行人数与连续异常后的跨班积压，并分别统计当班总放行和本班应交工件的按时达成。 [等人时高峰支援](manufacturing/PEAK_REWORK_SUPPORT.md) · [跨班返工积压](manufacturing/REWORK_CARRYOVER.md)
+
+质检区的有限等待位会把返工拥堵传回装配。用相同的质量暂存预算比较首检前和返工前的布置，同时检验已知风险批次靠前时的预排支援。 [有限暂存与装配阻塞](manufacturing/FINITE_STAGING.md)
 
 ```bash
 python manufacturing/line_balance.py

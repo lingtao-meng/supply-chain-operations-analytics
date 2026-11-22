@@ -35,4 +35,4 @@ python manufacturing/downtime_recovery.py
 
 [缓冲筛选、随机种子和验收结果](results/downtime_decision.json) · [逐工位与停机时点明细](results/downtime_scenarios.csv) · [试产复核表](PILOT_CHECKLIST.md)
 
-同样使用两个缓冲位时，位置选择的比较见[同预算布置与停机验收](BUFFER_HOLDOUT.md)。
+同样使用两个缓冲位时，位置选择的比较见[同预算布置与停机验收](BUFFER_HOLDOUT.md)。维修结束后若还要等质量放行，可按[复机放行等待预算](RESTART_RELEASE.md)计算产量预警时点和补产时间。

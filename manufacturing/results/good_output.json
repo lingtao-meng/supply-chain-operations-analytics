@@ -1,0 +1,450 @@
+{
+  "case": "Mitchell",
+  "target_released_units": 1650,
+  "shift_seconds": 25200,
+  "assembly_plan": [
+    [
+      1,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      2,
+      6,
+      8
+    ],
+    [
+      9,
+      11,
+      12,
+      13
+    ],
+    [
+      10,
+      15,
+      16,
+      18
+    ],
+    [
+      17
+    ],
+    [
+      21,
+      19,
+      20
+    ]
+  ],
+  "assembly_buffers": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "task_cv_pct": 20,
+  "shift_cv_pct": 3,
+  "batch_size": 100,
+  "inspection_seconds": 12,
+  "rework_and_recheck_seconds": 120,
+  "repairable_probability": 0.8,
+  "rework_pass_probability": 0.85,
+  "design": {
+    "runs": 300,
+    "seed": 2026112211,
+    "required_hits": 292,
+    "screen": [
+      {
+        "defect_pct": 4,
+        "released_hits": 300,
+        "paired_gain_vs_standard": {
+          "mean": 131.613,
+          "ci95": [
+            131.107,
+            132.12
+          ],
+          "lower_above_zero": true
+        },
+        "eligible": true
+      },
+      {
+        "defect_pct": 6,
+        "released_hits": 300,
+        "paired_gain_vs_standard": {
+          "mean": 119.293,
+          "ci95": [
+            118.697,
+            119.89
+          ],
+          "lower_above_zero": true
+        },
+        "eligible": true
+      },
+      {
+        "defect_pct": 8,
+        "released_hits": 300,
+        "paired_gain_vs_standard": {
+          "mean": 106.857,
+          "ci95": [
+            106.139,
+            107.574
+          ],
+          "lower_above_zero": true
+        },
+        "eligible": true
+      },
+      {
+        "defect_pct": 10,
+        "released_hits": 300,
+        "paired_gain_vs_standard": {
+          "mean": 94.457,
+          "ci95": [
+            93.684,
+            95.229
+          ],
+          "lower_above_zero": true
+        },
+        "eligible": true
+      },
+      {
+        "defect_pct": 12,
+        "released_hits": 300,
+        "paired_gain_vs_standard": {
+          "mean": 80.337,
+          "ci95": [
+            79.472,
+            81.202
+          ],
+          "lower_above_zero": true
+        },
+        "eligible": true
+      },
+      {
+        "defect_pct": 14,
+        "released_hits": 300,
+        "paired_gain_vs_standard": {
+          "mean": 59.483,
+          "ci95": [
+            58.145,
+            60.822
+          ],
+          "lower_above_zero": true
+        },
+        "eligible": true
+      },
+      {
+        "defect_pct": 16,
+        "released_hits": 296,
+        "paired_gain_vs_standard": {
+          "mean": 26.907,
+          "ci95": [
+            25.106,
+            28.707
+          ],
+          "lower_above_zero": true
+        },
+        "eligible": true
+      },
+      {
+        "defect_pct": 18,
+        "released_hits": 285,
+        "paired_gain_vs_standard": {
+          "mean": -10.033,
+          "ci95": [
+            -12.069,
+            -7.998
+          ],
+          "lower_above_zero": false
+        },
+        "eligible": false
+      },
+      {
+        "defect_pct": 20,
+        "released_hits": 250,
+        "paired_gain_vs_standard": {
+          "mean": -47.93,
+          "ci95": [
+            -50.147,
+            -45.713
+          ],
+          "lower_above_zero": false
+        },
+        "eligible": false
+      },
+      {
+        "defect_pct": 22,
+        "released_hits": 166,
+        "paired_gain_vs_standard": {
+          "mean": -85.86,
+          "ci95": [
+            -88.183,
+            -83.537
+          ],
+          "lower_above_zero": false
+        },
+        "eligible": false
+      },
+      {
+        "defect_pct": 24,
+        "released_hits": 75,
+        "paired_gain_vs_standard": {
+          "mean": -123.763,
+          "ci95": [
+            -126.175,
+            -121.352
+          ],
+          "lower_above_zero": false
+        },
+        "eligible": false
+      }
+    ],
+    "locked_defect_pct": 16
+  },
+  "holdout": {
+    "runs": 600,
+    "seed": 2026112212,
+    "required_reliability": 0.95,
+    "alpha_per_policy": 0.008333333333333333,
+    "required_hits": 583,
+    "policies": [
+      {
+        "name": "standard",
+        "time_factor": 1.0,
+        "defect_pct": 4,
+        "inspectors": 1,
+        "rework_servers": 1,
+        "means": {
+          "gross": 1761.85,
+          "first_inspected": 1760.975,
+          "first_pass": 1690.158,
+          "routed_to_rework": 56.755,
+          "rework_pass": 47.868,
+          "direct_scrap": 14.062,
+          "rework_scrap": 8.553,
+          "scrap": 22.615,
+          "pending_inspection": 0.875,
+          "pending_rework": 0.333,
+          "released": 1738.027
+        },
+        "pooled_first_pass_yield": 0.959786,
+        "gross_hits": 591,
+        "released_hits": 566,
+        "gross_pass_released_fail": 25,
+        "released_adjusted_lower": 0.916647,
+        "passes": false,
+        "mean_released_shortfall": 1.058,
+        "staff": 10,
+        "staffed_hours_per_100_released": 4.028,
+        "paired_released_gain_vs_standard": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "name": "fast_stable",
+        "time_factor": 0.93,
+        "defect_pct": 4,
+        "inspectors": 1,
+        "rework_servers": 1,
+        "means": {
+          "gross": 1895.03,
+          "first_inspected": 1894.025,
+          "first_pass": 1817.837,
+          "routed_to_rework": 61.047,
+          "rework_pass": 51.495,
+          "direct_scrap": 15.142,
+          "rework_scrap": 9.222,
+          "scrap": 24.363,
+          "pending_inspection": 1.005,
+          "pending_rework": 0.33,
+          "released": 1869.332
+        },
+        "pooled_first_pass_yield": 0.959774,
+        "gross_hits": 600,
+        "released_hits": 600,
+        "gross_pass_released_fail": 0,
+        "released_adjusted_lower": 0.992053,
+        "passes": true,
+        "mean_released_shortfall": 0.0,
+        "staff": 10,
+        "staffed_hours_per_100_released": 3.745,
+        "paired_released_gain_vs_standard": {
+          "mean": 131.305,
+          "ci95": [
+            130.952,
+            131.658
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "name": "fast_drift",
+        "time_factor": 0.93,
+        "defect_pct": 18,
+        "inspectors": 1,
+        "rework_servers": 1,
+        "means": {
+          "gross": 1895.03,
+          "first_inspected": 1894.025,
+          "first_pass": 1552.818,
+          "routed_to_rework": 272.937,
+          "rework_pass": 176.003,
+          "direct_scrap": 68.27,
+          "rework_scrap": 30.968,
+          "scrap": 99.238,
+          "pending_inspection": 1.005,
+          "pending_rework": 65.965,
+          "released": 1728.822
+        },
+        "pooled_first_pass_yield": 0.819851,
+        "gross_hits": 600,
+        "released_hits": 570,
+        "gross_pass_released_fail": 30,
+        "released_adjusted_lower": 0.924538,
+        "passes": false,
+        "mean_released_shortfall": 1.26,
+        "staff": 10,
+        "staffed_hours_per_100_released": 4.049,
+        "paired_released_gain_vs_standard": {
+          "mean": -9.205,
+          "ci95": [
+            -10.584,
+            -7.826
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "name": "fast_extra_inspection",
+        "time_factor": 0.93,
+        "defect_pct": 18,
+        "inspectors": 2,
+        "rework_servers": 1,
+        "means": {
+          "gross": 1895.03,
+          "first_inspected": 1894.14,
+          "first_pass": 1552.91,
+          "routed_to_rework": 272.958,
+          "rework_pass": 176.007,
+          "direct_scrap": 68.272,
+          "rework_scrap": 30.968,
+          "scrap": 99.24,
+          "pending_inspection": 0.89,
+          "pending_rework": 65.983,
+          "released": 1728.917
+        },
+        "pooled_first_pass_yield": 0.81985,
+        "gross_hits": 600,
+        "released_hits": 570,
+        "gross_pass_released_fail": 30,
+        "released_adjusted_lower": 0.924538,
+        "passes": false,
+        "mean_released_shortfall": 1.26,
+        "staff": 11,
+        "staffed_hours_per_100_released": 4.454,
+        "paired_released_gain_vs_standard": {
+          "mean": -9.11,
+          "ci95": [
+            -10.488,
+            -7.732
+          ],
+          "lower_above_zero": false
+        }
+      },
+      {
+        "name": "fast_extra_rework",
+        "time_factor": 0.93,
+        "defect_pct": 18,
+        "inspectors": 1,
+        "rework_servers": 2,
+        "means": {
+          "gross": 1895.03,
+          "first_inspected": 1894.025,
+          "first_pass": 1552.818,
+          "routed_to_rework": 272.937,
+          "rework_pass": 230.528,
+          "direct_scrap": 68.27,
+          "rework_scrap": 40.713,
+          "scrap": 108.983,
+          "pending_inspection": 1.005,
+          "pending_rework": 1.695,
+          "released": 1783.347
+        },
+        "pooled_first_pass_yield": 0.819851,
+        "gross_hits": 600,
+        "released_hits": 596,
+        "gross_pass_released_fail": 4,
+        "released_adjusted_lower": 0.980349,
+        "passes": true,
+        "mean_released_shortfall": 0.113,
+        "staff": 11,
+        "staffed_hours_per_100_released": 4.318,
+        "paired_released_gain_vs_standard": {
+          "mean": 45.32,
+          "ci95": [
+            44.586,
+            46.054
+          ],
+          "lower_above_zero": true
+        }
+      },
+      {
+        "name": "fast_locked_limit",
+        "time_factor": 0.93,
+        "defect_pct": 16,
+        "inspectors": 1,
+        "rework_servers": 1,
+        "means": {
+          "gross": 1895.03,
+          "first_inspected": 1894.025,
+          "first_pass": 1590.708,
+          "routed_to_rework": 242.58,
+          "rework_pass": 174.528,
+          "direct_scrap": 60.737,
+          "rework_scrap": 30.833,
+          "scrap": 91.57,
+          "pending_inspection": 1.005,
+          "pending_rework": 37.218,
+          "released": 1765.237
+        },
+        "pooled_first_pass_yield": 0.839856,
+        "gross_hits": 600,
+        "released_hits": 593,
+        "gross_pass_released_fail": 7,
+        "released_adjusted_lower": 0.973039,
+        "passes": true,
+        "mean_released_shortfall": 0.228,
+        "staff": 10,
+        "staffed_hours_per_100_released": 3.965,
+        "paired_released_gain_vs_standard": {
+          "mean": 27.21,
+          "ci95": [
+            25.944,
+            28.476
+          ],
+          "lower_above_zero": true
+        }
+      }
+    ],
+    "extra_rework_vs_extra_inspection": {
+      "mean": 54.43,
+      "ci95": [
+        53.258,
+        55.602
+      ],
+      "lower_above_zero": true
+    }
+  }
+}

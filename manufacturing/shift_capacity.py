@@ -47,6 +47,11 @@ def shift_output_counts(service: np.ndarray, buffers: tuple[int, ...], duration:
     return _flow_shop(service, buffers, duration, measure_stations=False)
 
 
+def shift_exit_times(service: np.ndarray, buffers: tuple[int, ...], duration: float) -> np.ndarray:
+    """Return end-of-line exits by product and replication, with infinity after cutoff."""
+    return _flow_shop(service, buffers, duration, measure_stations=False, record_exits=True)
+
+
 def recovery_shift(
     service: np.ndarray, buffers: tuple[int, ...], duration: float, outage: tuple[int, float, float],
 ) -> tuple[np.ndarray, np.ndarray]:
@@ -68,7 +73,7 @@ def station_trace(
 def _flow_shop(
     service: np.ndarray, buffers: tuple[int, ...], duration: float | None, *, measure_stations: bool = True,
     outage: tuple[int, float, float] | None = None,
-    measure_buffers: bool = False, trace: np.ndarray | None = None,
+    measure_buffers: bool = False, trace: np.ndarray | None = None, record_exits: bool = False,
 ) -> np.ndarray | tuple[np.ndarray, np.ndarray]:
     if service.ndim != 3 or not all(service.shape) or not np.isfinite(service).all() or (service <= 0).any():
         raise ValueError("service must contain finite positive times for products, stations and replications")
@@ -89,6 +94,8 @@ def _flow_shop(
     history_length = 1 + max(buffers, default=0)
     prior_starts = np.zeros((history_length, station_count, replications))
     output = np.zeros(replications, dtype=int)
+    if record_exits:
+        exit_times = np.full((service.shape[0], replications), np.inf)
     if measure_buffers:
         waiting_time = np.zeros(replications)
     if track_stations:
@@ -127,12 +134,18 @@ def _flow_shop(
                 busy[station] += np.minimum(finish, duration) - np.minimum(start, duration)
                 blocked[station] += np.minimum(departure, duration) - np.minimum(finish, duration)
         if track_shift:
-            output += exits[-1] <= duration
+            finished_in_shift = exits[-1] <= duration
+            if record_exits:
+                exit_times[product, finished_in_shift] = exits[-1, finished_in_shift]
+            else:
+                output += finished_in_shift
 
     if not track_shift:
         return exits[-1]
     if (exits[0] < duration).any():
         raise ValueError("the input workload ends before the shift; supply more products")
+    if record_exits:
+        return exit_times
     if measure_buffers:
         return output, waiting_time / duration
     if not track_stations:
