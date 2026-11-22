@@ -161,6 +161,40 @@ jobs:
             cmp "manufacturing/results/repair_space_confirmation.$ext" "$RUNNER_TEMP/support-budget/repair_space_confirmation.$ext"
           done
 
+      - name: Verify factory constraints and mixed-model release
+        run: |
+          python manufacturing/test_factory_simulation.py
+          python manufacturing/test_factory_study.py
+          python manufacturing/factory_study.py --output-dir "$RUNNER_TEMP/factory-study"
+          for ext in json csv; do
+            cmp "manufacturing/results/factory_study.$ext" "$RUNNER_TEMP/factory-study/factory_study.$ext"
+          done
+      - name: Verify incoming inspection, maintenance and shipping
+        run: |
+          python manufacturing/test_factory_receiving.py
+          python manufacturing/test_factory_shipping.py
+          python manufacturing/factory_dispatch_study.py --output-dir "$RUNNER_TEMP/factory-dispatch"
+          python manufacturing/factory_dispatch_study.py --confirm --output-dir "$RUNNER_TEMP/factory-dispatch"
+          for study in factory_dispatch_study factory_dispatch_confirmation; do
+            for ext in json csv; do
+              cmp "manufacturing/results/$study.$ext" "$RUNNER_TEMP/factory-dispatch/$study.$ext"
+            done
+          done
+      - name: Verify constrained capacity and sensitivity
+        run: |
+          python manufacturing/test_factory_capacity_plan.py
+          python manufacturing/factory_capacity_plan.py --output-dir "$RUNNER_TEMP/factory-capacity"
+          for ext in json csv; do
+            cmp "manufacturing/results/factory_capacity_plan.$ext" "$RUNNER_TEMP/factory-capacity/factory_capacity_plan.$ext"
+          done
+      - name: Verify finite buffers, handling and material replenishment
+        run: |
+          python manufacturing/test_factory_floor.py
+          python manufacturing/factory_floor_study.py --output-dir "$RUNNER_TEMP/factory-floor"
+          for ext in json csv; do
+            cmp "manufacturing/results/factory_floor_study.$ext" "$RUNNER_TEMP/factory-floor/factory_floor_study.$ext"
+          done
+
   express:
     runs-on: ubuntu-latest
     steps:

@@ -1,0 +1,899 @@
+{
+  "benchmark": "Mitchell",
+  "stations": [
+    [
+      1,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      2,
+      6,
+      8
+    ],
+    [
+      9,
+      11,
+      12,
+      13
+    ],
+    [
+      10,
+      15,
+      16,
+      18
+    ],
+    [
+      17
+    ],
+    [
+      21,
+      19,
+      20
+    ]
+  ],
+  "budgets": [
+    0,
+    35,
+    60,
+    90,
+    120
+  ],
+  "design": [
+    175,
+    2026112321
+  ],
+  "holdout": [
+    800,
+    2026112322
+  ],
+  "sensitivity": [
+    600,
+    2026112323
+  ],
+  "screened_count": 60,
+  "infeasible_layout": {
+    "none_c2_backup1_earlier0": [
+      "no_parallel_station_to_staff"
+    ],
+    "none_c2_backup1_earlier1": [
+      "no_parallel_station_to_staff"
+    ],
+    "none_c3_backup1_earlier0": [
+      "no_parallel_station_to_staff"
+    ],
+    "none_c3_backup1_earlier1": [
+      "no_parallel_station_to_staff"
+    ],
+    "none_c4_backup1_earlier0": [
+      "no_parallel_station_to_staff"
+    ],
+    "none_c4_backup1_earlier1": [
+      "no_parallel_station_to_staff"
+    ],
+    "converted_bay_c3_backup0_earlier0": [
+      "cart_bays_exceeded"
+    ],
+    "converted_bay_c3_backup0_earlier1": [
+      "cart_bays_exceeded"
+    ],
+    "converted_bay_c3_backup1_earlier0": [
+      "cart_bays_exceeded"
+    ],
+    "converted_bay_c3_backup1_earlier1": [
+      "cart_bays_exceeded"
+    ],
+    "converted_bay_c4_backup0_earlier0": [
+      "cart_bays_exceeded"
+    ],
+    "converted_bay_c4_backup0_earlier1": [
+      "cart_bays_exceeded"
+    ],
+    "converted_bay_c4_backup1_earlier0": [
+      "cart_bays_exceeded"
+    ],
+    "converted_bay_c4_backup1_earlier1": [
+      "cart_bays_exceeded"
+    ],
+    "general_bay_c2_backup0_earlier0": [
+      "duplicate_outside_assembly_zone"
+    ],
+    "general_bay_c2_backup0_earlier1": [
+      "duplicate_outside_assembly_zone"
+    ],
+    "general_bay_c2_backup1_earlier0": [
+      "duplicate_outside_assembly_zone"
+    ],
+    "general_bay_c2_backup1_earlier1": [
+      "duplicate_outside_assembly_zone"
+    ],
+    "general_bay_c3_backup0_earlier0": [
+      "duplicate_outside_assembly_zone"
+    ],
+    "general_bay_c3_backup0_earlier1": [
+      "duplicate_outside_assembly_zone"
+    ],
+    "general_bay_c3_backup1_earlier0": [
+      "duplicate_outside_assembly_zone"
+    ],
+    "general_bay_c3_backup1_earlier1": [
+      "duplicate_outside_assembly_zone"
+    ],
+    "general_bay_c4_backup0_earlier0": [
+      "duplicate_outside_assembly_zone"
+    ],
+    "general_bay_c4_backup0_earlier1": [
+      "duplicate_outside_assembly_zone"
+    ],
+    "general_bay_c4_backup1_earlier0": [
+      "duplicate_outside_assembly_zone"
+    ],
+    "general_bay_c4_backup1_earlier1": [
+      "duplicate_outside_assembly_zone"
+    ],
+    "shared_inspection_bay_c2_backup0_earlier0": [
+      "assembly_and_incoming_inspection_share_bay"
+    ],
+    "shared_inspection_bay_c2_backup0_earlier1": [
+      "assembly_and_incoming_inspection_share_bay"
+    ],
+    "shared_inspection_bay_c2_backup1_earlier0": [
+      "assembly_and_incoming_inspection_share_bay"
+    ],
+    "shared_inspection_bay_c2_backup1_earlier1": [
+      "assembly_and_incoming_inspection_share_bay"
+    ],
+    "shared_inspection_bay_c3_backup0_earlier0": [
+      "assembly_and_incoming_inspection_share_bay"
+    ],
+    "shared_inspection_bay_c3_backup0_earlier1": [
+      "assembly_and_incoming_inspection_share_bay"
+    ],
+    "shared_inspection_bay_c3_backup1_earlier0": [
+      "assembly_and_incoming_inspection_share_bay"
+    ],
+    "shared_inspection_bay_c3_backup1_earlier1": [
+      "assembly_and_incoming_inspection_share_bay"
+    ],
+    "shared_inspection_bay_c4_backup0_earlier0": [
+      "assembly_and_incoming_inspection_share_bay",
+      "cart_bays_exceeded"
+    ],
+    "shared_inspection_bay_c4_backup0_earlier1": [
+      "assembly_and_incoming_inspection_share_bay",
+      "cart_bays_exceeded"
+    ],
+    "shared_inspection_bay_c4_backup1_earlier0": [
+      "assembly_and_incoming_inspection_share_bay",
+      "cart_bays_exceeded"
+    ],
+    "shared_inspection_bay_c4_backup1_earlier1": [
+      "assembly_and_incoming_inspection_share_bay",
+      "cart_bays_exceeded"
+    ]
+  },
+  "excluded_before_design": {
+    "none_c2_backup0_earlier0": "unnecessary_cart_removal",
+    "none_c2_backup0_earlier1": "unnecessary_cart_removal",
+    "added_bay_c2_backup0_earlier0": "unnecessary_cart_removal",
+    "added_bay_c2_backup0_earlier1": "unnecessary_cart_removal",
+    "added_bay_c2_backup1_earlier0": "unnecessary_cart_removal",
+    "added_bay_c2_backup1_earlier1": "unnecessary_cart_removal"
+  },
+  "feasible": {
+    "none_c3_backup0_earlier0": {
+      "config": {
+        "location": "none",
+        "carts": 3,
+        "backup": false,
+        "earlier_kits": false
+      },
+      "cost": 0,
+      "frozen_promise": 940
+    },
+    "none_c3_backup0_earlier1": {
+      "config": {
+        "location": "none",
+        "carts": 3,
+        "backup": false,
+        "earlier_kits": true
+      },
+      "cost": 25,
+      "frozen_promise": 950
+    },
+    "none_c4_backup0_earlier0": {
+      "config": {
+        "location": "none",
+        "carts": 4,
+        "backup": false,
+        "earlier_kits": false
+      },
+      "cost": 12,
+      "frozen_promise": 940
+    },
+    "none_c4_backup0_earlier1": {
+      "config": {
+        "location": "none",
+        "carts": 4,
+        "backup": false,
+        "earlier_kits": true
+      },
+      "cost": 37,
+      "frozen_promise": 960
+    },
+    "converted_bay_c2_backup0_earlier0": {
+      "config": {
+        "location": "converted_bay",
+        "carts": 2,
+        "backup": false,
+        "earlier_kits": false
+      },
+      "cost": 35,
+      "frozen_promise": 940
+    },
+    "converted_bay_c2_backup0_earlier1": {
+      "config": {
+        "location": "converted_bay",
+        "carts": 2,
+        "backup": false,
+        "earlier_kits": true
+      },
+      "cost": 60,
+      "frozen_promise": 980
+    },
+    "converted_bay_c2_backup1_earlier0": {
+      "config": {
+        "location": "converted_bay",
+        "carts": 2,
+        "backup": true,
+        "earlier_kits": false
+      },
+      "cost": 53,
+      "frozen_promise": 940
+    },
+    "converted_bay_c2_backup1_earlier1": {
+      "config": {
+        "location": "converted_bay",
+        "carts": 2,
+        "backup": true,
+        "earlier_kits": true
+      },
+      "cost": 78,
+      "frozen_promise": 980
+    },
+    "added_bay_c3_backup0_earlier0": {
+      "config": {
+        "location": "added_bay",
+        "carts": 3,
+        "backup": false,
+        "earlier_kits": false
+      },
+      "cost": 55,
+      "frozen_promise": 940
+    },
+    "added_bay_c3_backup0_earlier1": {
+      "config": {
+        "location": "added_bay",
+        "carts": 3,
+        "backup": false,
+        "earlier_kits": true
+      },
+      "cost": 80,
+      "frozen_promise": 980
+    },
+    "added_bay_c3_backup1_earlier0": {
+      "config": {
+        "location": "added_bay",
+        "carts": 3,
+        "backup": true,
+        "earlier_kits": false
+      },
+      "cost": 73,
+      "frozen_promise": 940
+    },
+    "added_bay_c3_backup1_earlier1": {
+      "config": {
+        "location": "added_bay",
+        "carts": 3,
+        "backup": true,
+        "earlier_kits": true
+      },
+      "cost": 98,
+      "frozen_promise": 980
+    },
+    "added_bay_c4_backup0_earlier0": {
+      "config": {
+        "location": "added_bay",
+        "carts": 4,
+        "backup": false,
+        "earlier_kits": false
+      },
+      "cost": 67,
+      "frozen_promise": 940
+    },
+    "added_bay_c4_backup0_earlier1": {
+      "config": {
+        "location": "added_bay",
+        "carts": 4,
+        "backup": false,
+        "earlier_kits": true
+      },
+      "cost": 92,
+      "frozen_promise": 980
+    },
+    "added_bay_c4_backup1_earlier0": {
+      "config": {
+        "location": "added_bay",
+        "carts": 4,
+        "backup": true,
+        "earlier_kits": false
+      },
+      "cost": 85,
+      "frozen_promise": 940
+    },
+    "added_bay_c4_backup1_earlier1": {
+      "config": {
+        "location": "added_bay",
+        "carts": 4,
+        "backup": true,
+        "earlier_kits": true
+      },
+      "cost": 110,
+      "frozen_promise": 1030
+    }
+  },
+  "winners": {
+    "0": "none_c3_backup0_earlier0",
+    "35": "none_c3_backup0_earlier1",
+    "60": "converted_bay_c2_backup0_earlier1",
+    "90": "converted_bay_c2_backup0_earlier1",
+    "120": "added_bay_c4_backup1_earlier1"
+  },
+  "best_parallel": "added_bay_c4_backup1_earlier1",
+  "validation": {
+    "none_c3_backup0_earlier0": {
+      "promise": {
+        "target": 940,
+        "a": 658,
+        "b": 282,
+        "hits": 785,
+        "n": 800,
+        "lower": 0.965633,
+        "accepted": true,
+        "sample_rate": 0.98125,
+        "mean_shipped": [
+          1491.48,
+          1354.38
+        ],
+        "availability": [
+          0.0,
+          0.0
+        ],
+        "mean_parallel_operations": [
+          0.0,
+          0.0
+        ]
+      },
+      "original": {
+        "target": 1650,
+        "a": 1155,
+        "b": 495,
+        "hits": 0,
+        "n": 800,
+        "lower": 0.0,
+        "accepted": false,
+        "sample_rate": 0.0,
+        "mean_shipped": [
+          1491.48,
+          1354.38
+        ],
+        "availability": [
+          0.0,
+          0.0
+        ],
+        "mean_parallel_operations": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "none_c3_backup0_earlier1": {
+      "promise": {
+        "target": 950,
+        "a": 665,
+        "b": 285,
+        "hits": 790,
+        "n": 800,
+        "lower": 0.97393,
+        "accepted": true,
+        "sample_rate": 0.9875,
+        "mean_shipped": [
+          1511.021,
+          1383.406
+        ],
+        "availability": [
+          0.0,
+          0.0
+        ],
+        "mean_parallel_operations": [
+          0.0,
+          0.0
+        ]
+      },
+      "original": {
+        "target": 1650,
+        "a": 1155,
+        "b": 495,
+        "hits": 0,
+        "n": 800,
+        "lower": 0.0,
+        "accepted": false,
+        "sample_rate": 0.0,
+        "mean_shipped": [
+          1511.021,
+          1383.406
+        ],
+        "availability": [
+          0.0,
+          0.0
+        ],
+        "mean_parallel_operations": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "converted_bay_c2_backup0_earlier1": {
+      "promise": {
+        "target": 980,
+        "a": 686,
+        "b": 294,
+        "hits": 796,
+        "n": 800,
+        "lower": 0.984731,
+        "accepted": true,
+        "sample_rate": 0.995,
+        "mean_shipped": [
+          1605.478,
+          1528.118
+        ],
+        "availability": [
+          0.8238,
+          0.8162
+        ],
+        "mean_parallel_operations": [
+          907.05,
+          800.18
+        ]
+      },
+      "original": {
+        "target": 1650,
+        "a": 1155,
+        "b": 495,
+        "hits": 25,
+        "n": 800,
+        "lower": 0.017935,
+        "accepted": false,
+        "sample_rate": 0.03125,
+        "mean_shipped": [
+          1605.478,
+          1528.118
+        ],
+        "availability": [
+          0.8238,
+          0.8162
+        ],
+        "mean_parallel_operations": [
+          907.05,
+          800.18
+        ]
+      }
+    },
+    "added_bay_c4_backup1_earlier1": {
+      "promise": {
+        "target": 1030,
+        "a": 721,
+        "b": 309,
+        "hits": 790,
+        "n": 800,
+        "lower": 0.97393,
+        "accepted": true,
+        "sample_rate": 0.9875,
+        "mean_shipped": [
+          1636.881,
+          1587.015
+        ],
+        "availability": [
+          0.9475,
+          0.9388
+        ],
+        "mean_parallel_operations": [
+          1093.18,
+          987.474
+        ]
+      },
+      "original": {
+        "target": 1650,
+        "a": 1155,
+        "b": 495,
+        "hits": 55,
+        "n": 800,
+        "lower": 0.048266,
+        "accepted": false,
+        "sample_rate": 0.06875,
+        "mean_shipped": [
+          1636.881,
+          1587.015
+        ],
+        "availability": [
+          0.9475,
+          0.9388
+        ],
+        "mean_parallel_operations": [
+          1093.18,
+          987.474
+        ]
+      }
+    }
+  },
+  "alpha": 0.00625,
+  "stress_alpha": 0.0035714285714285718,
+  "stress_settings": {
+    "reference": {
+      "qualified_availability": 0.82,
+      "kit_delay": 0,
+      "maintenance_minutes": 18
+    },
+    "operator_70pct": {
+      "qualified_availability": 0.7,
+      "kit_delay": 0,
+      "maintenance_minutes": 18
+    },
+    "operator_95pct": {
+      "qualified_availability": 0.95,
+      "kit_delay": 0,
+      "maintenance_minutes": 18
+    },
+    "kits_15min_late": {
+      "qualified_availability": 0.82,
+      "kit_delay": 15,
+      "maintenance_minutes": 18
+    },
+    "kits_30min_late": {
+      "qualified_availability": 0.82,
+      "kit_delay": 30,
+      "maintenance_minutes": 18
+    },
+    "maintenance_30min": {
+      "qualified_availability": 0.82,
+      "kit_delay": 0,
+      "maintenance_minutes": 30
+    },
+    "combined": {
+      "qualified_availability": 0.7,
+      "kit_delay": 30,
+      "maintenance_minutes": 30
+    }
+  },
+  "stress_results": {
+    "added_bay_c4_backup1_earlier1": {
+      "reference": {
+        "target": 1030,
+        "a": 721,
+        "b": 309,
+        "hits": 598,
+        "n": 600,
+        "lower": 0.983955,
+        "accepted": true,
+        "sample_rate": 0.996667,
+        "mean_shipped": [
+          1640.758,
+          1594.82
+        ],
+        "availability": [
+          0.9417,
+          0.96
+        ],
+        "mean_parallel_operations": [
+          1072.223,
+          992.343
+        ]
+      },
+      "operator_70pct": {
+        "target": 1030,
+        "a": 721,
+        "b": 309,
+        "hits": 598,
+        "n": 600,
+        "lower": 0.983955,
+        "accepted": true,
+        "sample_rate": 0.996667,
+        "mean_shipped": [
+          1635.832,
+          1586.853
+        ],
+        "availability": [
+          0.9117,
+          0.9133
+        ],
+        "mean_parallel_operations": [
+          1032.352,
+          933.195
+        ]
+      },
+      "operator_95pct": {
+        "target": 1030,
+        "a": 721,
+        "b": 309,
+        "hits": 598,
+        "n": 600,
+        "lower": 0.983955,
+        "accepted": true,
+        "sample_rate": 0.996667,
+        "mean_shipped": [
+          1645.385,
+          1599.922
+        ],
+        "availability": [
+          0.9867,
+          0.9867
+        ],
+        "mean_parallel_operations": [
+          1132.667,
+          1021.355
+        ]
+      },
+      "kits_15min_late": {
+        "target": 1030,
+        "a": 721,
+        "b": 309,
+        "hits": 594,
+        "n": 600,
+        "lower": 0.97327,
+        "accepted": true,
+        "sample_rate": 0.99,
+        "mean_shipped": [
+          1618.743,
+          1558.837
+        ],
+        "availability": [
+          0.9417,
+          0.96
+        ],
+        "mean_parallel_operations": [
+          1072.057,
+          971.745
+        ]
+      },
+      "kits_30min_late": {
+        "target": 1030,
+        "a": 721,
+        "b": 309,
+        "hits": 582,
+        "n": 600,
+        "lower": 0.94601,
+        "accepted": false,
+        "sample_rate": 0.97,
+        "mean_shipped": [
+          1585.487,
+          1510.345
+        ],
+        "availability": [
+          0.9417,
+          0.96
+        ],
+        "mean_parallel_operations": [
+          1057.93,
+          942.64
+        ]
+      },
+      "maintenance_30min": {
+        "target": 1030,
+        "a": 721,
+        "b": 309,
+        "hits": 596,
+        "n": 600,
+        "lower": 0.97839,
+        "accepted": true,
+        "sample_rate": 0.993333,
+        "mean_shipped": [
+          1635.065,
+          1586.808
+        ],
+        "availability": [
+          0.9417,
+          0.96
+        ],
+        "mean_parallel_operations": [
+          980.34,
+          958.707
+        ]
+      },
+      "combined": {
+        "target": 1030,
+        "a": 721,
+        "b": 309,
+        "hits": 580,
+        "n": 600,
+        "lower": 0.941756,
+        "accepted": false,
+        "sample_rate": 0.966667,
+        "mean_shipped": [
+          1575.647,
+          1496.555
+        ],
+        "availability": [
+          0.9117,
+          0.9133
+        ],
+        "mean_parallel_operations": [
+          912.78,
+          843.357
+        ]
+      }
+    },
+    "converted_bay_c2_backup0_earlier1": {
+      "reference": {
+        "target": 980,
+        "a": 686,
+        "b": 294,
+        "hits": 598,
+        "n": 600,
+        "lower": 0.983955,
+        "accepted": true,
+        "sample_rate": 0.996667,
+        "mean_shipped": [
+          1607.252,
+          1537.632
+        ],
+        "availability": [
+          0.8167,
+          0.8233
+        ],
+        "mean_parallel_operations": [
+          889.703,
+          799.575
+        ]
+      },
+      "operator_70pct": {
+        "target": 980,
+        "a": 686,
+        "b": 294,
+        "hits": 596,
+        "n": 600,
+        "lower": 0.97839,
+        "accepted": true,
+        "sample_rate": 0.993333,
+        "mean_shipped": [
+          1591.99,
+          1512.035
+        ],
+        "availability": [
+          0.6933,
+          0.6933
+        ],
+        "mean_parallel_operations": [
+          738.937,
+          650.718
+        ]
+      },
+      "operator_95pct": {
+        "target": 980,
+        "a": 686,
+        "b": 294,
+        "hits": 599,
+        "n": 600,
+        "lower": 0.987056,
+        "accepted": true,
+        "sample_rate": 0.998333,
+        "mean_shipped": [
+          1624.652,
+          1561.913
+        ],
+        "availability": [
+          0.9633,
+          0.9467
+        ],
+        "mean_parallel_operations": [
+          1067.433,
+          929.508
+        ]
+      },
+      "kits_15min_late": {
+        "target": 980,
+        "a": 686,
+        "b": 294,
+        "hits": 597,
+        "n": 600,
+        "lower": 0.981097,
+        "accepted": true,
+        "sample_rate": 0.995,
+        "mean_shipped": [
+          1584.767,
+          1500.498
+        ],
+        "availability": [
+          0.8167,
+          0.8233
+        ],
+        "mean_parallel_operations": [
+          876.273,
+          780.858
+        ]
+      },
+      "kits_30min_late": {
+        "target": 980,
+        "a": 686,
+        "b": 294,
+        "hits": 596,
+        "n": 600,
+        "lower": 0.97839,
+        "accepted": true,
+        "sample_rate": 0.993333,
+        "mean_shipped": [
+          1552.417,
+          1451.653
+        ],
+        "availability": [
+          0.8167,
+          0.8233
+        ],
+        "mean_parallel_operations": [
+          869.017,
+          769.07
+        ]
+      },
+      "maintenance_30min": {
+        "target": 980,
+        "a": 686,
+        "b": 294,
+        "hits": 597,
+        "n": 600,
+        "lower": 0.981097,
+        "accepted": true,
+        "sample_rate": 0.995,
+        "mean_shipped": [
+          1590.335,
+          1511.673
+        ],
+        "availability": [
+          0.8167,
+          0.8233
+        ],
+        "mean_parallel_operations": [
+          831.987,
+          790.952
+        ]
+      },
+      "combined": {
+        "target": 980,
+        "a": 686,
+        "b": 294,
+        "hits": 587,
+        "n": 600,
+        "lower": 0.956918,
+        "accepted": true,
+        "sample_rate": 0.978333,
+        "mean_shipped": [
+          1519.848,
+          1402.162
+        ],
+        "availability": [
+          0.6933,
+          0.6933
+        ],
+        "mean_parallel_operations": [
+          672.258,
+          608.987
+        ]
+      }
+    }
+  }
+}
