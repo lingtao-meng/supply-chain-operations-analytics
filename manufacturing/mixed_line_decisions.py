@@ -122,19 +122,32 @@ def shift_measures(scenario, model, gates, windows, retries, staffed):
     return rows
 
 
-def trial(case, plan, seed):
+@dataclass(frozen=True)
+class Pressure:
+    late_receipts_minutes: int = 0
+    adverse_qualified_availability: float = .82
+    improved_repair_seconds: int = 60
+
+
+def trial(case, plan, seed, *, pressure=Pressure()):
     base_seed, extra_seed, roster_seed = seed.spawn(3)
     scenario = sample(case, plan, base_seed)
     extra = np.random.default_rng(extra_seed)
     windows = calendar(extra.integers(145, 345, 2), extra.integers(12, 31, 2), True)
     retries = extra.random((len(scenario.kits), 2))
-    staffed = np.random.default_rng(roster_seed).random(SHIFTS) < .82
+    availability = np.full(SHIFTS, .82)
+    availability[list(ADVERSE)] = pressure.adverse_qualified_availability
+    staffed = np.random.default_rng(roster_seed).random(SHIFTS) < availability
+    if pressure.late_receipts_minutes:
+        affected = np.isin(scenario.orders, np.array(ADVERSE)*SHIFT_SECONDS)
+        affected &= scenario.kits > scenario.orders
+        scenario = replace(scenario, kits=scenario.kits + affected*60*pressure.late_receipts_minutes)
     gates = {supply: receive_kits(scenario, ReceivingPlan(), advance_minutes=(55 if supply else 30))[0]
              for supply in (False, True)}
     scenarios = {supply: replace(scenario, kits=gates[supply]) for supply in gates}
     result = {}
     for policy in POLICIES:
-        plant = replace(PLANT, kit_advance=0, repair_seconds=60 if policy.rework else 90)
+        plant = replace(PLANT, kit_advance=0, repair_seconds=pressure.improved_repair_seconds if policy.rework else 90)
         floor = replace(FLOOR, route_minutes=10) if policy.supply else FLOOR
         model = simulate(scenarios[policy.supply], plant, maintenance=windows, floor=floor,
                          parallel_available=staffed if policy.assembly else None, diagnose=True)
