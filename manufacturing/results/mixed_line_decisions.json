@@ -1,0 +1,1196 @@
+{
+  "design": [
+    160,
+    2026112531
+  ],
+  "holdout": [
+    800,
+    2026112532
+  ],
+  "assumptions": {
+    "currency": "CNY",
+    "shifts_per_year": 250,
+    "investment_life_years": 3,
+    "assembly_hourly_rate": 38,
+    "parallel_operator_hourly_rate": 46,
+    "buffer_space_per_slot_year": 900,
+    "first_repair_per_completed_attempt": 6,
+    "first_recheck_per_completed_attempt": 2,
+    "second_repair_and_recheck_per_completed_attempt": 12,
+    "scrap_per_disposed_unit": 20,
+    "primary_station_downtime_per_minute": 8,
+    "supply_change_investment": 18000,
+    "parallel_station_investment": 65000,
+    "rework_fixture_investment": 25000,
+    "supply_change_extra_cost_per_shift": 90,
+    "parallel_maintenance_extra_cost_per_shift": 20,
+    "rework_fixture_extra_cost_per_shift": 15
+  },
+  "settings": {
+    "dispatch": "ready",
+    "floor": "compact_aid_two_per_gap",
+    "target_a_b": [
+      1155,
+      495
+    ],
+    "alternate_operator_availability": 0.82,
+    "supply_advance": [
+      30,
+      55
+    ],
+    "route_minutes": [
+      15,
+      10
+    ],
+    "first_repair_seconds": [
+      90,
+      60
+    ],
+    "unchanged_second_repair_seconds": 210
+  },
+  "confidence_alpha_per_goal": 0.00125,
+  "outcomes": {
+    "base": {
+      "capital": 0,
+      "annual_operating_cost": 1212536.875,
+      "mean_total_cost_per_shift": 4850.1475,
+      "cost_per_physically_shipped": 3.42991,
+      "mean_four_shift_shortfall": 2841.90125,
+      "mean_shift_3": {
+        "a": 559.3225,
+        "b": 181.0225,
+        "short_a": 595.6775,
+        "short_b": 313.9775,
+        "qualified": 757.685,
+        "old_sent": 608.685,
+        "old_open": 0.0,
+        "closing_open": 1073.065,
+        "scrap": 153.62125,
+        "late_minutes": 297.65,
+        "not_started": 1032.05875,
+        "on_line": 15.16875,
+        "in_quality": 8.4975,
+        "scrapped_current": 36.59,
+        "awaiting_truck": 17.34,
+        "first_attempts": 190.6475,
+        "second_attempts": 16.91625,
+        "scrap_this_shift": 67.89875,
+        "primary_stop_minutes": 39.04125,
+        "peak_actions_per_min": 32.3332,
+        "station_five_posture_min": 54.19255,
+        "ergo_pass": 1.0,
+        "parallel_jobs": 0.0,
+        "kit_wait_min": 0.0,
+        "station3_block_min": 128.82827,
+        "station4_calendar_wait_min": 39.13506,
+        "station6_processing_min": 313.67096
+      },
+      "joint_ergonomics_pass_rate": 1.0,
+      "design_promise": 300,
+      "reliability": {
+        "300": {
+          "target": 300,
+          "quotas": [
+            210,
+            90
+          ],
+          "hits": 798,
+          "lower": 0.986374,
+          "passed": true
+        },
+        "330": {
+          "target": 330,
+          "quotas": [
+            231,
+            99
+          ],
+          "hits": 791,
+          "lower": 0.972356,
+          "passed": true
+        },
+        "400": {
+          "target": 400,
+          "quotas": [
+            280,
+            120
+          ],
+          "hits": 632,
+          "lower": 0.743579,
+          "passed": false
+        },
+        "500": {
+          "target": 500,
+          "quotas": [
+            350,
+            150
+          ],
+          "hits": 585,
+          "lower": 0.681489,
+          "passed": false
+        },
+        "1650": {
+          "target": 1650,
+          "quotas": [
+            1155,
+            495
+          ],
+          "hits": 0,
+          "lower": 0.0,
+          "passed": false
+        }
+      }
+    },
+    "rework": {
+      "capital": 25000,
+      "annual_operating_cost": 1226070.9375,
+      "mean_total_cost_per_shift": 4937.6171,
+      "cost_per_physically_shipped": 3.33528,
+      "mean_four_shift_shortfall": 2491.7725,
+      "mean_shift_3": {
+        "a": 615.63375,
+        "b": 209.3725,
+        "short_a": 539.36625,
+        "short_b": 285.6275,
+        "qualified": 843.28,
+        "old_sent": 601.205,
+        "old_open": 0.0,
+        "closing_open": 982.44875,
+        "scrap": 159.57625,
+        "late_minutes": 273.2,
+        "not_started": 944.45625,
+        "on_line": 14.25875,
+        "in_quality": 5.46,
+        "scrapped_current": 42.545,
+        "awaiting_truck": 18.27375,
+        "first_attempts": 203.65125,
+        "second_attempts": 18.0625,
+        "scrap_this_shift": 72.87125,
+        "primary_stop_minutes": 39.04125,
+        "peak_actions_per_min": 34.23191,
+        "station_five_posture_min": 57.38467,
+        "ergo_pass": 1.0,
+        "parallel_jobs": 0.0,
+        "kit_wait_min": 0.0,
+        "station3_block_min": 111.19061,
+        "station4_calendar_wait_min": 39.22946,
+        "station6_processing_min": 332.09371
+      },
+      "joint_ergonomics_pass_rate": 1.0,
+      "design_promise": 410,
+      "reliability": {
+        "330": {
+          "target": 330,
+          "quotas": [
+            231,
+            99
+          ],
+          "hits": 799,
+          "lower": 0.988824,
+          "passed": true
+        },
+        "400": {
+          "target": 400,
+          "quotas": [
+            280,
+            120
+          ],
+          "hits": 796,
+          "lower": 0.981999,
+          "passed": true
+        },
+        "410": {
+          "target": 410,
+          "quotas": [
+            287,
+            123
+          ],
+          "hits": 795,
+          "lower": 0.979962,
+          "passed": true
+        },
+        "500": {
+          "target": 500,
+          "quotas": [
+            350,
+            150
+          ],
+          "hits": 788,
+          "lower": 0.967004,
+          "passed": true
+        },
+        "1650": {
+          "target": 1650,
+          "quotas": [
+            1155,
+            495
+          ],
+          "hits": 0,
+          "lower": 0.0,
+          "passed": false
+        }
+      },
+      "paired_four_shift_shortfall_reduction": {
+        "mean": 350.12875,
+        "ci95": [
+          333.46632,
+          366.79118
+        ],
+        "simultaneous95": [
+          327.23471,
+          373.02279
+        ],
+        "dz": 1.45831
+      },
+      "paired_shift_cost_change": {
+        "mean": 87.46958,
+        "ci95": [
+          85.01568,
+          89.92349
+        ],
+        "simultaneous95": [
+          84.09794,
+          90.84123
+        ],
+        "dz": 2.47378
+      }
+    },
+    "assembly": {
+      "capital": 65000,
+      "annual_operating_cost": 1313516.5625,
+      "mean_total_cost_per_shift": 5340.7329,
+      "cost_per_physically_shipped": 3.50477,
+      "mean_four_shift_shortfall": 1916.5775,
+      "mean_shift_3": {
+        "a": 766.67375,
+        "b": 273.63125,
+        "short_a": 388.32625,
+        "short_b": 221.36875,
+        "qualified": 1057.45375,
+        "old_sent": 450.47875,
+        "old_open": 0.0,
+        "closing_open": 752.4875,
+        "scrap": 174.23875,
+        "late_minutes": 253.55,
+        "not_started": 710.0125,
+        "on_line": 16.0725,
+        "in_quality": 9.25375,
+        "scrapped_current": 57.2075,
+        "awaiting_truck": 17.14875,
+        "first_attempts": 217.44875,
+        "second_attempts": 19.455,
+        "scrap_this_shift": 78.00875,
+        "primary_stop_minutes": 39.04125,
+        "peak_actions_per_min": 35.82143,
+        "station_five_posture_min": 60.04066,
+        "ergo_pass": 1.0,
+        "parallel_jobs": 653.705,
+        "kit_wait_min": 0.48358,
+        "station3_block_min": 94.5977,
+        "station4_calendar_wait_min": 7.42023,
+        "station6_processing_min": 347.60932
+      },
+      "joint_ergonomics_pass_rate": 1.0,
+      "design_promise": 360,
+      "reliability": {
+        "330": {
+          "target": 330,
+          "quotas": [
+            231,
+            99
+          ],
+          "hits": 798,
+          "lower": 0.986374,
+          "passed": true
+        },
+        "360": {
+          "target": 360,
+          "quotas": [
+            252,
+            108
+          ],
+          "hits": 795,
+          "lower": 0.979962,
+          "passed": true
+        },
+        "400": {
+          "target": 400,
+          "quotas": [
+            280,
+            120
+          ],
+          "hits": 788,
+          "lower": 0.967004,
+          "passed": true
+        },
+        "500": {
+          "target": 500,
+          "quotas": [
+            350,
+            150
+          ],
+          "hits": 780,
+          "lower": 0.953526,
+          "passed": true
+        },
+        "1650": {
+          "target": 1650,
+          "quotas": [
+            1155,
+            495
+          ],
+          "hits": 0,
+          "lower": 0.0,
+          "passed": false
+        }
+      },
+      "paired_four_shift_shortfall_reduction": {
+        "mean": 925.32375,
+        "ci95": [
+          898.94941,
+          951.69809
+        ],
+        "simultaneous95": [
+          889.08563,
+          961.56187
+        ],
+        "dz": 2.43486
+      },
+      "paired_shift_cost_change": {
+        "mean": 490.58542,
+        "ci95": [
+          488.17345,
+          492.99738
+        ],
+        "simultaneous95": [
+          487.2714,
+          493.89943
+        ],
+        "dz": 14.1158
+      }
+    },
+    "assembly+rework": {
+      "capital": 90000,
+      "annual_operating_cost": 1323770.9375,
+      "mean_total_cost_per_shift": 5415.0837,
+      "cost_per_physically_shipped": 3.44426,
+      "mean_four_shift_shortfall": 1643.88125,
+      "mean_shift_3": {
+        "a": 813.61375,
+        "b": 294.48375,
+        "short_a": 341.38625,
+        "short_b": 200.51625,
+        "qualified": 1126.31625,
+        "old_sent": 438.69875,
+        "old_open": 0.0,
+        "closing_open": 679.2275,
+        "scrap": 179.70625,
+        "late_minutes": 247.7,
+        "not_started": 639.93,
+        "on_line": 15.28,
+        "in_quality": 5.79875,
+        "scrapped_current": 62.675,
+        "awaiting_truck": 18.21875,
+        "first_attempts": 228.50625,
+        "second_attempts": 20.38375,
+        "scrap_this_shift": 82.3675,
+        "primary_stop_minutes": 39.04125,
+        "peak_actions_per_min": 37.21485,
+        "station_five_posture_min": 62.37497,
+        "ergo_pass": 1.0,
+        "parallel_jobs": 682.11375,
+        "kit_wait_min": 0.62232,
+        "station3_block_min": 81.17253,
+        "station4_calendar_wait_min": 7.37986,
+        "station6_processing_min": 361.15728
+      },
+      "joint_ergonomics_pass_rate": 1.0,
+      "design_promise": 640,
+      "reliability": {
+        "330": {
+          "target": 330,
+          "quotas": [
+            231,
+            99
+          ],
+          "hits": 800,
+          "lower": 0.991679,
+          "passed": true
+        },
+        "400": {
+          "target": 400,
+          "quotas": [
+            280,
+            120
+          ],
+          "hits": 800,
+          "lower": 0.991679,
+          "passed": true
+        },
+        "500": {
+          "target": 500,
+          "quotas": [
+            350,
+            150
+          ],
+          "hits": 799,
+          "lower": 0.988824,
+          "passed": true
+        },
+        "640": {
+          "target": 640,
+          "quotas": [
+            448,
+            192
+          ],
+          "hits": 795,
+          "lower": 0.979962,
+          "passed": true
+        },
+        "1650": {
+          "target": 1650,
+          "quotas": [
+            1155,
+            495
+          ],
+          "hits": 0,
+          "lower": 0.0,
+          "passed": false
+        }
+      },
+      "paired_four_shift_shortfall_reduction": {
+        "mean": 1198.02,
+        "ci95": [
+          1172.29092,
+          1223.74908
+        ],
+        "simultaneous95": [
+          1162.66847,
+          1233.37153
+        ],
+        "dz": 3.23148
+      },
+      "paired_shift_cost_change": {
+        "mean": 564.93625,
+        "ci95": [
+          562.06755,
+          567.80495
+        ],
+        "simultaneous95": [
+          560.99469,
+          568.87781
+        ],
+        "dz": 13.6671
+      }
+    },
+    "supply": {
+      "capital": 18000,
+      "annual_operating_cost": 1235331.25,
+      "mean_total_cost_per_shift": 4965.325,
+      "cost_per_physically_shipped": 3.50676,
+      "mean_four_shift_shortfall": 2825.68625,
+      "mean_shift_3": {
+        "a": 563.2375,
+        "b": 182.1875,
+        "short_a": 591.7625,
+        "short_b": 312.8125,
+        "qualified": 762.65125,
+        "old_sent": 604.53625,
+        "old_open": 0.0,
+        "closing_open": 1067.57125,
+        "scrap": 154.035,
+        "late_minutes": 294.5,
+        "not_started": 1026.52,
+        "on_line": 15.1875,
+        "in_quality": 8.6375,
+        "scrapped_current": 37.00375,
+        "awaiting_truck": 17.22625,
+        "first_attempts": 190.69375,
+        "second_attempts": 16.9075,
+        "scrap_this_shift": 68.0025,
+        "primary_stop_minutes": 39.04125,
+        "peak_actions_per_min": 32.36716,
+        "station_five_posture_min": 54.25793,
+        "ergo_pass": 1.0,
+        "parallel_jobs": 0.0,
+        "kit_wait_min": 0.0,
+        "station3_block_min": 128.4787,
+        "station4_calendar_wait_min": 39.15118,
+        "station6_processing_min": 313.98665
+      },
+      "joint_ergonomics_pass_rate": 1.0,
+      "design_promise": 300,
+      "reliability": {
+        "300": {
+          "target": 300,
+          "quotas": [
+            210,
+            90
+          ],
+          "hits": 800,
+          "lower": 0.991679,
+          "passed": true
+        },
+        "330": {
+          "target": 330,
+          "quotas": [
+            231,
+            99
+          ],
+          "hits": 793,
+          "lower": 0.976072,
+          "passed": true
+        },
+        "400": {
+          "target": 400,
+          "quotas": [
+            280,
+            120
+          ],
+          "hits": 642,
+          "lower": 0.756952,
+          "passed": false
+        },
+        "500": {
+          "target": 500,
+          "quotas": [
+            350,
+            150
+          ],
+          "hits": 591,
+          "lower": 0.689352,
+          "passed": false
+        },
+        "1650": {
+          "target": 1650,
+          "quotas": [
+            1155,
+            495
+          ],
+          "hits": 0,
+          "lower": 0.0,
+          "passed": false
+        }
+      },
+      "paired_four_shift_shortfall_reduction": {
+        "mean": 16.215,
+        "ci95": [
+          12.01226,
+          20.41774
+        ],
+        "simultaneous95": [
+          10.44047,
+          21.98953
+        ],
+        "dz": 0.26776
+      },
+      "paired_shift_cost_change": {
+        "mean": 115.1775,
+        "ci95": [
+          114.80064,
+          115.55436
+        ],
+        "simultaneous95": [
+          114.65969,
+          115.69531
+        ],
+        "dz": 21.21026
+      }
+    },
+    "supply+rework": {
+      "capital": 43000,
+      "annual_operating_cost": 1248722.1875,
+      "mean_total_cost_per_shift": 5052.2221,
+      "cost_per_physically_shipped": 3.41042,
+      "mean_four_shift_shortfall": 2480.84625,
+      "mean_shift_3": {
+        "a": 618.8575,
+        "b": 209.7325,
+        "short_a": 536.1425,
+        "short_b": 285.2675,
+        "qualified": 846.83625,
+        "old_sent": 597.80625,
+        "old_open": 0.0,
+        "closing_open": 978.60625,
+        "scrap": 159.835,
+        "late_minutes": 270.95,
+        "not_started": 940.59125,
+        "on_line": 14.27,
+        "in_quality": 5.49875,
+        "scrapped_current": 42.80375,
+        "awaiting_truck": 18.24625,
+        "first_attempts": 203.675,
+        "second_attempts": 18.07125,
+        "scrap_this_shift": 72.88125,
+        "primary_stop_minutes": 39.04125,
+        "peak_actions_per_min": 34.24032,
+        "station_five_posture_min": 57.40193,
+        "ergo_pass": 1.0,
+        "parallel_jobs": 0.0,
+        "kit_wait_min": 0.0,
+        "station3_block_min": 111.07223,
+        "station4_calendar_wait_min": 39.24228,
+        "station6_processing_min": 332.16979
+      },
+      "joint_ergonomics_pass_rate": 1.0,
+      "design_promise": 500,
+      "reliability": {
+        "330": {
+          "target": 330,
+          "quotas": [
+            231,
+            99
+          ],
+          "hits": 800,
+          "lower": 0.991679,
+          "passed": true
+        },
+        "400": {
+          "target": 400,
+          "quotas": [
+            280,
+            120
+          ],
+          "hits": 797,
+          "lower": 0.984124,
+          "passed": true
+        },
+        "500": {
+          "target": 500,
+          "quotas": [
+            350,
+            150
+          ],
+          "hits": 789,
+          "lower": 0.968764,
+          "passed": true
+        },
+        "1650": {
+          "target": 1650,
+          "quotas": [
+            1155,
+            495
+          ],
+          "hits": 0,
+          "lower": 0.0,
+          "passed": false
+        }
+      },
+      "paired_four_shift_shortfall_reduction": {
+        "mean": 361.055,
+        "ci95": [
+          343.89713,
+          378.21287
+        ],
+        "simultaneous95": [
+          337.48023,
+          384.62977
+        ],
+        "dz": 1.4604
+      },
+      "paired_shift_cost_change": {
+        "mean": 202.07458,
+        "ci95": [
+          199.60155,
+          204.54762
+        ],
+        "simultaneous95": [
+          198.67666,
+          205.47251
+        ],
+        "dz": 5.67079
+      }
+    },
+    "supply+assembly": {
+      "capital": 83000,
+      "annual_operating_cost": 1337399.375,
+      "mean_total_cost_per_shift": 5460.2642,
+      "cost_per_physically_shipped": 3.56004,
+      "mean_four_shift_shortfall": 1826.27125,
+      "mean_shift_3": {
+        "a": 787.80625,
+        "b": 281.56875,
+        "short_a": 367.19375,
+        "short_b": 213.43125,
+        "qualified": 1086.5875,
+        "old_sent": 428.86625,
+        "old_open": 0.0,
+        "closing_open": 721.35375,
+        "scrap": 176.3025,
+        "late_minutes": 250.55,
+        "not_started": 678.89875,
+        "on_line": 16.01875,
+        "in_quality": 9.22375,
+        "scrapped_current": 59.27125,
+        "awaiting_truck": 17.2125,
+        "first_attempts": 218.5175,
+        "second_attempts": 19.55125,
+        "scrap_this_shift": 78.68625,
+        "primary_stop_minutes": 39.04125,
+        "peak_actions_per_min": 36.00922,
+        "station_five_posture_min": 60.32889,
+        "ergo_pass": 1.0,
+        "parallel_jobs": 662.61,
+        "kit_wait_min": 0.1002,
+        "station3_block_min": 93.08019,
+        "station4_calendar_wait_min": 7.42965,
+        "station6_processing_min": 349.5651
+      },
+      "joint_ergonomics_pass_rate": 1.0,
+      "design_promise": 440,
+      "reliability": {
+        "330": {
+          "target": 330,
+          "quotas": [
+            231,
+            99
+          ],
+          "hits": 799,
+          "lower": 0.988824,
+          "passed": true
+        },
+        "400": {
+          "target": 400,
+          "quotas": [
+            280,
+            120
+          ],
+          "hits": 793,
+          "lower": 0.976072,
+          "passed": true
+        },
+        "440": {
+          "target": 440,
+          "quotas": [
+            308,
+            132
+          ],
+          "hits": 790,
+          "lower": 0.970547,
+          "passed": true
+        },
+        "500": {
+          "target": 500,
+          "quotas": [
+            350,
+            150
+          ],
+          "hits": 788,
+          "lower": 0.967004,
+          "passed": true
+        },
+        "1650": {
+          "target": 1650,
+          "quotas": [
+            1155,
+            495
+          ],
+          "hits": 0,
+          "lower": 0.0,
+          "passed": false
+        }
+      },
+      "paired_four_shift_shortfall_reduction": {
+        "mean": 1015.63,
+        "ci95": [
+          990.60483,
+          1040.65517
+        ],
+        "simultaneous95": [
+          981.24563,
+          1050.01437
+        ],
+        "dz": 2.81657
+      },
+      "paired_shift_cost_change": {
+        "mean": 610.11667,
+        "ci95": [
+          607.69041,
+          612.54292
+        ],
+        "simultaneous95": [
+          606.78301,
+          613.45032
+        ],
+        "dz": 17.45172
+      }
+    },
+    "supply+assembly+rework": {
+      "capital": 108000,
+      "annual_operating_cost": 1347050.0,
+      "mean_total_cost_per_shift": 5532.2,
+      "cost_per_physically_shipped": 3.50532,
+      "mean_four_shift_shortfall": 1579.315,
+      "mean_shift_3": {
+        "a": 829.49125,
+        "b": 300.37125,
+        "short_a": 325.50875,
+        "short_b": 194.62875,
+        "qualified": 1148.08375,
+        "old_sent": 419.96,
+        "old_open": 0.0,
+        "closing_open": 656.01375,
+        "scrap": 181.155,
+        "late_minutes": 246.05,
+        "not_started": 616.82625,
+        "on_line": 15.25375,
+        "in_quality": 5.7125,
+        "scrapped_current": 64.12375,
+        "awaiting_truck": 18.22125,
+        "first_attempts": 228.8525,
+        "second_attempts": 20.4325,
+        "scrap_this_shift": 82.5825,
+        "primary_stop_minutes": 39.04125,
+        "peak_actions_per_min": 37.27972,
+        "station_five_posture_min": 62.45812,
+        "ergo_pass": 1.0,
+        "parallel_jobs": 687.44625,
+        "kit_wait_min": 0.12433,
+        "station3_block_min": 81.02594,
+        "station4_calendar_wait_min": 7.38322,
+        "station6_processing_min": 361.91322
+      },
+      "joint_ergonomics_pass_rate": 1.0,
+      "design_promise": 650,
+      "reliability": {
+        "330": {
+          "target": 330,
+          "quotas": [
+            231,
+            99
+          ],
+          "hits": 800,
+          "lower": 0.991679,
+          "passed": true
+        },
+        "400": {
+          "target": 400,
+          "quotas": [
+            280,
+            120
+          ],
+          "hits": 800,
+          "lower": 0.991679,
+          "passed": true
+        },
+        "500": {
+          "target": 500,
+          "quotas": [
+            350,
+            150
+          ],
+          "hits": 800,
+          "lower": 0.991679,
+          "passed": true
+        },
+        "650": {
+          "target": 650,
+          "quotas": [
+            455,
+            195
+          ],
+          "hits": 799,
+          "lower": 0.988824,
+          "passed": true
+        },
+        "1650": {
+          "target": 1650,
+          "quotas": [
+            1155,
+            495
+          ],
+          "hits": 0,
+          "lower": 0.0,
+          "passed": false
+        }
+      },
+      "paired_four_shift_shortfall_reduction": {
+        "mean": 1262.58625,
+        "ci95": [
+          1237.76558,
+          1287.40692
+        ],
+        "simultaneous95": [
+          1228.48286,
+          1296.68964
+        ],
+        "dz": 3.53028
+      },
+      "paired_shift_cost_change": {
+        "mean": 682.0525,
+        "ci95": [
+          679.18143,
+          684.92357
+        ],
+        "simultaneous95": [
+          678.10768,
+          685.99732
+        ],
+        "dz": 16.48679
+      }
+    }
+  },
+  "factorial_shortfall_effects": {
+    "supply": {
+      "mean": 45.50344,
+      "ci95": [
+        39.52589,
+        51.48098
+      ],
+      "simultaneous95": [
+        37.29034,
+        53.71653
+      ],
+      "dz": 0.5283
+    },
+    "assembly": {
+      "mean": 918.54031,
+      "ci95": [
+        896.70893,
+        940.3717
+      ],
+      "simultaneous95": [
+        888.54417,
+        948.53645
+      ],
+      "dz": 2.91997
+    },
+    "rework": {
+      "mean": 303.65531,
+      "ci95": [
+        287.27785,
+        320.03277
+      ],
+      "simultaneous95": [
+        281.15282,
+        326.1578
+      ],
+      "dz": 1.28675
+    },
+    "supply+assembly": {
+      "mean": 31.93281,
+      "ci95": [
+        27.56362,
+        36.30201
+      ],
+      "simultaneous95": [
+        25.92957,
+        37.93605
+      ],
+      "dz": 0.50722
+    },
+    "supply+rework": {
+      "mean": -7.75719,
+      "ci95": [
+        -9.36822,
+        -6.14615
+      ],
+      "simultaneous95": [
+        -9.97074,
+        -5.54364
+      ],
+      "dz": -0.33416
+    },
+    "assembly+rework": {
+      "mean": -43.82906,
+      "ci95": [
+        -49.23383,
+        -38.4243
+      ],
+      "simultaneous95": [
+        -51.25516,
+        -36.40296
+      ],
+      "dz": -0.56279
+    },
+    "supply+assembly+rework": {
+      "mean": -5.11281,
+      "ci95": [
+        -6.43743,
+        -3.78819
+      ],
+      "simultaneous95": [
+        -6.93283,
+        -3.2928
+      ],
+      "dz": -0.26787
+    }
+  },
+  "incremental_shortfall_reduction": {
+    "base -> supply": {
+      "mean": 16.215,
+      "ci95": [
+        12.01226,
+        20.41774
+      ],
+      "simultaneous95": [
+        10.06262,
+        22.36738
+      ],
+      "dz": 0.26776
+    },
+    "base -> assembly": {
+      "mean": 925.32375,
+      "ci95": [
+        898.94941,
+        951.69809
+      ],
+      "simultaneous95": [
+        886.71442,
+        963.93308
+      ],
+      "dz": 2.43486
+    },
+    "base -> rework": {
+      "mean": 350.12875,
+      "ci95": [
+        333.46632,
+        366.79118
+      ],
+      "simultaneous95": [
+        325.73666,
+        374.52084
+      ],
+      "dz": 1.45831
+    },
+    "rework -> supply+rework": {
+      "mean": 10.92625,
+      "ci95": [
+        7.92317,
+        13.92933
+      ],
+      "simultaneous95": [
+        6.53005,
+        15.32245
+      ],
+      "dz": 0.2525
+    },
+    "rework -> assembly+rework": {
+      "mean": 847.89125,
+      "ci95": [
+        827.80109,
+        867.98141
+      ],
+      "simultaneous95": [
+        818.48132,
+        877.30118
+      ],
+      "dz": 2.92899
+    },
+    "assembly -> supply+assembly": {
+      "mean": 90.30625,
+      "ci95": [
+        78.40963,
+        102.20287
+      ],
+      "simultaneous95": [
+        72.89082,
+        107.72168
+      ],
+      "dz": 0.52681
+    },
+    "assembly -> assembly+rework": {
+      "mean": 272.69625,
+      "ci95": [
+        254.30181,
+        291.09069
+      ],
+      "simultaneous95": [
+        245.76868,
+        299.62382
+      ],
+      "dz": 1.02885
+    },
+    "assembly+rework -> supply+assembly+rework": {
+      "mean": 64.56625,
+      "ci95": [
+        56.29142,
+        72.84108
+      ],
+      "simultaneous95": [
+        52.45274,
+        76.67976
+      ],
+      "dz": 0.54151
+    },
+    "supply -> supply+assembly": {
+      "mean": 999.415,
+      "ci95": [
+        974.08073,
+        1024.74927
+      ],
+      "simultaneous95": [
+        962.32823,
+        1036.50177
+      ],
+      "dz": 2.73778
+    },
+    "supply -> supply+rework": {
+      "mean": 344.84,
+      "ci95": [
+        328.11691,
+        361.56309
+      ],
+      "simultaneous95": [
+        320.35912,
+        369.32088
+      ],
+      "dz": 1.43108
+    },
+    "supply+rework -> supply+assembly+rework": {
+      "mean": 901.53125,
+      "ci95": [
+        882.41016,
+        920.65234
+      ],
+      "simultaneous95": [
+        873.53994,
+        929.52256
+      ],
+      "dz": 3.27212
+    },
+    "supply+assembly -> supply+assembly+rework": {
+      "mean": 246.95625,
+      "ci95": [
+        229.30753,
+        264.60497
+      ],
+      "simultaneous95": [
+        221.12034,
+        272.79216
+      ],
+      "dz": 0.97111
+    }
+  },
+  "cheapest_at_common_target": {
+    "330": "base",
+    "400": "rework",
+    "500": "rework",
+    "1650": null
+  },
+  "largest_tested_target_by_capital": {
+    "0": {
+      "target": 330,
+      "policy": "base"
+    },
+    "20000": {
+      "target": 330,
+      "policy": "base"
+    },
+    "50000": {
+      "target": 500,
+      "policy": "rework"
+    },
+    "85000": {
+      "target": 500,
+      "policy": "rework"
+    },
+    "90000": {
+      "target": 640,
+      "policy": "assembly+rework"
+    },
+    "110000": {
+      "target": 650,
+      "policy": "supply+assembly+rework"
+    }
+  }
+}

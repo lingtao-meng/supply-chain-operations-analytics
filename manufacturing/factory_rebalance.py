@@ -113,6 +113,21 @@ def cohort_rows(scenario, ready, good, shipped):
     return rows
 
 
+def update_cohort_stages(row, day, orders, trace, ready, good):
+    cutoff = (day+1)*SHIFT_SECONDS
+    current = orders == day*SHIFT_SECONDS
+    in_process = current & (ready > cutoff)
+    entry = trace[:, ENTRY]
+    assembled = trace[:, ASSEMBLED]
+    row["not_started"] = int((in_process & (entry > cutoff)).sum())
+    row["on_line"] = int((in_process & (entry <= cutoff) & (assembled > cutoff)).sum())
+    row["in_quality"] = int((in_process & (assembled <= cutoff)).sum())
+    row["scrapped_current"] = int((current & ~good & (ready <= cutoff)).sum())
+    row["awaiting_truck"] = row["qualified"]-row["a"]-row["b"]
+    assert (row["qualified"]+row["not_started"]+row["on_line"]+row["in_quality"]+
+            row["scrapped_current"] == int(current.sum()))
+
+
 def trial(case, plan, choices, detail, seed):
     base_seed, extra_seed, roster_seed = seed.spawn(3)
     blocks = []
@@ -146,18 +161,7 @@ def trial(case, plan, choices, detail, seed):
         rows = cohort_rows(scenario, ready, good, shipped)
         actions = action_rates(case, plan, choice)
         for day, row in enumerate(rows):
-            cutoff = (day+1)*SHIFT_SECONDS
-            current = planned.orders == day*SHIFT_SECONDS
-            in_process = current & (ready > cutoff)
-            entry = model.trace[:, ENTRY]
-            assembled = model.trace[:, ASSEMBLED]
-            row["not_started"] = int((in_process & (entry > cutoff)).sum())
-            row["on_line"] = int((in_process & (entry <= cutoff) & (assembled > cutoff)).sum())
-            row["in_quality"] = int((in_process & (assembled <= cutoff)).sum())
-            row["scrapped_current"] = int((current & ~good & (ready <= cutoff)).sum())
-            row["awaiting_truck"] = row["qualified"]-row["a"]-row["b"]
-            assert (row["qualified"]+row["not_started"]+row["on_line"]+row["in_quality"]+
-                    row["scrapped_current"] == int(current.sum()))
+            update_cohort_stages(row, day, planned.orders, model.trace, ready, good)
             counts = model.floor_stats[day, :, :2].copy()
             mask = model.parallel_used & (starts >= day*SHIFT_SECONDS) & (starts < (day+1)*SHIFT_SECONDS)
             alt = np.bincount(scenario.sku[mask], minlength=2)

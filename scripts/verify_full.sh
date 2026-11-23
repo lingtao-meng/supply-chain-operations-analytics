@@ -122,4 +122,7 @@ for name in decision_economics.json decision_sensitivity.csv small_graph_validat
   cmp "manufacturing/results/$name" "$RUNNER_TEMP/new/$name"
 done
 test -s "$RUNNER_TEMP/new/decision_tornado.png"
+python manufacturing/mixed_line_decisions.py --output-dir "$RUNNER_TEMP/mixed-line"
+cmp manufacturing/results/mixed_line_decisions.json "$RUNNER_TEMP/mixed-line/mixed_line_decisions.json"
+diff -r manufacturing/results/mixed_line "$RUNNER_TEMP/mixed-line/mixed_line"
 echo "Manufacturing numerical results reproduced."
