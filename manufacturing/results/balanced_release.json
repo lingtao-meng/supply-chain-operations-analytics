@@ -1,0 +1,3797 @@
+{
+  "design": [
+    144,
+    2026112551
+  ],
+  "holdout": [
+    800,
+    2026112552
+  ],
+  "tuning_pressures": [
+    "reference",
+    "combined"
+  ],
+  "tested_batch_sizes": [
+    30,
+    60,
+    90,
+    120,
+    180
+  ],
+  "delay_tolerance_minutes": 10.0,
+  "reliability_alpha": 0.0002777777777777778,
+  "pairwise_effect_family": 120,
+  "uncompressed_evidence_sha256": "3e066caa8c0f164702c445dbccbc664bdcf0e8f1e94042708687668a3006e6af",
+  "outcomes": {
+    "base": {
+      "ready": {
+        "locked_target": 310,
+        "scenarios": {
+          "reference": {
+            "means": {
+              "a_first": 829.41875,
+              "b_first": 310.90875,
+              "a_second": 555.5625,
+              "b_second": 180.27125,
+              "short_a": 1866.2875,
+              "short_b": 987.91875,
+              "longest_delay_min": 385.35,
+              "final_open": 1528.05625,
+              "entry_changeovers": 31.94375,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": null,
+            "protects_old_orders_and_both_skus": true,
+            "reliability": {
+              "310": {
+                "target": 310,
+                "quotas": [
+                  217,
+                  93
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 785,
+                "lower": 0.958566,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 626,
+                "lower": 0.728723,
+                "passed": false
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 584,
+                "lower": 0.672974,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 500,
+                "lower": 0.564212,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 481,
+                "lower": 0.540042,
+                "passed": false
+              }
+            }
+          },
+          "late_receipts": {
+            "means": {
+              "a_first": 822.275,
+              "b_first": 309.19,
+              "a_second": 547.5225,
+              "b_second": 178.02375,
+              "short_a": 1890.1225,
+              "short_b": 995.19,
+              "longest_delay_min": 386.5875,
+              "final_open": 1541.4875,
+              "entry_changeovers": 32.06125,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": null,
+            "protects_old_orders_and_both_skus": true,
+            "reliability": {
+              "310": {
+                "target": 310,
+                "quotas": [
+                  217,
+                  93
+                ],
+                "hits": 797,
+                "lower": 0.981804,
+                "passed": true
+              },
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 783,
+                "lower": 0.955088,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 607,
+                "lower": 0.703372,
+                "passed": false
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 568,
+                "lower": 0.651997,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 484,
+                "lower": 0.543849,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 464,
+                "lower": 0.51854,
+                "passed": false
+              }
+            }
+          },
+          "low_staffing": {
+            "means": {
+              "a_first": 829.41875,
+              "b_first": 310.90875,
+              "a_second": 555.5625,
+              "b_second": 180.27125,
+              "short_a": 1866.2875,
+              "short_b": 987.91875,
+              "longest_delay_min": 385.35,
+              "final_open": 1528.05625,
+              "entry_changeovers": 31.94375,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": null,
+            "protects_old_orders_and_both_skus": true,
+            "reliability": {
+              "310": {
+                "target": 310,
+                "quotas": [
+                  217,
+                  93
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 785,
+                "lower": 0.958566,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 626,
+                "lower": 0.728723,
+                "passed": false
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 584,
+                "lower": 0.672974,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 500,
+                "lower": 0.564212,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 481,
+                "lower": 0.540042,
+                "passed": false
+              }
+            }
+          },
+          "slower_repair": {
+            "means": {
+              "a_first": 829.41875,
+              "b_first": 310.90875,
+              "a_second": 555.5625,
+              "b_second": 180.27125,
+              "short_a": 1866.2875,
+              "short_b": 987.91875,
+              "longest_delay_min": 385.35,
+              "final_open": 1528.05625,
+              "entry_changeovers": 31.94375,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": null,
+            "protects_old_orders_and_both_skus": true,
+            "reliability": {
+              "310": {
+                "target": 310,
+                "quotas": [
+                  217,
+                  93
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 785,
+                "lower": 0.958566,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 626,
+                "lower": 0.728723,
+                "passed": false
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 584,
+                "lower": 0.672974,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 500,
+                "lower": 0.564212,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 481,
+                "lower": 0.540042,
+                "passed": false
+              }
+            }
+          },
+          "combined": {
+            "means": {
+              "a_first": 822.275,
+              "b_first": 309.19,
+              "a_second": 547.5225,
+              "b_second": 178.02375,
+              "short_a": 1890.1225,
+              "short_b": 995.19,
+              "longest_delay_min": 386.5875,
+              "final_open": 1541.4875,
+              "entry_changeovers": 32.06125,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": null,
+            "protects_old_orders_and_both_skus": true,
+            "reliability": {
+              "310": {
+                "target": 310,
+                "quotas": [
+                  217,
+                  93
+                ],
+                "hits": 797,
+                "lower": 0.981804,
+                "passed": true
+              },
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 783,
+                "lower": 0.955088,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 607,
+                "lower": 0.703372,
+                "passed": false
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 568,
+                "lower": 0.651997,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 484,
+                "lower": 0.543849,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 464,
+                "lower": 0.51854,
+                "passed": false
+              }
+            }
+          }
+        },
+        "guardrails_passed": true,
+        "verified_all_pressures": [
+          310,
+          330
+        ]
+      },
+      "campaign_120": {
+        "locked_target": 300,
+        "scenarios": {
+          "reference": {
+            "means": {
+              "a_first": 634.13,
+              "b_first": 490.48125,
+              "a_second": 340.7575,
+              "b_second": 380.68,
+              "short_a": 2502.43875,
+              "short_b": 420.4575,
+              "longest_delay_min": 378.40625,
+              "final_open": 1479.46625,
+              "entry_changeovers": 34.78625,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 636.15125,
+                "ci95": [
+                  622.11594,
+                  650.18656
+                ],
+                "simultaneous95": [
+                  610.80958,
+                  661.49292
+                ],
+                "dz": 3.14557
+              },
+              "short_b": {
+                "mean": -567.46125,
+                "ci95": [
+                  -573.63313,
+                  -561.28937
+                ],
+                "simultaneous95": [
+                  -578.60497,
+                  -556.31753
+                ],
+                "dz": -6.38088
+              },
+              "longest_delay_min": {
+                "mean": -6.94375,
+                "ci95": [
+                  -8.58792,
+                  -5.29958
+                ],
+                "simultaneous95": [
+                  -9.9124,
+                  -3.9751
+                ],
+                "dz": -0.2931
+              },
+              "final_open": {
+                "mean": -48.59,
+                "ci95": [
+                  -58.77995,
+                  -38.40005
+                ],
+                "simultaneous95": [
+                  -66.98861,
+                  -30.19139
+                ],
+                "dz": -0.33093
+              },
+              "entry_changeovers": {
+                "mean": 2.8425,
+                "ci95": [
+                  2.72033,
+                  2.96467
+                ],
+                "simultaneous95": [
+                  2.62191,
+                  3.06309
+                ],
+                "dz": 1.61467
+              },
+              "total_shortfall": {
+                "mean": 68.69,
+                "ci95": [
+                  52.40751,
+                  84.97249
+                ],
+                "simultaneous95": [
+                  39.2909,
+                  98.0891
+                ],
+                "dz": 0.29278
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "300": {
+                "target": 300,
+                "quotas": [
+                  210,
+                  90
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 788,
+                "lower": 0.963917,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 676,
+                "lower": 0.796685,
+                "passed": false
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 369,
+                "lower": 0.400433,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 44,
+                "lower": 0.031177,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 39,
+                "lower": 0.026518,
+                "passed": false
+              }
+            }
+          },
+          "late_receipts": {
+            "means": {
+              "a_first": 648.82625,
+              "b_first": 469.53125,
+              "a_second": 344.315,
+              "b_second": 375.86625,
+              "short_a": 2482.60875,
+              "short_b": 443.2725,
+              "longest_delay_min": 378.2,
+              "final_open": 1479.30875,
+              "entry_changeovers": 35.0025,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 592.48625,
+                "ci95": [
+                  578.5326,
+                  606.4399
+                ],
+                "simultaneous95": [
+                  567.29202,
+                  617.68048
+                ],
+                "dz": 2.94681
+              },
+              "short_b": {
+                "mean": -551.9175,
+                "ci95": [
+                  -558.28566,
+                  -545.54934
+                ],
+                "simultaneous95": [
+                  -563.41564,
+                  -540.41936
+                ],
+                "dz": -6.0148
+              },
+              "longest_delay_min": {
+                "mean": -8.3875,
+                "ci95": [
+                  -10.04902,
+                  -6.72598
+                ],
+                "simultaneous95": [
+                  -11.38749,
+                  -5.38751
+                ],
+                "dz": -0.35034
+              },
+              "final_open": {
+                "mean": -62.17875,
+                "ci95": [
+                  -72.00129,
+                  -52.35621
+                ],
+                "simultaneous95": [
+                  -79.91399,
+                  -44.44351
+                ],
+                "dz": -0.43932
+              },
+              "entry_changeovers": {
+                "mean": 2.94125,
+                "ci95": [
+                  2.81615,
+                  3.06635
+                ],
+                "simultaneous95": [
+                  2.71537,
+                  3.16713
+                ],
+                "dz": 1.63167
+              },
+              "total_shortfall": {
+                "mean": 40.56875,
+                "ci95": [
+                  25.05843,
+                  56.07907
+                ],
+                "simultaneous95": [
+                  12.56386,
+                  68.57364
+                ],
+                "dz": 0.18152
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "300": {
+                "target": 300,
+                "quotas": [
+                  210,
+                  90
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 783,
+                "lower": 0.955088,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 672,
+                "lower": 0.79117,
+                "passed": false
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 380,
+                "lower": 0.413933,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 60,
+                "lower": 0.046689,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 53,
+                "lower": 0.039804,
+                "passed": false
+              }
+            }
+          },
+          "low_staffing": {
+            "means": {
+              "a_first": 634.13,
+              "b_first": 490.48125,
+              "a_second": 340.7575,
+              "b_second": 380.68,
+              "short_a": 2502.43875,
+              "short_b": 420.4575,
+              "longest_delay_min": 378.40625,
+              "final_open": 1479.46625,
+              "entry_changeovers": 34.78625,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 636.15125,
+                "ci95": [
+                  622.11594,
+                  650.18656
+                ],
+                "simultaneous95": [
+                  610.80958,
+                  661.49292
+                ],
+                "dz": 3.14557
+              },
+              "short_b": {
+                "mean": -567.46125,
+                "ci95": [
+                  -573.63313,
+                  -561.28937
+                ],
+                "simultaneous95": [
+                  -578.60497,
+                  -556.31753
+                ],
+                "dz": -6.38088
+              },
+              "longest_delay_min": {
+                "mean": -6.94375,
+                "ci95": [
+                  -8.58792,
+                  -5.29958
+                ],
+                "simultaneous95": [
+                  -9.9124,
+                  -3.9751
+                ],
+                "dz": -0.2931
+              },
+              "final_open": {
+                "mean": -48.59,
+                "ci95": [
+                  -58.77995,
+                  -38.40005
+                ],
+                "simultaneous95": [
+                  -66.98861,
+                  -30.19139
+                ],
+                "dz": -0.33093
+              },
+              "entry_changeovers": {
+                "mean": 2.8425,
+                "ci95": [
+                  2.72033,
+                  2.96467
+                ],
+                "simultaneous95": [
+                  2.62191,
+                  3.06309
+                ],
+                "dz": 1.61467
+              },
+              "total_shortfall": {
+                "mean": 68.69,
+                "ci95": [
+                  52.40751,
+                  84.97249
+                ],
+                "simultaneous95": [
+                  39.2909,
+                  98.0891
+                ],
+                "dz": 0.29278
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "300": {
+                "target": 300,
+                "quotas": [
+                  210,
+                  90
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 788,
+                "lower": 0.963917,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 676,
+                "lower": 0.796685,
+                "passed": false
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 369,
+                "lower": 0.400433,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 44,
+                "lower": 0.031177,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 39,
+                "lower": 0.026518,
+                "passed": false
+              }
+            }
+          },
+          "slower_repair": {
+            "means": {
+              "a_first": 634.13,
+              "b_first": 490.48125,
+              "a_second": 340.7575,
+              "b_second": 380.68,
+              "short_a": 2502.43875,
+              "short_b": 420.4575,
+              "longest_delay_min": 378.40625,
+              "final_open": 1479.46625,
+              "entry_changeovers": 34.78625,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 636.15125,
+                "ci95": [
+                  622.11594,
+                  650.18656
+                ],
+                "simultaneous95": [
+                  610.80958,
+                  661.49292
+                ],
+                "dz": 3.14557
+              },
+              "short_b": {
+                "mean": -567.46125,
+                "ci95": [
+                  -573.63313,
+                  -561.28937
+                ],
+                "simultaneous95": [
+                  -578.60497,
+                  -556.31753
+                ],
+                "dz": -6.38088
+              },
+              "longest_delay_min": {
+                "mean": -6.94375,
+                "ci95": [
+                  -8.58792,
+                  -5.29958
+                ],
+                "simultaneous95": [
+                  -9.9124,
+                  -3.9751
+                ],
+                "dz": -0.2931
+              },
+              "final_open": {
+                "mean": -48.59,
+                "ci95": [
+                  -58.77995,
+                  -38.40005
+                ],
+                "simultaneous95": [
+                  -66.98861,
+                  -30.19139
+                ],
+                "dz": -0.33093
+              },
+              "entry_changeovers": {
+                "mean": 2.8425,
+                "ci95": [
+                  2.72033,
+                  2.96467
+                ],
+                "simultaneous95": [
+                  2.62191,
+                  3.06309
+                ],
+                "dz": 1.61467
+              },
+              "total_shortfall": {
+                "mean": 68.69,
+                "ci95": [
+                  52.40751,
+                  84.97249
+                ],
+                "simultaneous95": [
+                  39.2909,
+                  98.0891
+                ],
+                "dz": 0.29278
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "300": {
+                "target": 300,
+                "quotas": [
+                  210,
+                  90
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 788,
+                "lower": 0.963917,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 676,
+                "lower": 0.796685,
+                "passed": false
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 369,
+                "lower": 0.400433,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 44,
+                "lower": 0.031177,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 39,
+                "lower": 0.026518,
+                "passed": false
+              }
+            }
+          },
+          "combined": {
+            "means": {
+              "a_first": 648.82625,
+              "b_first": 469.53125,
+              "a_second": 344.315,
+              "b_second": 375.86625,
+              "short_a": 2482.60875,
+              "short_b": 443.2725,
+              "longest_delay_min": 378.2,
+              "final_open": 1479.30875,
+              "entry_changeovers": 35.0025,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 592.48625,
+                "ci95": [
+                  578.5326,
+                  606.4399
+                ],
+                "simultaneous95": [
+                  567.29202,
+                  617.68048
+                ],
+                "dz": 2.94681
+              },
+              "short_b": {
+                "mean": -551.9175,
+                "ci95": [
+                  -558.28566,
+                  -545.54934
+                ],
+                "simultaneous95": [
+                  -563.41564,
+                  -540.41936
+                ],
+                "dz": -6.0148
+              },
+              "longest_delay_min": {
+                "mean": -8.3875,
+                "ci95": [
+                  -10.04902,
+                  -6.72598
+                ],
+                "simultaneous95": [
+                  -11.38749,
+                  -5.38751
+                ],
+                "dz": -0.35034
+              },
+              "final_open": {
+                "mean": -62.17875,
+                "ci95": [
+                  -72.00129,
+                  -52.35621
+                ],
+                "simultaneous95": [
+                  -79.91399,
+                  -44.44351
+                ],
+                "dz": -0.43932
+              },
+              "entry_changeovers": {
+                "mean": 2.94125,
+                "ci95": [
+                  2.81615,
+                  3.06635
+                ],
+                "simultaneous95": [
+                  2.71537,
+                  3.16713
+                ],
+                "dz": 1.63167
+              },
+              "total_shortfall": {
+                "mean": 40.56875,
+                "ci95": [
+                  25.05843,
+                  56.07907
+                ],
+                "simultaneous95": [
+                  12.56386,
+                  68.57364
+                ],
+                "dz": 0.18152
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "300": {
+                "target": 300,
+                "quotas": [
+                  210,
+                  90
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 783,
+                "lower": 0.955088,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 672,
+                "lower": 0.79117,
+                "passed": false
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 380,
+                "lower": 0.413933,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 60,
+                "lower": 0.046689,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 53,
+                "lower": 0.039804,
+                "passed": false
+              }
+            }
+          }
+        },
+        "guardrails_passed": false,
+        "verified_all_pressures": [
+          300,
+          330
+        ]
+      },
+      "balanced_batch_180": {
+        "locked_target": 420,
+        "scenarios": {
+          "reference": {
+            "means": {
+              "a_first": 746.1,
+              "b_first": 380.12,
+              "a_second": 449.03375,
+              "b_second": 297.9775,
+              "short_a": 2153.85625,
+              "short_b": 656.9675,
+              "longest_delay_min": 374.9,
+              "final_open": 1435.25125,
+              "entry_changeovers": 25.85875,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 287.56875,
+                "ci95": [
+                  274.35553,
+                  300.78197
+                ],
+                "simultaneous95": [
+                  263.71141,
+                  311.42609
+                ],
+                "dz": 1.51041
+              },
+              "short_b": {
+                "mean": -330.95125,
+                "ci95": [
+                  -337.55852,
+                  -324.34398
+                ],
+                "simultaneous95": [
+                  -342.88111,
+                  -319.02139
+                ],
+                "dz": -3.47619
+              },
+              "longest_delay_min": {
+                "mean": -10.45,
+                "ci95": [
+                  -12.16406,
+                  -8.73594
+                ],
+                "simultaneous95": [
+                  -13.54484,
+                  -7.35516
+                ],
+                "dz": -0.42311
+              },
+              "final_open": {
+                "mean": -92.805,
+                "ci95": [
+                  -102.98,
+                  -82.63
+                ],
+                "simultaneous95": [
+                  -111.17663,
+                  -74.43337
+                ],
+                "dz": -0.63299
+              },
+              "entry_changeovers": {
+                "mean": -6.085,
+                "ci95": [
+                  -6.18117,
+                  -5.98883
+                ],
+                "simultaneous95": [
+                  -6.25864,
+                  -5.91136
+                ],
+                "dz": -4.39127
+              },
+              "total_shortfall": {
+                "mean": -43.3825,
+                "ci95": [
+                  -59.76485,
+                  -27.00015
+                ],
+                "simultaneous95": [
+                  -72.9619,
+                  -13.8031
+                ],
+                "dz": -0.18378
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 797,
+                "lower": 0.981804,
+                "passed": true
+              },
+              "420": {
+                "target": 420,
+                "quotas": [
+                  294,
+                  126
+                ],
+                "hits": 795,
+                "lower": 0.977428,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 783,
+                "lower": 0.955088,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 317,
+                "lower": 0.337248,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 292,
+                "lower": 0.307256,
+                "passed": false
+              }
+            }
+          },
+          "late_receipts": {
+            "means": {
+              "a_first": 742.36125,
+              "b_first": 378.13,
+              "a_second": 447.76375,
+              "b_second": 293.6075,
+              "short_a": 2163.8725,
+              "short_b": 666.10125,
+              "longest_delay_min": 375.24375,
+              "final_open": 1443.29875,
+              "entry_changeovers": 25.82125,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 273.75,
+                "ci95": [
+                  260.80145,
+                  286.69855
+                ],
+                "simultaneous95": [
+                  250.37056,
+                  297.12944
+                ],
+                "dz": 1.46722
+              },
+              "short_b": {
+                "mean": -329.08875,
+                "ci95": [
+                  -335.73091,
+                  -322.44659
+                ],
+                "simultaneous95": [
+                  -341.08161,
+                  -317.09589
+                ],
+                "dz": -3.43847
+              },
+              "longest_delay_min": {
+                "mean": -11.34375,
+                "ci95": [
+                  -13.04633,
+                  -9.64117
+                ],
+                "simultaneous95": [
+                  -14.41786,
+                  -8.26964
+                ],
+                "dz": -0.46239
+              },
+              "final_open": {
+                "mean": -98.18875,
+                "ci95": [
+                  -108.13176,
+                  -88.24574
+                ],
+                "simultaneous95": [
+                  -116.1415,
+                  -80.236
+                ],
+                "dz": -0.68534
+              },
+              "entry_changeovers": {
+                "mean": -6.24,
+                "ci95": [
+                  -6.34405,
+                  -6.13595
+                ],
+                "simultaneous95": [
+                  -6.42786,
+                  -6.05214
+                ],
+                "dz": -4.16212
+              },
+              "total_shortfall": {
+                "mean": -55.33875,
+                "ci95": [
+                  -71.07404,
+                  -39.60346
+                ],
+                "simultaneous95": [
+                  -83.74984,
+                  -26.92766
+                ],
+                "dz": -0.24407
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 797,
+                "lower": 0.981804,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 796,
+                "lower": 0.979567,
+                "passed": true
+              },
+              "420": {
+                "target": 420,
+                "quotas": [
+                  294,
+                  126
+                ],
+                "hits": 795,
+                "lower": 0.977428,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 779,
+                "lower": 0.948297,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 301,
+                "lower": 0.318023,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 281,
+                "lower": 0.294142,
+                "passed": false
+              }
+            }
+          },
+          "low_staffing": {
+            "means": {
+              "a_first": 746.1,
+              "b_first": 380.12,
+              "a_second": 449.03375,
+              "b_second": 297.9775,
+              "short_a": 2153.85625,
+              "short_b": 656.9675,
+              "longest_delay_min": 374.9,
+              "final_open": 1435.25125,
+              "entry_changeovers": 25.85875,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 287.56875,
+                "ci95": [
+                  274.35553,
+                  300.78197
+                ],
+                "simultaneous95": [
+                  263.71141,
+                  311.42609
+                ],
+                "dz": 1.51041
+              },
+              "short_b": {
+                "mean": -330.95125,
+                "ci95": [
+                  -337.55852,
+                  -324.34398
+                ],
+                "simultaneous95": [
+                  -342.88111,
+                  -319.02139
+                ],
+                "dz": -3.47619
+              },
+              "longest_delay_min": {
+                "mean": -10.45,
+                "ci95": [
+                  -12.16406,
+                  -8.73594
+                ],
+                "simultaneous95": [
+                  -13.54484,
+                  -7.35516
+                ],
+                "dz": -0.42311
+              },
+              "final_open": {
+                "mean": -92.805,
+                "ci95": [
+                  -102.98,
+                  -82.63
+                ],
+                "simultaneous95": [
+                  -111.17663,
+                  -74.43337
+                ],
+                "dz": -0.63299
+              },
+              "entry_changeovers": {
+                "mean": -6.085,
+                "ci95": [
+                  -6.18117,
+                  -5.98883
+                ],
+                "simultaneous95": [
+                  -6.25864,
+                  -5.91136
+                ],
+                "dz": -4.39127
+              },
+              "total_shortfall": {
+                "mean": -43.3825,
+                "ci95": [
+                  -59.76485,
+                  -27.00015
+                ],
+                "simultaneous95": [
+                  -72.9619,
+                  -13.8031
+                ],
+                "dz": -0.18378
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 797,
+                "lower": 0.981804,
+                "passed": true
+              },
+              "420": {
+                "target": 420,
+                "quotas": [
+                  294,
+                  126
+                ],
+                "hits": 795,
+                "lower": 0.977428,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 783,
+                "lower": 0.955088,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 317,
+                "lower": 0.337248,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 292,
+                "lower": 0.307256,
+                "passed": false
+              }
+            }
+          },
+          "slower_repair": {
+            "means": {
+              "a_first": 746.1,
+              "b_first": 380.12,
+              "a_second": 449.03375,
+              "b_second": 297.9775,
+              "short_a": 2153.85625,
+              "short_b": 656.9675,
+              "longest_delay_min": 374.9,
+              "final_open": 1435.25125,
+              "entry_changeovers": 25.85875,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 287.56875,
+                "ci95": [
+                  274.35553,
+                  300.78197
+                ],
+                "simultaneous95": [
+                  263.71141,
+                  311.42609
+                ],
+                "dz": 1.51041
+              },
+              "short_b": {
+                "mean": -330.95125,
+                "ci95": [
+                  -337.55852,
+                  -324.34398
+                ],
+                "simultaneous95": [
+                  -342.88111,
+                  -319.02139
+                ],
+                "dz": -3.47619
+              },
+              "longest_delay_min": {
+                "mean": -10.45,
+                "ci95": [
+                  -12.16406,
+                  -8.73594
+                ],
+                "simultaneous95": [
+                  -13.54484,
+                  -7.35516
+                ],
+                "dz": -0.42311
+              },
+              "final_open": {
+                "mean": -92.805,
+                "ci95": [
+                  -102.98,
+                  -82.63
+                ],
+                "simultaneous95": [
+                  -111.17663,
+                  -74.43337
+                ],
+                "dz": -0.63299
+              },
+              "entry_changeovers": {
+                "mean": -6.085,
+                "ci95": [
+                  -6.18117,
+                  -5.98883
+                ],
+                "simultaneous95": [
+                  -6.25864,
+                  -5.91136
+                ],
+                "dz": -4.39127
+              },
+              "total_shortfall": {
+                "mean": -43.3825,
+                "ci95": [
+                  -59.76485,
+                  -27.00015
+                ],
+                "simultaneous95": [
+                  -72.9619,
+                  -13.8031
+                ],
+                "dz": -0.18378
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 797,
+                "lower": 0.981804,
+                "passed": true
+              },
+              "420": {
+                "target": 420,
+                "quotas": [
+                  294,
+                  126
+                ],
+                "hits": 795,
+                "lower": 0.977428,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 783,
+                "lower": 0.955088,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 317,
+                "lower": 0.337248,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 292,
+                "lower": 0.307256,
+                "passed": false
+              }
+            }
+          },
+          "combined": {
+            "means": {
+              "a_first": 742.36125,
+              "b_first": 378.13,
+              "a_second": 447.76375,
+              "b_second": 293.6075,
+              "short_a": 2163.8725,
+              "short_b": 666.10125,
+              "longest_delay_min": 375.24375,
+              "final_open": 1443.29875,
+              "entry_changeovers": 25.82125,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 273.75,
+                "ci95": [
+                  260.80145,
+                  286.69855
+                ],
+                "simultaneous95": [
+                  250.37056,
+                  297.12944
+                ],
+                "dz": 1.46722
+              },
+              "short_b": {
+                "mean": -329.08875,
+                "ci95": [
+                  -335.73091,
+                  -322.44659
+                ],
+                "simultaneous95": [
+                  -341.08161,
+                  -317.09589
+                ],
+                "dz": -3.43847
+              },
+              "longest_delay_min": {
+                "mean": -11.34375,
+                "ci95": [
+                  -13.04633,
+                  -9.64117
+                ],
+                "simultaneous95": [
+                  -14.41786,
+                  -8.26964
+                ],
+                "dz": -0.46239
+              },
+              "final_open": {
+                "mean": -98.18875,
+                "ci95": [
+                  -108.13176,
+                  -88.24574
+                ],
+                "simultaneous95": [
+                  -116.1415,
+                  -80.236
+                ],
+                "dz": -0.68534
+              },
+              "entry_changeovers": {
+                "mean": -6.24,
+                "ci95": [
+                  -6.34405,
+                  -6.13595
+                ],
+                "simultaneous95": [
+                  -6.42786,
+                  -6.05214
+                ],
+                "dz": -4.16212
+              },
+              "total_shortfall": {
+                "mean": -55.33875,
+                "ci95": [
+                  -71.07404,
+                  -39.60346
+                ],
+                "simultaneous95": [
+                  -83.74984,
+                  -26.92766
+                ],
+                "dz": -0.24407
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 797,
+                "lower": 0.981804,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 796,
+                "lower": 0.979567,
+                "passed": true
+              },
+              "420": {
+                "target": 420,
+                "quotas": [
+                  294,
+                  126
+                ],
+                "hits": 795,
+                "lower": 0.977428,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 779,
+                "lower": 0.948297,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 301,
+                "lower": 0.318023,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 281,
+                "lower": 0.294142,
+                "passed": false
+              }
+            }
+          }
+        },
+        "guardrails_passed": false,
+        "verified_all_pressures": [
+          330,
+          400,
+          420
+        ]
+      }
+    },
+    "assembly+rework": {
+      "ready": {
+        "locked_target": 640,
+        "scenarios": {
+          "reference": {
+            "means": {
+              "a_first": 956.35,
+              "b_first": 358.6275,
+              "a_second": 814.69625,
+              "b_second": 293.95125,
+              "short_a": 997.89,
+              "short_b": 639.38875,
+              "longest_delay_min": 297.5,
+              "final_open": 881.77625,
+              "entry_changeovers": 36.0275,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": null,
+            "protects_old_orders_and_both_skus": true,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 797,
+                "lower": 0.981804,
+                "passed": true
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 796,
+                "lower": 0.979567,
+                "passed": true
+              }
+            }
+          },
+          "late_receipts": {
+            "means": {
+              "a_first": 939.90875,
+              "b_first": 351.07125,
+              "a_second": 793.705,
+              "b_second": 286.94125,
+              "short_a": 1056.385,
+              "short_b": 664.26,
+              "longest_delay_min": 306.2,
+              "final_open": 913.4275,
+              "entry_changeovers": 35.8575,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": null,
+            "protects_old_orders_and_both_skus": true,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 792,
+                "lower": 0.971399,
+                "passed": true
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 789,
+                "lower": 0.965745,
+                "passed": true
+              }
+            }
+          },
+          "low_staffing": {
+            "means": {
+              "a_first": 943.89375,
+              "b_first": 349.75125,
+              "a_second": 779.82625,
+              "b_second": 280.3625,
+              "short_a": 1082.23625,
+              "short_b": 678.8575,
+              "longest_delay_min": 317.9,
+              "final_open": 936.46375,
+              "entry_changeovers": 35.63,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": null,
+            "protects_old_orders_and_both_skus": true,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 795,
+                "lower": 0.977428,
+                "passed": true
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 789,
+                "lower": 0.965745,
+                "passed": true
+              }
+            }
+          },
+          "slower_repair": {
+            "means": {
+              "a_first": 953.90875,
+              "b_first": 357.0675,
+              "a_second": 793.8,
+              "b_second": 285.8275,
+              "short_a": 1077.235,
+              "short_b": 672.91625,
+              "longest_delay_min": 306.70625,
+              "final_open": 962.53625,
+              "entry_changeovers": 35.5525,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": null,
+            "protects_old_orders_and_both_skus": true,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 796,
+                "lower": 0.979567,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 790,
+                "lower": 0.967598,
+                "passed": true
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 789,
+                "lower": 0.965745,
+                "passed": true
+              }
+            }
+          },
+          "combined": {
+            "means": {
+              "a_first": 925.29,
+              "b_first": 341.92,
+              "a_second": 741.7325,
+              "b_second": 263.485,
+              "short_a": 1222.0325,
+              "short_b": 739.05875,
+              "longest_delay_min": 331.0625,
+              "final_open": 1056.3975,
+              "entry_changeovers": 35.00625,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": null,
+            "protects_old_orders_and_both_skus": true,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 790,
+                "lower": 0.967598,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 782,
+                "lower": 0.953371,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 768,
+                "lower": 0.930411,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 756,
+                "lower": 0.911745,
+                "passed": false
+              }
+            }
+          }
+        },
+        "guardrails_passed": true,
+        "verified_all_pressures": [
+          330,
+          400,
+          500
+        ]
+      },
+      "campaign_120": {
+        "locked_target": 470,
+        "scenarios": {
+          "reference": {
+            "means": {
+              "a_first": 806.16375,
+              "b_first": 501.895,
+              "a_second": 600.63875,
+              "b_second": 496.91125,
+              "short_a": 1702.7925,
+              "short_b": 58.37875,
+              "longest_delay_min": 302.45,
+              "final_open": 897.09,
+              "entry_changeovers": 40.52,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 704.9025,
+                "ci95": [
+                  697.5157,
+                  712.2893
+                ],
+                "simultaneous95": [
+                  691.56516,
+                  718.23984
+                ],
+                "dz": 6.62269
+              },
+              "short_b": {
+                "mean": -581.01,
+                "ci95": [
+                  -586.92081,
+                  -575.09919
+                ],
+                "simultaneous95": [
+                  -591.68236,
+                  -570.33764
+                ],
+                "dz": -6.82178
+              },
+              "longest_delay_min": {
+                "mean": 4.95,
+                "ci95": [
+                  2.79221,
+                  7.10779
+                ],
+                "simultaneous95": [
+                  1.05397,
+                  8.84603
+                ],
+                "dz": 0.15921
+              },
+              "final_open": {
+                "mean": 15.31375,
+                "ci95": [
+                  12.59258,
+                  18.03492
+                ],
+                "simultaneous95": [
+                  10.4005,
+                  20.227
+                ],
+                "dz": 0.39056
+              },
+              "entry_changeovers": {
+                "mean": 4.4925,
+                "ci95": [
+                  4.34107,
+                  4.64393
+                ],
+                "simultaneous95": [
+                  4.21909,
+                  4.76591
+                ],
+                "dz": 2.05894
+              },
+              "total_shortfall": {
+                "mean": 123.8925,
+                "ci95": [
+                  118.14575,
+                  129.63925
+                ],
+                "simultaneous95": [
+                  113.51638,
+                  134.26862
+                ],
+                "dz": 1.49618
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "470": {
+                "target": 470,
+                "quotas": [
+                  329,
+                  141
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 790,
+                "lower": 0.967598,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 735,
+                "lower": 0.880345,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 723,
+                "lower": 0.862891,
+                "passed": false
+              }
+            }
+          },
+          "late_receipts": {
+            "means": {
+              "a_first": 800.81125,
+              "b_first": 484.11625,
+              "a_second": 593.9825,
+              "b_second": 478.54,
+              "short_a": 1730.2,
+              "short_b": 93.81375,
+              "longest_delay_min": 308.9,
+              "final_open": 923.46375,
+              "entry_changeovers": 40.47375,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 673.815,
+                "ci95": [
+                  665.71095,
+                  681.91905
+                ],
+                "simultaneous95": [
+                  659.18261,
+                  688.44739
+                ],
+                "dz": 5.77032
+              },
+              "short_b": {
+                "mean": -570.44625,
+                "ci95": [
+                  -576.75328,
+                  -564.13922
+                ],
+                "simultaneous95": [
+                  -581.834,
+                  -559.0585
+                ],
+                "dz": -6.27699
+              },
+              "longest_delay_min": {
+                "mean": 2.7,
+                "ci95": [
+                  0.71057,
+                  4.68943
+                ],
+                "simultaneous95": [
+                  -0.89204,
+                  6.29204
+                ],
+                "dz": 0.09419
+              },
+              "final_open": {
+                "mean": 10.03625,
+                "ci95": [
+                  7.36459,
+                  12.70791
+                ],
+                "simultaneous95": [
+                  5.2124,
+                  14.8601
+                ],
+                "dz": 0.26071
+              },
+              "entry_changeovers": {
+                "mean": 4.61625,
+                "ci95": [
+                  4.46294,
+                  4.76956
+                ],
+                "simultaneous95": [
+                  4.33944,
+                  4.89306
+                ],
+                "dz": 2.08966
+              },
+              "total_shortfall": {
+                "mean": 103.36875,
+                "ci95": [
+                  97.63036,
+                  109.10714
+                ],
+                "simultaneous95": [
+                  93.00771,
+                  113.72979
+                ],
+                "dz": 1.25015
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "470": {
+                "target": 470,
+                "quotas": [
+                  329,
+                  141
+                ],
+                "hits": 795,
+                "lower": 0.977428,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 783,
+                "lower": 0.955088,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 725,
+                "lower": 0.865781,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 711,
+                "lower": 0.8457,
+                "passed": false
+              }
+            }
+          },
+          "low_staffing": {
+            "means": {
+              "a_first": 786.035,
+              "b_first": 500.50375,
+              "a_second": 559.8275,
+              "b_second": 488.40875,
+              "short_a": 1794.1625,
+              "short_b": 79.355,
+              "longest_delay_min": 322.4,
+              "final_open": 949.6175,
+              "entry_changeovers": 39.95625,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 711.92625,
+                "ci95": [
+                  704.60086,
+                  719.25164
+                ],
+                "simultaneous95": [
+                  698.69978,
+                  725.15272
+                ],
+                "dz": 6.74475
+              },
+              "short_b": {
+                "mean": -599.5025,
+                "ci95": [
+                  -605.21067,
+                  -593.79433
+                ],
+                "simultaneous95": [
+                  -609.80897,
+                  -589.19603
+                ],
+                "dz": -7.2888
+              },
+              "longest_delay_min": {
+                "mean": 4.5,
+                "ci95": [
+                  2.48284,
+                  6.51716
+                ],
+                "simultaneous95": [
+                  0.85789,
+                  8.14211
+                ],
+                "dz": 0.15482
+              },
+              "final_open": {
+                "mean": 13.15375,
+                "ci95": [
+                  10.38005,
+                  15.92745
+                ],
+                "simultaneous95": [
+                  8.14566,
+                  18.16184
+                ],
+                "dz": 0.32912
+              },
+              "entry_changeovers": {
+                "mean": 4.32625,
+                "ci95": [
+                  4.17849,
+                  4.47401
+                ],
+                "simultaneous95": [
+                  4.05946,
+                  4.59304
+                ],
+                "dz": 2.03198
+              },
+              "total_shortfall": {
+                "mean": 112.42375,
+                "ci95": [
+                  106.65622,
+                  118.19128
+                ],
+                "simultaneous95": [
+                  102.01009,
+                  122.83741
+                ],
+                "dz": 1.35279
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "470": {
+                "target": 470,
+                "quotas": [
+                  329,
+                  141
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 781,
+                "lower": 0.951667,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 679,
+                "lower": 0.800832,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 662,
+                "lower": 0.777448,
+                "passed": false
+              }
+            }
+          },
+          "slower_repair": {
+            "means": {
+              "a_first": 799.485,
+              "b_first": 501.07125,
+              "a_second": 566.1,
+              "b_second": 491.00375,
+              "short_a": 1795.4975,
+              "short_b": 93.9375,
+              "longest_delay_min": 318.26875,
+              "final_open": 990.32875,
+              "entry_changeovers": 39.65125,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 718.2625,
+                "ci95": [
+                  707.86528,
+                  728.65972
+                ],
+                "simultaneous95": [
+                  699.48963,
+                  737.03537
+                ],
+                "dz": 4.79432
+              },
+              "short_b": {
+                "mean": -578.97875,
+                "ci95": [
+                  -584.93686,
+                  -573.02064
+                ],
+                "simultaneous95": [
+                  -589.73652,
+                  -568.22098
+                ],
+                "dz": -6.74396
+              },
+              "longest_delay_min": {
+                "mean": 11.5625,
+                "ci95": [
+                  8.51498,
+                  14.61002
+                ],
+                "simultaneous95": [
+                  6.06,
+                  17.065
+                ],
+                "dz": 0.26331
+              },
+              "final_open": {
+                "mean": 27.7925,
+                "ci95": [
+                  20.96385,
+                  34.62115
+                ],
+                "simultaneous95": [
+                  15.46292,
+                  40.12208
+                ],
+                "dz": 0.28246
+              },
+              "entry_changeovers": {
+                "mean": 4.09875,
+                "ci95": [
+                  3.94894,
+                  4.24856
+                ],
+                "simultaneous95": [
+                  3.82825,
+                  4.36925
+                ],
+                "dz": 1.89875
+              },
+              "total_shortfall": {
+                "mean": 139.28375,
+                "ci95": [
+                  127.71629,
+                  150.85121
+                ],
+                "simultaneous95": [
+                  118.39795,
+                  160.16955
+                ],
+                "dz": 0.83565
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "470": {
+                "target": 470,
+                "quotas": [
+                  329,
+                  141
+                ],
+                "hits": 796,
+                "lower": 0.979567,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 782,
+                "lower": 0.953371,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 687,
+                "lower": 0.811935,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 675,
+                "lower": 0.795305,
+                "passed": false
+              }
+            }
+          },
+          "combined": {
+            "means": {
+              "a_first": 778.35625,
+              "b_first": 480.96375,
+              "a_second": 526.33875,
+              "b_second": 464.40875,
+              "short_a": 1894.88375,
+              "short_b": 156.4275,
+              "longest_delay_min": 337.01875,
+              "final_open": 1061.3075,
+              "entry_changeovers": 39.1475,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 672.85125,
+                "ci95": [
+                  661.99026,
+                  683.71224
+                ],
+                "simultaneous95": [
+                  653.24103,
+                  692.46147
+                ],
+                "dz": 4.29943
+              },
+              "short_b": {
+                "mean": -582.63125,
+                "ci95": [
+                  -588.83176,
+                  -576.43074
+                ],
+                "simultaneous95": [
+                  -593.82668,
+                  -571.43582
+                ],
+                "dz": -6.5212
+              },
+              "longest_delay_min": {
+                "mean": 5.95625,
+                "ci95": [
+                  3.40337,
+                  8.50913
+                ],
+                "simultaneous95": [
+                  1.34687,
+                  10.56563
+                ],
+                "dz": 0.16192
+              },
+              "final_open": {
+                "mean": 4.91,
+                "ci95": [
+                  -1.83976,
+                  11.65976
+                ],
+                "simultaneous95": [
+                  -7.27713,
+                  17.09713
+                ],
+                "dz": 0.05048
+              },
+              "entry_changeovers": {
+                "mean": 4.14125,
+                "ci95": [
+                  3.99008,
+                  4.29242
+                ],
+                "simultaneous95": [
+                  3.8683,
+                  4.4142
+                ],
+                "dz": 1.90119
+              },
+              "total_shortfall": {
+                "mean": 90.22,
+                "ci95": [
+                  79.05842,
+                  101.38158
+                ],
+                "simultaneous95": [
+                  70.06703,
+                  110.37297
+                ],
+                "dz": 0.56097
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 796,
+                "lower": 0.979567,
+                "passed": true
+              },
+              "470": {
+                "target": 470,
+                "quotas": [
+                  329,
+                  141
+                ],
+                "hits": 789,
+                "lower": 0.965745,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 761,
+                "lower": 0.919441,
+                "passed": false
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 585,
+                "lower": 0.674289,
+                "passed": false
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 570,
+                "lower": 0.654612,
+                "passed": false
+              }
+            }
+          }
+        },
+        "guardrails_passed": false,
+        "verified_all_pressures": [
+          330,
+          400,
+          470
+        ]
+      },
+      "balanced_batch_120": {
+        "locked_target": 650,
+        "scenarios": {
+          "reference": {
+            "means": {
+              "a_first": 881.9975,
+              "b_first": 431.02875,
+              "a_second": 740.3775,
+              "b_second": 370.465,
+              "short_a": 1256.435,
+              "short_b": 359.08875,
+              "longest_delay_min": 296.6,
+              "final_open": 867.12375,
+              "entry_changeovers": 36.79125,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 258.545,
+                "ci95": [
+                  254.07864,
+                  263.01136
+                ],
+                "simultaneous95": [
+                  250.4807,
+                  266.6093
+                ],
+                "dz": 4.01739
+              },
+              "short_b": {
+                "mean": -280.3,
+                "ci95": [
+                  -283.79599,
+                  -276.80401
+                ],
+                "simultaneous95": [
+                  -286.61224,
+                  -273.98776
+                ],
+                "dz": -5.56435
+              },
+              "longest_delay_min": {
+                "mean": -0.9,
+                "ci95": [
+                  -2.401,
+                  0.601
+                ],
+                "simultaneous95": [
+                  -3.61015,
+                  1.81015
+                ],
+                "dz": -0.04161
+              },
+              "final_open": {
+                "mean": -14.6525,
+                "ci95": [
+                  -16.92813,
+                  -12.37687
+                ],
+                "simultaneous95": [
+                  -18.7613,
+                  -10.5437
+                ],
+                "dz": -0.44686
+              },
+              "entry_changeovers": {
+                "mean": 0.76375,
+                "ci95": [
+                  0.62395,
+                  0.90355
+                ],
+                "simultaneous95": [
+                  0.51133,
+                  1.01617
+                ],
+                "dz": 0.37914
+              },
+              "total_shortfall": {
+                "mean": -21.755,
+                "ci95": [
+                  -25.42194,
+                  -18.08806
+                ],
+                "simultaneous95": [
+                  -28.3759,
+                  -15.1341
+                ],
+                "dz": -0.41173
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              }
+            }
+          },
+          "late_receipts": {
+            "means": {
+              "a_first": 867.7575,
+              "b_first": 421.17125,
+              "a_second": 721.22375,
+              "b_second": 362.535,
+              "short_a": 1311.3275,
+              "short_b": 385.315,
+              "longest_delay_min": 305.15,
+              "final_open": 897.30625,
+              "entry_changeovers": 36.74625,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 254.9425,
+                "ci95": [
+                  250.34651,
+                  259.53849
+                ],
+                "simultaneous95": [
+                  246.64413,
+                  263.24087
+                ],
+                "dz": 3.84968
+              },
+              "short_b": {
+                "mean": -278.945,
+                "ci95": [
+                  -282.51299,
+                  -275.37701
+                ],
+                "simultaneous95": [
+                  -285.38724,
+                  -272.50276
+                ],
+                "dz": -5.42571
+              },
+              "longest_delay_min": {
+                "mean": -1.05,
+                "ci95": [
+                  -2.68878,
+                  0.58878
+                ],
+                "simultaneous95": [
+                  -4.00892,
+                  1.90892
+                ],
+                "dz": -0.04447
+              },
+              "final_open": {
+                "mean": -16.12125,
+                "ci95": [
+                  -18.50211,
+                  -13.74039
+                ],
+                "simultaneous95": [
+                  -20.42005,
+                  -11.82245
+                ],
+                "dz": -0.46992
+              },
+              "entry_changeovers": {
+                "mean": 0.88875,
+                "ci95": [
+                  0.74816,
+                  1.02934
+                ],
+                "simultaneous95": [
+                  0.6349,
+                  1.1426
+                ],
+                "dz": 0.43871
+              },
+              "total_shortfall": {
+                "mean": -24.0025,
+                "ci95": [
+                  -27.77503,
+                  -20.22997
+                ],
+                "simultaneous95": [
+                  -30.81404,
+                  -17.19096
+                ],
+                "dz": -0.44156
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 797,
+                "lower": 0.981804,
+                "passed": true
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 796,
+                "lower": 0.979567,
+                "passed": true
+              }
+            }
+          },
+          "low_staffing": {
+            "means": {
+              "a_first": 867.32625,
+              "b_first": 424.53125,
+              "a_second": 705.98875,
+              "b_second": 356.54875,
+              "short_a": 1342.51375,
+              "short_b": 394.3825,
+              "longest_delay_min": 316.85,
+              "final_open": 919.80125,
+              "entry_changeovers": 36.46375,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 260.2775,
+                "ci95": [
+                  255.82929,
+                  264.72571
+                ],
+                "simultaneous95": [
+                  252.24596,
+                  268.30904
+                ],
+                "dz": 4.06081
+              },
+              "short_b": {
+                "mean": -284.475,
+                "ci95": [
+                  -287.99819,
+                  -280.95181
+                ],
+                "simultaneous95": [
+                  -290.83635,
+                  -278.11365
+                ],
+                "dz": -5.60363
+              },
+              "longest_delay_min": {
+                "mean": -1.05,
+                "ci95": [
+                  -2.52132,
+                  0.42132
+                ],
+                "simultaneous95": [
+                  -3.70656,
+                  1.60656
+                ],
+                "dz": -0.04953
+              },
+              "final_open": {
+                "mean": -16.6625,
+                "ci95": [
+                  -19.04896,
+                  -14.27604
+                ],
+                "simultaneous95": [
+                  -20.97142,
+                  -12.35358
+                ],
+                "dz": -0.48456
+              },
+              "entry_changeovers": {
+                "mean": 0.83375,
+                "ci95": [
+                  0.70088,
+                  0.96662
+                ],
+                "simultaneous95": [
+                  0.59384,
+                  1.07366
+                ],
+                "dz": 0.43547
+              },
+              "total_shortfall": {
+                "mean": -24.1975,
+                "ci95": [
+                  -27.90571,
+                  -20.48929
+                ],
+                "simultaneous95": [
+                  -30.89291,
+                  -17.50209
+                ],
+                "dz": -0.45286
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 798,
+                "lower": 0.984179,
+                "passed": true
+              }
+            }
+          },
+          "slower_repair": {
+            "means": {
+              "a_first": 878.11625,
+              "b_first": 429.5275,
+              "a_second": 720.8875,
+              "b_second": 363.43125,
+              "short_a": 1322.06,
+              "short_b": 385.625,
+              "longest_delay_min": 306.11875,
+              "final_open": 928.07,
+              "entry_changeovers": 36.47625,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 244.825,
+                "ci95": [
+                  238.5225,
+                  251.1275
+                ],
+                "simultaneous95": [
+                  233.44542,
+                  256.20458
+                ],
+                "dz": 2.6959
+              },
+              "short_b": {
+                "mean": -287.29125,
+                "ci95": [
+                  -291.41749,
+                  -283.16501
+                ],
+                "simultaneous95": [
+                  -294.74145,
+                  -279.84105
+                ],
+                "dz": -4.83202
+              },
+              "longest_delay_min": {
+                "mean": -0.5875,
+                "ci95": [
+                  -2.81968,
+                  1.64468
+                ],
+                "simultaneous95": [
+                  -4.61784,
+                  3.44284
+                ],
+                "dz": -0.01827
+              },
+              "final_open": {
+                "mean": -34.46625,
+                "ci95": [
+                  -39.13219,
+                  -29.80031
+                ],
+                "simultaneous95": [
+                  -42.8909,
+                  -26.0416
+                ],
+                "dz": -0.51265
+              },
+              "entry_changeovers": {
+                "mean": 0.92375,
+                "ci95": [
+                  0.78638,
+                  1.06112
+                ],
+                "simultaneous95": [
+                  0.67572,
+                  1.17178
+                ],
+                "dz": 0.46669
+              },
+              "total_shortfall": {
+                "mean": -42.46625,
+                "ci95": [
+                  -49.83943,
+                  -35.09307
+                ],
+                "simultaneous95": [
+                  -55.77901,
+                  -29.15349
+                ],
+                "dz": -0.39972
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              }
+            }
+          },
+          "combined": {
+            "means": {
+              "a_first": 849.47125,
+              "b_first": 414.94125,
+              "a_second": 669.89875,
+              "b_second": 341.73125,
+              "short_a": 1459.04875,
+              "short_b": 448.11,
+              "longest_delay_min": 329.51875,
+              "final_open": 1012.6525,
+              "entry_changeovers": 36.05625,
+              "ergo_pass": 1.0
+            },
+            "effects_vs_ready": {
+              "short_a": {
+                "mean": 237.01625,
+                "ci95": [
+                  230.24592,
+                  243.78658
+                ],
+                "simultaneous95": [
+                  224.79198,
+                  249.24052
+                ],
+                "dz": 2.42957
+              },
+              "short_b": {
+                "mean": -290.94875,
+                "ci95": [
+                  -295.2686,
+                  -286.6289
+                ],
+                "simultaneous95": [
+                  -298.74852,
+                  -283.14898
+                ],
+                "dz": -4.67422
+              },
+              "longest_delay_min": {
+                "mean": -1.54375,
+                "ci95": [
+                  -3.47389,
+                  0.38639
+                ],
+                "simultaneous95": [
+                  -5.02874,
+                  1.94124
+                ],
+                "dz": -0.05551
+              },
+              "final_open": {
+                "mean": -43.745,
+                "ci95": [
+                  -48.76175,
+                  -38.72825
+                ],
+                "simultaneous95": [
+                  -52.80307,
+                  -34.68693
+                ],
+                "dz": -0.60516
+              },
+              "entry_changeovers": {
+                "mean": 1.05,
+                "ci95": [
+                  0.91566,
+                  1.18434
+                ],
+                "simultaneous95": [
+                  0.80744,
+                  1.29256
+                ],
+                "dz": 0.54242
+              },
+              "total_shortfall": {
+                "mean": -53.9325,
+                "ci95": [
+                  -61.6922,
+                  -46.1728
+                ],
+                "simultaneous95": [
+                  -67.94315,
+                  -39.92185
+                ],
+                "dz": -0.48236
+              }
+            },
+            "protects_old_orders_and_both_skus": false,
+            "reliability": {
+              "330": {
+                "target": 330,
+                "quotas": [
+                  231,
+                  99
+                ],
+                "hits": 800,
+                "lower": 0.989816,
+                "passed": true
+              },
+              "400": {
+                "target": 400,
+                "quotas": [
+                  280,
+                  120
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "500": {
+                "target": 500,
+                "quotas": [
+                  350,
+                  150
+                ],
+                "hits": 799,
+                "lower": 0.986776,
+                "passed": true
+              },
+              "640": {
+                "target": 640,
+                "quotas": [
+                  448,
+                  192
+                ],
+                "hits": 789,
+                "lower": 0.965745,
+                "passed": true
+              },
+              "650": {
+                "target": 650,
+                "quotas": [
+                  455,
+                  195
+                ],
+                "hits": 787,
+                "lower": 0.962113,
+                "passed": true
+              }
+            }
+          }
+        },
+        "guardrails_passed": false,
+        "verified_all_pressures": [
+          330,
+          400,
+          500,
+          640,
+          650
+        ]
+      }
+    }
+  }
+}

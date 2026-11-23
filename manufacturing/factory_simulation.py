@@ -12,7 +12,7 @@ from staggered_support import HISTORY, trigger
 
 ENTRY, ASSEMBLED, INSPECTED, HANDOFF, REPAIR_START, REPAIR_END, TEST_START, END, HELPER = range(9)
 SETUP_SECONDS = (24, 0, 0, 55, 0, 0, 32, 0)
-DISPATCH = {"fifo": 0, "ready": 1, "campaign": 2, "current_ready": 3, "reserve_old": 4}
+DISPATCH = {"fifo": 0, "ready": 1, "campaign": 2, "current_ready": 3, "reserve_old": 4, "balanced_batch": 5}
 MAINTENANCE_STATION = 3
 
 
@@ -100,6 +100,24 @@ def _select(heads, free, orders, kits, last, run, max_run, rule, contested=0):
 
 
 @njit(cache=True)
+def _select_balanced(heads, free, orders, kits, last, run, batch, cohort_ids, released, previous_cohort):
+    """Use only available kits and released counts; never bypass a ready older cohort."""
+    a, b = heads
+    if (a < 0 or b < 0 or orders[a] != orders[b]
+            or kits[a] > free or kits[b] > free):
+        return _select(heads, free, orders, kits, last, run, batch, 1)
+    cohort = cohort_ids[a]
+    if last >= 0 and previous_cohort == cohort and run < batch:
+        return heads[last], -1
+    # At a batch boundary, serve the SKU further behind the cohort's A:B release ratio of 7:3.
+    normalized_a = released[cohort, 0] * 3
+    normalized_b = released[cohort, 1] * 7
+    if normalized_a == normalized_b:
+        return (heads[last] if last >= 0 and previous_cohort == cohort else min(a, b)), -1
+    return (a if normalized_a < normalized_b else b), -1
+
+
+@njit(cache=True)
 def _start_outside_maintenance(begin, duration, maintenance):
     for left, right in maintenance:
         if begin >= right:
@@ -169,9 +187,19 @@ def _line(work, sku, orders, kits, routes, windows, setup_times, waiting_places,
                     delivery_stats[day, 0] += 1
     station_seconds = np.zeros((DAYS, stations+1, 5))
     contested = 0
-    previous, run = -1, 0
+    previous, run, previous_cohort = -1, 0, -1
+    cohort_ids = np.empty(0, dtype=np.int64)
+    released_by_sku = np.zeros((0, 2), dtype=np.int64)
+    if rule == 5:
+        cohorts = np.unique(orders)
+        cohort_ids = np.searchsorted(cohorts, orders)
+        released_by_sku = np.zeros((len(cohorts), 2), dtype=np.int64)
     for index in range(jobs):
-        job, open_override = _select(heads, exits[0], orders, ready, previous, run, max_run, rule, contested)
+        if rule == 5:
+            job, open_override = _select_balanced(heads, exits[0], orders, ready, previous, run,
+                                                  max_run, cohort_ids, released_by_sku, previous_cohort)
+        else:
+            job, open_override = _select(heads, exits[0], orders, ready, previous, run, max_run, rule, contested)
         if open_override == -2:
             contested += 1
         model = sku[job]
@@ -329,7 +357,13 @@ def _line(work, sku, orders, kits, routes, windows, setup_times, waiting_places,
         trace[job, HANDOFF] = handoff
         trace[job, END] = finish
         exits[stations] = handoff
-        run = run+1 if previous == model else 1
+        if rule == 5:
+            job_cohort = cohort_ids[job]
+            released_by_sku[job_cohort, model] += 1
+            run = run+1 if previous == model and previous_cohort == job_cohort else 1
+            previous_cohort = job_cohort
+        else:
+            run = run+1 if previous == model else 1
         previous = model
     return trace, setups, kit_wait, changeovers, maintenance_wait, maintenance_operations, parallel_used, floor_stats, delivery_stats, station_seconds
 
