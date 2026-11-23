@@ -1,0 +1,944 @@
+{
+  "shift_seconds": 25200,
+  "task_cv_pct": 20,
+  "shift_cv_pct": 3,
+  "correlations": [
+    0.0,
+    0.5,
+    0.9
+  ],
+  "design_runs": 300,
+  "holdout_runs": 600,
+  "batch_size": 100,
+  "reliability": 0.95,
+  "headroom_pct": 1,
+  "target_increment": 10,
+  "cases": [
+    {
+      "case": "Mitchell",
+      "cycle": 15,
+      "original_target": 1650,
+      "design_seed": 2026112205,
+      "holdout_seed": 2026112206,
+      "alpha_per_endpoint": 0.0020833333333333333,
+      "design_required_hits": 296,
+      "holdout_required_hits": 585,
+      "policies": {
+        "rpw_7_uniform": {
+          "station_tasks": [
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              7,
+              6,
+              2
+            ],
+            [
+              8,
+              9,
+              11
+            ],
+            [
+              10,
+              12,
+              15,
+              13,
+              16
+            ],
+            [
+              17
+            ],
+            [
+              18,
+              21,
+              14
+            ],
+            [
+              20,
+              19
+            ]
+          ],
+          "station_loads": [
+            13,
+            14,
+            15,
+            15,
+            15,
+            13,
+            15,
+            5
+          ],
+          "layout": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "planned_target_units": 1430,
+          "original_passes_all": false,
+          "planned_passes_all": true,
+          "scenarios": [
+            {
+              "rho": 0.0,
+              "design_boundary_units": 1548,
+              "mean_output": 1647.752,
+              "p05_output": 1567.0,
+              "original_target": {
+                "hits": 290,
+                "adjusted_lower": 0.424441,
+                "passes": false,
+                "mean_shortfall": 21.192
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.989763,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "rho": 0.5,
+              "design_boundary_units": 1519,
+              "mean_output": 1613.88,
+              "p05_output": 1533.95,
+              "original_target": {
+                "hits": 147,
+                "adjusted_lower": 0.196537,
+                "passes": false,
+                "mean_shortfall": 42.978
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.989763,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 33.872,
+                "ci95": [
+                  33.628,
+                  34.115
+                ]
+              }
+            },
+            {
+              "rho": 0.9,
+              "design_boundary_units": 1450,
+              "mean_output": 1538.192,
+              "p05_output": 1457.95,
+              "original_target": {
+                "hits": 5,
+                "adjusted_lower": 0.001463,
+                "passes": false,
+                "mean_shortfall": 111.855
+              },
+              "planned_target": {
+                "hits": 592,
+                "adjusted_lower": 0.966994,
+                "passes": true,
+                "mean_shortfall": 0.237
+              },
+              "paired_loss_vs_independent": {
+                "mean": 109.56,
+                "ci95": [
+                  108.657,
+                  110.463
+                ]
+              }
+            }
+          ]
+        },
+        "milp_7_uniform": {
+          "station_tasks": [
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              7,
+              14
+            ],
+            [
+              2,
+              6,
+              8
+            ],
+            [
+              9,
+              11,
+              12,
+              13
+            ],
+            [
+              10,
+              15,
+              16,
+              18
+            ],
+            [
+              17
+            ],
+            [
+              21,
+              19,
+              20
+            ]
+          ],
+          "station_loads": [
+            13,
+            14,
+            11,
+            14,
+            14,
+            14,
+            13,
+            12
+          ],
+          "layout": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "planned_target_units": 1520,
+          "original_passes_all": false,
+          "planned_passes_all": true,
+          "scenarios": [
+            {
+              "rho": 0.0,
+              "design_boundary_units": 1655,
+              "mean_output": 1765.407,
+              "p05_output": 1677.95,
+              "original_target": {
+                "hits": 589,
+                "adjusted_lower": 0.959891,
+                "passes": true,
+                "mean_shortfall": 0.277
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.989763,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "rho": 0.5,
+              "design_boundary_units": 1619,
+              "mean_output": 1726.487,
+              "p05_output": 1640.0,
+              "original_target": {
+                "hits": 557,
+                "adjusted_lower": 0.893018,
+                "passes": false,
+                "mean_shortfall": 1.658
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.989763,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 38.92,
+                "ci95": [
+                  38.638,
+                  39.202
+                ]
+              }
+            },
+            {
+              "rho": 0.9,
+              "design_boundary_units": 1537,
+              "mean_output": 1638.452,
+              "p05_output": 1552.0,
+              "original_target": {
+                "hits": 247,
+                "adjusted_lower": 0.354359,
+                "passes": false,
+                "mean_shortfall": 27.465
+              },
+              "planned_target": {
+                "hits": 594,
+                "adjusted_lower": 0.97195,
+                "passes": true,
+                "mean_shortfall": 0.217
+              },
+              "paired_loss_vs_independent": {
+                "mean": 126.955,
+                "ci95": [
+                  125.935,
+                  127.975
+                ]
+              }
+            }
+          ]
+        },
+        "milp_7_concentrated": {
+          "station_tasks": [
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              7,
+              14
+            ],
+            [
+              2,
+              6,
+              8
+            ],
+            [
+              9,
+              11,
+              12,
+              13
+            ],
+            [
+              10,
+              15,
+              16,
+              18
+            ],
+            [
+              17
+            ],
+            [
+              21,
+              19,
+              20
+            ]
+          ],
+          "station_loads": [
+            13,
+            14,
+            11,
+            14,
+            14,
+            14,
+            13,
+            12
+          ],
+          "layout": [
+            2,
+            0,
+            0,
+            2,
+            2,
+            1,
+            0
+          ],
+          "planned_target_units": 1510,
+          "original_passes_all": false,
+          "planned_passes_all": true,
+          "scenarios": [
+            {
+              "rho": 0.0,
+              "design_boundary_units": 1600,
+              "mean_output": 1709.387,
+              "p05_output": 1625.95,
+              "original_target": {
+                "hits": 521,
+                "adjusted_lower": 0.82437,
+                "passes": false,
+                "mean_shortfall": 3.26
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.989763,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "rho": 0.5,
+              "design_boundary_units": 1583,
+              "mean_output": 1690.898,
+              "p05_output": 1609.0,
+              "original_target": {
+                "hits": 470,
+                "adjusted_lower": 0.731665,
+                "passes": false,
+                "mean_shortfall": 6.37
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.989763,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 18.488,
+                "ci95": [
+                  18.206,
+                  18.77
+                ]
+              }
+            },
+            {
+              "rho": 0.9,
+              "design_boundary_units": 1533,
+              "mean_output": 1634.597,
+              "p05_output": 1550.9,
+              "original_target": {
+                "hits": 230,
+                "adjusted_lower": 0.326994,
+                "passes": false,
+                "mean_shortfall": 29.902
+              },
+              "planned_target": {
+                "hits": 594,
+                "adjusted_lower": 0.97195,
+                "passes": true,
+                "mean_shortfall": 0.148
+              },
+              "paired_loss_vs_independent": {
+                "mean": 74.79,
+                "ci95": [
+                  73.752,
+                  75.828
+                ]
+              }
+            }
+          ]
+        },
+        "milp_14_uniform": {
+          "station_tasks": [
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              7,
+              14
+            ],
+            [
+              2,
+              6,
+              8
+            ],
+            [
+              9,
+              11,
+              12,
+              13
+            ],
+            [
+              10,
+              15,
+              16,
+              18
+            ],
+            [
+              17
+            ],
+            [
+              21,
+              19,
+              20
+            ]
+          ],
+          "station_loads": [
+            13,
+            14,
+            11,
+            14,
+            14,
+            14,
+            13,
+            12
+          ],
+          "layout": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "planned_target_units": 1540,
+          "original_passes_all": false,
+          "planned_passes_all": true,
+          "scenarios": [
+            {
+              "rho": 0.0,
+              "design_boundary_units": 1666,
+              "mean_output": 1778.272,
+              "p05_output": 1691.0,
+              "original_target": {
+                "hits": 594,
+                "adjusted_lower": 0.97195,
+                "passes": true,
+                "mean_shortfall": 0.11
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.989763,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "rho": 0.5,
+              "design_boundary_units": 1643,
+              "mean_output": 1752.88,
+              "p05_output": 1665.0,
+              "original_target": {
+                "hits": 585,
+                "adjusted_lower": 0.950829,
+                "passes": true,
+                "mean_shortfall": 0.552
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.989763,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 25.392,
+                "ci95": [
+                  25.126,
+                  25.658
+                ]
+              }
+            },
+            {
+              "rho": 0.9,
+              "design_boundary_units": 1561,
+              "mean_output": 1668.482,
+              "p05_output": 1582.0,
+              "original_target": {
+                "hits": 383,
+                "adjusted_lower": 0.58015,
+                "passes": false,
+                "mean_shortfall": 13.265
+              },
+              "planned_target": {
+                "hits": 594,
+                "adjusted_lower": 0.97195,
+                "passes": true,
+                "mean_shortfall": 0.148
+              },
+              "paired_loss_vs_independent": {
+                "mean": 109.79,
+                "ci95": [
+                  108.742,
+                  110.838
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "Jackson",
+      "cycle": 14,
+      "original_target": 1780,
+      "design_seed": 2026112207,
+      "holdout_seed": 2026112208,
+      "alpha_per_endpoint": 0.002777777777777778,
+      "design_required_hits": 295,
+      "holdout_required_hits": 585,
+      "policies": {
+        "existing_zero": {
+          "station_tasks": [
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              6
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              7,
+              9,
+              11
+            ]
+          ],
+          "station_loads": [
+            12,
+            11,
+            11,
+            12
+          ],
+          "layout": [
+            0,
+            0,
+            0
+          ],
+          "planned_target_units": 1760,
+          "original_passes_all": true,
+          "planned_passes_all": true,
+          "scenarios": [
+            {
+              "rho": 0.0,
+              "design_boundary_units": 1822,
+              "mean_output": 1952.318,
+              "p05_output": 1859.8,
+              "original_target": {
+                "hits": 598,
+                "adjusted_lower": 0.98345,
+                "passes": true,
+                "mean_shortfall": 0.028
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.990238,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "rho": 0.5,
+              "design_boundary_units": 1806,
+              "mean_output": 1937.862,
+              "p05_output": 1844.9,
+              "original_target": {
+                "hits": 598,
+                "adjusted_lower": 0.98345,
+                "passes": true,
+                "mean_shortfall": 0.08
+              },
+              "planned_target": {
+                "hits": 599,
+                "adjusted_lower": 0.98659,
+                "passes": true,
+                "mean_shortfall": 0.015
+              },
+              "paired_loss_vs_independent": {
+                "mean": 14.457,
+                "ci95": [
+                  14.172,
+                  14.742
+                ]
+              }
+            },
+            {
+              "rho": 0.9,
+              "design_boundary_units": 1787,
+              "mean_output": 1919.218,
+              "p05_output": 1824.9,
+              "original_target": {
+                "hits": 597,
+                "adjusted_lower": 0.980559,
+                "passes": true,
+                "mean_shortfall": 0.173
+              },
+              "planned_target": {
+                "hits": 598,
+                "adjusted_lower": 0.98345,
+                "passes": true,
+                "mean_shortfall": 0.105
+              },
+              "paired_loss_vs_independent": {
+                "mean": 33.1,
+                "ci95": [
+                  32.053,
+                  34.147
+                ]
+              }
+            }
+          ]
+        },
+        "two_end_slots": {
+          "station_tasks": [
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              6
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              7,
+              9,
+              11
+            ]
+          ],
+          "station_loads": [
+            12,
+            11,
+            11,
+            12
+          ],
+          "layout": [
+            1,
+            0,
+            1
+          ],
+          "planned_target_units": 1800,
+          "original_passes_all": true,
+          "planned_passes_all": true,
+          "scenarios": [
+            {
+              "rho": 0.0,
+              "design_boundary_units": 1932,
+              "mean_output": 2071.715,
+              "p05_output": 1972.8,
+              "original_target": {
+                "hits": 600,
+                "adjusted_lower": 0.990238,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.990238,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "rho": 0.5,
+              "design_boundary_units": 1902,
+              "mean_output": 2037.647,
+              "p05_output": 1938.95,
+              "original_target": {
+                "hits": 600,
+                "adjusted_lower": 0.990238,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.990238,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 34.068,
+                "ci95": [
+                  33.776,
+                  34.361
+                ]
+              }
+            },
+            {
+              "rho": 0.9,
+              "design_boundary_units": 1826,
+              "mean_output": 1967.278,
+              "p05_output": 1873.9,
+              "original_target": {
+                "hits": 598,
+                "adjusted_lower": 0.98345,
+                "passes": true,
+                "mean_shortfall": 0.048
+              },
+              "planned_target": {
+                "hits": 598,
+                "adjusted_lower": 0.98345,
+                "passes": true,
+                "mean_shortfall": 0.115
+              },
+              "paired_loss_vs_independent": {
+                "mean": 104.437,
+                "ci95": [
+                  103.359,
+                  105.515
+                ]
+              }
+            }
+          ]
+        },
+        "three_uniform": {
+          "station_tasks": [
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              6
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              7,
+              9,
+              11
+            ]
+          ],
+          "station_loads": [
+            12,
+            11,
+            11,
+            12
+          ],
+          "layout": [
+            1,
+            1,
+            1
+          ],
+          "planned_target_units": 1820,
+          "original_passes_all": true,
+          "planned_passes_all": true,
+          "scenarios": [
+            {
+              "rho": 0.0,
+              "design_boundary_units": 1946,
+              "mean_output": 2086.283,
+              "p05_output": 1985.9,
+              "original_target": {
+                "hits": 600,
+                "adjusted_lower": 0.990238,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.990238,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "rho": 0.5,
+              "design_boundary_units": 1923,
+              "mean_output": 2061.087,
+              "p05_output": 1961.95,
+              "original_target": {
+                "hits": 600,
+                "adjusted_lower": 0.990238,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "planned_target": {
+                "hits": 600,
+                "adjusted_lower": 0.990238,
+                "passes": true,
+                "mean_shortfall": 0.0
+              },
+              "paired_loss_vs_independent": {
+                "mean": 25.197,
+                "ci95": [
+                  24.887,
+                  25.506
+                ]
+              }
+            },
+            {
+              "rho": 0.9,
+              "design_boundary_units": 1839,
+              "mean_output": 1984.162,
+              "p05_output": 1888.0,
+              "original_target": {
+                "hits": 599,
+                "adjusted_lower": 0.98659,
+                "passes": true,
+                "mean_shortfall": 0.005
+              },
+              "planned_target": {
+                "hits": 598,
+                "adjusted_lower": 0.98345,
+                "passes": true,
+                "mean_shortfall": 0.137
+              },
+              "paired_loss_vs_independent": {
+                "mean": 102.122,
+                "ci95": [
+                  101.013,
+                  103.23
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

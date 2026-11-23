@@ -1,0 +1,489 @@
+{
+  "case": "Jackson",
+  "station_tasks": [
+    [
+      1,
+      3,
+      5
+    ],
+    [
+      2,
+      4,
+      6
+    ],
+    [
+      8,
+      10
+    ],
+    [
+      7,
+      9,
+      11
+    ]
+  ],
+  "nominal_loads": [
+    12,
+    11,
+    11,
+    12
+  ],
+  "layouts": {
+    "incumbent": [
+      0,
+      0,
+      0
+    ],
+    "selected": [
+      1,
+      0,
+      1
+    ]
+  },
+  "shift_seconds": 25200,
+  "target_units": 1780,
+  "required_reliability": 0.95,
+  "task_cv_pct": 20,
+  "shift_cv_pct": 3,
+  "mechanical_stop_minutes": 25,
+  "design": {
+    "seed": 2026112203,
+    "runs": 300,
+    "starts": [
+      120,
+      300
+    ],
+    "alpha_per_condition": 0.00625,
+    "required_hits": 295,
+    "maximum_search_minutes": 95,
+    "locked_wait_minutes": 10,
+    "boundary_checks": [
+      {
+        "release_wait_minutes": 10,
+        "required_seconds": 25155
+      },
+      {
+        "release_wait_minutes": 11,
+        "required_seconds": 25215
+      }
+    ]
+  },
+  "validation": {
+    "seed": 2026112204,
+    "runs": 300,
+    "starts": [
+      90,
+      330
+    ],
+    "release_waits_minutes": [
+      0,
+      5,
+      10,
+      15
+    ],
+    "alpha_per_condition": 0.00078125,
+    "required_hits": 296,
+    "locked_wait_pass": true,
+    "results": [
+      {
+        "policy": "incumbent",
+        "release_wait_minutes": 0,
+        "worst_hits": 256,
+        "worst_lower95_adjusted": 0.778973,
+        "pass": false,
+        "required_make_up_seconds": 625,
+        "conditions": [
+          {
+            "station": 1,
+            "stop_start_minute": 90,
+            "hits": 256
+          },
+          {
+            "station": 1,
+            "stop_start_minute": 330,
+            "hits": 256
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 90,
+            "hits": 256
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 330,
+            "hits": 256
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 90,
+            "hits": 256
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 330,
+            "hits": 256
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 90,
+            "hits": 256
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 330,
+            "hits": 256
+          }
+        ]
+      },
+      {
+        "policy": "incumbent",
+        "release_wait_minutes": 5,
+        "worst_hits": 217,
+        "worst_lower95_adjusted": 0.635371,
+        "pass": false,
+        "required_make_up_seconds": 925,
+        "conditions": [
+          {
+            "station": 1,
+            "stop_start_minute": 90,
+            "hits": 217
+          },
+          {
+            "station": 1,
+            "stop_start_minute": 330,
+            "hits": 217
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 90,
+            "hits": 217
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 330,
+            "hits": 217
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 90,
+            "hits": 217
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 330,
+            "hits": 217
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 90,
+            "hits": 218
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 330,
+            "hits": 218
+          }
+        ]
+      },
+      {
+        "policy": "incumbent",
+        "release_wait_minutes": 10,
+        "worst_hits": 180,
+        "worst_lower95_adjusted": 0.507344,
+        "pass": false,
+        "required_make_up_seconds": 1225,
+        "conditions": [
+          {
+            "station": 1,
+            "stop_start_minute": 90,
+            "hits": 181
+          },
+          {
+            "station": 1,
+            "stop_start_minute": 330,
+            "hits": 181
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 90,
+            "hits": 181
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 330,
+            "hits": 181
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 90,
+            "hits": 181
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 330,
+            "hits": 181
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 90,
+            "hits": 181
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 330,
+            "hits": 180
+          }
+        ]
+      },
+      {
+        "policy": "incumbent",
+        "release_wait_minutes": 15,
+        "worst_hits": 117,
+        "worst_lower95_adjusted": 0.302701,
+        "pass": false,
+        "required_make_up_seconds": 1525,
+        "conditions": [
+          {
+            "station": 1,
+            "stop_start_minute": 90,
+            "hits": 117
+          },
+          {
+            "station": 1,
+            "stop_start_minute": 330,
+            "hits": 117
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 90,
+            "hits": 117
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 330,
+            "hits": 117
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 90,
+            "hits": 117
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 330,
+            "hits": 117
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 90,
+            "hits": 117
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 330,
+            "hits": 117
+          }
+        ]
+      },
+      {
+        "policy": "selected",
+        "release_wait_minutes": 0,
+        "worst_hits": 300,
+        "worst_lower95_adjusted": 0.976433,
+        "pass": true,
+        "required_make_up_seconds": 0,
+        "conditions": [
+          {
+            "station": 1,
+            "stop_start_minute": 90,
+            "hits": 300
+          },
+          {
+            "station": 1,
+            "stop_start_minute": 330,
+            "hits": 300
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 90,
+            "hits": 300
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 330,
+            "hits": 300
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 90,
+            "hits": 300
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 330,
+            "hits": 300
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 90,
+            "hits": 300
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 330,
+            "hits": 300
+          }
+        ]
+      },
+      {
+        "policy": "selected",
+        "release_wait_minutes": 5,
+        "worst_hits": 298,
+        "worst_lower95_adjusted": 0.962194,
+        "pass": true,
+        "required_make_up_seconds": 0,
+        "conditions": [
+          {
+            "station": 1,
+            "stop_start_minute": 90,
+            "hits": 298
+          },
+          {
+            "station": 1,
+            "stop_start_minute": 330,
+            "hits": 298
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 90,
+            "hits": 298
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 330,
+            "hits": 298
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 90,
+            "hits": 298
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 330,
+            "hits": 298
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 90,
+            "hits": 298
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 330,
+            "hits": 298
+          }
+        ]
+      },
+      {
+        "policy": "selected",
+        "release_wait_minutes": 10,
+        "worst_hits": 298,
+        "worst_lower95_adjusted": 0.962194,
+        "pass": true,
+        "required_make_up_seconds": 0,
+        "conditions": [
+          {
+            "station": 1,
+            "stop_start_minute": 90,
+            "hits": 298
+          },
+          {
+            "station": 1,
+            "stop_start_minute": 330,
+            "hits": 298
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 90,
+            "hits": 298
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 330,
+            "hits": 298
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 90,
+            "hits": 298
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 330,
+            "hits": 298
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 90,
+            "hits": 298
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 330,
+            "hits": 298
+          }
+        ]
+      },
+      {
+        "policy": "selected",
+        "release_wait_minutes": 15,
+        "worst_hits": 290,
+        "worst_lower95_adjusted": 0.920176,
+        "pass": false,
+        "required_make_up_seconds": 158,
+        "conditions": [
+          {
+            "station": 1,
+            "stop_start_minute": 90,
+            "hits": 290
+          },
+          {
+            "station": 1,
+            "stop_start_minute": 330,
+            "hits": 290
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 90,
+            "hits": 290
+          },
+          {
+            "station": 2,
+            "stop_start_minute": 330,
+            "hits": 290
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 90,
+            "hits": 290
+          },
+          {
+            "station": 3,
+            "stop_start_minute": 330,
+            "hits": 290
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 90,
+            "hits": 290
+          },
+          {
+            "station": 4,
+            "stop_start_minute": 330,
+            "hits": 290
+          }
+        ]
+      }
+    ]
+  }
+}

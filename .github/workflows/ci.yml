@@ -6,105 +6,16 @@ on:
   pull_request:
 
 jobs:
-  sql:
+  quick:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
-      - name: Byte-compile
-        run: python -m compileall -q python app tests
-
-      - name: SQL syntax + schema test (in-memory, no data needed)
-        run: python tests/test_sql_syntax.py
-  ie:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
       - name: Install analysis dependencies
+        run: pip install -r requirements.txt -r manufacturing/requirements-search.txt
+      - name: Validate modules and published numbers
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Verify reconfiguration results
-        run: |
-          python manufacturing/test_reconfiguration.py
-          python manufacturing/reconfiguration.py --output-dir "$RUNNER_TEMP/reconfiguration"
-          cmp manufacturing/results/reconfiguration_frontier.csv "$RUNNER_TEMP/reconfiguration/reconfiguration_frontier.csv"
-          cmp manufacturing/results/reconfiguration_decisions.json "$RUNNER_TEMP/reconfiguration/reconfiguration_decisions.json"
-
-      - name: IE analysis tests
-        run: |
-          python tests/test_ie_quality.py
-          python tests/test_ie_scheduling.py
-          python manufacturing/test_line_balance.py
-          python manufacturing/line_balance.py --output-dir "$RUNNER_TEMP/line-balance"
-          cmp manufacturing/results/method_comparison.csv "$RUNNER_TEMP/line-balance/method_comparison.csv"
-          python manufacturing/test_shift_capacity.py
-          python manufacturing/shift_capacity.py --output-dir "$RUNNER_TEMP/shift-capacity"
-          for name in shift_capacity.csv station_time_losses.csv shift_decision.json; do
-            cmp "manufacturing/results/$name" "$RUNNER_TEMP/shift-capacity/$name"
-          done
-          python manufacturing/test_optimize_buffers.py
-          python manufacturing/optimize_buffers.py --output-dir "$RUNNER_TEMP/jackson-buffer"
-          for name in jackson_buffer_screen.csv jackson_buffer_decision.json; do
-            cmp "manufacturing/results/$name" "$RUNNER_TEMP/jackson-buffer/$name"
-          done
-          python manufacturing/test_capacity_frontier.py
-          python manufacturing/capacity_frontier.py --output-dir "$RUNNER_TEMP/capacity-frontier"
-          for name in capacity_frontier.csv frontier_experiments.json; do
-            cmp "manufacturing/results/$name" "$RUNNER_TEMP/capacity-frontier/$name"
-          done
-
-  certified-search:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install certification dependencies
-        run: python -m pip install numpy scipy -r manufacturing/requirements-search.txt
-
-      - name: Verify Buxey transfer experiment
-        run: |
-          python manufacturing/transfer_validation.py --output "$RUNNER_TEMP/transfer_validation.json"
-          cmp manufacturing/results/transfer_validation.json "$RUNNER_TEMP/transfer_validation.json"
-
-      - name: Verify search certificates
-        run: |
-          python manufacturing/test_certified_search.py
-          python manufacturing/certified_search.py --output "$RUNNER_TEMP/search_certificate.json"
-          cmp manufacturing/results/search_certificate.json "$RUNNER_TEMP/search_certificate.json"
-
-  express:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install express dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install pandas numpy matplotlib
-
-      - name: Compile express module
-        working-directory: express
-        run: python -m compileall -q src scripts
-
-      - name: Express hub tests
-        working-directory: express
-        run: python tests/test_hub.py
+          python -m compileall -q python app tests express/src express/scripts manufacturing
+          make test-fast

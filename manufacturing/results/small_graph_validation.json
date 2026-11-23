@@ -1,0 +1,779 @@
+{
+  "horizon_seconds": 3600,
+  "design_runs": 60,
+  "holdout_runs": 180,
+  "cases": [
+    {
+      "name": "DAG-714",
+      "seed": 714,
+      "times": [
+        11,
+        8,
+        7,
+        4,
+        4,
+        5,
+        7,
+        10,
+        7,
+        6,
+        8,
+        4
+      ],
+      "edges": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          11,
+          12
+        ]
+      ],
+      "static": [
+        {
+          "case": "DAG-714",
+          "cycle": 15,
+          "method": "LCR",
+          "tasks": 12,
+          "work_content": 81,
+          "workload_lower_bound": 6,
+          "stations": 6,
+          "peak_load": 15,
+          "total_idle": 9,
+          "balance_rate_pct": 90.0
+        },
+        {
+          "case": "DAG-714",
+          "cycle": 15,
+          "method": "RPW",
+          "tasks": 12,
+          "work_content": 81,
+          "workload_lower_bound": 6,
+          "stations": 7,
+          "peak_load": 15,
+          "total_idle": 24,
+          "balance_rate_pct": 77.1429
+        },
+        {
+          "case": "DAG-714",
+          "cycle": 15,
+          "method": "MILP",
+          "tasks": 12,
+          "work_content": 81,
+          "workload_lower_bound": 6,
+          "stations": 6,
+          "peak_load": 15,
+          "total_idle": 9,
+          "balance_rate_pct": 90.0
+        },
+        {
+          "case": "DAG-714",
+          "cycle": 16,
+          "method": "LCR",
+          "tasks": 12,
+          "work_content": 81,
+          "workload_lower_bound": 6,
+          "stations": 6,
+          "peak_load": 16,
+          "total_idle": 15,
+          "balance_rate_pct": 84.375
+        },
+        {
+          "case": "DAG-714",
+          "cycle": 16,
+          "method": "RPW",
+          "tasks": 12,
+          "work_content": 81,
+          "workload_lower_bound": 6,
+          "stations": 6,
+          "peak_load": 16,
+          "total_idle": 15,
+          "balance_rate_pct": 84.375
+        },
+        {
+          "case": "DAG-714",
+          "cycle": 16,
+          "method": "MILP",
+          "tasks": 12,
+          "work_content": 81,
+          "workload_lower_bound": 6,
+          "stations": 6,
+          "peak_load": 15,
+          "total_idle": 15,
+          "balance_rate_pct": 84.375
+        },
+        {
+          "case": "DAG-714",
+          "cycle": 17,
+          "method": "LCR",
+          "tasks": 12,
+          "work_content": 81,
+          "workload_lower_bound": 5,
+          "stations": 6,
+          "peak_load": 17,
+          "total_idle": 21,
+          "balance_rate_pct": 79.4118
+        },
+        {
+          "case": "DAG-714",
+          "cycle": 17,
+          "method": "RPW",
+          "tasks": 12,
+          "work_content": 81,
+          "workload_lower_bound": 5,
+          "stations": 6,
+          "peak_load": 17,
+          "total_idle": 21,
+          "balance_rate_pct": 79.4118
+        },
+        {
+          "case": "DAG-714",
+          "cycle": 17,
+          "method": "MILP",
+          "tasks": 12,
+          "work_content": 81,
+          "workload_lower_bound": 5,
+          "stations": 5,
+          "peak_load": 17,
+          "total_idle": 4,
+          "balance_rate_pct": 95.2941
+        }
+      ],
+      "work_bound": 6,
+      "stations": [
+        [
+          2,
+          3
+        ],
+        [
+          6,
+          7,
+          5
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9
+        ]
+      ],
+      "tested_layouts": 10,
+      "transferred": [
+        1,
+        3,
+        4
+      ],
+      "selected": [
+        1,
+        2,
+        3
+      ],
+      "mean_transferred": 215.6944,
+      "mean_selected": 219.5722,
+      "paired_gain": {
+        "mean": 3.87778,
+        "ci95": [
+          3.67528,
+          4.08028
+        ],
+        "simultaneous95": [
+          3.62977,
+          4.12578
+        ],
+        "dz": 2.8165
+      }
+    },
+    {
+      "name": "DAG-715",
+      "seed": 715,
+      "times": [
+        6,
+        6,
+        11,
+        5,
+        7,
+        11,
+        4,
+        5,
+        11,
+        4,
+        8,
+        7,
+        8,
+        9
+      ],
+      "edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          6,
+          14
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      "static": [
+        {
+          "case": "DAG-715",
+          "cycle": 15,
+          "method": "LCR",
+          "tasks": 14,
+          "work_content": 102,
+          "workload_lower_bound": 7,
+          "stations": 8,
+          "peak_load": 15,
+          "total_idle": 18,
+          "balance_rate_pct": 85.0
+        },
+        {
+          "case": "DAG-715",
+          "cycle": 15,
+          "method": "RPW",
+          "tasks": 14,
+          "work_content": 102,
+          "workload_lower_bound": 7,
+          "stations": 8,
+          "peak_load": 15,
+          "total_idle": 18,
+          "balance_rate_pct": 85.0
+        },
+        {
+          "case": "DAG-715",
+          "cycle": 15,
+          "method": "MILP",
+          "tasks": 14,
+          "work_content": 102,
+          "workload_lower_bound": 7,
+          "stations": 8,
+          "peak_load": 15,
+          "total_idle": 18,
+          "balance_rate_pct": 85.0
+        },
+        {
+          "case": "DAG-715",
+          "cycle": 16,
+          "method": "LCR",
+          "tasks": 14,
+          "work_content": 102,
+          "workload_lower_bound": 7,
+          "stations": 7,
+          "peak_load": 16,
+          "total_idle": 10,
+          "balance_rate_pct": 91.0714
+        },
+        {
+          "case": "DAG-715",
+          "cycle": 16,
+          "method": "RPW",
+          "tasks": 14,
+          "work_content": 102,
+          "workload_lower_bound": 7,
+          "stations": 8,
+          "peak_load": 16,
+          "total_idle": 26,
+          "balance_rate_pct": 79.6875
+        },
+        {
+          "case": "DAG-715",
+          "cycle": 16,
+          "method": "MILP",
+          "tasks": 14,
+          "work_content": 102,
+          "workload_lower_bound": 7,
+          "stations": 7,
+          "peak_load": 16,
+          "total_idle": 10,
+          "balance_rate_pct": 91.0714
+        },
+        {
+          "case": "DAG-715",
+          "cycle": 17,
+          "method": "LCR",
+          "tasks": 14,
+          "work_content": 102,
+          "workload_lower_bound": 6,
+          "stations": 7,
+          "peak_load": 17,
+          "total_idle": 17,
+          "balance_rate_pct": 85.7143
+        },
+        {
+          "case": "DAG-715",
+          "cycle": 17,
+          "method": "RPW",
+          "tasks": 14,
+          "work_content": 102,
+          "workload_lower_bound": 6,
+          "stations": 7,
+          "peak_load": 17,
+          "total_idle": 17,
+          "balance_rate_pct": 85.7143
+        },
+        {
+          "case": "DAG-715",
+          "cycle": 17,
+          "method": "MILP",
+          "tasks": 14,
+          "work_content": 102,
+          "workload_lower_bound": 6,
+          "stations": 7,
+          "peak_load": 16,
+          "total_idle": 17,
+          "balance_rate_pct": 85.7143
+        }
+      ],
+      "work_bound": 7,
+      "stations": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          12,
+          10,
+          8
+        ],
+        [
+          9
+        ],
+        [
+          14
+        ],
+        [
+          13
+        ]
+      ],
+      "tested_layouts": 35,
+      "transferred": [
+        1,
+        4,
+        6
+      ],
+      "selected": [
+        2,
+        3,
+        4
+      ],
+      "mean_transferred": 205.65,
+      "mean_selected": 216.2667,
+      "paired_gain": {
+        "mean": 10.61667,
+        "ci95": [
+          10.37368,
+          10.85966
+        ],
+        "simultaneous95": [
+          10.31908,
+          10.91425
+        ],
+        "dz": 6.42629
+      }
+    },
+    {
+      "name": "DAG-716",
+      "seed": 716,
+      "times": [
+        7,
+        10,
+        8,
+        11,
+        6,
+        9,
+        10,
+        9,
+        10,
+        10,
+        7,
+        10,
+        9,
+        5,
+        6,
+        9
+      ],
+      "edges": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          14
+        ],
+        [
+          6,
+          16
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          13
+        ],
+        [
+          8,
+          14
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          16
+        ]
+      ],
+      "static": [
+        {
+          "case": "DAG-716",
+          "cycle": 15,
+          "method": "LCR",
+          "tasks": 16,
+          "work_content": 136,
+          "workload_lower_bound": 10,
+          "stations": 12,
+          "peak_load": 15,
+          "total_idle": 44,
+          "balance_rate_pct": 75.5556
+        },
+        {
+          "case": "DAG-716",
+          "cycle": 15,
+          "method": "RPW",
+          "tasks": 16,
+          "work_content": 136,
+          "workload_lower_bound": 10,
+          "stations": 12,
+          "peak_load": 15,
+          "total_idle": 44,
+          "balance_rate_pct": 75.5556
+        },
+        {
+          "case": "DAG-716",
+          "cycle": 15,
+          "method": "MILP",
+          "tasks": 16,
+          "work_content": 136,
+          "workload_lower_bound": 10,
+          "stations": 12,
+          "peak_load": 15,
+          "total_idle": 44,
+          "balance_rate_pct": 75.5556
+        },
+        {
+          "case": "DAG-716",
+          "cycle": 16,
+          "method": "LCR",
+          "tasks": 16,
+          "work_content": 136,
+          "workload_lower_bound": 9,
+          "stations": 11,
+          "peak_load": 16,
+          "total_idle": 40,
+          "balance_rate_pct": 77.2727
+        },
+        {
+          "case": "DAG-716",
+          "cycle": 16,
+          "method": "RPW",
+          "tasks": 16,
+          "work_content": 136,
+          "workload_lower_bound": 9,
+          "stations": 11,
+          "peak_load": 16,
+          "total_idle": 40,
+          "balance_rate_pct": 77.2727
+        },
+        {
+          "case": "DAG-716",
+          "cycle": 16,
+          "method": "MILP",
+          "tasks": 16,
+          "work_content": 136,
+          "workload_lower_bound": 9,
+          "stations": 11,
+          "peak_load": 16,
+          "total_idle": 40,
+          "balance_rate_pct": 77.2727
+        },
+        {
+          "case": "DAG-716",
+          "cycle": 17,
+          "method": "LCR",
+          "tasks": 16,
+          "work_content": 136,
+          "workload_lower_bound": 8,
+          "stations": 10,
+          "peak_load": 17,
+          "total_idle": 34,
+          "balance_rate_pct": 80.0
+        },
+        {
+          "case": "DAG-716",
+          "cycle": 17,
+          "method": "RPW",
+          "tasks": 16,
+          "work_content": 136,
+          "workload_lower_bound": 8,
+          "stations": 11,
+          "peak_load": 16,
+          "total_idle": 51,
+          "balance_rate_pct": 72.7273
+        },
+        {
+          "case": "DAG-716",
+          "cycle": 17,
+          "method": "MILP",
+          "tasks": 16,
+          "work_content": 136,
+          "workload_lower_bound": 8,
+          "stations": 10,
+          "peak_load": 17,
+          "total_idle": 34,
+          "balance_rate_pct": 80.0
+        }
+      ],
+      "work_bound": 9,
+      "stations": [
+        [
+          1,
+          3
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          9
+        ],
+        [
+          12
+        ],
+        [
+          2
+        ],
+        [
+          10
+        ],
+        [
+          13
+        ],
+        [
+          16
+        ]
+      ],
+      "tested_layouts": 120,
+      "transferred": [
+        1,
+        6,
+        9
+      ],
+      "selected": [
+        2,
+        3,
+        4
+      ],
+      "mean_transferred": 192.3778,
+      "mean_selected": 209.2389,
+      "paired_gain": {
+        "mean": 16.86111,
+        "ci95": [
+          16.65854,
+          17.06368
+        ],
+        "simultaneous95": [
+          16.61303,
+          17.10919
+        ],
+        "dz": 12.24264
+      }
+    }
+  ]
+}

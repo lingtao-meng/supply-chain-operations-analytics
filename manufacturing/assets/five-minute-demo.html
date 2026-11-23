@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>装配线改善 | 五分钟演示</title>
+<style>
+:root { color-scheme: light; font-family: system-ui, "PingFang SC", sans-serif; color:#172734; background:#eef3f3; }
+* { box-sizing:border-box }
+body { margin:0; }
+main { width:min(100% - 36px, 910px); margin:44px auto; }
+h1 { font-size:clamp(29px,5vw,46px); line-height:1.12; margin:.35em 0 .65em; }
+h2 { margin:.25em 0 .35em; font-size:clamp(21px,3vw,32px); }
+small { color:#375c60; }
+nav { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0; }
+button { border:1px solid #a8bcbc; border-radius:6px; padding:.54em .85em; background:#fff; color:#172734; cursor:pointer; font:inherit; }
+button[aria-current="step"], #play { background:#154f4f; color:white; }
+section { background:#fff; border-radius:12px; padding:clamp(16px,4vw,38px); box-shadow:0 8px 30px #23454514; }
+#description { line-height:1.7; margin-top:1.5em; }
+#visual { min-height:150px; padding-top:1em; }
+.lane { display:grid; grid-template-columns: minmax(84px,110px) 1fr; align-items:center; gap:10px; margin:1em 0; }
+.nodes { display:flex; gap:4px; }
+.nodes span { flex:1; min-width:0; height:31px; padding:7px 0; text-align:center; background:#e1ebec; color:#173d3e; border-radius:3px; }
+.nodes .spare { background:#fff; color:#657782; border:1px dashed #a6adad; }
+.meter { background:#e8eeef; border-radius:4px; height:29px; overflow:hidden; }
+.fill { height:100%; background:#17756b; color:white; font-size:14px; padding:5px 10px; white-space:nowrap; width:var(--width); transform-origin:left; animation:open .65s ease-out; }
+.fill.alt { background:#9f4a20; }
+.queue { display:flex; gap:6px; margin:8px 0 20px; }
+.queue span { flex:1; text-align:center; padding:10px 0; border:1px solid #c5d5d5; border-radius:6px; font-size:14px; }
+.queue .blocked { color:#832d0b; background:#fce9dc; }
+.queue .buffer { color:#145b55; background:#d8efea; }
+.controls { display:flex; gap:14px; align-items:center; margin-top:18px; }
+#timeline { flex:1; min-width:40px; accent-color:#154f4f; }
+#clock { font-variant-numeric: tabular-nums; white-space:nowrap; }
+.note { font-size:.89rem; color:#496067; line-height:1.55; }
+@keyframes open { from { transform:scaleX(.06); opacity:.3 } to { transform:scaleX(1); opacity:1 } }
+@media (prefers-reduced-motion:reduce) { .fill { animation:none; } }
+</style>
+<main>
+<small>制造工业工程 · 公开基准与离线仿真</small>
+<h1>一条装配线能承诺多少？</h1>
+<nav aria-label="演示章节"></nav>
+<section>
+  <small id="interval"></small>
+  <h2 id="title"></h2>
+  <div id="visual"></div>
+  <p id="description"></p>
+  <small id="basis"></small>
+</section>
+<div class="controls">
+  <button id="play" type="button">播放</button>
+  <input id="timeline" aria-label="演示进度" type="range" min="0" max="300" value="0">
+  <span id="clock">0:00 / 5:00</span>
+</div>
+<p class="note">图中工位和等待位置为示意。模型结论对应列明的资源、工况和指标。可用上方按钮跳到任一章节。</p>
+</main>
+<script>
+const chapters = [
+  {time:0, tab:"静态排工", title:"同一组工序，少设一个工位", basis:"Mitchell · 节拍 15 · 静态工位数",
+   body:"先满足工序的先后关系和节拍上限。最长工序优先得到 9 站，整数规划得到 8 站。比较同为 8 站的方案时，再看最重工位是否留有工时余量。"},
+  {time:50, tab:"班产认证", title:"留出一批班次，专门核定承诺", basis:"Mitchell · 8 站、3 个缓冲位 · 装配完工",
+   body:"第 4 站来不及接件时，第 3 站做完也会堵住。缓冲可让上游提前腾位。设计样本内的搜索上下界收敛到 1,590 件，随后锁定 1,570 件，在新样本的两个设定工况中各用 300 班验收。"},
+  {time:130, tab:"异常恢复", title:"停机 30 分钟，两个缓冲位能做什么", basis:"Jackson · 每个工况 300 个独立班次 · 目标 1,780 件",
+   body:"保持工位与人员，在第一段和第三段各留一个缓冲位。较差工况下的达标班次从 214 增至 299。停机时长继续增加时，需要重算补产时间。"},
+  {time:215, tab:"工厂约束", title:"欠交先看工件卡在哪一段", basis:"Mitchell 混线扩展 · 600 组独立四班轨迹 · 按原工单交期发运",
+   body:"第二个异常班，原方案平均约有 1,032 件本班单没开工，已经合格待发只有约 17 件。增设第 4 站平行工位仍按齐料旧单优先后，连续两班各自按型号达标的承诺从每班 330 件升到 400 件。"}
+];
+const byId = id => document.getElementById(id);
+const slider = byId("timeline");
+const play = byId("play");
+const buttons = document.querySelector("nav");
+let position = 0, active = -1, start = 0, request = 0;
+const format = seconds => Math.floor(seconds / 60) + ":" + String(Math.floor(seconds % 60)).padStart(2, "0");
+const lane = (name, interior) => "<div class='lane'><b>" + name + "</b>" + interior + "</div>";
+const meter = (label, value, pct, alt=false) => lane(label, "<div class='meter'><div class='fill" +
+  (alt ? " alt" : "") + "' style='--width:" + pct + "%'>" + value + "</div></div>");
+const nodes = count => "<div class='nodes'>" + Array.from({length:9}, (_, index) => index<count ?
+  "<span>" + (index+1) + "</span>" : "<span class='spare'>省</span>").join("") + "</div>";
+function draw(index) {
+  if (index===0) return lane("最长工序优先", nodes(9)) + lane("整数规划", nodes(8));
+  if (index===1) return "<div class='queue'><span>第 3 站</span><span class='buffer'>缓冲接件</span><span class='blocked'>第 4 站等待</span></div>" +
+    meter("设计最优", "1,590 件", 96) + meter("独立验收", "1,570 件", 95);
+  if (index===2) return meter("原分工无缓冲", "214 / 300 班", 71.3, true) + meter("同分工加缓冲", "299 / 300 班", 99.7);
+  return meter("本班未开工", "约 1,032 件", 92, true) + lane("合格待发", "<div>约 17 件</div>") +
+    meter("加平行工位后", "承诺 400 件 / 班", 68);
+}
+function render() {
+  const sec = Math.min(Math.floor(position), 300);
+  let index = chapters.length-1;
+  while (sec < chapters[index].time) index--;
+  slider.value = sec;
+  byId("clock").textContent = format(sec) + " / 5:00";
+  if (active === index) return;
+  const chapter = chapters[index];
+  byId("interval").textContent = format(chapter.time) + "–" + format(chapters[index+1]?.time ?? 300);
+  byId("title").textContent = chapter.title;
+  byId("visual").innerHTML = draw(index);
+  byId("description").textContent = chapter.body;
+  byId("basis").textContent = chapter.basis;
+  Array.from(buttons.children).forEach((button, i) => button.setAttribute("aria-current", i===index ? "step" : "false"));
+  active = index;
+}
+function stop() {
+  cancelAnimationFrame(request);
+  request = 0;
+  play.textContent = position>=300 ? "重播" : "播放";
+}
+function frame(now) {
+  position = Math.min(300, (now-start)/1000);
+  render();
+  if (position>=300) stop();
+  else request = requestAnimationFrame(frame);
+}
+function jump(time) {
+  position = time;
+  if (request) start = performance.now()-time*1000;
+  render();
+}
+chapters.forEach(chapter => {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.textContent = format(chapter.time) + " " + chapter.tab;
+  button.addEventListener("click", () => jump(chapter.time));
+  buttons.append(button);
+});
+play.addEventListener("click", () => {
+  if (request) { stop(); return; }
+  if (position>=300) jump(0);
+  start = performance.now()-position*1000;
+  request = requestAnimationFrame(frame);
+  play.textContent = "暂停";
+});
+slider.addEventListener("input", () => jump(Number(slider.value)));
+render();
+</script>
+</html>

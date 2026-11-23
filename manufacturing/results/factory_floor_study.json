@@ -1,0 +1,4141 @@
+{
+  "case": "Mitchell",
+  "design": [
+    120,
+    2026112331
+  ],
+  "holdout": [
+    600,
+    2026112332
+  ],
+  "winner": "compact_aid_two_per_gap",
+  "limits": {
+    "actions_per_min": 42,
+    "posture_minutes": 90
+  },
+  "configurations": {
+    "baseline": {
+      "floor": {
+        "buffers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "walk": true,
+        "directional_setup": true,
+        "route_minutes": 15,
+        "bin_units": 90,
+        "cards": 2,
+        "posture_aid": false
+      },
+      "second_repair": true,
+      "faults": true
+    },
+    "zero_buffer": {
+      "floor": {
+        "buffers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "walk": true,
+        "directional_setup": true,
+        "route_minutes": 15,
+        "bin_units": 90,
+        "cards": 2,
+        "posture_aid": false
+      },
+      "second_repair": true,
+      "faults": true
+    },
+    "two_per_gap": {
+      "floor": {
+        "buffers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "walk": true,
+        "directional_setup": true,
+        "route_minutes": 15,
+        "bin_units": 90,
+        "cards": 2,
+        "posture_aid": false
+      },
+      "second_repair": true,
+      "faults": true
+    },
+    "compact_layout": {
+      "floor": {
+        "buffers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "walk": true,
+        "directional_setup": true,
+        "route_minutes": 15,
+        "bin_units": 90,
+        "cards": 2,
+        "posture_aid": false
+      },
+      "second_repair": true,
+      "faults": true
+    },
+    "symmetric_setup": {
+      "floor": {
+        "buffers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "walk": true,
+        "directional_setup": false,
+        "route_minutes": 15,
+        "bin_units": 90,
+        "cards": 2,
+        "posture_aid": false
+      },
+      "second_repair": true,
+      "faults": true
+    },
+    "no_fault": {
+      "floor": {
+        "buffers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "walk": true,
+        "directional_setup": true,
+        "route_minutes": 15,
+        "bin_units": 90,
+        "cards": 2,
+        "posture_aid": false
+      },
+      "second_repair": true,
+      "faults": false
+    },
+    "no_second_repair": {
+      "floor": {
+        "buffers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "walk": true,
+        "directional_setup": true,
+        "route_minutes": 15,
+        "bin_units": 90,
+        "cards": 2,
+        "posture_aid": false
+      },
+      "second_repair": false,
+      "faults": true
+    },
+    "slow_kanban": {
+      "floor": {
+        "buffers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "walk": true,
+        "directional_setup": true,
+        "route_minutes": 25,
+        "bin_units": 90,
+        "cards": 2,
+        "posture_aid": false
+      },
+      "second_repair": true,
+      "faults": true
+    },
+    "no_route_or_kanban_wait": {
+      "floor": {
+        "buffers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "walk": true,
+        "directional_setup": true,
+        "route_minutes": 0,
+        "bin_units": 90,
+        "cards": 2,
+        "posture_aid": false
+      },
+      "second_repair": true,
+      "faults": true
+    },
+    "compact_with_aid": {
+      "floor": {
+        "buffers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "walk": true,
+        "directional_setup": true,
+        "route_minutes": 15,
+        "bin_units": 90,
+        "cards": 2,
+        "posture_aid": true
+      },
+      "second_repair": true,
+      "faults": true
+    },
+    "compact_aid_faster_route": {
+      "floor": {
+        "buffers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "walk": true,
+        "directional_setup": true,
+        "route_minutes": 10,
+        "bin_units": 90,
+        "cards": 2,
+        "posture_aid": true
+      },
+      "second_repair": true,
+      "faults": true
+    },
+    "compact_aid_faster_single_card": {
+      "floor": {
+        "buffers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "walk": true,
+        "directional_setup": true,
+        "route_minutes": 10,
+        "bin_units": 90,
+        "cards": 1,
+        "posture_aid": true
+      },
+      "second_repair": true,
+      "faults": true
+    },
+    "compact_aid_two_per_gap": {
+      "floor": {
+        "buffers": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "layout": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "walk": true,
+        "directional_setup": true,
+        "route_minutes": 15,
+        "bin_units": 90,
+        "cards": 2,
+        "posture_aid": true
+      },
+      "second_repair": true,
+      "faults": true
+    }
+  },
+  "results": {
+    "baseline": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 1016.018,
+            "qualified_b": 343.492,
+            "qualified_on_time": 1359.51,
+            "shipped_a": 1007.472,
+            "shipped_b": 335.928,
+            "shipped_on_time": 1343.4,
+            "shipped_short_a": 147.528,
+            "shipped_short_b": 159.072,
+            "shipped_shortfall": 306.6,
+            "qualified_not_shipped_on_time": 16.11,
+            "late_shipped": 0.0,
+            "dock_backlog": 16.11,
+            "unfinished_production": 474.787,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.062,
+            "peak_actions_per_min": 31.252,
+            "station_five_posture_min": 126.716,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 17.715,
+            "wait_kit_min": 0.0,
+            "transfer_m": 37294.471,
+            "second_attempts": 3.773,
+            "second_passes": 1.655
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 573.833,
+            "qualified_b": 208.388,
+            "qualified_on_time": 782.222,
+            "shipped_a": 559.597,
+            "shipped_b": 207.252,
+            "shipped_on_time": 766.848,
+            "shipped_short_a": 595.403,
+            "shipped_short_b": 287.748,
+            "shipped_shortfall": 883.152,
+            "qualified_not_shipped_on_time": 15.373,
+            "late_shipped": 485.38,
+            "dock_backlog": 15.373,
+            "unfinished_production": 1029.462,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.273,
+            "peak_actions_per_min": 29.933,
+            "station_five_posture_min": 122.715,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 16.053,
+            "wait_kit_min": 0.0,
+            "transfer_m": 35163.84,
+            "second_attempts": 10.592,
+            "second_passes": 4.762
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 171.6,
+            "qualified_b": 11.66,
+            "qualified_on_time": 183.26,
+            "shipped_a": 158.663,
+            "shipped_b": 8.675,
+            "shipped_on_time": 167.338,
+            "shipped_short_a": 996.337,
+            "shipped_short_b": 486.325,
+            "shipped_shortfall": 1482.662,
+            "qualified_not_shipped_on_time": 15.922,
+            "late_shipped": 985.983,
+            "dock_backlog": 16.435,
+            "unfinished_production": 1662.328,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.276,
+            "peak_actions_per_min": 27.608,
+            "station_five_posture_min": 112.498,
+            "ergonomics_pass": 0.002,
+            "logistics_bins": 15.158,
+            "wait_kit_min": 0.0,
+            "transfer_m": 32705.925,
+            "second_attempts": 16.04,
+            "second_passes": 7.207
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 0.0,
+            "qualified_b": 0.0,
+            "qualified_on_time": 0.0,
+            "shipped_a": 0.0,
+            "shipped_b": 0.0,
+            "shipped_on_time": 0.0,
+            "shipped_short_a": 1155.0,
+            "shipped_short_b": 495.0,
+            "shipped_shortfall": 1650.0,
+            "qualified_not_shipped_on_time": 0.0,
+            "late_shipped": 1123.148,
+            "dock_backlog": 13.877,
+            "unfinished_production": 2320.6,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.026,
+            "peak_actions_per_min": 27.543,
+            "station_five_posture_min": 112.546,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 13.033,
+            "wait_kit_min": 0.0,
+            "transfer_m": 32504.212,
+            "second_attempts": 17.26,
+            "second_passes": 7.835
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "zero_buffer": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 772.12,
+            "qualified_b": 315.267,
+            "qualified_on_time": 1087.387,
+            "shipped_a": 769.217,
+            "shipped_b": 305.072,
+            "shipped_on_time": 1074.288,
+            "shipped_short_a": 385.783,
+            "shipped_short_b": 189.928,
+            "shipped_shortfall": 575.712,
+            "qualified_not_shipped_on_time": 13.098,
+            "late_shipped": 0.0,
+            "dock_backlog": 13.098,
+            "unfinished_production": 750.1,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.038,
+            "peak_actions_per_min": 25.179,
+            "station_five_posture_min": 102.663,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 14.843,
+            "wait_kit_min": 0.0,
+            "transfer_m": 29796.923,
+            "second_attempts": 3.02,
+            "second_passes": 1.322
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": -272.123,
+              "ci95": [
+                -272.846,
+                -271.401
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": -269.112,
+              "ci95": [
+                -269.834,
+                -268.389
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 269.112,
+              "ci95": [
+                268.389,
+                269.834
+              ],
+              "lower_above_zero": true
+            },
+            "dock_backlog": {
+              "mean": -3.012,
+              "ci95": [
+                -3.2,
+                -2.823
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 248.383,
+            "qualified_b": 37.737,
+            "qualified_on_time": 286.12,
+            "shipped_a": 245.563,
+            "shipped_b": 28.207,
+            "shipped_on_time": 273.77,
+            "shipped_short_a": 909.437,
+            "shipped_short_b": 466.793,
+            "shipped_shortfall": 1376.23,
+            "qualified_not_shipped_on_time": 12.35,
+            "late_shipped": 754.492,
+            "dock_backlog": 12.35,
+            "unfinished_production": 1554.512,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.201,
+            "peak_actions_per_min": 23.755,
+            "station_five_posture_min": 96.483,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 13.155,
+            "wait_kit_min": 0.0,
+            "transfer_m": 28269.137,
+            "second_attempts": 4.39,
+            "second_passes": 2.027
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": -496.102,
+              "ci95": [
+                -498.393,
+                -493.81
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": -493.078,
+              "ci95": [
+                -495.326,
+                -490.831
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 493.078,
+              "ci95": [
+                490.831,
+                495.326
+              ],
+              "lower_above_zero": true
+            },
+            "dock_backlog": {
+              "mean": -3.023,
+              "ci95": [
+                -3.336,
+                -2.711
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 0.0,
+            "qualified_b": 0.0,
+            "qualified_on_time": 0.0,
+            "shipped_a": 0.0,
+            "shipped_b": 0.0,
+            "shipped_on_time": 0.0,
+            "shipped_short_a": 1155.0,
+            "shipped_short_b": 495.0,
+            "shipped_shortfall": 1650.0,
+            "qualified_not_shipped_on_time": 0.0,
+            "late_shipped": 963.96,
+            "dock_backlog": 12.528,
+            "unfinished_production": 2378.6,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.323,
+            "peak_actions_per_min": 23.452,
+            "station_five_posture_min": 95.599,
+            "ergonomics_pass": 0.055,
+            "logistics_bins": 11.155,
+            "wait_kit_min": 0.0,
+            "transfer_m": 27770.506,
+            "second_attempts": 15.402,
+            "second_passes": 6.873
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": -183.26,
+              "ci95": [
+                -190.714,
+                -175.806
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": -167.338,
+              "ci95": [
+                -174.748,
+                -159.928
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 167.338,
+              "ci95": [
+                159.928,
+                174.748
+              ],
+              "lower_above_zero": true
+            },
+            "dock_backlog": {
+              "mean": -3.907,
+              "ci95": [
+                -4.168,
+                -3.645
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 0.0,
+            "qualified_b": 0.0,
+            "qualified_on_time": 0.0,
+            "shipped_a": 0.0,
+            "shipped_b": 0.0,
+            "shipped_on_time": 0.0,
+            "shipped_short_a": 1155.0,
+            "shipped_short_b": 495.0,
+            "shipped_shortfall": 1650.0,
+            "qualified_not_shipped_on_time": 0.0,
+            "late_shipped": 1038.15,
+            "dock_backlog": 12.168,
+            "unfinished_production": 3144.42,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 17.999,
+            "peak_actions_per_min": 24.883,
+            "station_five_posture_min": 101.678,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 13.985,
+            "wait_kit_min": 0.0,
+            "transfer_m": 29364.929,
+            "second_attempts": 11.395,
+            "second_passes": 5.21
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": -1.708,
+              "ci95": [
+                -2.22,
+                -1.197
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "two_per_gap": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 1020.218,
+            "qualified_b": 354.343,
+            "qualified_on_time": 1374.562,
+            "shipped_a": 1014.82,
+            "shipped_b": 343.072,
+            "shipped_on_time": 1357.892,
+            "shipped_short_a": 140.18,
+            "shipped_short_b": 151.928,
+            "shipped_shortfall": 292.108,
+            "qualified_not_shipped_on_time": 16.67,
+            "late_shipped": 0.0,
+            "dock_backlog": 16.67,
+            "unfinished_production": 459.53,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.072,
+            "peak_actions_per_min": 31.667,
+            "station_five_posture_min": 128.515,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 17.955,
+            "wait_kit_min": 0.0,
+            "transfer_m": 37761.026,
+            "second_attempts": 3.815,
+            "second_passes": 1.668
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 15.052,
+              "ci95": [
+                14.876,
+                15.227
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 14.492,
+              "ci95": [
+                14.332,
+                14.652
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -14.492,
+              "ci95": [
+                -14.652,
+                -14.332
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.56,
+              "ci95": [
+                0.349,
+                0.771
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 603.993,
+            "qualified_b": 209.792,
+            "qualified_on_time": 813.785,
+            "shipped_a": 588.812,
+            "shipped_b": 209.315,
+            "shipped_on_time": 798.127,
+            "shipped_short_a": 566.188,
+            "shipped_short_b": 285.685,
+            "shipped_shortfall": 851.873,
+            "qualified_not_shipped_on_time": 15.658,
+            "late_shipped": 470.888,
+            "dock_backlog": 15.658,
+            "unfinished_production": 995.795,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.298,
+            "peak_actions_per_min": 30.267,
+            "station_five_posture_min": 123.836,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 16.26,
+            "wait_kit_min": 0.0,
+            "transfer_m": 35662.2,
+            "second_attempts": 11.107,
+            "second_passes": 4.968
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 31.563,
+              "ci95": [
+                31.111,
+                32.015
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 31.278,
+              "ci95": [
+                30.864,
+                31.693
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -31.278,
+              "ci95": [
+                -31.693,
+                -30.864
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.285,
+              "ci95": [
+                0.045,
+                0.525
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 204.472,
+            "qualified_b": 25.003,
+            "qualified_on_time": 229.475,
+            "shipped_a": 193.038,
+            "shipped_b": 20.24,
+            "shipped_on_time": 213.278,
+            "shipped_short_a": 961.962,
+            "shipped_short_b": 474.76,
+            "shipped_shortfall": 1436.722,
+            "qualified_not_shipped_on_time": 16.197,
+            "late_shipped": 955.635,
+            "dock_backlog": 16.372,
+            "unfinished_production": 1613.89,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.305,
+            "peak_actions_per_min": 28.003,
+            "station_five_posture_min": 114.251,
+            "ergonomics_pass": 0.002,
+            "logistics_bins": 15.285,
+            "wait_kit_min": 0.0,
+            "transfer_m": 33113.144,
+            "second_attempts": 15.86,
+            "second_passes": 7.152
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 46.215,
+              "ci95": [
+                45.002,
+                47.428
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 45.94,
+              "ci95": [
+                44.682,
+                47.198
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -45.94,
+              "ci95": [
+                -47.198,
+                -44.682
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": -0.063,
+              "ci95": [
+                -0.262,
+                0.136
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 0.0,
+            "qualified_b": 0.0,
+            "qualified_on_time": 0.0,
+            "shipped_a": 0.0,
+            "shipped_b": 0.0,
+            "shipped_on_time": 0.0,
+            "shipped_short_a": 1155.0,
+            "shipped_short_b": 495.0,
+            "shipped_shortfall": 1650.0,
+            "qualified_not_shipped_on_time": 0.0,
+            "late_shipped": 1129.727,
+            "dock_backlog": 14.267,
+            "unfinished_production": 2263.968,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.023,
+            "peak_actions_per_min": 27.726,
+            "station_five_posture_min": 113.335,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 13.097,
+            "wait_kit_min": 0.0,
+            "transfer_m": 32701.99,
+            "second_attempts": 17.705,
+            "second_passes": 8.038
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.39,
+              "ci95": [
+                0.049,
+                0.731
+              ],
+              "lower_above_zero": true
+            }
+          }
+        }
+      }
+    },
+    "compact_layout": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 1107.412,
+            "qualified_b": 438.593,
+            "qualified_on_time": 1546.005,
+            "shipped_a": 1088.027,
+            "shipped_b": 438.087,
+            "shipped_on_time": 1526.113,
+            "shipped_short_a": 67.68,
+            "shipped_short_b": 56.913,
+            "shipped_shortfall": 124.593,
+            "qualified_not_shipped_on_time": 19.892,
+            "late_shipped": 0.0,
+            "dock_backlog": 19.892,
+            "unfinished_production": 286.147,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.114,
+            "peak_actions_per_min": 35.74,
+            "station_five_posture_min": 145.547,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 19.417,
+            "wait_kit_min": 0.0,
+            "transfer_m": 21980.347,
+            "second_attempts": 4.27,
+            "second_passes": 1.868
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 186.495,
+              "ci95": [
+                185.464,
+                187.526
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 182.713,
+              "ci95": [
+                181.726,
+                183.701
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -182.007,
+              "ci95": [
+                -182.923,
+                -181.09
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 3.782,
+              "ci95": [
+                3.599,
+                3.964
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 811.555,
+            "qualified_b": 308.708,
+            "qualified_on_time": 1120.263,
+            "shipped_a": 797.037,
+            "shipped_b": 306.327,
+            "shipped_on_time": 1103.363,
+            "shipped_short_a": 357.963,
+            "shipped_short_b": 188.673,
+            "shipped_shortfall": 546.637,
+            "qualified_not_shipped_on_time": 16.9,
+            "late_shipped": 302.667,
+            "dock_backlog": 16.9,
+            "unfinished_production": 668.683,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.291,
+            "peak_actions_per_min": 33.732,
+            "station_five_posture_min": 137.713,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 18.123,
+            "wait_kit_min": 0.782,
+            "transfer_m": 20666.658,
+            "second_attempts": 15.705,
+            "second_passes": 7.103
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 338.042,
+              "ci95": [
+                335.061,
+                341.023
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 336.515,
+              "ci95": [
+                333.713,
+                339.317
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -336.515,
+              "ci95": [
+                -339.317,
+                -333.713
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 1.527,
+              "ci95": [
+                1.091,
+                1.962
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 517.283,
+            "qualified_b": 167.86,
+            "qualified_on_time": 685.143,
+            "shipped_a": 504.337,
+            "shipped_b": 163.933,
+            "shipped_on_time": 668.27,
+            "shipped_short_a": 650.663,
+            "shipped_short_b": 331.067,
+            "shipped_shortfall": 981.73,
+            "qualified_not_shipped_on_time": 16.873,
+            "late_shipped": 650.932,
+            "dock_backlog": 16.873,
+            "unfinished_production": 1132.895,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.355,
+            "peak_actions_per_min": 31.61,
+            "station_five_posture_min": 128.933,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 17.055,
+            "wait_kit_min": 0.0,
+            "transfer_m": 19392.017,
+            "second_attempts": 16.788,
+            "second_passes": 7.605
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 501.883,
+              "ci95": [
+                493.569,
+                510.198
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 500.932,
+              "ci95": [
+                492.661,
+                509.202
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -500.932,
+              "ci95": [
+                -509.202,
+                -492.661
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.438,
+              "ci95": [
+                0.05,
+                0.826
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 202.302,
+            "qualified_b": 41.153,
+            "qualified_on_time": 243.455,
+            "shipped_a": 190.783,
+            "shipped_b": 37.035,
+            "shipped_on_time": 227.818,
+            "shipped_short_a": 964.217,
+            "shipped_short_b": 457.965,
+            "shipped_shortfall": 1422.182,
+            "qualified_not_shipped_on_time": 15.637,
+            "late_shipped": 1065.202,
+            "dock_backlog": 18.948,
+            "unfinished_production": 1622.043,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 17.962,
+            "peak_actions_per_min": 30.96,
+            "station_five_posture_min": 126.412,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 16.348,
+            "wait_kit_min": 0.0,
+            "transfer_m": 18964.18,
+            "second_attempts": 17.033,
+            "second_passes": 7.643
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 243.455,
+              "ci95": [
+                227.809,
+                259.101
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 227.818,
+              "ci95": [
+                212.509,
+                243.128
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -227.818,
+              "ci95": [
+                -243.128,
+                -212.509
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 5.072,
+              "ci95": [
+                4.626,
+                5.518
+              ],
+              "lower_above_zero": true
+            }
+          }
+        }
+      }
+    },
+    "symmetric_setup": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 1016.065,
+            "qualified_b": 344.197,
+            "qualified_on_time": 1360.262,
+            "shipped_a": 1007.533,
+            "shipped_b": 336.347,
+            "shipped_on_time": 1343.88,
+            "shipped_short_a": 147.467,
+            "shipped_short_b": 158.653,
+            "shipped_shortfall": 306.12,
+            "qualified_not_shipped_on_time": 16.382,
+            "late_shipped": 0.0,
+            "dock_backlog": 16.382,
+            "unfinished_production": 474.01,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.066,
+            "peak_actions_per_min": 31.273,
+            "station_five_posture_min": 126.808,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 17.72,
+            "wait_kit_min": 0.0,
+            "transfer_m": 37316.385,
+            "second_attempts": 3.778,
+            "second_passes": 1.655
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.752,
+              "ci95": [
+                0.685,
+                0.818
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 0.48,
+              "ci95": [
+                0.413,
+                0.547
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -0.48,
+              "ci95": [
+                -0.547,
+                -0.413
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.272,
+              "ci95": [
+                0.208,
+                0.335
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 574.117,
+            "qualified_b": 208.458,
+            "qualified_on_time": 782.575,
+            "shipped_a": 559.828,
+            "shipped_b": 207.373,
+            "shipped_on_time": 767.202,
+            "shipped_short_a": 595.172,
+            "shipped_short_b": 287.627,
+            "shipped_shortfall": 882.798,
+            "qualified_not_shipped_on_time": 15.373,
+            "late_shipped": 484.9,
+            "dock_backlog": 15.373,
+            "unfinished_production": 1029.087,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.267,
+            "peak_actions_per_min": 29.919,
+            "station_five_posture_min": 122.65,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 16.055,
+            "wait_kit_min": 0.0,
+            "transfer_m": 35150.411,
+            "second_attempts": 10.597,
+            "second_passes": 4.767
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.353,
+              "ci95": [
+                0.265,
+                0.442
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 0.353,
+              "ci95": [
+                0.268,
+                0.439
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -0.353,
+              "ci95": [
+                -0.439,
+                -0.268
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.0,
+              "ci95": [
+                -0.061,
+                0.061
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 171.917,
+            "qualified_b": 11.947,
+            "qualified_on_time": 183.863,
+            "shipped_a": 158.993,
+            "shipped_b": 8.948,
+            "shipped_on_time": 167.942,
+            "shipped_short_a": 996.007,
+            "shipped_short_b": 486.052,
+            "shipped_shortfall": 1482.058,
+            "qualified_not_shipped_on_time": 15.922,
+            "late_shipped": 985.703,
+            "dock_backlog": 16.408,
+            "unfinished_production": 1661.67,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.27,
+            "peak_actions_per_min": 27.618,
+            "station_five_posture_min": 112.543,
+            "ergonomics_pass": 0.002,
+            "logistics_bins": 15.162,
+            "wait_kit_min": 0.0,
+            "transfer_m": 32716.747,
+            "second_attempts": 16.032,
+            "second_passes": 7.203
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.603,
+              "ci95": [
+                0.469,
+                0.737
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 0.603,
+              "ci95": [
+                0.465,
+                0.742
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -0.603,
+              "ci95": [
+                -0.742,
+                -0.465
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": -0.027,
+              "ci95": [
+                -0.096,
+                0.042
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 0.0,
+            "qualified_b": 0.0,
+            "qualified_on_time": 0.0,
+            "shipped_a": 0.0,
+            "shipped_b": 0.0,
+            "shipped_on_time": 0.0,
+            "shipped_short_a": 1155.0,
+            "shipped_short_b": 495.0,
+            "shipped_shortfall": 1650.0,
+            "qualified_not_shipped_on_time": 0.0,
+            "late_shipped": 1123.275,
+            "dock_backlog": 13.842,
+            "unfinished_production": 2319.793,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.021,
+            "peak_actions_per_min": 27.546,
+            "station_five_posture_min": 112.559,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 13.037,
+            "wait_kit_min": 0.0,
+            "transfer_m": 32507.298,
+            "second_attempts": 17.267,
+            "second_passes": 7.84
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": -0.035,
+              "ci95": [
+                -0.129,
+                0.059
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "no_fault": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 1016.018,
+            "qualified_b": 343.492,
+            "qualified_on_time": 1359.51,
+            "shipped_a": 1007.472,
+            "shipped_b": 335.928,
+            "shipped_on_time": 1343.4,
+            "shipped_short_a": 147.528,
+            "shipped_short_b": 159.072,
+            "shipped_shortfall": 306.6,
+            "qualified_not_shipped_on_time": 16.11,
+            "late_shipped": 0.0,
+            "dock_backlog": 16.11,
+            "unfinished_production": 474.787,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.062,
+            "peak_actions_per_min": 31.252,
+            "station_five_posture_min": 126.716,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 17.715,
+            "wait_kit_min": 0.0,
+            "transfer_m": 37294.471,
+            "second_attempts": 3.773,
+            "second_passes": 1.655
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 640.672,
+            "qualified_b": 210.402,
+            "qualified_on_time": 851.073,
+            "shipped_a": 625.202,
+            "shipped_b": 210.26,
+            "shipped_on_time": 835.462,
+            "shipped_short_a": 529.798,
+            "shipped_short_b": 284.74,
+            "shipped_shortfall": 814.538,
+            "qualified_not_shipped_on_time": 15.612,
+            "late_shipped": 485.38,
+            "dock_backlog": 15.612,
+            "unfinished_production": 956.027,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.089,
+            "peak_actions_per_min": 31.499,
+            "station_five_posture_min": 128.822,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 16.882,
+            "wait_kit_min": 0.0,
+            "transfer_m": 37131.526,
+            "second_attempts": 11.778,
+            "second_passes": 5.27
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 68.852,
+              "ci95": [
+                67.184,
+                70.519
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 68.613,
+              "ci95": [
+                66.977,
+                70.25
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -68.613,
+              "ci95": [
+                -70.25,
+                -66.977
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.238,
+              "ci95": [
+                -0.033,
+                0.51
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 254.54,
+            "qualified_b": 53.523,
+            "qualified_on_time": 308.063,
+            "shipped_a": 243.998,
+            "shipped_b": 48.217,
+            "shipped_on_time": 292.215,
+            "shipped_short_a": 911.002,
+            "shipped_short_b": 446.783,
+            "shipped_shortfall": 1357.785,
+            "qualified_not_shipped_on_time": 15.848,
+            "late_shipped": 918.833,
+            "dock_backlog": 15.848,
+            "unfinished_production": 1531.707,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 17.963,
+            "peak_actions_per_min": 29.085,
+            "station_five_posture_min": 118.897,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 15.723,
+            "wait_kit_min": 0.0,
+            "transfer_m": 34298.761,
+            "second_attempts": 16.027,
+            "second_passes": 7.252
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 124.803,
+              "ci95": [
+                121.0,
+                128.606
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 124.877,
+              "ci95": [
+                121.068,
+                128.686
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -124.877,
+              "ci95": [
+                -128.686,
+                -121.068
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": -0.587,
+              "ci95": [
+                -0.82,
+                -0.353
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 0.148,
+            "qualified_b": 0.0,
+            "qualified_on_time": 0.148,
+            "shipped_a": 0.088,
+            "shipped_b": 0.0,
+            "shipped_on_time": 0.088,
+            "shipped_short_a": 1154.912,
+            "shipped_short_b": 495.0,
+            "shipped_shortfall": 1649.912,
+            "qualified_not_shipped_on_time": 0.06,
+            "late_shipped": 1119.302,
+            "dock_backlog": 14.702,
+            "unfinished_production": 2191.058,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.011,
+            "peak_actions_per_min": 27.408,
+            "station_five_posture_min": 111.95,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 12.935,
+            "wait_kit_min": 0.0,
+            "transfer_m": 32361.721,
+            "second_attempts": 17.805,
+            "second_passes": 8.063
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.148,
+              "ci95": [
+                -0.064,
+                0.361
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.088,
+              "ci95": [
+                -0.047,
+                0.224
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": -0.088,
+              "ci95": [
+                -0.224,
+                0.047
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.825,
+              "ci95": [
+                0.427,
+                1.223
+              ],
+              "lower_above_zero": true
+            }
+          }
+        }
+      }
+    },
+    "no_second_repair": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 1014.773,
+            "qualified_b": 343.082,
+            "qualified_on_time": 1357.855,
+            "shipped_a": 1006.243,
+            "shipped_b": 335.525,
+            "shipped_on_time": 1341.768,
+            "shipped_short_a": 148.757,
+            "shipped_short_b": 159.475,
+            "shipped_shortfall": 308.232,
+            "qualified_not_shipped_on_time": 16.087,
+            "late_shipped": 0.0,
+            "dock_backlog": 16.087,
+            "unfinished_production": 474.752,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.062,
+            "peak_actions_per_min": 31.252,
+            "station_five_posture_min": 126.716,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 17.715,
+            "wait_kit_min": 0.0,
+            "transfer_m": 37294.471,
+            "second_attempts": 0.0,
+            "second_passes": 0.0
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": -1.655,
+              "ci95": [
+                -1.759,
+                -1.551
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": -1.632,
+              "ci95": [
+                -1.735,
+                -1.528
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 1.632,
+              "ci95": [
+                1.528,
+                1.735
+              ],
+              "lower_above_zero": true
+            },
+            "dock_backlog": {
+              "mean": -0.023,
+              "ci95": [
+                -0.035,
+                -0.011
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 571.005,
+            "qualified_b": 207.182,
+            "qualified_on_time": 778.187,
+            "shipped_a": 556.83,
+            "shipped_b": 206.075,
+            "shipped_on_time": 762.905,
+            "shipped_short_a": 598.17,
+            "shipped_short_b": 288.925,
+            "shipped_shortfall": 887.095,
+            "qualified_not_shipped_on_time": 15.282,
+            "late_shipped": 484.63,
+            "dock_backlog": 15.282,
+            "unfinished_production": 1029.303,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.273,
+            "peak_actions_per_min": 29.933,
+            "station_five_posture_min": 122.715,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 16.053,
+            "wait_kit_min": 0.0,
+            "transfer_m": 35163.84,
+            "second_attempts": 0.0,
+            "second_passes": 0.0
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": -4.035,
+              "ci95": [
+                -4.27,
+                -3.8
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": -3.943,
+              "ci95": [
+                -4.174,
+                -3.712
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 3.943,
+              "ci95": [
+                3.712,
+                4.174
+              ],
+              "lower_above_zero": true
+            },
+            "dock_backlog": {
+              "mean": -0.092,
+              "ci95": [
+                -0.115,
+                -0.069
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 171.115,
+            "qualified_b": 11.633,
+            "qualified_on_time": 182.748,
+            "shipped_a": 158.215,
+            "shipped_b": 8.653,
+            "shipped_on_time": 166.868,
+            "shipped_short_a": 996.785,
+            "shipped_short_b": 486.347,
+            "shipped_shortfall": 1483.132,
+            "qualified_not_shipped_on_time": 15.88,
+            "late_shipped": 979.202,
+            "dock_backlog": 16.388,
+            "unfinished_production": 1662.242,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.276,
+            "peak_actions_per_min": 27.608,
+            "station_five_posture_min": 112.498,
+            "ergonomics_pass": 0.002,
+            "logistics_bins": 15.158,
+            "wait_kit_min": 0.0,
+            "transfer_m": 32705.925,
+            "second_attempts": 0.0,
+            "second_passes": 0.0
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": -0.512,
+              "ci95": [
+                -0.571,
+                -0.452
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": -0.47,
+              "ci95": [
+                -0.527,
+                -0.413
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.47,
+              "ci95": [
+                0.413,
+                0.527
+              ],
+              "lower_above_zero": true
+            },
+            "dock_backlog": {
+              "mean": -0.047,
+              "ci95": [
+                -0.064,
+                -0.03
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 0.0,
+            "qualified_b": 0.0,
+            "qualified_on_time": 0.0,
+            "shipped_a": 0.0,
+            "shipped_b": 0.0,
+            "shipped_on_time": 0.0,
+            "shipped_short_a": 1155.0,
+            "shipped_short_b": 495.0,
+            "shipped_shortfall": 1650.0,
+            "qualified_not_shipped_on_time": 0.0,
+            "late_shipped": 1115.352,
+            "dock_backlog": 13.792,
+            "unfinished_production": 2320.425,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.026,
+            "peak_actions_per_min": 27.543,
+            "station_five_posture_min": 112.546,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 13.033,
+            "wait_kit_min": 0.0,
+            "transfer_m": 32504.212,
+            "second_attempts": 0.0,
+            "second_passes": 0.0
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": -0.085,
+              "ci95": [
+                -0.107,
+                -0.063
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "slow_kanban": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 1014.735,
+            "qualified_b": 340.658,
+            "qualified_on_time": 1355.393,
+            "shipped_a": 1005.092,
+            "shipped_b": 334.113,
+            "shipped_on_time": 1339.205,
+            "shipped_short_a": 149.908,
+            "shipped_short_b": 160.887,
+            "shipped_shortfall": 310.795,
+            "qualified_not_shipped_on_time": 16.188,
+            "late_shipped": 0.0,
+            "dock_backlog": 16.188,
+            "unfinished_production": 478.96,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.073,
+            "peak_actions_per_min": 31.146,
+            "station_five_posture_min": 126.258,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 17.397,
+            "wait_kit_min": 0.0,
+            "transfer_m": 37181.447,
+            "second_attempts": 3.76,
+            "second_passes": 1.645
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": -4.117,
+              "ci95": [
+                -4.324,
+                -3.91
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": -4.195,
+              "ci95": [
+                -4.396,
+                -3.994
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 4.195,
+              "ci95": [
+                3.994,
+                4.396
+              ],
+              "lower_above_zero": true
+            },
+            "dock_backlog": {
+              "mean": 0.078,
+              "ci95": [
+                -0.05,
+                0.207
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 569.647,
+            "qualified_b": 208.313,
+            "qualified_on_time": 777.96,
+            "shipped_a": 555.473,
+            "shipped_b": 207.065,
+            "shipped_on_time": 762.538,
+            "shipped_short_a": 599.527,
+            "shipped_short_b": 287.935,
+            "shipped_shortfall": 887.462,
+            "qualified_not_shipped_on_time": 15.422,
+            "late_shipped": 489.575,
+            "dock_backlog": 15.422,
+            "unfinished_production": 1033.985,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.28,
+            "peak_actions_per_min": 29.94,
+            "station_five_posture_min": 122.789,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 16.317,
+            "wait_kit_min": 0.0,
+            "transfer_m": 35151.872,
+            "second_attempts": 10.533,
+            "second_passes": 4.738
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": -4.262,
+              "ci95": [
+                -4.517,
+                -4.007
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": -4.31,
+              "ci95": [
+                -4.565,
+                -4.055
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 4.31,
+              "ci95": [
+                4.055,
+                4.565
+              ],
+              "lower_above_zero": true
+            },
+            "dock_backlog": {
+              "mean": 0.048,
+              "ci95": [
+                -0.079,
+                0.176
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 168.065,
+            "qualified_b": 10.588,
+            "qualified_on_time": 178.653,
+            "shipped_a": 154.968,
+            "shipped_b": 7.778,
+            "shipped_on_time": 162.747,
+            "shipped_short_a": 1000.032,
+            "shipped_short_b": 487.222,
+            "shipped_shortfall": 1487.253,
+            "qualified_not_shipped_on_time": 15.907,
+            "late_shipped": 990.193,
+            "dock_backlog": 16.458,
+            "unfinished_production": 1667.167,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.276,
+            "peak_actions_per_min": 27.597,
+            "station_five_posture_min": 112.434,
+            "ergonomics_pass": 0.003,
+            "logistics_bins": 15.298,
+            "wait_kit_min": 0.0,
+            "transfer_m": 32699.206,
+            "second_attempts": 16.08,
+            "second_passes": 7.225
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": -4.607,
+              "ci95": [
+                -4.961,
+                -4.253
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": -4.592,
+              "ci95": [
+                -4.956,
+                -4.228
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 4.592,
+              "ci95": [
+                4.228,
+                4.956
+              ],
+              "lower_above_zero": true
+            },
+            "dock_backlog": {
+              "mean": 0.023,
+              "ci95": [
+                -0.099,
+                0.146
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 0.0,
+            "qualified_b": 0.0,
+            "qualified_on_time": 0.0,
+            "shipped_a": 0.0,
+            "shipped_b": 0.0,
+            "shipped_on_time": 0.0,
+            "shipped_short_a": 1155.0,
+            "shipped_short_b": 495.0,
+            "shipped_shortfall": 1650.0,
+            "qualified_not_shipped_on_time": 0.0,
+            "late_shipped": 1123.543,
+            "dock_backlog": 13.815,
+            "unfinished_production": 2325.197,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.034,
+            "peak_actions_per_min": 27.549,
+            "station_five_posture_min": 112.562,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 13.208,
+            "wait_kit_min": 0.0,
+            "transfer_m": 32514.907,
+            "second_attempts": 17.218,
+            "second_passes": 7.825
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": -0.062,
+              "ci95": [
+                -0.217,
+                0.094
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "no_route_or_kanban_wait": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 1016.018,
+            "qualified_b": 343.492,
+            "qualified_on_time": 1359.51,
+            "shipped_a": 1007.472,
+            "shipped_b": 335.928,
+            "shipped_on_time": 1343.4,
+            "shipped_short_a": 147.528,
+            "shipped_short_b": 159.072,
+            "shipped_shortfall": 306.6,
+            "qualified_not_shipped_on_time": 16.11,
+            "late_shipped": 0.0,
+            "dock_backlog": 16.11,
+            "unfinished_production": 474.787,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.062,
+            "peak_actions_per_min": 31.252,
+            "station_five_posture_min": 126.716,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 0.0,
+            "wait_kit_min": 0.0,
+            "transfer_m": 37294.471,
+            "second_attempts": 3.773,
+            "second_passes": 1.655
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 573.928,
+            "qualified_b": 208.388,
+            "qualified_on_time": 782.317,
+            "shipped_a": 559.703,
+            "shipped_b": 207.252,
+            "shipped_on_time": 766.955,
+            "shipped_short_a": 595.297,
+            "shipped_short_b": 287.748,
+            "shipped_shortfall": 883.045,
+            "qualified_not_shipped_on_time": 15.362,
+            "late_shipped": 485.38,
+            "dock_backlog": 15.362,
+            "unfinished_production": 1029.357,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.274,
+            "peak_actions_per_min": 29.935,
+            "station_five_posture_min": 122.724,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 0.0,
+            "wait_kit_min": 0.0,
+            "transfer_m": 35166.599,
+            "second_attempts": 10.598,
+            "second_passes": 4.765
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.095,
+              "ci95": [
+                0.039,
+                0.151
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 0.107,
+              "ci95": [
+                0.045,
+                0.168
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -0.107,
+              "ci95": [
+                -0.168,
+                -0.045
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": -0.012,
+              "ci95": [
+                -0.029,
+                0.005
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 171.688,
+            "qualified_b": 11.703,
+            "qualified_on_time": 183.392,
+            "shipped_a": 158.757,
+            "shipped_b": 8.718,
+            "shipped_on_time": 167.475,
+            "shipped_short_a": 996.243,
+            "shipped_short_b": 486.282,
+            "shipped_shortfall": 1482.525,
+            "qualified_not_shipped_on_time": 15.917,
+            "late_shipped": 985.877,
+            "dock_backlog": 16.43,
+            "unfinished_production": 1662.188,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.279,
+            "peak_actions_per_min": 27.609,
+            "station_five_posture_min": 112.502,
+            "ergonomics_pass": 0.002,
+            "logistics_bins": 0.0,
+            "wait_kit_min": 0.0,
+            "transfer_m": 32706.903,
+            "second_attempts": 16.037,
+            "second_passes": 7.203
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.132,
+              "ci95": [
+                0.045,
+                0.218
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 0.137,
+              "ci95": [
+                0.047,
+                0.226
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -0.137,
+              "ci95": [
+                -0.226,
+                -0.047
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": -0.005,
+              "ci95": [
+                -0.026,
+                0.016
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 0.0,
+            "qualified_b": 0.0,
+            "qualified_on_time": 0.0,
+            "shipped_a": 0.0,
+            "shipped_b": 0.0,
+            "shipped_on_time": 0.0,
+            "shipped_short_a": 1155.0,
+            "shipped_short_b": 495.0,
+            "shipped_shortfall": 1650.0,
+            "qualified_not_shipped_on_time": 0.0,
+            "late_shipped": 1123.168,
+            "dock_backlog": 13.887,
+            "unfinished_production": 2320.428,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.026,
+            "peak_actions_per_min": 27.544,
+            "station_five_posture_min": 112.547,
+            "ergonomics_pass": 0.0,
+            "logistics_bins": 0.0,
+            "wait_kit_min": 0.0,
+            "transfer_m": 32504.997,
+            "second_attempts": 17.258,
+            "second_passes": 7.835
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_on_time": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shipped_shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.01,
+              "ci95": [
+                -0.011,
+                0.031
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "compact_with_aid": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 1107.412,
+            "qualified_b": 438.593,
+            "qualified_on_time": 1546.005,
+            "shipped_a": 1088.027,
+            "shipped_b": 438.087,
+            "shipped_on_time": 1526.113,
+            "shipped_short_a": 67.68,
+            "shipped_short_b": 56.913,
+            "shipped_shortfall": 124.593,
+            "qualified_not_shipped_on_time": 19.892,
+            "late_shipped": 0.0,
+            "dock_backlog": 19.892,
+            "unfinished_production": 286.147,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.114,
+            "peak_actions_per_min": 35.74,
+            "station_five_posture_min": 59.702,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 19.417,
+            "wait_kit_min": 0.0,
+            "transfer_m": 21980.347,
+            "second_attempts": 4.27,
+            "second_passes": 1.868
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 186.495,
+              "ci95": [
+                185.464,
+                187.526
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 182.713,
+              "ci95": [
+                181.726,
+                183.701
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -182.007,
+              "ci95": [
+                -182.923,
+                -181.09
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 3.782,
+              "ci95": [
+                3.599,
+                3.964
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 811.555,
+            "qualified_b": 308.708,
+            "qualified_on_time": 1120.263,
+            "shipped_a": 797.037,
+            "shipped_b": 306.327,
+            "shipped_on_time": 1103.363,
+            "shipped_short_a": 357.963,
+            "shipped_short_b": 188.673,
+            "shipped_shortfall": 546.637,
+            "qualified_not_shipped_on_time": 16.9,
+            "late_shipped": 302.667,
+            "dock_backlog": 16.9,
+            "unfinished_production": 668.683,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.291,
+            "peak_actions_per_min": 33.732,
+            "station_five_posture_min": 56.555,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 18.123,
+            "wait_kit_min": 0.782,
+            "transfer_m": 20666.658,
+            "second_attempts": 15.705,
+            "second_passes": 7.103
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 338.042,
+              "ci95": [
+                335.061,
+                341.023
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 336.515,
+              "ci95": [
+                333.713,
+                339.317
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -336.515,
+              "ci95": [
+                -339.317,
+                -333.713
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 1.527,
+              "ci95": [
+                1.091,
+                1.962
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 517.283,
+            "qualified_b": 167.86,
+            "qualified_on_time": 685.143,
+            "shipped_a": 504.337,
+            "shipped_b": 163.933,
+            "shipped_on_time": 668.27,
+            "shipped_short_a": 650.663,
+            "shipped_short_b": 331.067,
+            "shipped_shortfall": 981.73,
+            "qualified_not_shipped_on_time": 16.873,
+            "late_shipped": 650.932,
+            "dock_backlog": 16.873,
+            "unfinished_production": 1132.895,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.355,
+            "peak_actions_per_min": 31.61,
+            "station_five_posture_min": 52.923,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 17.055,
+            "wait_kit_min": 0.0,
+            "transfer_m": 19392.017,
+            "second_attempts": 16.788,
+            "second_passes": 7.605
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 501.883,
+              "ci95": [
+                493.569,
+                510.198
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 500.932,
+              "ci95": [
+                492.661,
+                509.202
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -500.932,
+              "ci95": [
+                -509.202,
+                -492.661
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.438,
+              "ci95": [
+                0.05,
+                0.826
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 202.302,
+            "qualified_b": 41.153,
+            "qualified_on_time": 243.455,
+            "shipped_a": 190.783,
+            "shipped_b": 37.035,
+            "shipped_on_time": 227.818,
+            "shipped_short_a": 964.217,
+            "shipped_short_b": 457.965,
+            "shipped_shortfall": 1422.182,
+            "qualified_not_shipped_on_time": 15.637,
+            "late_shipped": 1065.202,
+            "dock_backlog": 18.948,
+            "unfinished_production": 1622.043,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 17.962,
+            "peak_actions_per_min": 30.96,
+            "station_five_posture_min": 51.92,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 16.348,
+            "wait_kit_min": 0.0,
+            "transfer_m": 18964.18,
+            "second_attempts": 17.033,
+            "second_passes": 7.643
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 243.455,
+              "ci95": [
+                227.809,
+                259.101
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 227.818,
+              "ci95": [
+                212.509,
+                243.128
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -227.818,
+              "ci95": [
+                -243.128,
+                -212.509
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 5.072,
+              "ci95": [
+                4.626,
+                5.518
+              ],
+              "lower_above_zero": true
+            }
+          }
+        }
+      }
+    },
+    "compact_aid_faster_route": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 1107.412,
+            "qualified_b": 438.593,
+            "qualified_on_time": 1546.005,
+            "shipped_a": 1088.027,
+            "shipped_b": 438.087,
+            "shipped_on_time": 1526.113,
+            "shipped_short_a": 67.68,
+            "shipped_short_b": 56.913,
+            "shipped_shortfall": 124.593,
+            "qualified_not_shipped_on_time": 19.892,
+            "late_shipped": 0.0,
+            "dock_backlog": 19.892,
+            "unfinished_production": 286.147,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.114,
+            "peak_actions_per_min": 35.74,
+            "station_five_posture_min": 59.702,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 19.627,
+            "wait_kit_min": 0.0,
+            "transfer_m": 21980.347,
+            "second_attempts": 4.27,
+            "second_passes": 1.868
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 186.495,
+              "ci95": [
+                185.464,
+                187.526
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 182.713,
+              "ci95": [
+                181.726,
+                183.701
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -182.007,
+              "ci95": [
+                -182.923,
+                -181.09
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 3.782,
+              "ci95": [
+                3.599,
+                3.964
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 811.795,
+            "qualified_b": 309.125,
+            "qualified_on_time": 1120.92,
+            "shipped_a": 797.285,
+            "shipped_b": 306.722,
+            "shipped_on_time": 1104.007,
+            "shipped_short_a": 357.715,
+            "shipped_short_b": 188.278,
+            "shipped_shortfall": 545.993,
+            "qualified_not_shipped_on_time": 16.913,
+            "late_shipped": 302.667,
+            "dock_backlog": 16.913,
+            "unfinished_production": 667.982,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.284,
+            "peak_actions_per_min": 33.747,
+            "station_five_posture_min": 56.582,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 18.137,
+            "wait_kit_min": 0.635,
+            "transfer_m": 20675.257,
+            "second_attempts": 15.727,
+            "second_passes": 7.115
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 338.698,
+              "ci95": [
+                335.826,
+                341.571
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 337.158,
+              "ci95": [
+                334.472,
+                339.844
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -337.158,
+              "ci95": [
+                -339.844,
+                -334.472
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 1.54,
+              "ci95": [
+                1.109,
+                1.971
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 517.588,
+            "qualified_b": 168.343,
+            "qualified_on_time": 685.932,
+            "shipped_a": 504.65,
+            "shipped_b": 164.465,
+            "shipped_on_time": 669.115,
+            "shipped_short_a": 650.35,
+            "shipped_short_b": 330.535,
+            "shipped_shortfall": 980.885,
+            "qualified_not_shipped_on_time": 16.817,
+            "late_shipped": 650.288,
+            "dock_backlog": 16.817,
+            "unfinished_production": 1132.028,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.365,
+            "peak_actions_per_min": 31.618,
+            "station_five_posture_min": 52.936,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 17.057,
+            "wait_kit_min": 0.0,
+            "transfer_m": 19396.306,
+            "second_attempts": 16.777,
+            "second_passes": 7.592
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 502.672,
+              "ci95": [
+                494.399,
+                510.945
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 501.777,
+              "ci95": [
+                493.552,
+                510.001
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -501.777,
+              "ci95": [
+                -510.001,
+                -493.552
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.382,
+              "ci95": [
+                -0.005,
+                0.769
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 203.032,
+            "qualified_b": 41.348,
+            "qualified_on_time": 244.38,
+            "shipped_a": 191.623,
+            "shipped_b": 37.153,
+            "shipped_on_time": 228.777,
+            "shipped_short_a": 963.377,
+            "shipped_short_b": 457.847,
+            "shipped_shortfall": 1421.223,
+            "qualified_not_shipped_on_time": 15.603,
+            "late_shipped": 1064.598,
+            "dock_backlog": 18.897,
+            "unfinished_production": 1620.877,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 17.967,
+            "peak_actions_per_min": 30.964,
+            "station_five_posture_min": 51.925,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 16.412,
+            "wait_kit_min": 0.0,
+            "transfer_m": 18967.377,
+            "second_attempts": 17.032,
+            "second_passes": 7.653
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 244.38,
+              "ci95": [
+                228.739,
+                260.021
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 228.777,
+              "ci95": [
+                213.469,
+                244.084
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -228.777,
+              "ci95": [
+                -244.084,
+                -213.469
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 5.02,
+              "ci95": [
+                4.57,
+                5.47
+              ],
+              "lower_above_zero": true
+            }
+          }
+        }
+      }
+    },
+    "compact_aid_faster_single_card": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 1027.9,
+            "qualified_b": 411.312,
+            "qualified_on_time": 1439.212,
+            "shipped_a": 1024.225,
+            "shipped_b": 399.547,
+            "shipped_on_time": 1423.772,
+            "shipped_short_a": 130.775,
+            "shipped_short_b": 95.453,
+            "shipped_shortfall": 226.228,
+            "qualified_not_shipped_on_time": 15.44,
+            "late_shipped": 0.0,
+            "dock_backlog": 15.44,
+            "unfinished_production": 394.157,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 17.253,
+            "peak_actions_per_min": 33.321,
+            "station_five_posture_min": 55.724,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 17.02,
+            "wait_kit_min": 6.915,
+            "transfer_m": 20473.69,
+            "second_attempts": 3.977,
+            "second_passes": 1.748
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 79.702,
+              "ci95": [
+                78.94,
+                80.463
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 80.372,
+              "ci95": [
+                79.64,
+                81.103
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -80.372,
+              "ci95": [
+                -81.103,
+                -79.64
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": -0.67,
+              "ci95": [
+                -0.934,
+                -0.406
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 681.373,
+            "qualified_b": 245.298,
+            "qualified_on_time": 926.672,
+            "shipped_a": 669.247,
+            "shipped_b": 242.052,
+            "shipped_on_time": 911.298,
+            "shipped_short_a": 485.753,
+            "shipped_short_b": 252.948,
+            "shipped_shortfall": 738.702,
+            "qualified_not_shipped_on_time": 15.373,
+            "late_shipped": 405.008,
+            "dock_backlog": 15.373,
+            "unfinished_production": 875.305,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.318,
+            "peak_actions_per_min": 31.371,
+            "station_five_posture_min": 52.479,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 16.59,
+            "wait_kit_min": 7.848,
+            "transfer_m": 19256.726,
+            "second_attempts": 12.76,
+            "second_passes": 5.72
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 144.45,
+              "ci95": [
+                142.824,
+                146.076
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 144.45,
+              "ci95": [
+                142.843,
+                146.057
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -144.45,
+              "ci95": [
+                -146.057,
+                -142.843
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.0,
+              "ci95": [
+                -0.409,
+                0.409
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 300.643,
+            "qualified_b": 92.727,
+            "qualified_on_time": 393.37,
+            "shipped_a": 288.573,
+            "shipped_b": 87.638,
+            "shipped_on_time": 376.212,
+            "shipped_short_a": 866.427,
+            "shipped_short_b": 407.362,
+            "shipped_shortfall": 1273.788,
+            "qualified_not_shipped_on_time": 17.158,
+            "late_shipped": 842.997,
+            "dock_backlog": 17.158,
+            "unfinished_production": 1442.272,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.294,
+            "peak_actions_per_min": 29.275,
+            "station_five_posture_min": 49.161,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 15.877,
+            "wait_kit_min": 7.967,
+            "transfer_m": 17909.167,
+            "second_attempts": 15.8,
+            "second_passes": 7.143
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 210.11,
+              "ci95": [
+                206.016,
+                214.204
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 208.873,
+              "ci95": [
+                204.794,
+                212.953
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -208.873,
+              "ci95": [
+                -212.953,
+                -204.794
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.723,
+              "ci95": [
+                0.403,
+                1.044
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 6.597,
+            "qualified_b": 0.532,
+            "qualified_on_time": 7.128,
+            "shipped_a": 5.257,
+            "shipped_b": 0.438,
+            "shipped_on_time": 5.695,
+            "shipped_short_a": 1149.743,
+            "shipped_short_b": 494.562,
+            "shipped_shortfall": 1644.305,
+            "qualified_not_shipped_on_time": 1.433,
+            "late_shipped": 1164.118,
+            "dock_backlog": 16.502,
+            "unfinished_production": 2049.143,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 17.997,
+            "peak_actions_per_min": 28.49,
+            "station_five_posture_min": 47.746,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 14.128,
+            "wait_kit_min": 7.456,
+            "transfer_m": 17462.741,
+            "second_attempts": 18.395,
+            "second_passes": 8.305
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 7.128,
+              "ci95": [
+                4.689,
+                9.567
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 5.695,
+              "ci95": [
+                3.548,
+                7.842
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -5.695,
+              "ci95": [
+                -7.842,
+                -3.548
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 2.625,
+              "ci95": [
+                2.137,
+                3.113
+              ],
+              "lower_above_zero": true
+            }
+          }
+        }
+      }
+    },
+    "compact_aid_two_per_gap": {
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0.0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 1129.62,
+            "qualified_b": 438.785,
+            "qualified_on_time": 1568.405,
+            "shipped_a": 1109.618,
+            "shipped_b": 438.603,
+            "shipped_on_time": 1548.222,
+            "shipped_short_a": 48.012,
+            "shipped_short_b": 56.397,
+            "shipped_shortfall": 104.408,
+            "qualified_not_shipped_on_time": 20.183,
+            "late_shipped": 0.0,
+            "dock_backlog": 20.183,
+            "unfinished_production": 263.498,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 18.096,
+            "peak_actions_per_min": 36.236,
+            "station_five_posture_min": 60.476,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 19.702,
+            "wait_kit_min": 0.0,
+            "transfer_m": 22317.018,
+            "second_attempts": 4.343,
+            "second_passes": 1.902
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 208.895,
+              "ci95": [
+                207.812,
+                209.978
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 204.822,
+              "ci95": [
+                203.769,
+                205.874
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -202.192,
+              "ci95": [
+                -203.072,
+                -201.312
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 4.073,
+              "ci95": [
+                3.889,
+                4.258
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "2": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 847.895,
+            "qualified_b": 312.245,
+            "qualified_on_time": 1160.14,
+            "shipped_a": 832.083,
+            "shipped_b": 311.075,
+            "shipped_on_time": 1143.158,
+            "shipped_short_a": 322.917,
+            "shipped_short_b": 183.925,
+            "shipped_shortfall": 506.842,
+            "qualified_not_shipped_on_time": 16.982,
+            "late_shipped": 280.558,
+            "dock_backlog": 16.982,
+            "unfinished_production": 626.063,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.267,
+            "peak_actions_per_min": 34.189,
+            "station_five_posture_min": 57.289,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 18.36,
+            "wait_kit_min": 1.25,
+            "transfer_m": 20956.195,
+            "second_attempts": 16.312,
+            "second_passes": 7.38
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 377.918,
+              "ci95": [
+                374.436,
+                381.401
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 376.31,
+              "ci95": [
+                372.998,
+                379.622
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -376.31,
+              "ci95": [
+                -379.622,
+                -372.998
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 1.608,
+              "ci95": [
+                1.148,
+                2.068
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 565.065,
+            "qualified_b": 182.822,
+            "qualified_on_time": 747.887,
+            "shipped_a": 552.58,
+            "shipped_b": 178.578,
+            "shipped_on_time": 731.158,
+            "shipped_short_a": 602.42,
+            "shipped_short_b": 316.422,
+            "shipped_shortfall": 918.842,
+            "qualified_not_shipped_on_time": 16.728,
+            "late_shipped": 611.137,
+            "dock_backlog": 16.728,
+            "unfinished_production": 1065.83,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 39.368,
+            "peak_actions_per_min": 32.209,
+            "station_five_posture_min": 53.982,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 17.323,
+            "wait_kit_min": 0.0,
+            "transfer_m": 19739.612,
+            "second_attempts": 17.123,
+            "second_passes": 7.735
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 564.627,
+              "ci95": [
+                555.679,
+                573.575
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 563.82,
+              "ci95": [
+                554.925,
+                572.715
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -563.82,
+              "ci95": [
+                -572.715,
+                -554.925
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 0.293,
+              "ci95": [
+                -0.1,
+                0.687
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 0,
+          "means": {
+            "qualified_a": 269.068,
+            "qualified_b": 67.247,
+            "qualified_on_time": 336.315,
+            "shipped_a": 256.05,
+            "shipped_b": 62.348,
+            "shipped_on_time": 318.398,
+            "shipped_short_a": 898.95,
+            "shipped_short_b": 432.652,
+            "shipped_shortfall": 1331.602,
+            "qualified_not_shipped_on_time": 17.917,
+            "late_shipped": 1013.532,
+            "dock_backlog": 19.65,
+            "unfinished_production": 1518.073,
+            "receiving_wait_lot_min": 0.0,
+            "incoming_lots": 0.0,
+            "maintenance_block_min": 17.983,
+            "peak_actions_per_min": 31.794,
+            "station_five_posture_min": 53.369,
+            "ergonomics_pass": 1.0,
+            "logistics_bins": 16.873,
+            "wait_kit_min": 0.0,
+            "transfer_m": 19458.228,
+            "second_attempts": 16.47,
+            "second_passes": 7.42
+          },
+          "paired_delta_vs_baseline": {
+            "qualified_on_time": {
+              "mean": 336.315,
+              "ci95": [
+                319.004,
+                353.626
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_on_time": {
+              "mean": 318.398,
+              "ci95": [
+                301.317,
+                335.48
+              ],
+              "lower_above_zero": true
+            },
+            "shipped_shortfall": {
+              "mean": -318.398,
+              "ci95": [
+                -335.48,
+                -301.317
+              ],
+              "lower_above_zero": false
+            },
+            "dock_backlog": {
+              "mean": 5.773,
+              "ci95": [
+                5.35,
+                6.196
+              ],
+              "lower_above_zero": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

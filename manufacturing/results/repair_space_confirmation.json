@@ -1,0 +1,46 @@
+{
+  "holdout": [
+    3000,
+    2026112282
+  ],
+  "slots": [
+    12,
+    32
+  ],
+  "crew": "2x120",
+  "target": 1650,
+  "results": {
+    "12": {
+      "target": 1650,
+      "each_shift": [
+        2853,
+        2721
+      ],
+      "joint_hits": 2665,
+      "lower": 0.876516,
+      "accepted": false,
+      "rescued": 0,
+      "lost": 0,
+      "mean_blocked_min": [
+        11.273,
+        11.278
+      ]
+    },
+    "32": {
+      "target": 1650,
+      "each_shift": [
+        2944,
+        2925
+      ],
+      "joint_hits": 2895,
+      "lower": 0.957787,
+      "accepted": true,
+      "rescued": 230,
+      "lost": 0,
+      "mean_blocked_min": [
+        1.094,
+        1.167
+      ]
+    }
+  }
+}

@@ -1,0 +1,4504 @@
+{
+  "case": "Mitchell",
+  "assembly_plan": [
+    [
+      1,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      2,
+      6,
+      8
+    ],
+    [
+      9,
+      11,
+      12,
+      13
+    ],
+    [
+      10,
+      15,
+      16,
+      18
+    ],
+    [
+      17
+    ],
+    [
+      21,
+      19,
+      20
+    ]
+  ],
+  "joint_target_by_sku": [
+    1155,
+    495
+  ],
+  "adverse_shifts": [
+    2,
+    3
+  ],
+  "design": {
+    "n": 120,
+    "seed": 2026112291
+  },
+  "evaluation": {
+    "n": 600,
+    "seed": 2026112292,
+    "alpha_per_policy": 0.004545454545454546
+  },
+  "design_candidates": {
+    "fifo_cover0_test1_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "fifo",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        0,
+        -80649
+      ]
+    },
+    "fifo_cover0_test1_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "fifo",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        1,
+        -53489
+      ]
+    },
+    "fifo_cover0_test2_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "fifo",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        0,
+        -80649
+      ]
+    },
+    "fifo_cover0_test2_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "fifo",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        1,
+        -53489
+      ]
+    },
+    "fifo_cover1_test1_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "fifo",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        0,
+        -72651
+      ]
+    },
+    "fifo_cover1_test1_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "fifo",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        1,
+        2,
+        -44244
+      ]
+    },
+    "fifo_cover1_test2_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "fifo",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        0,
+        -72651
+      ]
+    },
+    "fifo_cover1_test2_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "fifo",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        1,
+        2,
+        -44244
+      ]
+    },
+    "ready_cover0_test1_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "ready",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        1,
+        3,
+        -44171
+      ]
+    },
+    "ready_cover0_test1_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "ready",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        2,
+        6,
+        -32437
+      ]
+    },
+    "ready_cover0_test2_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "ready",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        1,
+        3,
+        -44171
+      ]
+    },
+    "ready_cover0_test2_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "ready",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        2,
+        6,
+        -32437
+      ]
+    },
+    "ready_cover1_test1_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "ready",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        3,
+        5,
+        -36212
+      ]
+    },
+    "ready_cover1_test1_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "ready",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        6,
+        13,
+        -22665
+      ]
+    },
+    "ready_cover1_test2_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "ready",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        3,
+        5,
+        -36212
+      ]
+    },
+    "ready_cover1_test2_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "ready",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        6,
+        13,
+        -22665
+      ]
+    },
+    "campaign_40_cover0_test1_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "campaign",
+        "max_run": 40,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        0,
+        -75786
+      ]
+    },
+    "campaign_40_cover0_test1_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "campaign",
+        "max_run": 40,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        0,
+        -73566
+      ]
+    },
+    "campaign_40_cover0_test2_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "campaign",
+        "max_run": 40,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        0,
+        -75786
+      ]
+    },
+    "campaign_40_cover0_test2_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "campaign",
+        "max_run": 40,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        0,
+        -73566
+      ]
+    },
+    "campaign_40_cover1_test1_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "campaign",
+        "max_run": 40,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        0,
+        -75294
+      ]
+    },
+    "campaign_40_cover1_test1_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "campaign",
+        "max_run": 40,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        0,
+        -72997
+      ]
+    },
+    "campaign_40_cover1_test2_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "campaign",
+        "max_run": 40,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        0,
+        -75294
+      ]
+    },
+    "campaign_40_cover1_test2_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "campaign",
+        "max_run": 40,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        0,
+        0,
+        -72997
+      ]
+    },
+    "campaign_80_cover0_test1_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "campaign",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        1,
+        1,
+        -58103
+      ]
+    },
+    "campaign_80_cover0_test1_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "campaign",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        1,
+        1,
+        -52391
+      ]
+    },
+    "campaign_80_cover0_test2_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "campaign",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        1,
+        1,
+        -58103
+      ]
+    },
+    "campaign_80_cover0_test2_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "campaign",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        1,
+        1,
+        -52391
+      ]
+    },
+    "campaign_80_cover1_test1_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "campaign",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        1,
+        1,
+        -57668
+      ]
+    },
+    "campaign_80_cover1_test1_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "campaign",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        4,
+        4,
+        -52520
+      ]
+    },
+    "campaign_80_cover1_test2_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "campaign",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        1,
+        1,
+        -57668
+      ]
+    },
+    "campaign_80_cover1_test2_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "campaign",
+        "max_run": 80,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        4,
+        4,
+        -52520
+      ]
+    },
+    "campaign_120_cover0_test1_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "campaign",
+        "max_run": 120,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        2,
+        2,
+        -53919
+      ]
+    },
+    "campaign_120_cover0_test1_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "campaign",
+        "max_run": 120,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        2,
+        4,
+        -47192
+      ]
+    },
+    "campaign_120_cover0_test2_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "campaign",
+        "max_run": 120,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        2,
+        2,
+        -53919
+      ]
+    },
+    "campaign_120_cover0_test2_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": false,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "campaign",
+        "max_run": 120,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        2,
+        4,
+        -47192
+      ]
+    },
+    "campaign_120_cover1_test1_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "campaign",
+        "max_run": 120,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        1,
+        1,
+        -53140
+      ]
+    },
+    "campaign_120_cover1_test1_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 1,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "campaign",
+        "max_run": 120,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        4,
+        6,
+        -48083
+      ]
+    },
+    "campaign_120_cover1_test2_early0": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 0,
+        "kit_dispatch": "campaign",
+        "max_run": 120,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        1,
+        1,
+        -53140
+      ]
+    },
+    "campaign_120_cover1_test2_early30": {
+      "plant": {
+        "parking_bays": 3,
+        "carts": 3,
+        "slots_per_cart": 8,
+        "parking_length_cm": 360,
+        "parking_width_cm": 240,
+        "aisle_width_cm": 120,
+        "cart_length_cm": 120,
+        "cart_width_cm": 100,
+        "transfer": 15,
+        "return_bin": 20,
+        "staffing": true,
+        "cover": true,
+        "testers": 2,
+        "setup": true,
+        "kits": true,
+        "kit_advance": 30,
+        "kit_dispatch": "campaign",
+        "max_run": 120,
+        "repair_seconds": 90,
+        "test_seconds": 30
+      },
+      "scores": [
+        4,
+        6,
+        -48083
+      ]
+    }
+  },
+  "selected": {
+    "dispatch_only": "campaign_120_cover0_test1_early0",
+    "single_resource_action": "fifo_cover0_test1_early30",
+    "combined": "ready_cover1_test1_early30"
+  },
+  "ablation_names": [
+    "relax_space",
+    "relax_staffing",
+    "relax_fixture",
+    "relax_changeover",
+    "relax_kits"
+  ],
+  "evaluated": {
+    "baseline": {
+      "parking_bays": 3,
+      "carts": 3,
+      "slots_per_cart": 8,
+      "parking_length_cm": 360,
+      "parking_width_cm": 240,
+      "aisle_width_cm": 120,
+      "cart_length_cm": 120,
+      "cart_width_cm": 100,
+      "transfer": 15,
+      "return_bin": 20,
+      "staffing": true,
+      "cover": false,
+      "testers": 1,
+      "setup": true,
+      "kits": true,
+      "kit_advance": 0,
+      "kit_dispatch": "fifo",
+      "max_run": 80,
+      "repair_seconds": 90,
+      "test_seconds": 30
+    },
+    "relax_space": {
+      "parking_bays": 8,
+      "carts": 8,
+      "slots_per_cart": 8,
+      "parking_length_cm": 960,
+      "parking_width_cm": 240,
+      "aisle_width_cm": 120,
+      "cart_length_cm": 120,
+      "cart_width_cm": 100,
+      "transfer": 15,
+      "return_bin": 20,
+      "staffing": true,
+      "cover": false,
+      "testers": 1,
+      "setup": true,
+      "kits": true,
+      "kit_advance": 0,
+      "kit_dispatch": "fifo",
+      "max_run": 80,
+      "repair_seconds": 90,
+      "test_seconds": 30
+    },
+    "relax_staffing": {
+      "parking_bays": 3,
+      "carts": 3,
+      "slots_per_cart": 8,
+      "parking_length_cm": 360,
+      "parking_width_cm": 240,
+      "aisle_width_cm": 120,
+      "cart_length_cm": 120,
+      "cart_width_cm": 100,
+      "transfer": 15,
+      "return_bin": 20,
+      "staffing": false,
+      "cover": false,
+      "testers": 1,
+      "setup": true,
+      "kits": true,
+      "kit_advance": 0,
+      "kit_dispatch": "fifo",
+      "max_run": 80,
+      "repair_seconds": 90,
+      "test_seconds": 30
+    },
+    "relax_fixture": {
+      "parking_bays": 3,
+      "carts": 3,
+      "slots_per_cart": 8,
+      "parking_length_cm": 360,
+      "parking_width_cm": 240,
+      "aisle_width_cm": 120,
+      "cart_length_cm": 120,
+      "cart_width_cm": 100,
+      "transfer": 15,
+      "return_bin": 20,
+      "staffing": true,
+      "cover": false,
+      "testers": 4,
+      "setup": true,
+      "kits": true,
+      "kit_advance": 0,
+      "kit_dispatch": "fifo",
+      "max_run": 80,
+      "repair_seconds": 90,
+      "test_seconds": 30
+    },
+    "relax_changeover": {
+      "parking_bays": 3,
+      "carts": 3,
+      "slots_per_cart": 8,
+      "parking_length_cm": 360,
+      "parking_width_cm": 240,
+      "aisle_width_cm": 120,
+      "cart_length_cm": 120,
+      "cart_width_cm": 100,
+      "transfer": 15,
+      "return_bin": 20,
+      "staffing": true,
+      "cover": false,
+      "testers": 1,
+      "setup": false,
+      "kits": true,
+      "kit_advance": 0,
+      "kit_dispatch": "fifo",
+      "max_run": 80,
+      "repair_seconds": 90,
+      "test_seconds": 30
+    },
+    "relax_kits": {
+      "parking_bays": 3,
+      "carts": 3,
+      "slots_per_cart": 8,
+      "parking_length_cm": 360,
+      "parking_width_cm": 240,
+      "aisle_width_cm": 120,
+      "cart_length_cm": 120,
+      "cart_width_cm": 100,
+      "transfer": 15,
+      "return_bin": 20,
+      "staffing": true,
+      "cover": false,
+      "testers": 1,
+      "setup": true,
+      "kits": false,
+      "kit_advance": 0,
+      "kit_dispatch": "fifo",
+      "max_run": 80,
+      "repair_seconds": 90,
+      "test_seconds": 30
+    },
+    "fifo_cover1_test1_early0": {
+      "parking_bays": 3,
+      "carts": 3,
+      "slots_per_cart": 8,
+      "parking_length_cm": 360,
+      "parking_width_cm": 240,
+      "aisle_width_cm": 120,
+      "cart_length_cm": 120,
+      "cart_width_cm": 100,
+      "transfer": 15,
+      "return_bin": 20,
+      "staffing": true,
+      "cover": true,
+      "testers": 1,
+      "setup": true,
+      "kits": true,
+      "kit_advance": 0,
+      "kit_dispatch": "fifo",
+      "max_run": 80,
+      "repair_seconds": 90,
+      "test_seconds": 30
+    },
+    "fifo_cover0_test2_early0": {
+      "parking_bays": 3,
+      "carts": 3,
+      "slots_per_cart": 8,
+      "parking_length_cm": 360,
+      "parking_width_cm": 240,
+      "aisle_width_cm": 120,
+      "cart_length_cm": 120,
+      "cart_width_cm": 100,
+      "transfer": 15,
+      "return_bin": 20,
+      "staffing": true,
+      "cover": false,
+      "testers": 2,
+      "setup": true,
+      "kits": true,
+      "kit_advance": 0,
+      "kit_dispatch": "fifo",
+      "max_run": 80,
+      "repair_seconds": 90,
+      "test_seconds": 30
+    },
+    "fifo_cover0_test1_early30": {
+      "parking_bays": 3,
+      "carts": 3,
+      "slots_per_cart": 8,
+      "parking_length_cm": 360,
+      "parking_width_cm": 240,
+      "aisle_width_cm": 120,
+      "cart_length_cm": 120,
+      "cart_width_cm": 100,
+      "transfer": 15,
+      "return_bin": 20,
+      "staffing": true,
+      "cover": false,
+      "testers": 1,
+      "setup": true,
+      "kits": true,
+      "kit_advance": 30,
+      "kit_dispatch": "fifo",
+      "max_run": 80,
+      "repair_seconds": 90,
+      "test_seconds": 30
+    },
+    "campaign_120_cover0_test1_early0": {
+      "parking_bays": 3,
+      "carts": 3,
+      "slots_per_cart": 8,
+      "parking_length_cm": 360,
+      "parking_width_cm": 240,
+      "aisle_width_cm": 120,
+      "cart_length_cm": 120,
+      "cart_width_cm": 100,
+      "transfer": 15,
+      "return_bin": 20,
+      "staffing": true,
+      "cover": false,
+      "testers": 1,
+      "setup": true,
+      "kits": true,
+      "kit_advance": 0,
+      "kit_dispatch": "campaign",
+      "max_run": 120,
+      "repair_seconds": 90,
+      "test_seconds": 30
+    },
+    "ready_cover1_test1_early30": {
+      "parking_bays": 3,
+      "carts": 3,
+      "slots_per_cart": 8,
+      "parking_length_cm": 360,
+      "parking_width_cm": 240,
+      "aisle_width_cm": 120,
+      "cart_length_cm": 120,
+      "cart_width_cm": 100,
+      "transfer": 15,
+      "return_bin": 20,
+      "staffing": true,
+      "cover": true,
+      "testers": 1,
+      "setup": true,
+      "kits": true,
+      "kit_advance": 30,
+      "kit_dispatch": "ready",
+      "max_run": 80,
+      "repair_seconds": 90,
+      "test_seconds": 30
+    }
+  },
+  "results": {
+    "baseline": {
+      "replications": 600,
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 429,
+          "means": {
+            "on_time_a": 1277.74,
+            "on_time_b": 514.447,
+            "on_time_good": 1792.187,
+            "short_a": 0.0,
+            "short_b": 7.78,
+            "shortfall": 7.78,
+            "physical_good": 1792.187,
+            "late_good": 0.0,
+            "scrap": 23.2,
+            "backlog": 34.613,
+            "unstarted": 25.873,
+            "assembly": 7.942,
+            "waiting_inspection": 0.588,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.027,
+            "in_repair": 0.13,
+            "waiting_or_retesting": 0.053,
+            "inspection_blocked_min": 0.0,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 16.59,
+            "changeovers": 26.908,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 2.123,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 8,
+          "means": {
+            "on_time_a": 1023.628,
+            "on_time_b": 381.625,
+            "on_time_good": 1405.253,
+            "short_a": 140.277,
+            "short_b": 113.667,
+            "shortfall": 253.943,
+            "physical_good": 1439.4,
+            "late_good": 34.147,
+            "scrap": 88.783,
+            "backlog": 356.43,
+            "unstarted": 333.118,
+            "assembly": 12.538,
+            "waiting_inspection": 0.722,
+            "held_by_inspection": 0.173,
+            "waiting_repair": 8.943,
+            "in_repair": 0.702,
+            "waiting_or_retesting": 0.233,
+            "inspection_blocked_min": 18.424,
+            "retest_wait_unit_min": 11.601,
+            "kit_wait_min": 51.08,
+            "setup_station_min": 15.649,
+            "changeovers": 25.393,
+            "support_people": 1.593,
+            "support_booked_person_min": 143.607,
+            "support_busy_person_min": 86.147,
+            "peak_cart_places": 22.085,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "on_time_a": 890.447,
+            "on_time_b": 326.365,
+            "on_time_good": 1216.812,
+            "short_a": 265.63,
+            "short_b": 168.635,
+            "shortfall": 434.265,
+            "physical_good": 1555.433,
+            "late_good": 338.622,
+            "scrap": 94.223,
+            "backlog": 556.773,
+            "unstarted": 530.252,
+            "assembly": 12.792,
+            "waiting_inspection": 0.698,
+            "held_by_inspection": 0.237,
+            "waiting_repair": 11.76,
+            "in_repair": 0.775,
+            "waiting_or_retesting": 0.26,
+            "inspection_blocked_min": 32.196,
+            "retest_wait_unit_min": 10.656,
+            "kit_wait_min": 12.581,
+            "setup_station_min": 16.576,
+            "changeovers": 26.885,
+            "support_people": 1.543,
+            "support_booked_person_min": 116.148,
+            "support_busy_person_min": 74.597,
+            "peak_cart_places": 22.362,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 3,
+          "means": {
+            "on_time_a": 835.743,
+            "on_time_b": 303.572,
+            "on_time_good": 1139.315,
+            "short_a": 322.688,
+            "short_b": 191.52,
+            "shortfall": 514.208,
+            "physical_good": 1665.493,
+            "late_good": 526.178,
+            "scrap": 45.105,
+            "backlog": 696.175,
+            "unstarted": 683.313,
+            "assembly": 11.683,
+            "waiting_inspection": 0.88,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.042,
+            "in_repair": 0.188,
+            "waiting_or_retesting": 0.068,
+            "inspection_blocked_min": 34.209,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 16.995,
+            "changeovers": 27.57,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 14.76,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "relax_space": {
+      "replications": 600,
+      "both_hit": 1,
+      "both_rate": 0.001667,
+      "both_adjusted_lower": 8e-06,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 1,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 429,
+          "means": {
+            "on_time_a": 1277.74,
+            "on_time_b": 514.447,
+            "on_time_good": 1792.187,
+            "short_a": 0.0,
+            "short_b": 7.78,
+            "shortfall": 7.78,
+            "physical_good": 1792.187,
+            "late_good": 0.0,
+            "scrap": 23.2,
+            "backlog": 34.613,
+            "unstarted": 25.873,
+            "assembly": 7.942,
+            "waiting_inspection": 0.588,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.027,
+            "in_repair": 0.13,
+            "waiting_or_retesting": 0.053,
+            "inspection_blocked_min": 0.0,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 16.59,
+            "changeovers": 26.908,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 2.123,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 13,
+          "means": {
+            "on_time_a": 1050.512,
+            "on_time_b": 392.872,
+            "on_time_good": 1443.383,
+            "short_a": 116.792,
+            "short_b": 102.6,
+            "shortfall": 219.392,
+            "physical_good": 1477.53,
+            "late_good": 34.147,
+            "scrap": 91.035,
+            "backlog": 316.048,
+            "unstarted": 286.015,
+            "assembly": 11.75,
+            "waiting_inspection": 0.817,
+            "held_by_inspection": 0.03,
+            "waiting_repair": 16.485,
+            "in_repair": 0.71,
+            "waiting_or_retesting": 0.242,
+            "inspection_blocked_min": 2.29,
+            "retest_wait_unit_min": 11.723,
+            "kit_wait_min": 54.333,
+            "setup_station_min": 16.125,
+            "changeovers": 26.168,
+            "support_people": 1.593,
+            "support_booked_person_min": 143.607,
+            "support_busy_person_min": 86.657,
+            "peak_cart_places": 38.013,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 38.13,
+              "ci95": [
+                33.834,
+                42.426
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -34.552,
+              "ci95": [
+                -38.672,
+                -30.431
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -40.382,
+              "ci95": [
+                -44.835,
+                -35.928
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -16.134,
+              "ci95": [
+                -17.529,
+                -14.738
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 1,
+          "means": {
+            "on_time_a": 964.662,
+            "on_time_b": 357.212,
+            "on_time_good": 1321.873,
+            "short_a": 192.535,
+            "short_b": 137.79,
+            "shortfall": 330.325,
+            "physical_good": 1622.365,
+            "late_good": 300.492,
+            "scrap": 99.703,
+            "backlog": 443.98,
+            "unstarted": 409.72,
+            "assembly": 11.863,
+            "waiting_inspection": 0.835,
+            "held_by_inspection": 0.045,
+            "waiting_repair": 20.508,
+            "in_repair": 0.75,
+            "waiting_or_retesting": 0.258,
+            "inspection_blocked_min": 7.633,
+            "retest_wait_unit_min": 13.31,
+            "kit_wait_min": 18.016,
+            "setup_station_min": 17.309,
+            "changeovers": 28.072,
+            "support_people": 1.558,
+            "support_booked_person_min": 126.292,
+            "support_busy_person_min": 85.438,
+            "peak_cart_places": 43.458,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 105.062,
+              "ci95": [
+                96.105,
+                114.019
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -103.94,
+              "ci95": [
+                -112.874,
+                -95.006
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -112.793,
+              "ci95": [
+                -122.298,
+                -103.289
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -24.563,
+              "ci95": [
+                -26.524,
+                -22.602
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 4,
+          "means": {
+            "on_time_a": 989.23,
+            "on_time_b": 367.782,
+            "on_time_good": 1357.012,
+            "short_a": 173.538,
+            "short_b": 127.385,
+            "shortfall": 300.923,
+            "physical_good": 1778.128,
+            "late_good": 421.117,
+            "scrap": 40.285,
+            "backlog": 475.567,
+            "unstarted": 462.673,
+            "assembly": 11.678,
+            "waiting_inspection": 0.868,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.07,
+            "in_repair": 0.207,
+            "waiting_or_retesting": 0.07,
+            "inspection_blocked_min": 9.282,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 17.96,
+            "changeovers": 29.138,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 29.213,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 217.697,
+              "ci95": [
+                201.965,
+                233.428
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -213.285,
+              "ci95": [
+                -229.099,
+                -197.471
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -220.608,
+              "ci95": [
+                -236.545,
+                -204.672
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -24.927,
+              "ci95": [
+                -27.395,
+                -22.458
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "relax_staffing": {
+      "replications": 600,
+      "both_hit": 1,
+      "both_rate": 0.001667,
+      "both_adjusted_lower": 8e-06,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 1,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 429,
+          "means": {
+            "on_time_a": 1277.74,
+            "on_time_b": 514.447,
+            "on_time_good": 1792.187,
+            "short_a": 0.0,
+            "short_b": 7.78,
+            "shortfall": 7.78,
+            "physical_good": 1792.187,
+            "late_good": 0.0,
+            "scrap": 23.2,
+            "backlog": 34.613,
+            "unstarted": 25.873,
+            "assembly": 7.942,
+            "waiting_inspection": 0.588,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.027,
+            "in_repair": 0.13,
+            "waiting_or_retesting": 0.053,
+            "inspection_blocked_min": 0.0,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 16.59,
+            "changeovers": 26.908,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 2.123,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 21,
+          "means": {
+            "on_time_a": 1051.082,
+            "on_time_b": 392.438,
+            "on_time_good": 1443.52,
+            "short_a": 118.62,
+            "short_b": 103.288,
+            "shortfall": 221.908,
+            "physical_good": 1477.667,
+            "late_good": 34.147,
+            "scrap": 93.29,
+            "backlog": 313.657,
+            "unstarted": 299.328,
+            "assembly": 11.475,
+            "waiting_inspection": 0.858,
+            "held_by_inspection": 0.002,
+            "waiting_repair": 1.053,
+            "in_repair": 0.582,
+            "waiting_or_retesting": 0.358,
+            "inspection_blocked_min": 4.966,
+            "retest_wait_unit_min": 22.055,
+            "kit_wait_min": 54.784,
+            "setup_station_min": 15.988,
+            "changeovers": 25.95,
+            "support_people": 2.0,
+            "support_booked_person_min": 240.0,
+            "support_busy_person_min": 127.99,
+            "peak_cart_places": 14.918,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 38.267,
+              "ci95": [
+                31.125,
+                45.408
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -32.035,
+              "ci95": [
+                -38.714,
+                -25.356
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -42.773,
+              "ci95": [
+                -50.401,
+                -35.146
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -13.458,
+              "ci95": [
+                -15.375,
+                -11.541
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 3,
+          "means": {
+            "on_time_a": 968.865,
+            "on_time_b": 359.555,
+            "on_time_good": 1328.42,
+            "short_a": 189.547,
+            "short_b": 135.477,
+            "shortfall": 325.023,
+            "physical_good": 1628.775,
+            "late_good": 300.355,
+            "scrap": 100.088,
+            "backlog": 434.793,
+            "unstarted": 420.52,
+            "assembly": 11.61,
+            "waiting_inspection": 0.865,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.808,
+            "in_repair": 0.618,
+            "waiting_or_retesting": 0.372,
+            "inspection_blocked_min": 6.678,
+            "retest_wait_unit_min": 21.976,
+            "kit_wait_min": 18.305,
+            "setup_station_min": 17.348,
+            "changeovers": 28.142,
+            "support_people": 2.0,
+            "support_booked_person_min": 240.0,
+            "support_busy_person_min": 131.285,
+            "peak_cart_places": 14.88,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 111.608,
+              "ci95": [
+                100.038,
+                123.178
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -109.242,
+              "ci95": [
+                -120.699,
+                -97.784
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -121.98,
+              "ci95": [
+                -134.365,
+                -109.595
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -25.518,
+              "ci95": [
+                -27.794,
+                -23.242
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 4,
+          "means": {
+            "on_time_a": 974.3,
+            "on_time_b": 361.542,
+            "on_time_good": 1335.842,
+            "short_a": 189.843,
+            "short_b": 133.625,
+            "shortfall": 323.468,
+            "physical_good": 1750.412,
+            "late_good": 414.57,
+            "scrap": 37.41,
+            "backlog": 496.972,
+            "unstarted": 484.048,
+            "assembly": 11.738,
+            "waiting_inspection": 0.872,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.053,
+            "in_repair": 0.2,
+            "waiting_or_retesting": 0.06,
+            "inspection_blocked_min": 11.954,
+            "retest_wait_unit_min": 0.01,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 17.845,
+            "changeovers": 28.937,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 8.523,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 196.527,
+              "ci95": [
+                178.078,
+                214.976
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -190.74,
+              "ci95": [
+                -209.026,
+                -172.454
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -199.203,
+              "ci95": [
+                -217.892,
+                -180.515
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -22.255,
+              "ci95": [
+                -24.719,
+                -19.79
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "relax_fixture": {
+      "replications": 600,
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 429,
+          "means": {
+            "on_time_a": 1277.74,
+            "on_time_b": 514.447,
+            "on_time_good": 1792.187,
+            "short_a": 0.0,
+            "short_b": 7.78,
+            "shortfall": 7.78,
+            "physical_good": 1792.187,
+            "late_good": 0.0,
+            "scrap": 23.2,
+            "backlog": 34.613,
+            "unstarted": 25.873,
+            "assembly": 7.942,
+            "waiting_inspection": 0.588,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.027,
+            "in_repair": 0.13,
+            "waiting_or_retesting": 0.053,
+            "inspection_blocked_min": 0.0,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 16.59,
+            "changeovers": 26.908,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 2.123,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 8,
+          "means": {
+            "on_time_a": 1023.628,
+            "on_time_b": 381.625,
+            "on_time_good": 1405.253,
+            "short_a": 140.277,
+            "short_b": 113.667,
+            "shortfall": 253.943,
+            "physical_good": 1439.4,
+            "late_good": 34.147,
+            "scrap": 88.783,
+            "backlog": 356.43,
+            "unstarted": 333.118,
+            "assembly": 12.538,
+            "waiting_inspection": 0.722,
+            "held_by_inspection": 0.173,
+            "waiting_repair": 8.943,
+            "in_repair": 0.702,
+            "waiting_or_retesting": 0.233,
+            "inspection_blocked_min": 18.424,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 51.08,
+            "setup_station_min": 15.649,
+            "changeovers": 25.393,
+            "support_people": 1.593,
+            "support_booked_person_min": 143.607,
+            "support_busy_person_min": 86.147,
+            "peak_cart_places": 22.085,
+            "peak_testers": 2.207
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "on_time_a": 890.447,
+            "on_time_b": 326.365,
+            "on_time_good": 1216.812,
+            "short_a": 265.63,
+            "short_b": 168.635,
+            "shortfall": 434.265,
+            "physical_good": 1555.433,
+            "late_good": 338.622,
+            "scrap": 94.223,
+            "backlog": 556.773,
+            "unstarted": 530.252,
+            "assembly": 12.792,
+            "waiting_inspection": 0.698,
+            "held_by_inspection": 0.237,
+            "waiting_repair": 11.76,
+            "in_repair": 0.775,
+            "waiting_or_retesting": 0.26,
+            "inspection_blocked_min": 32.196,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 12.581,
+            "setup_station_min": 16.576,
+            "changeovers": 26.885,
+            "support_people": 1.543,
+            "support_booked_person_min": 116.148,
+            "support_busy_person_min": 74.597,
+            "peak_cart_places": 22.362,
+            "peak_testers": 2.165
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 3,
+          "means": {
+            "on_time_a": 835.743,
+            "on_time_b": 303.572,
+            "on_time_good": 1139.315,
+            "short_a": 322.688,
+            "short_b": 191.52,
+            "shortfall": 514.208,
+            "physical_good": 1665.493,
+            "late_good": 526.178,
+            "scrap": 45.105,
+            "backlog": 696.175,
+            "unstarted": 683.313,
+            "assembly": 11.683,
+            "waiting_inspection": 0.88,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.042,
+            "in_repair": 0.188,
+            "waiting_or_retesting": 0.068,
+            "inspection_blocked_min": 34.209,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 16.995,
+            "changeovers": 27.57,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 14.76,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "relax_changeover": {
+      "replications": 600,
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 542,
+          "means": {
+            "on_time_a": 1278.383,
+            "on_time_b": 532.728,
+            "on_time_good": 1811.112,
+            "short_a": 0.0,
+            "short_b": 2.365,
+            "shortfall": 2.365,
+            "physical_good": 1811.112,
+            "late_good": 0.0,
+            "scrap": 23.485,
+            "backlog": 15.403,
+            "unstarted": 10.42,
+            "assembly": 4.523,
+            "waiting_inspection": 0.327,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.007,
+            "in_repair": 0.092,
+            "waiting_or_retesting": 0.035,
+            "inspection_blocked_min": 0.0,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 0.0,
+            "changeovers": 0.0,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 2.117,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 18.925,
+              "ci95": [
+                17.698,
+                20.152
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -5.415,
+              "ci95": [
+                -6.252,
+                -4.578
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -19.21,
+              "ci95": [
+                -20.454,
+                -17.966
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 28,
+          "means": {
+            "on_time_a": 1035.303,
+            "on_time_b": 388.18,
+            "on_time_good": 1423.483,
+            "short_a": 131.452,
+            "short_b": 107.815,
+            "shortfall": 239.267,
+            "physical_good": 1438.705,
+            "late_good": 15.222,
+            "scrap": 89.467,
+            "backlog": 337.232,
+            "unstarted": 314.187,
+            "assembly": 12.345,
+            "waiting_inspection": 0.738,
+            "held_by_inspection": 0.162,
+            "waiting_repair": 8.895,
+            "in_repair": 0.702,
+            "waiting_or_retesting": 0.203,
+            "inspection_blocked_min": 20.007,
+            "retest_wait_unit_min": 11.988,
+            "kit_wait_min": 56.845,
+            "setup_station_min": 0.0,
+            "changeovers": 0.0,
+            "support_people": 1.595,
+            "support_booked_person_min": 144.557,
+            "support_busy_person_min": 86.82,
+            "peak_cart_places": 22.313,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 18.23,
+              "ci95": [
+                16.794,
+                19.666
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -14.677,
+              "ci95": [
+                -15.96,
+                -13.393
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -19.198,
+              "ci95": [
+                -20.678,
+                -17.719
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 1.583,
+              "ci95": [
+                1.299,
+                1.867
+              ],
+              "lower_above_zero": true
+            }
+          }
+        },
+        "3": {
+          "hits": 1,
+          "means": {
+            "on_time_a": 914.76,
+            "on_time_b": 337.305,
+            "on_time_good": 1252.065,
+            "short_a": 242.083,
+            "short_b": 157.735,
+            "shortfall": 399.818,
+            "physical_good": 1572.457,
+            "late_good": 320.392,
+            "scrap": 95.752,
+            "backlog": 519.023,
+            "unstarted": 492.783,
+            "assembly": 12.87,
+            "waiting_inspection": 0.713,
+            "held_by_inspection": 0.222,
+            "waiting_repair": 11.423,
+            "in_repair": 0.767,
+            "waiting_or_retesting": 0.245,
+            "inspection_blocked_min": 32.479,
+            "retest_wait_unit_min": 11.108,
+            "kit_wait_min": 16.156,
+            "setup_station_min": 0.0,
+            "changeovers": 0.0,
+            "support_people": 1.553,
+            "support_booked_person_min": 119.065,
+            "support_busy_person_min": 78.078,
+            "peak_cart_places": 22.563,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 35.253,
+              "ci95": [
+                32.71,
+                37.797
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -34.447,
+              "ci95": [
+                -36.997,
+                -31.897
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -37.75,
+              "ci95": [
+                -40.395,
+                -35.105
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.283,
+              "ci95": [
+                -0.15,
+                0.716
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 8,
+          "means": {
+            "on_time_a": 892.967,
+            "on_time_b": 329.635,
+            "on_time_good": 1222.602,
+            "short_a": 271.712,
+            "short_b": 165.89,
+            "shortfall": 437.602,
+            "physical_good": 1713.527,
+            "late_good": 490.925,
+            "scrap": 43.705,
+            "backlog": 611.792,
+            "unstarted": 598.913,
+            "assembly": 11.618,
+            "waiting_inspection": 0.873,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.078,
+            "in_repair": 0.242,
+            "waiting_or_retesting": 0.067,
+            "inspection_blocked_min": 31.414,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 0.0,
+            "changeovers": 0.0,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 14.098,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 83.287,
+              "ci95": [
+                80.168,
+                86.406
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -76.607,
+              "ci95": [
+                -79.996,
+                -73.218
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -84.383,
+              "ci95": [
+                -87.544,
+                -81.223
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -2.794,
+              "ci95": [
+                -3.2,
+                -2.389
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "relax_kits": {
+      "replications": 600,
+      "both_hit": 22,
+      "both_rate": 0.036667,
+      "both_adjusted_lower": 0.019639,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 22,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 429,
+          "means": {
+            "on_time_a": 1277.74,
+            "on_time_b": 514.447,
+            "on_time_good": 1792.187,
+            "short_a": 0.0,
+            "short_b": 7.78,
+            "shortfall": 7.78,
+            "physical_good": 1792.187,
+            "late_good": 0.0,
+            "scrap": 23.2,
+            "backlog": 34.613,
+            "unstarted": 25.873,
+            "assembly": 7.942,
+            "waiting_inspection": 0.588,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.027,
+            "in_repair": 0.13,
+            "waiting_or_retesting": 0.053,
+            "inspection_blocked_min": 0.0,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 16.59,
+            "changeovers": 26.908,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 2.123,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 113,
+          "means": {
+            "on_time_a": 1180.7,
+            "on_time_b": 446.18,
+            "on_time_good": 1626.88,
+            "short_a": 17.965,
+            "short_b": 52.837,
+            "shortfall": 70.802,
+            "physical_good": 1661.027,
+            "late_good": 34.147,
+            "scrap": 101.085,
+            "backlog": 122.502,
+            "unstarted": 105.835,
+            "assembly": 10.808,
+            "waiting_inspection": 0.705,
+            "held_by_inspection": 0.08,
+            "waiting_repair": 4.323,
+            "in_repair": 0.572,
+            "waiting_or_retesting": 0.178,
+            "inspection_blocked_min": 15.955,
+            "retest_wait_unit_min": 17.453,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 17.715,
+            "changeovers": 28.745,
+            "support_people": 1.622,
+            "support_booked_person_min": 164.875,
+            "support_busy_person_min": 115.225,
+            "peak_cart_places": 21.628,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 221.627,
+              "ci95": [
+                207.471,
+                235.782
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -183.142,
+              "ci95": [
+                -195.682,
+                -170.601
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -233.928,
+              "ci95": [
+                -248.827,
+                -219.03
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -2.468,
+              "ci95": [
+                -3.744,
+                -1.193
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 40,
+          "means": {
+            "on_time_a": 1117.832,
+            "on_time_b": 418.827,
+            "on_time_good": 1536.658,
+            "short_a": 61.608,
+            "short_b": 77.245,
+            "shortfall": 138.853,
+            "physical_good": 1653.653,
+            "late_good": 116.995,
+            "scrap": 102.415,
+            "backlog": 216.433,
+            "unstarted": 196.628,
+            "assembly": 11.913,
+            "waiting_inspection": 0.762,
+            "held_by_inspection": 0.12,
+            "waiting_repair": 6.21,
+            "in_repair": 0.592,
+            "waiting_or_retesting": 0.208,
+            "inspection_blocked_min": 19.076,
+            "retest_wait_unit_min": 17.075,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 17.735,
+            "changeovers": 28.76,
+            "support_people": 1.597,
+            "support_booked_person_min": 153.67,
+            "support_busy_person_min": 110.255,
+            "peak_cart_places": 21.895,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 319.847,
+              "ci95": [
+                302.206,
+                337.487
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -295.412,
+              "ci95": [
+                -312.245,
+                -278.578
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -340.34,
+              "ci95": [
+                -359.02,
+                -321.66
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -13.121,
+              "ci95": [
+                -15.788,
+                -10.453
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 74,
+          "means": {
+            "on_time_a": 1138.348,
+            "on_time_b": 430.048,
+            "on_time_good": 1568.397,
+            "short_a": 65.568,
+            "short_b": 69.37,
+            "shortfall": 134.938,
+            "physical_good": 1774.728,
+            "late_good": 206.332,
+            "scrap": 30.298,
+            "backlog": 261.407,
+            "unstarted": 249.265,
+            "assembly": 10.998,
+            "waiting_inspection": 0.833,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.058,
+            "in_repair": 0.188,
+            "waiting_or_retesting": 0.063,
+            "inspection_blocked_min": 8.685,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 17.98,
+            "changeovers": 29.15,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 8.028,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 429.082,
+              "ci95": [
+                404.082,
+                454.082
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -379.27,
+              "ci95": [
+                -403.548,
+                -354.992
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -434.768,
+              "ci95": [
+                -460.092,
+                -409.445
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -25.524,
+              "ci95": [
+                -28.355,
+                -22.692
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "fifo_cover1_test1_early0": {
+      "replications": 600,
+      "both_hit": 1,
+      "both_rate": 0.001667,
+      "both_adjusted_lower": 8e-06,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 1,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 429,
+          "means": {
+            "on_time_a": 1277.74,
+            "on_time_b": 514.447,
+            "on_time_good": 1792.187,
+            "short_a": 0.0,
+            "short_b": 7.78,
+            "shortfall": 7.78,
+            "physical_good": 1792.187,
+            "late_good": 0.0,
+            "scrap": 23.2,
+            "backlog": 34.613,
+            "unstarted": 25.873,
+            "assembly": 7.942,
+            "waiting_inspection": 0.588,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.027,
+            "in_repair": 0.13,
+            "waiting_or_retesting": 0.053,
+            "inspection_blocked_min": 0.0,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 16.59,
+            "changeovers": 26.908,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 2.123,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 15,
+          "means": {
+            "on_time_a": 1045.513,
+            "on_time_b": 390.478,
+            "on_time_good": 1435.992,
+            "short_a": 122.233,
+            "short_b": 105.042,
+            "shortfall": 227.275,
+            "physical_good": 1470.138,
+            "late_good": 34.147,
+            "scrap": 91.95,
+            "backlog": 322.525,
+            "unstarted": 302.482,
+            "assembly": 11.94,
+            "waiting_inspection": 0.792,
+            "held_by_inspection": 0.08,
+            "waiting_repair": 6.377,
+            "in_repair": 0.657,
+            "waiting_or_retesting": 0.198,
+            "inspection_blocked_min": 6.872,
+            "retest_wait_unit_min": 16.958,
+            "kit_wait_min": 54.143,
+            "setup_station_min": 15.943,
+            "changeovers": 25.873,
+            "support_people": 1.913,
+            "support_booked_person_min": 196.765,
+            "support_busy_person_min": 110.86,
+            "peak_cart_places": 19.728,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 30.738,
+              "ci95": [
+                24.957,
+                36.52
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -26.668,
+              "ci95": [
+                -32.107,
+                -21.23
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -33.905,
+              "ci95": [
+                -40.07,
+                -27.74
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -11.552,
+              "ci95": [
+                -13.174,
+                -9.93
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 1,
+          "means": {
+            "on_time_a": 945.212,
+            "on_time_b": 349.01,
+            "on_time_good": 1294.222,
+            "short_a": 212.323,
+            "short_b": 145.997,
+            "shortfall": 358.32,
+            "physical_good": 1602.105,
+            "late_good": 307.883,
+            "scrap": 97.97,
+            "backlog": 472.45,
+            "unstarted": 450.652,
+            "assembly": 12.175,
+            "waiting_inspection": 0.793,
+            "held_by_inspection": 0.118,
+            "waiting_repair": 7.765,
+            "in_repair": 0.697,
+            "waiting_or_retesting": 0.25,
+            "inspection_blocked_min": 15.254,
+            "retest_wait_unit_min": 17.42,
+            "kit_wait_min": 16.737,
+            "setup_station_min": 17.07,
+            "changeovers": 27.687,
+            "support_people": 1.912,
+            "support_booked_person_min": 182.868,
+            "support_busy_person_min": 108.013,
+            "peak_cart_places": 20.087,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 77.41,
+              "ci95": [
+                68.445,
+                86.375
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -75.945,
+              "ci95": [
+                -84.831,
+                -67.059
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -84.323,
+              "ci95": [
+                -93.916,
+                -74.731
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -16.942,
+              "ci95": [
+                -18.636,
+                -15.249
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 4,
+          "means": {
+            "on_time_a": 924.68,
+            "on_time_b": 341.408,
+            "on_time_good": 1266.088,
+            "short_a": 237.59,
+            "short_b": 153.758,
+            "shortfall": 391.348,
+            "physical_good": 1714.857,
+            "late_good": 448.768,
+            "scrap": 39.917,
+            "backlog": 567.677,
+            "unstarted": 554.805,
+            "assembly": 11.712,
+            "waiting_inspection": 0.86,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.053,
+            "in_repair": 0.18,
+            "waiting_or_retesting": 0.067,
+            "inspection_blocked_min": 22.03,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 17.503,
+            "changeovers": 28.392,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 11.655,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 126.773,
+              "ci95": [
+                113.005,
+                140.542
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -122.86,
+              "ci95": [
+                -136.484,
+                -109.236
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -128.498,
+              "ci95": [
+                -142.457,
+                -114.539
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -12.179,
+              "ci95": [
+                -13.837,
+                -10.522
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "fifo_cover0_test2_early0": {
+      "replications": 600,
+      "both_hit": 0,
+      "both_rate": 0.0,
+      "both_adjusted_lower": 0,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 0,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 429,
+          "means": {
+            "on_time_a": 1277.74,
+            "on_time_b": 514.447,
+            "on_time_good": 1792.187,
+            "short_a": 0.0,
+            "short_b": 7.78,
+            "shortfall": 7.78,
+            "physical_good": 1792.187,
+            "late_good": 0.0,
+            "scrap": 23.2,
+            "backlog": 34.613,
+            "unstarted": 25.873,
+            "assembly": 7.942,
+            "waiting_inspection": 0.588,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.027,
+            "in_repair": 0.13,
+            "waiting_or_retesting": 0.053,
+            "inspection_blocked_min": 0.0,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 16.59,
+            "changeovers": 26.908,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 2.123,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 8,
+          "means": {
+            "on_time_a": 1023.628,
+            "on_time_b": 381.625,
+            "on_time_good": 1405.253,
+            "short_a": 140.277,
+            "short_b": 113.667,
+            "shortfall": 253.943,
+            "physical_good": 1439.4,
+            "late_good": 34.147,
+            "scrap": 88.783,
+            "backlog": 356.43,
+            "unstarted": 333.118,
+            "assembly": 12.538,
+            "waiting_inspection": 0.722,
+            "held_by_inspection": 0.173,
+            "waiting_repair": 8.943,
+            "in_repair": 0.702,
+            "waiting_or_retesting": 0.233,
+            "inspection_blocked_min": 18.424,
+            "retest_wait_unit_min": 0.822,
+            "kit_wait_min": 51.08,
+            "setup_station_min": 15.649,
+            "changeovers": 25.393,
+            "support_people": 1.593,
+            "support_booked_person_min": 143.607,
+            "support_busy_person_min": 86.147,
+            "peak_cart_places": 22.085,
+            "peak_testers": 1.873
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 0,
+          "means": {
+            "on_time_a": 890.447,
+            "on_time_b": 326.365,
+            "on_time_good": 1216.812,
+            "short_a": 265.63,
+            "short_b": 168.635,
+            "shortfall": 434.265,
+            "physical_good": 1555.433,
+            "late_good": 338.622,
+            "scrap": 94.223,
+            "backlog": 556.773,
+            "unstarted": 530.252,
+            "assembly": 12.792,
+            "waiting_inspection": 0.698,
+            "held_by_inspection": 0.237,
+            "waiting_repair": 11.76,
+            "in_repair": 0.775,
+            "waiting_or_retesting": 0.26,
+            "inspection_blocked_min": 32.196,
+            "retest_wait_unit_min": 0.697,
+            "kit_wait_min": 12.581,
+            "setup_station_min": 16.576,
+            "changeovers": 26.885,
+            "support_people": 1.543,
+            "support_booked_person_min": 116.148,
+            "support_busy_person_min": 74.597,
+            "peak_cart_places": 22.362,
+            "peak_testers": 1.835
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 3,
+          "means": {
+            "on_time_a": 835.743,
+            "on_time_b": 303.572,
+            "on_time_good": 1139.315,
+            "short_a": 322.688,
+            "short_b": 191.52,
+            "shortfall": 514.208,
+            "physical_good": 1665.493,
+            "late_good": 526.178,
+            "scrap": 45.105,
+            "backlog": 696.175,
+            "unstarted": 683.313,
+            "assembly": 11.683,
+            "waiting_inspection": 0.88,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.042,
+            "in_repair": 0.188,
+            "waiting_or_retesting": 0.068,
+            "inspection_blocked_min": 34.209,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 16.995,
+            "changeovers": 27.57,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 14.76,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "fifo_cover0_test1_early30": {
+      "replications": 600,
+      "both_hit": 3,
+      "both_rate": 0.005,
+      "both_adjusted_lower": 0.000545,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 3,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 429,
+          "means": {
+            "on_time_a": 1277.74,
+            "on_time_b": 514.447,
+            "on_time_good": 1792.187,
+            "short_a": 0.0,
+            "short_b": 7.78,
+            "shortfall": 7.78,
+            "physical_good": 1792.187,
+            "late_good": 0.0,
+            "scrap": 23.2,
+            "backlog": 34.613,
+            "unstarted": 25.873,
+            "assembly": 7.942,
+            "waiting_inspection": 0.588,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.027,
+            "in_repair": 0.13,
+            "waiting_or_retesting": 0.053,
+            "inspection_blocked_min": 0.0,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 16.59,
+            "changeovers": 26.908,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 2.123,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 37,
+          "means": {
+            "on_time_a": 1096.145,
+            "on_time_b": 413.188,
+            "on_time_good": 1509.333,
+            "short_a": 78.222,
+            "short_b": 82.953,
+            "shortfall": 161.175,
+            "physical_good": 1543.48,
+            "late_good": 34.147,
+            "scrap": 94.885,
+            "backlog": 246.248,
+            "unstarted": 225.553,
+            "assembly": 12.012,
+            "waiting_inspection": 0.733,
+            "held_by_inspection": 0.153,
+            "waiting_repair": 6.937,
+            "in_repair": 0.655,
+            "waiting_or_retesting": 0.205,
+            "inspection_blocked_min": 16.554,
+            "retest_wait_unit_min": 14.364,
+            "kit_wait_min": 27.828,
+            "setup_station_min": 16.7,
+            "changeovers": 27.1,
+            "support_people": 1.607,
+            "support_booked_person_min": 152.62,
+            "support_busy_person_min": 100.9,
+            "peak_cart_places": 21.882,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 104.08,
+              "ci95": [
+                98.358,
+                109.802
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -92.768,
+              "ci95": [
+                -98.349,
+                -87.188
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -110.182,
+              "ci95": [
+                -116.116,
+                -104.248
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -1.87,
+              "ci95": [
+                -2.746,
+                -0.995
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 4,
+          "means": {
+            "on_time_a": 990.653,
+            "on_time_b": 368.78,
+            "on_time_good": 1359.433,
+            "short_a": 169.917,
+            "short_b": 126.315,
+            "shortfall": 296.232,
+            "physical_good": 1593.975,
+            "late_good": 234.542,
+            "scrap": 98.175,
+            "backlog": 404.098,
+            "unstarted": 380.09,
+            "assembly": 12.49,
+            "waiting_inspection": 0.74,
+            "held_by_inspection": 0.178,
+            "waiting_repair": 9.642,
+            "in_repair": 0.703,
+            "waiting_or_retesting": 0.255,
+            "inspection_blocked_min": 25.163,
+            "retest_wait_unit_min": 14.03,
+            "kit_wait_min": 9.288,
+            "setup_station_min": 17.047,
+            "changeovers": 27.652,
+            "support_people": 1.57,
+            "support_booked_person_min": 132.622,
+            "support_busy_person_min": 91.998,
+            "peak_cart_places": 22.193,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 142.622,
+              "ci95": [
+                135.544,
+                149.7
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -138.033,
+              "ci95": [
+                -145.207,
+                -130.86
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -152.675,
+              "ci95": [
+                -160.078,
+                -145.272
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -7.034,
+              "ci95": [
+                -8.499,
+                -5.568
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 12,
+          "means": {
+            "on_time_a": 975.248,
+            "on_time_b": 364.565,
+            "on_time_good": 1339.813,
+            "short_a": 193.6,
+            "short_b": 131.228,
+            "shortfall": 324.828,
+            "physical_good": 1723.37,
+            "late_good": 383.557,
+            "scrap": 37.742,
+            "backlog": 492.987,
+            "unstarted": 480.275,
+            "assembly": 11.528,
+            "waiting_inspection": 0.878,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.037,
+            "in_repair": 0.2,
+            "waiting_or_retesting": 0.068,
+            "inspection_blocked_min": 20.871,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 17.48,
+            "changeovers": 28.333,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 11.912,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 200.498,
+              "ci95": [
+                190.523,
+                210.474
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -189.38,
+              "ci95": [
+                -199.828,
+                -178.932
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -203.188,
+              "ci95": [
+                -213.306,
+                -193.071
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -13.337,
+              "ci95": [
+                -14.873,
+                -11.802
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "campaign_120_cover0_test1_early0": {
+      "replications": 600,
+      "both_hit": 7,
+      "both_rate": 0.011667,
+      "both_adjusted_lower": 0.003346,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 7,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 579,
+          "means": {
+            "on_time_a": 1240.185,
+            "on_time_b": 547.807,
+            "on_time_good": 1787.992,
+            "short_a": 0.777,
+            "short_b": 0.0,
+            "shortfall": 0.777,
+            "physical_good": 1787.992,
+            "late_good": 0.0,
+            "scrap": 23.175,
+            "backlog": 38.833,
+            "unstarted": 30.53,
+            "assembly": 7.407,
+            "waiting_inspection": 0.638,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.038,
+            "in_repair": 0.167,
+            "waiting_or_retesting": 0.053,
+            "inspection_blocked_min": 0.0,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 18.5,
+            "changeovers": 30.0,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 2.117,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": -4.195,
+              "ci95": [
+                -4.517,
+                -3.873
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": -7.003,
+              "ci95": [
+                -8.122,
+                -5.885
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 4.22,
+              "ci95": [
+                3.903,
+                4.537
+              ],
+              "lower_above_zero": true
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 70,
+          "means": {
+            "on_time_a": 1022.807,
+            "on_time_b": 519.862,
+            "on_time_good": 1542.668,
+            "short_a": 137.403,
+            "short_b": 1.192,
+            "shortfall": 138.595,
+            "physical_good": 1581.01,
+            "late_good": 38.342,
+            "scrap": 94.625,
+            "backlog": 213.198,
+            "unstarted": 189.777,
+            "assembly": 11.808,
+            "waiting_inspection": 0.722,
+            "held_by_inspection": 0.16,
+            "waiting_repair": 9.763,
+            "in_repair": 0.72,
+            "waiting_or_retesting": 0.248,
+            "inspection_blocked_min": 14.662,
+            "retest_wait_unit_min": 10.0,
+            "kit_wait_min": 17.163,
+            "setup_station_min": 20.73,
+            "changeovers": 33.627,
+            "support_people": 1.648,
+            "support_booked_person_min": 176.498,
+            "support_busy_person_min": 80.5,
+            "peak_cart_places": 22.175,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 137.415,
+              "ci95": [
+                126.734,
+                148.096
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -115.348,
+              "ci95": [
+                -125.309,
+                -105.387
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -143.232,
+              "ci95": [
+                -154.486,
+                -131.977
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -3.761,
+              "ci95": [
+                -5.339,
+                -2.184
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 11,
+          "means": {
+            "on_time_a": 868.005,
+            "on_time_b": 517.732,
+            "on_time_good": 1385.737,
+            "short_a": 287.87,
+            "short_b": 2.68,
+            "shortfall": 290.55,
+            "physical_good": 1586.943,
+            "late_good": 201.207,
+            "scrap": 96.402,
+            "backlog": 379.853,
+            "unstarted": 352.22,
+            "assembly": 12.657,
+            "waiting_inspection": 0.715,
+            "held_by_inspection": 0.228,
+            "waiting_repair": 12.945,
+            "in_repair": 0.803,
+            "waiting_or_retesting": 0.285,
+            "inspection_blocked_min": 27.419,
+            "retest_wait_unit_min": 8.262,
+            "kit_wait_min": 6.211,
+            "setup_station_min": 20.584,
+            "changeovers": 33.372,
+            "support_people": 1.628,
+            "support_booked_person_min": 168.233,
+            "support_busy_person_min": 67.97,
+            "peak_cart_places": 22.927,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 168.925,
+              "ci95": [
+                156.344,
+                181.506
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -143.715,
+              "ci95": [
+                -156.216,
+                -131.214
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -176.92,
+              "ci95": [
+                -190.353,
+                -163.487
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -4.777,
+              "ci95": [
+                -6.771,
+                -2.783
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 38,
+          "means": {
+            "on_time_a": 804.728,
+            "on_time_b": 541.46,
+            "on_time_good": 1346.188,
+            "short_a": 353.543,
+            "short_b": 2.01,
+            "shortfall": 355.553,
+            "physical_good": 1703.442,
+            "late_good": 357.253,
+            "scrap": 39.93,
+            "backlog": 486.482,
+            "unstarted": 473.912,
+            "assembly": 11.302,
+            "waiting_inspection": 0.903,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.053,
+            "in_repair": 0.228,
+            "waiting_or_retesting": 0.083,
+            "inspection_blocked_min": 24.806,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 18.474,
+            "changeovers": 29.962,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 16.385,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 206.873,
+              "ci95": [
+                188.152,
+                225.595
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -158.655,
+              "ci95": [
+                -177.192,
+                -140.118
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -209.693,
+              "ci95": [
+                -228.658,
+                -190.729
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -9.403,
+              "ci95": [
+                -11.467,
+                -7.34
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    },
+    "ready_cover1_test1_early30": {
+      "replications": 600,
+      "both_hit": 26,
+      "both_rate": 0.043333,
+      "both_adjusted_lower": 0.024593,
+      "passes_reliability_gate": false,
+      "rescued_vs_baseline": 26,
+      "lost_vs_baseline": 0,
+      "shifts": {
+        "1": {
+          "hits": 429,
+          "means": {
+            "on_time_a": 1277.74,
+            "on_time_b": 514.447,
+            "on_time_good": 1792.187,
+            "short_a": 0.0,
+            "short_b": 7.78,
+            "shortfall": 7.78,
+            "physical_good": 1792.187,
+            "late_good": 0.0,
+            "scrap": 23.2,
+            "backlog": 34.613,
+            "unstarted": 25.873,
+            "assembly": 7.942,
+            "waiting_inspection": 0.588,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.027,
+            "in_repair": 0.13,
+            "waiting_or_retesting": 0.053,
+            "inspection_blocked_min": 0.0,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 16.59,
+            "changeovers": 26.908,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 2.123,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "shortfall": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "2": {
+          "hits": 120,
+          "means": {
+            "on_time_a": 1186.157,
+            "on_time_b": 450.115,
+            "on_time_good": 1636.272,
+            "short_a": 15.947,
+            "short_b": 48.953,
+            "shortfall": 64.9,
+            "physical_good": 1670.418,
+            "late_good": 34.147,
+            "scrap": 101.983,
+            "backlog": 112.212,
+            "unstarted": 96.545,
+            "assembly": 10.747,
+            "waiting_inspection": 0.74,
+            "held_by_inspection": 0.053,
+            "waiting_repair": 3.43,
+            "in_repair": 0.52,
+            "waiting_or_retesting": 0.177,
+            "inspection_blocked_min": 5.683,
+            "retest_wait_unit_min": 21.238,
+            "kit_wait_min": 6.298,
+            "setup_station_min": 18.991,
+            "changeovers": 30.815,
+            "support_people": 1.923,
+            "support_booked_person_min": 212.897,
+            "support_busy_person_min": 132.153,
+            "peak_cart_places": 19.195,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 231.018,
+              "ci95": [
+                219.404,
+                242.633
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -189.043,
+              "ci95": [
+                -199.928,
+                -178.159
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -244.218,
+              "ci95": [
+                -256.44,
+                -231.996
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -12.741,
+              "ci95": [
+                -14.547,
+                -10.935
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "3": {
+          "hits": 51,
+          "means": {
+            "on_time_a": 1148.477,
+            "on_time_b": 428.6,
+            "on_time_good": 1577.077,
+            "short_a": 38.113,
+            "short_b": 67.96,
+            "shortfall": 106.073,
+            "physical_good": 1684.68,
+            "late_good": 107.603,
+            "scrap": 104.283,
+            "backlog": 173.248,
+            "unstarted": 155.848,
+            "assembly": 11.59,
+            "waiting_inspection": 0.798,
+            "held_by_inspection": 0.053,
+            "waiting_repair": 4.197,
+            "in_repair": 0.563,
+            "waiting_or_retesting": 0.198,
+            "inspection_blocked_min": 5.974,
+            "retest_wait_unit_min": 22.675,
+            "kit_wait_min": 4.057,
+            "setup_station_min": 18.891,
+            "changeovers": 30.632,
+            "support_people": 1.932,
+            "support_booked_person_min": 207.363,
+            "support_busy_person_min": 133.132,
+            "peak_cart_places": 19.57,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 360.265,
+              "ci95": [
+                345.345,
+                375.185
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -328.192,
+              "ci95": [
+                -343.134,
+                -313.25
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -383.525,
+              "ci95": [
+                -399.316,
+                -367.734
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -26.222,
+              "ci95": [
+                -28.967,
+                -23.477
+              ],
+              "lower_above_zero": false
+            }
+          }
+        },
+        "4": {
+          "hits": 91,
+          "means": {
+            "on_time_a": 1181.333,
+            "on_time_b": 442.773,
+            "on_time_good": 1624.107,
+            "short_a": 36.527,
+            "short_b": 56.642,
+            "shortfall": 93.168,
+            "physical_good": 1790.02,
+            "late_good": 165.913,
+            "scrap": 28.32,
+            "backlog": 204.908,
+            "unstarted": 192.537,
+            "assembly": 11.218,
+            "waiting_inspection": 0.815,
+            "held_by_inspection": 0.0,
+            "waiting_repair": 0.062,
+            "in_repair": 0.19,
+            "waiting_or_retesting": 0.087,
+            "inspection_blocked_min": 4.789,
+            "retest_wait_unit_min": 0.0,
+            "kit_wait_min": 0.0,
+            "setup_station_min": 18.152,
+            "changeovers": 29.437,
+            "support_people": 0.0,
+            "support_booked_person_min": 0.0,
+            "support_busy_person_min": 0.0,
+            "peak_cart_places": 6.267,
+            "peak_testers": 1.0
+          },
+          "paired_delta_vs_baseline": {
+            "on_time_good": {
+              "mean": 484.792,
+              "ci95": [
+                462.23,
+                507.353
+              ],
+              "lower_above_zero": true
+            },
+            "shortfall": {
+              "mean": -421.04,
+              "ci95": [
+                -444.095,
+                -397.985
+              ],
+              "lower_above_zero": false
+            },
+            "backlog": {
+              "mean": -491.267,
+              "ci95": [
+                -514.115,
+                -468.419
+              ],
+              "lower_above_zero": false
+            },
+            "inspection_blocked_min": {
+              "mean": -29.42,
+              "ci95": [
+                -32.468,
+                -26.372
+              ],
+              "lower_above_zero": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

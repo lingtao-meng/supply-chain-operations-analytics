@@ -1,0 +1,649 @@
+{
+  "case": "Mitchell",
+  "target_released": 1650,
+  "shift_seconds": 25200,
+  "task_cv_pct": 20,
+  "shift_cv_pct": 3,
+  "first_defect_pct": 18,
+  "pulse_minutes": 120,
+  "pulse_failure_share_pct": 65,
+  "inspection_seconds": 12,
+  "rework_seconds": 120,
+  "reserved_minutes": 90,
+  "review_minutes": 5,
+  "response_minutes": 10,
+  "design": {
+    "runs": 300,
+    "seeds": [
+      2026112213,
+      2026112214
+    ],
+    "pulse_starts": {
+      "early": 30,
+      "middle": 130,
+      "late": 240
+    },
+    "candidates": [
+      {
+        "name": "fixed_000",
+        "start_minute": 0,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -236,
+          1586,
+          -1544854
+        ]
+      },
+      {
+        "name": "fixed_015",
+        "start_minute": 15,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -236,
+          1586,
+          -1546797
+        ]
+      },
+      {
+        "name": "fixed_030",
+        "start_minute": 30,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -236,
+          1586,
+          -1548582
+        ]
+      },
+      {
+        "name": "fixed_045",
+        "start_minute": 45,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -236,
+          1586,
+          -1549248
+        ]
+      },
+      {
+        "name": "fixed_060",
+        "start_minute": 60,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -236,
+          1586,
+          -1551090
+        ]
+      },
+      {
+        "name": "fixed_075",
+        "start_minute": 75,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -236,
+          1586,
+          -1553029
+        ]
+      },
+      {
+        "name": "fixed_090",
+        "start_minute": 90,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -236,
+          1586,
+          -1554917
+        ]
+      },
+      {
+        "name": "fixed_105",
+        "start_minute": 105,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -236,
+          1586,
+          -1556855
+        ]
+      },
+      {
+        "name": "fixed_120",
+        "start_minute": 120,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -236,
+          1586,
+          -1558750
+        ]
+      },
+      {
+        "name": "fixed_135",
+        "start_minute": 135,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -236,
+          1584,
+          -1560272
+        ]
+      },
+      {
+        "name": "fixed_150",
+        "start_minute": 150,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -236,
+          1572,
+          -1560338
+        ]
+      },
+      {
+        "name": "fixed_165",
+        "start_minute": 165,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -243,
+          1260,
+          -1561951
+        ]
+      },
+      {
+        "name": "fixed_180",
+        "start_minute": 180,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -258,
+          938,
+          -1563869
+        ]
+      },
+      {
+        "name": "fixed_195",
+        "start_minute": 195,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -266,
+          683,
+          -1565808
+        ]
+      },
+      {
+        "name": "fixed_210",
+        "start_minute": 210,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -276,
+          489,
+          -1567716
+        ]
+      },
+      {
+        "name": "fixed_225",
+        "start_minute": 225,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -284,
+          368,
+          -1569596
+        ]
+      },
+      {
+        "name": "fixed_240",
+        "start_minute": 240,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -286,
+          268,
+          -1571438
+        ]
+      },
+      {
+        "name": "fixed_255",
+        "start_minute": 255,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -286,
+          252,
+          -1571688
+        ]
+      },
+      {
+        "name": "fixed_270",
+        "start_minute": 270,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -286,
+          252,
+          -1571688
+        ]
+      },
+      {
+        "name": "fixed_285",
+        "start_minute": 285,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -286,
+          252,
+          -1571688
+        ]
+      },
+      {
+        "name": "fixed_300",
+        "start_minute": 300,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -286,
+          252,
+          -1571688
+        ]
+      },
+      {
+        "name": "fixed_315",
+        "start_minute": 315,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -286,
+          252,
+          -1571688
+        ]
+      },
+      {
+        "name": "fixed_330",
+        "start_minute": 330,
+        "threshold": null,
+        "support_minutes": 90,
+        "score": [
+          -286,
+          252,
+          -1571692
+        ]
+      },
+      {
+        "name": "trigger_04",
+        "start_minute": null,
+        "threshold": 4,
+        "support_minutes": 90,
+        "score": [
+          -279,
+          606,
+          -1567655
+        ]
+      },
+      {
+        "name": "trigger_08",
+        "start_minute": null,
+        "threshold": 8,
+        "support_minutes": 90,
+        "score": [
+          -286,
+          252,
+          -1571648
+        ]
+      },
+      {
+        "name": "trigger_12",
+        "start_minute": null,
+        "threshold": 12,
+        "support_minutes": 90,
+        "score": [
+          -286,
+          252,
+          -1571688
+        ]
+      },
+      {
+        "name": "trigger_16",
+        "start_minute": null,
+        "threshold": 16,
+        "support_minutes": 90,
+        "score": [
+          -286,
+          252,
+          -1571688
+        ]
+      },
+      {
+        "name": "trigger_20",
+        "start_minute": null,
+        "threshold": 20,
+        "support_minutes": 90,
+        "score": [
+          -286,
+          252,
+          -1571688
+        ]
+      },
+      {
+        "name": "trigger_24",
+        "start_minute": null,
+        "threshold": 24,
+        "support_minutes": 90,
+        "score": [
+          -286,
+          252,
+          -1571688
+        ]
+      }
+    ]
+  },
+  "holdout": {
+    "runs": 600,
+    "seeds": [
+      2026112215,
+      2026112216
+    ],
+    "pulse_starts": {
+      "uniform": null,
+      "early": 55,
+      "middle": 165,
+      "late": 285
+    },
+    "alpha_per_scenario_policy": 0.003125,
+    "required_hits": 585,
+    "policies": [
+      {
+        "name": "no_support",
+        "start_minute": 0,
+        "threshold": null,
+        "support_minutes": 0
+      },
+      {
+        "name": "fixed",
+        "start_minute": 330,
+        "threshold": null,
+        "support_minutes": 90
+      },
+      {
+        "name": "adaptive",
+        "start_minute": null,
+        "threshold": 12,
+        "support_minutes": 90
+      },
+      {
+        "name": "full_shift",
+        "start_minute": 0,
+        "threshold": null,
+        "support_minutes": 420
+      }
+    ],
+    "results": [
+      {
+        "policy": "no_support",
+        "condition": "uniform",
+        "hits": 577,
+        "lower95_adjusted": 0.934989,
+        "passes": false,
+        "mean_released": 1733.245,
+        "mean_shortfall": 0.625,
+        "mean_pending_rework": 65.977,
+        "mean_open_rework": 33.675,
+        "mean_helper_busy_minutes": 0.0,
+        "median_support_start_minute": null,
+        "queue_triggered_shifts": 0
+      },
+      {
+        "policy": "fixed",
+        "condition": "uniform",
+        "hits": 598,
+        "lower95_adjusted": 0.983686,
+        "passes": true,
+        "mean_released": 1770.643,
+        "mean_shortfall": 0.063,
+        "mean_pending_rework": 21.917,
+        "mean_open_rework": 28.988,
+        "mean_helper_busy_minutes": 88.837,
+        "median_support_start_minute": 330.0,
+        "queue_triggered_shifts": 0
+      },
+      {
+        "policy": "adaptive",
+        "condition": "uniform",
+        "hits": 594,
+        "lower95_adjusted": 0.97294,
+        "passes": true,
+        "mean_released": 1755.383,
+        "mean_shortfall": 0.13,
+        "mean_pending_rework": 39.932,
+        "mean_open_rework": 15.109,
+        "mean_helper_busy_minutes": 68.1,
+        "median_support_start_minute": 80.0,
+        "queue_triggered_shifts": 600
+      },
+      {
+        "policy": "full_shift",
+        "condition": "uniform",
+        "hits": 598,
+        "lower95_adjusted": 0.983686,
+        "passes": true,
+        "mean_released": 1787.945,
+        "mean_shortfall": 0.063,
+        "mean_pending_rework": 1.622,
+        "mean_open_rework": 1.685,
+        "mean_helper_busy_minutes": 240.287,
+        "median_support_start_minute": 0.0,
+        "queue_triggered_shifts": 0
+      },
+      {
+        "policy": "no_support",
+        "condition": "early",
+        "hits": 567,
+        "lower95_adjusted": 0.914549,
+        "passes": false,
+        "mean_released": 1725.76,
+        "mean_shortfall": 1.105,
+        "mean_pending_rework": 74.627,
+        "mean_open_rework": 73.662,
+        "mean_helper_busy_minutes": 0.0,
+        "median_support_start_minute": null,
+        "queue_triggered_shifts": 0
+      },
+      {
+        "policy": "fixed",
+        "condition": "early",
+        "hits": 595,
+        "lower95_adjusted": 0.975473,
+        "passes": true,
+        "mean_released": 1763.983,
+        "mean_shortfall": 0.08,
+        "mean_pending_rework": 29.787,
+        "mean_open_rework": 68.95,
+        "mean_helper_busy_minutes": 89.807,
+        "median_support_start_minute": 330.0,
+        "queue_triggered_shifts": 0
+      },
+      {
+        "policy": "adaptive",
+        "condition": "early",
+        "hits": 595,
+        "lower95_adjusted": 0.975473,
+        "passes": true,
+        "mean_released": 1763.978,
+        "mean_shortfall": 0.08,
+        "mean_pending_rework": 29.792,
+        "mean_open_rework": 42.093,
+        "mean_helper_busy_minutes": 90.0,
+        "median_support_start_minute": 80.0,
+        "queue_triggered_shifts": 600
+      },
+      {
+        "policy": "full_shift",
+        "condition": "early",
+        "hits": 598,
+        "lower95_adjusted": 0.983686,
+        "passes": true,
+        "mean_released": 1788.723,
+        "mean_shortfall": 0.057,
+        "mean_pending_rework": 0.697,
+        "mean_open_rework": 15.69,
+        "mean_helper_busy_minutes": 248.06,
+        "median_support_start_minute": 0.0,
+        "queue_triggered_shifts": 0
+      },
+      {
+        "policy": "no_support",
+        "condition": "middle",
+        "hits": 529,
+        "lower95_adjusted": 0.84135,
+        "passes": false,
+        "mean_released": 1708.948,
+        "mean_shortfall": 2.49,
+        "mean_pending_rework": 94.367,
+        "mean_open_rework": 51.851,
+        "mean_helper_busy_minutes": 0.0,
+        "median_support_start_minute": null,
+        "queue_triggered_shifts": 0
+      },
+      {
+        "policy": "fixed",
+        "condition": "middle",
+        "hits": 589,
+        "lower95_adjusted": 0.961041,
+        "passes": true,
+        "mean_released": 1747.15,
+        "mean_shortfall": 0.295,
+        "mean_pending_rework": 49.367,
+        "mean_open_rework": 47.137,
+        "mean_helper_busy_minutes": 90.0,
+        "median_support_start_minute": 330.0,
+        "queue_triggered_shifts": 0
+      },
+      {
+        "policy": "adaptive",
+        "condition": "middle",
+        "hits": 589,
+        "lower95_adjusted": 0.961041,
+        "passes": true,
+        "mean_released": 1747.15,
+        "mean_shortfall": 0.295,
+        "mean_pending_rework": 49.367,
+        "mean_open_rework": 32.062,
+        "mean_helper_busy_minutes": 90.0,
+        "median_support_start_minute": 190.0,
+        "queue_triggered_shifts": 600
+      },
+      {
+        "policy": "full_shift",
+        "condition": "middle",
+        "hits": 598,
+        "lower95_adjusted": 0.983686,
+        "passes": true,
+        "mean_released": 1788.635,
+        "mean_shortfall": 0.057,
+        "mean_pending_rework": 0.815,
+        "mean_open_rework": 15.743,
+        "mean_helper_busy_minutes": 247.743,
+        "median_support_start_minute": 0.0,
+        "queue_triggered_shifts": 0
+      },
+      {
+        "policy": "no_support",
+        "condition": "late",
+        "hits": 470,
+        "lower95_adjusted": 0.73408,
+        "passes": false,
+        "mean_released": 1690.838,
+        "mean_shortfall": 5.468,
+        "mean_pending_rework": 115.932,
+        "mean_open_rework": 22.134,
+        "mean_helper_busy_minutes": 0.0,
+        "median_support_start_minute": null,
+        "queue_triggered_shifts": 0
+      },
+      {
+        "policy": "fixed",
+        "condition": "late",
+        "hits": 572,
+        "lower95_adjusted": 0.92467,
+        "passes": false,
+        "mean_released": 1729.07,
+        "mean_shortfall": 0.892,
+        "mean_pending_rework": 70.932,
+        "mean_open_rework": 17.42,
+        "mean_helper_busy_minutes": 90.0,
+        "median_support_start_minute": 330.0,
+        "queue_triggered_shifts": 0
+      },
+      {
+        "policy": "adaptive",
+        "condition": "late",
+        "hits": 572,
+        "lower95_adjusted": 0.92467,
+        "passes": false,
+        "mean_released": 1729.07,
+        "mean_shortfall": 0.892,
+        "mean_pending_rework": 70.932,
+        "mean_open_rework": 15.193,
+        "mean_helper_busy_minutes": 90.0,
+        "median_support_start_minute": 310.0,
+        "queue_triggered_shifts": 600
+      },
+      {
+        "policy": "full_shift",
+        "condition": "late",
+        "hits": 587,
+        "lower95_adjusted": 0.956516,
+        "passes": true,
+        "mean_released": 1747.5,
+        "mean_shortfall": 0.258,
+        "mean_pending_rework": 49.227,
+        "mean_open_rework": 11.25,
+        "mean_helper_busy_minutes": 191.27,
+        "median_support_start_minute": 0.0,
+        "queue_triggered_shifts": 0
+      }
+    ],
+    "paired_adaptive_gain_vs_fixed": {
+      "uniform": {
+        "mean": -15.26,
+        "ci95": [
+          -15.769,
+          -14.751
+        ],
+        "lower_above_zero": false
+      },
+      "early": {
+        "mean": -0.005,
+        "ci95": [
+          -0.011,
+          0.001
+        ],
+        "lower_above_zero": false
+      },
+      "middle": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "lower_above_zero": false
+      },
+      "late": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "lower_above_zero": false
+      }
+    }
+  }
+}
