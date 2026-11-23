@@ -178,6 +178,20 @@ def verify():
     expected_digest = read(f"{RESULTS}/{stress}.json")["uncompressed_evidence_sha256"]
     if hashlib.sha256(gzip.decompress((ROOT/f"{RESULTS}/{stress}.csv.gz").read_bytes())).hexdigest() != expected_digest:
         raise SystemExit(f"{stress}: evidence SHA-256 does not match the published summary")
+    release = "balanced_release"
+    release_doc = "BALANCED_RELEASE"
+    for resource, rule, target, row in (
+            ("base", "balanced_batch_180", 420, "原配置，180 件批"),
+            ("assembly+rework", "balanced_batch_120", 650, "平行工位加返工，120 件批")):
+        selector = f"outcomes/{resource}/{rule}/scenarios/combined"
+        report(release_doc, f"^| {row} |", release, selector,
+               ("effects_vs_ready/short_a/mean", ",.2f"),
+               ("effects_vs_ready/short_b/mean", ",.2f", -1),
+               ("effects_vs_ready/total_shortfall/mean", ",.2f", -1),
+               (f"reliability/{target}/hits", ",.0f"), (f"reliability/{target}/lower", ".2f", 100))
+    expected_digest = read(f"{RESULTS}/{release}.json")["uncompressed_evidence_sha256"]
+    if hashlib.sha256(gzip.decompress((ROOT/f"{RESULTS}/{release}.csv.gz").read_bytes())).hexdigest() != expected_digest:
+        raise SystemExit(f"{release}: evidence SHA-256 does not match the published summary")
     for i, seed in enumerate((714,715,716)):
         report("SMALL_GRAPH_VALIDATION",f"| DAG-{seed} |","small_graph_validation",f"cases/{i}",
                "work_bound",("paired_gain/mean",".2f"),("paired_gain/simultaneous95/0",".2f"),

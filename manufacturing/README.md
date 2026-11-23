@@ -15,7 +15,7 @@ flowchart LR
 - **静态排工。** Mitchell 节拍 15 时，最长工序优先需 9 个工位，整数规划需 8 个。工位数相同时，再比较最忙工位的负荷。[静态排工与结果](EXPERIMENTS.md#结果)
 - **班产承诺。** 同一基准配置 3 个缓冲位，固定设计样本上的最优班产为 1,590 件，独立验收的计划量为 1,570 件。[搜索证书与验收](CERTIFIED_SEARCH.md)
 - **异常恢复。** Jackson 停机 30 分钟时，较差工况下由 214/300 班达标提高到 299/300 班。连续慢件和集中返工另按各自交期验收。[停机](DOWNTIME_RECOVERY.md) · [慢件](PERSISTENT_WORKLOADS.md) · [返工](FINITE_STAGING.md)
-- **有限资源。** 混线仿真中，第 4 工位扩容是减少累计欠发最有效的单项措施。基准工况每班交足 500 件时，单改返工成本最低。到料晚、人员缺勤和返工提速打折的组合压力下，平行工位加返工方案仍通过这一档。[同目标成本](MIXED_LINE_DECISIONS.md) · [联合压力复验](MIXED_LINE_STRESS.md) · [有限暂存](SUPPORT_BUDGET.md) · [排产与平行工位](FACTORY_REBALANCE.md)
+- **有限资源。** 混线仿真中，第 4 工位扩容是减少累计欠发最有效的单项措施。基准工况每班交足 500 件时，单改返工成本最低。到料晚、人员缺勤和返工提速打折的组合压力下，平行工位加返工方案仍通过这一档。[同目标成本](MIXED_LINE_DECISIONS.md) · [联合压力复验](MIXED_LINE_STRESS.md) · [有限暂存](SUPPORT_BUDGET.md) · [投料规则与型号欠交](BALANCED_RELEASE.md)
 
 ## 局限与适用边界
 

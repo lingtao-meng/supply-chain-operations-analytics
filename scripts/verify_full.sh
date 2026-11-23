@@ -129,4 +129,8 @@ python manufacturing/mixed_line_stress.py --output-dir "$RUNNER_TEMP/mixed-stres
 cmp manufacturing/results/mixed_line_stress.json "$RUNNER_TEMP/mixed-stress/mixed_line_stress.json"
 diff <(gzip -dc manufacturing/results/mixed_line_stress.csv.gz) \
   <(gzip -dc "$RUNNER_TEMP/mixed-stress/mixed_line_stress.csv.gz")
+python manufacturing/balanced_release_study.py --output-dir "$RUNNER_TEMP/balanced-release"
+cmp manufacturing/results/balanced_release.json "$RUNNER_TEMP/balanced-release/balanced_release.json"
+diff <(gzip -dc manufacturing/results/balanced_release.csv.gz) \
+  <(gzip -dc "$RUNNER_TEMP/balanced-release/balanced_release.csv.gz")
 echo "Manufacturing numerical results reproduced."

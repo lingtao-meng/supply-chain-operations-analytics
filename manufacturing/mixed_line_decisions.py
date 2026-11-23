@@ -129,7 +129,8 @@ class Pressure:
     improved_repair_seconds: int = 60
 
 
-def trial(case, plan, seed, *, pressure=Pressure()):
+def trial(case, plan, seed, *, pressure=Pressure(), policies=POLICIES, release_rule="ready", batch_size=80,
+          measure_release=False):
     base_seed, extra_seed, roster_seed = seed.spawn(3)
     scenario = sample(case, plan, base_seed)
     extra = np.random.default_rng(extra_seed)
@@ -146,12 +147,17 @@ def trial(case, plan, seed, *, pressure=Pressure()):
              for supply in (False, True)}
     scenarios = {supply: replace(scenario, kits=gates[supply]) for supply in gates}
     result = {}
-    for policy in POLICIES:
-        plant = replace(PLANT, kit_advance=0, repair_seconds=pressure.improved_repair_seconds if policy.rework else 90)
+    for policy in policies:
+        plant = replace(PLANT, kit_advance=0, kit_dispatch=release_rule, max_run=batch_size,
+                        repair_seconds=pressure.improved_repair_seconds if policy.rework else 90)
         floor = replace(FLOOR, route_minutes=10) if policy.supply else FLOOR
         model = simulate(scenarios[policy.supply], plant, maintenance=windows, floor=floor,
                          parallel_available=staffed if policy.assembly else None, diagnose=True)
-        result[policy.name] = shift_measures(scenario, model, gates[policy.supply], windows, retries, staffed)
+        rows = shift_measures(scenario, model, gates[policy.supply], windows, retries, staffed)
+        if measure_release:
+            for day, row in enumerate(rows):
+                row["entry_changeovers"] = int(model.changeovers[day, 0])
+        result[policy.name] = rows
     return result
 
 
