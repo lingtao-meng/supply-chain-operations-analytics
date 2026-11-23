@@ -144,6 +144,8 @@ def _flow_shop(
         return exits[-1]
     if (exits[0] < duration).any():
         raise ValueError("the input workload ends before the shift; supply more products")
+    if record_exits and measure_buffers:
+        return exit_times, waiting_time / duration
     if record_exits:
         return exit_times
     if measure_buffers:

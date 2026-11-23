@@ -168,21 +168,9 @@ python python/04_ie_scheduling.py --capacity 300   # 容量敏感性
 
 ## 制造 IE 装配线平衡
 
-给定工序用时、前置关系与目标节拍，比较最长工序优先（LCR）、位置权重法（RPW）和 MILP。Mitchell 基准在节拍 15 时，LCR 需要 9 个工位，RPW 和 MILP 需要 8 个工位，平衡率由 77.78% 提高到 87.50%。在同样 8 个工位下，MILP 的峰值负荷由 RPW 的 15 降到 14。
+[一页案例](manufacturing/CASE_BRIEF.md) · [五分钟演示](manufacturing/DEMO.md) · [完整实验地图](manufacturing/EXPERIMENTS.md)
 
-在 Mitchell 的 8 工位、3 缓冲位案例中，分支定界把设计班产认证到 1,590 件，1,570 件的计划目标通过独立仿真验收。另用 Jackson 检验工序异常时的改线方案，用 Buxey 检验缓冲位置能否跨产线复用。 [制造 IE 项目入口](manufacturing/README.md)
-
-同一工序连续偏慢时，Mitchell 已验收的班产目标需要重新核定。Jackson 的补充实验计算了设备修复后的质量放行等待预算，并将等待超时换算成需补的净生产时间。 [连续慢件与班产承诺](manufacturing/PERSISTENT_WORKLOADS.md) · [复机放行等待预算](manufacturing/RESTART_RELEASE.md)
-
-合格班产实验把首检、离线返工、报废和班末待处理接入装配完工记录，在同一用工增量下比较增配首检位和返工位。 [合格班产与返工配置](manufacturing/GOOD_OUTPUT.md)
-
-返工支援进一步比较了等人时时间安排、并行人数与连续异常后的跨班积压，并分别统计当班总放行和本班应交工件的按时达成。 [等人时高峰支援](manufacturing/PEAK_REWORK_SUPPORT.md) · [跨班返工积压](manufacturing/REWORK_CARRYOVER.md)
-
-质检区的有限等待位会把返工拥堵传回装配。用相同的质量暂存预算比较首检前和返工前的布置，同时检验已知风险批次靠前时的预排支援。 [有限暂存与装配阻塞](manufacturing/FINITE_STAGING.md)
-
-```bash
-python manufacturing/line_balance.py
-```
+Mitchell 节拍 15 时，最长工序优先需 9 个工位，整数规划需 8 个。在 3 个缓冲位的设计条件下，固定样本最优班产为 1,590 件，独立验收的计划量为 1,570 件。返工、停机和混线发运另设工况，成本及回收期按可替换的人民币费率测算。[制造项目主页](manufacturing/README.md)
 
 ## 快递分拣线 IE 模块
 
@@ -190,10 +178,8 @@ python manufacturing/line_balance.py
 
 这是示例时间研究，不是顺丰现场实测；换成现场测时数据后，才能作为真实场地的结论。
 
-- 基准线平衡率 75%，瓶颈在供包，线产能 276 件/小时
-- 峰值时准时率掉到 26.2%，平均流程 14.5 分钟
-- 在供包加 1 人：平衡率只到 78%，但线产能 331 件/小时，准时率回到 89.6%，单票成本只涨 7.7%
-- 平时加同一个人：成本涨 12.7%，收益很小
+- 峰值基准的五分钟准时率为 18.9%，平均流程时间为 19.53 分钟。
+- 峰值供包增加一人后，五分钟准时率为 95.3%，单票成本由 0.758 美元升至 0.798 美元。
 
 详细结果、图和“怎么换现场数据”见 [`express/README.md`](express/README.md)。
 

@@ -1,0 +1,12 @@
+{
+  "currency": "CNY",
+  "shifts_per_year": 250,
+  "assembly_hourly_rate": 38,
+  "buffer_space_per_slot_year": 900,
+  "wip_value_per_unit": 260,
+  "annual_holding_rate": 0.20,
+  "direct_downtime_cost_per_minute": 8,
+  "repair_per_completed_attempt": 6,
+  "recheck_per_completed_attempt": 2,
+  "one_time_change_cost": 48000
+}
