@@ -1,0 +1,2911 @@
+{
+  "design": [
+    160,
+    2026112541
+  ],
+  "holdout": [
+    800,
+    2026112542
+  ],
+  "confidence_alpha_per_cell": 0.00025,
+  "assumptions": {
+    "currency": "CNY",
+    "shifts_per_year": 250,
+    "investment_life_years": 3,
+    "assembly_hourly_rate": 38,
+    "parallel_operator_hourly_rate": 46,
+    "buffer_space_per_slot_year": 900,
+    "first_repair_per_completed_attempt": 6,
+    "first_recheck_per_completed_attempt": 2,
+    "second_repair_and_recheck_per_completed_attempt": 12,
+    "scrap_per_disposed_unit": 20,
+    "primary_station_downtime_per_minute": 8,
+    "supply_change_investment": 18000,
+    "parallel_station_investment": 65000,
+    "rework_fixture_investment": 25000,
+    "supply_change_extra_cost_per_shift": 90,
+    "parallel_maintenance_extra_cost_per_shift": 20,
+    "rework_fixture_extra_cost_per_shift": 15
+  },
+  "pressures": {
+    "reference": {
+      "late_receipts_minutes": 0,
+      "adverse_qualified_availability": 0.82,
+      "improved_repair_seconds": 60
+    },
+    "late_receipts": {
+      "late_receipts_minutes": 20,
+      "adverse_qualified_availability": 0.82,
+      "improved_repair_seconds": 60
+    },
+    "low_staffing": {
+      "late_receipts_minutes": 0,
+      "adverse_qualified_availability": 0.65,
+      "improved_repair_seconds": 60
+    },
+    "slower_repair": {
+      "late_receipts_minutes": 0,
+      "adverse_qualified_availability": 0.82,
+      "improved_repair_seconds": 75
+    },
+    "combined": {
+      "late_receipts_minutes": 20,
+      "adverse_qualified_availability": 0.65,
+      "improved_repair_seconds": 75
+    }
+  },
+  "predeclared_common_targets": [
+    330,
+    500,
+    640,
+    650
+  ],
+  "outcomes": {
+    "base": {
+      "capital": 0,
+      "locked_pressure_promise": 310,
+      "passed_all_pressure_targets": [
+        310,
+        330
+      ],
+      "scenarios": {
+        "reference": {
+          "mean_four_shift_shortfall": 2841.38625,
+          "mean_abnormal_shift_2": [
+            559.37875,
+            181.5425
+          ],
+          "mean_shift_cost": 4849.5538,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": null,
+          "reliability": {
+            "310": {
+              "target": 310,
+              "quotas": [
+                217,
+                93
+              ],
+              "hits": 796,
+              "lower": 0.9794,
+              "passed": true
+            },
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 786,
+              "lower": 0.960112,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 588,
+              "lower": 0.677763,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 511,
+              "lower": 0.577775,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 491,
+              "lower": 0.552244,
+              "passed": false
+            }
+          }
+        },
+        "late_receipts": {
+          "mean_four_shift_shortfall": 2867.51375,
+          "mean_abnormal_shift_2": [
+            552.675,
+            179.36375
+          ],
+          "mean_shift_cost": 4847.4213,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 26.1275,
+            "ci95": [
+              20.61422,
+              31.64078
+            ],
+            "simultaneous95": [
+              17.21346,
+              35.04154
+            ],
+            "dz": 0.32889
+          },
+          "reliability": {
+            "310": {
+              "target": 310,
+              "quotas": [
+                217,
+                93
+              ],
+              "hits": 794,
+              "lower": 0.975183,
+              "passed": true
+            },
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 781,
+              "lower": 0.951431,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 572,
+              "lower": 0.656747,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 490,
+              "lower": 0.550972,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 476,
+              "lower": 0.533205,
+              "passed": false
+            }
+          }
+        },
+        "low_staffing": {
+          "mean_four_shift_shortfall": 2841.38625,
+          "mean_abnormal_shift_2": [
+            559.37875,
+            181.5425
+          ],
+          "mean_shift_cost": 4849.5538,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "simultaneous95": [
+              0.0,
+              0.0
+            ],
+            "dz": null
+          },
+          "reliability": {
+            "310": {
+              "target": 310,
+              "quotas": [
+                217,
+                93
+              ],
+              "hits": 796,
+              "lower": 0.9794,
+              "passed": true
+            },
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 786,
+              "lower": 0.960112,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 588,
+              "lower": 0.677763,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 511,
+              "lower": 0.577775,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 491,
+              "lower": 0.552244,
+              "passed": false
+            }
+          }
+        },
+        "slower_repair": {
+          "mean_four_shift_shortfall": 2841.38625,
+          "mean_abnormal_shift_2": [
+            559.37875,
+            181.5425
+          ],
+          "mean_shift_cost": 4849.5538,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "simultaneous95": [
+              0.0,
+              0.0
+            ],
+            "dz": null
+          },
+          "reliability": {
+            "310": {
+              "target": 310,
+              "quotas": [
+                217,
+                93
+              ],
+              "hits": 796,
+              "lower": 0.9794,
+              "passed": true
+            },
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 786,
+              "lower": 0.960112,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 588,
+              "lower": 0.677763,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 511,
+              "lower": 0.577775,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 491,
+              "lower": 0.552244,
+              "passed": false
+            }
+          }
+        },
+        "combined": {
+          "mean_four_shift_shortfall": 2867.51375,
+          "mean_abnormal_shift_2": [
+            552.675,
+            179.36375
+          ],
+          "mean_shift_cost": 4847.4213,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 26.1275,
+            "ci95": [
+              20.61422,
+              31.64078
+            ],
+            "simultaneous95": [
+              17.21346,
+              35.04154
+            ],
+            "dz": 0.32889
+          },
+          "reliability": {
+            "310": {
+              "target": 310,
+              "quotas": [
+                217,
+                93
+              ],
+              "hits": 794,
+              "lower": 0.975183,
+              "passed": true
+            },
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 781,
+              "lower": 0.951431,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 572,
+              "lower": 0.656747,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 490,
+              "lower": 0.550972,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 476,
+              "lower": 0.533205,
+              "passed": false
+            }
+          }
+        }
+      }
+    },
+    "rework": {
+      "capital": 25000,
+      "locked_pressure_promise": 330,
+      "passed_all_pressure_targets": [
+        330
+      ],
+      "scenarios": {
+        "reference": {
+          "mean_four_shift_shortfall": 2494.28625,
+          "mean_abnormal_shift_2": [
+            614.97,
+            208.99125
+          ],
+          "mean_shift_cost": 4936.5158,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": null,
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 786,
+              "lower": 0.960112,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 755,
+              "lower": 0.909913,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 739,
+              "lower": 0.885897,
+              "passed": false
+            }
+          }
+        },
+        "late_receipts": {
+          "mean_four_shift_shortfall": 2513.8275,
+          "mean_abnormal_shift_2": [
+            609.965,
+            207.71
+          ],
+          "mean_shift_cost": 4935.6458,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 19.54125,
+            "ci95": [
+              15.55643,
+              23.52607
+            ],
+            "simultaneous95": [
+              13.09847,
+              25.98403
+            ],
+            "dz": 0.34033
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 780,
+              "lower": 0.949736,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 743,
+              "lower": 0.891831,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 726,
+              "lower": 0.866872,
+              "passed": false
+            }
+          }
+        },
+        "low_staffing": {
+          "mean_four_shift_shortfall": 2494.28625,
+          "mean_abnormal_shift_2": [
+            614.97,
+            208.99125
+          ],
+          "mean_shift_cost": 4936.5158,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "simultaneous95": [
+              0.0,
+              0.0
+            ],
+            "dz": null
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 786,
+              "lower": 0.960112,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 755,
+              "lower": 0.909913,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 739,
+              "lower": 0.885897,
+              "passed": false
+            }
+          }
+        },
+        "slower_repair": {
+          "mean_four_shift_shortfall": 2647.785,
+          "mean_abnormal_shift_2": [
+            586.79375,
+            200.14125
+          ],
+          "mean_shift_cost": 4921.3896,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 153.49875,
+            "ci95": [
+              144.83461,
+              162.16289
+            ],
+            "simultaneous95": [
+              139.49028,
+              167.50722
+            ],
+            "dz": 1.22953
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 797,
+              "lower": 0.981644,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 736,
+              "lower": 0.881473,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 646,
+              "lower": 0.755229,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 628,
+              "lower": 0.730951,
+              "passed": false
+            }
+          }
+        },
+        "combined": {
+          "mean_four_shift_shortfall": 2671.0325,
+          "mean_abnormal_shift_2": [
+            581.40375,
+            198.065
+          ],
+          "mean_shift_cost": 4920.1796,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 176.74625,
+            "ci95": [
+              166.59649,
+              186.89601
+            ],
+            "simultaneous95": [
+              160.33579,
+              193.15671
+            ],
+            "dz": 1.20853
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 796,
+              "lower": 0.9794,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 718,
+              "lower": 0.855331,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 634,
+              "lower": 0.739017,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 614,
+              "lower": 0.712223,
+              "passed": false
+            }
+          }
+        }
+      }
+    },
+    "assembly": {
+      "capital": 65000,
+      "locked_pressure_promise": 340,
+      "passed_all_pressure_targets": [
+        330,
+        340
+      ],
+      "scenarios": {
+        "reference": {
+          "mean_four_shift_shortfall": 1892.76875,
+          "mean_abnormal_shift_2": [
+            769.6425,
+            275.84375
+          ],
+          "mean_shift_cost": 5341.0892,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": null,
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 797,
+              "lower": 0.981644,
+              "passed": true
+            },
+            "340": {
+              "target": 340,
+              "quotas": [
+                238,
+                102
+              ],
+              "hits": 797,
+              "lower": 0.981644,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 785,
+              "lower": 0.958344,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 765,
+              "lower": 0.925396,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 758,
+              "lower": 0.914512,
+              "passed": false
+            }
+          }
+        },
+        "late_receipts": {
+          "mean_four_shift_shortfall": 1998.94125,
+          "mean_abnormal_shift_2": [
+            746.08,
+            265.74
+          ],
+          "mean_shift_cost": 5334.6379,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 106.1725,
+            "ci95": [
+              95.14556,
+              117.19944
+            ],
+            "simultaneous95": [
+              88.34378,
+              124.00122
+            ],
+            "dz": 0.66822
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 797,
+              "lower": 0.981644,
+              "passed": true
+            },
+            "340": {
+              "target": 340,
+              "quotas": [
+                238,
+                102
+              ],
+              "hits": 795,
+              "lower": 0.977254,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 766,
+              "lower": 0.92697,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 745,
+              "lower": 0.894814,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 737,
+              "lower": 0.882945,
+              "passed": false
+            }
+          }
+        },
+        "low_staffing": {
+          "mean_four_shift_shortfall": 2044.95625,
+          "mean_abnormal_shift_2": [
+            731.06375,
+            259.39375
+          ],
+          "mean_shift_cost": 5331.3229,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 152.1875,
+            "ci95": [
+              134.67968,
+              169.69532
+            ],
+            "simultaneous95": [
+              123.88029,
+              180.49471
+            ],
+            "dz": 0.60327
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 797,
+              "lower": 0.981644,
+              "passed": true
+            },
+            "340": {
+              "target": 340,
+              "quotas": [
+                238,
+                102
+              ],
+              "hits": 797,
+              "lower": 0.981644,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 766,
+              "lower": 0.92697,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 742,
+              "lower": 0.890343,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 731,
+              "lower": 0.874146,
+              "passed": false
+            }
+          }
+        },
+        "slower_repair": {
+          "mean_four_shift_shortfall": 1892.76875,
+          "mean_abnormal_shift_2": [
+            769.6425,
+            275.84375
+          ],
+          "mean_shift_cost": 5341.0892,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "simultaneous95": [
+              0.0,
+              0.0
+            ],
+            "dz": null
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 797,
+              "lower": 0.981644,
+              "passed": true
+            },
+            "340": {
+              "target": 340,
+              "quotas": [
+                238,
+                102
+              ],
+              "hits": 797,
+              "lower": 0.981644,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 785,
+              "lower": 0.958344,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 765,
+              "lower": 0.925396,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 758,
+              "lower": 0.914512,
+              "passed": false
+            }
+          }
+        },
+        "combined": {
+          "mean_four_shift_shortfall": 2138.49125,
+          "mean_abnormal_shift_2": [
+            709.7925,
+            250.7075
+          ],
+          "mean_shift_cost": 5325.5567,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 245.7225,
+            "ci95": [
+              226.7384,
+              264.7066
+            ],
+            "simultaneous95": [
+              215.02839,
+              276.41661
+            ],
+            "dz": 0.89829
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 796,
+              "lower": 0.9794,
+              "passed": true
+            },
+            "340": {
+              "target": 340,
+              "quotas": [
+                238,
+                102
+              ],
+              "hits": 793,
+              "lower": 0.973172,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 748,
+              "lower": 0.89931,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 716,
+              "lower": 0.852464,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 704,
+              "lower": 0.835388,
+              "passed": false
+            }
+          }
+        }
+      }
+    },
+    "assembly+rework": {
+      "capital": 90000,
+      "locked_pressure_promise": 480,
+      "passed_all_pressure_targets": [
+        330,
+        480,
+        500
+      ],
+      "scenarios": {
+        "reference": {
+          "mean_four_shift_shortfall": 1626.84375,
+          "mean_abnormal_shift_2": [
+            816.83875,
+            294.905
+          ],
+          "mean_shift_cost": 5414.1675,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": null,
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "480": {
+              "target": 480,
+              "quotas": [
+                336,
+                144
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 795,
+              "lower": 0.977254,
+              "passed": true
+            }
+          }
+        },
+        "late_receipts": {
+          "mean_four_shift_shortfall": 1707.7875,
+          "mean_abnormal_shift_2": [
+            797.11125,
+            287.61
+          ],
+          "mean_shift_cost": 5410.1675,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 80.94375,
+            "ci95": [
+              73.11501,
+              88.77249
+            ],
+            "simultaneous95": [
+              68.28598,
+              93.60152
+            ],
+            "dz": 0.71755
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "480": {
+              "target": 480,
+              "quotas": [
+                336,
+                144
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 797,
+              "lower": 0.981644,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 793,
+              "lower": 0.973172,
+              "passed": true
+            }
+          }
+        },
+        "low_staffing": {
+          "mean_four_shift_shortfall": 1761.085,
+          "mean_abnormal_shift_2": [
+            780.73125,
+            278.9225
+          ],
+          "mean_shift_cost": 5406.7275,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 134.24125,
+            "ci95": [
+              119.5507,
+              148.9318
+            ],
+            "simultaneous95": [
+              110.48908,
+              157.99342
+            ],
+            "dz": 0.63418
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "480": {
+              "target": 480,
+              "quotas": [
+                336,
+                144
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 793,
+              "lower": 0.973172,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 789,
+              "lower": 0.965539,
+              "passed": true
+            }
+          }
+        },
+        "slower_repair": {
+          "mean_four_shift_shortfall": 1744.005,
+          "mean_abnormal_shift_2": [
+            795.21875,
+            286.8975
+          ],
+          "mean_shift_cost": 5403.0638,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 117.16125,
+            "ci95": [
+              108.19912,
+              126.12338
+            ],
+            "simultaneous95": [
+              102.67099,
+              131.65151
+            ],
+            "dz": 0.90727
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "480": {
+              "target": 480,
+              "quotas": [
+                336,
+                144
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 793,
+              "lower": 0.973172,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 789,
+              "lower": 0.965539,
+              "passed": true
+            }
+          }
+        },
+        "combined": {
+          "mean_four_shift_shortfall": 1966.52875,
+          "mean_abnormal_shift_2": [
+            739.82125,
+            263.195
+          ],
+          "mean_shift_cost": 5390.495,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 339.685,
+            "ci95": [
+              320.35693,
+              359.01307
+            ],
+            "simultaneous95": [
+              308.43475,
+              370.93525
+            ],
+            "dz": 1.21969
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 797,
+              "lower": 0.981644,
+              "passed": true
+            },
+            "480": {
+              "target": 480,
+              "quotas": [
+                336,
+                144
+              ],
+              "hits": 789,
+              "lower": 0.965539,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 786,
+              "lower": 0.960112,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 770,
+              "lower": 0.933326,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 765,
+              "lower": 0.925396,
+              "passed": false
+            }
+          }
+        }
+      }
+    },
+    "supply": {
+      "capital": 18000,
+      "locked_pressure_promise": 310,
+      "passed_all_pressure_targets": [
+        310,
+        330
+      ],
+      "scenarios": {
+        "reference": {
+          "mean_four_shift_shortfall": 2825.2025,
+          "mean_abnormal_shift_2": [
+            563.22,
+            183.04375
+          ],
+          "mean_shift_cost": 4965.0088,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": null,
+          "reliability": {
+            "310": {
+              "target": 310,
+              "quotas": [
+                217,
+                93
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 789,
+              "lower": 0.965539,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 600,
+              "lower": 0.693618,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 520,
+              "lower": 0.58932,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 499,
+              "lower": 0.562436,
+              "passed": false
+            }
+          }
+        },
+        "late_receipts": {
+          "mean_four_shift_shortfall": 2835.78375,
+          "mean_abnormal_shift_2": [
+            560.52375,
+            182.31
+          ],
+          "mean_shift_cost": 4964.0863,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 10.58125,
+            "ci95": [
+              6.95068,
+              14.21182
+            ],
+            "simultaneous95": [
+              4.71123,
+              16.45127
+            ],
+            "dz": 0.20227
+          },
+          "reliability": {
+            "310": {
+              "target": 310,
+              "quotas": [
+                217,
+                93
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 787,
+              "lower": 0.9619,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 593,
+              "lower": 0.68436,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 512,
+              "lower": 0.579056,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 493,
+              "lower": 0.55479,
+              "passed": false
+            }
+          }
+        },
+        "low_staffing": {
+          "mean_four_shift_shortfall": 2825.2025,
+          "mean_abnormal_shift_2": [
+            563.22,
+            183.04375
+          ],
+          "mean_shift_cost": 4965.0088,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "simultaneous95": [
+              0.0,
+              0.0
+            ],
+            "dz": null
+          },
+          "reliability": {
+            "310": {
+              "target": 310,
+              "quotas": [
+                217,
+                93
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 789,
+              "lower": 0.965539,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 600,
+              "lower": 0.693618,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 520,
+              "lower": 0.58932,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 499,
+              "lower": 0.562436,
+              "passed": false
+            }
+          }
+        },
+        "slower_repair": {
+          "mean_four_shift_shortfall": 2825.2025,
+          "mean_abnormal_shift_2": [
+            563.22,
+            183.04375
+          ],
+          "mean_shift_cost": 4965.0088,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "simultaneous95": [
+              0.0,
+              0.0
+            ],
+            "dz": null
+          },
+          "reliability": {
+            "310": {
+              "target": 310,
+              "quotas": [
+                217,
+                93
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 789,
+              "lower": 0.965539,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 600,
+              "lower": 0.693618,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 520,
+              "lower": 0.58932,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 499,
+              "lower": 0.562436,
+              "passed": false
+            }
+          }
+        },
+        "combined": {
+          "mean_four_shift_shortfall": 2835.78375,
+          "mean_abnormal_shift_2": [
+            560.52375,
+            182.31
+          ],
+          "mean_shift_cost": 4964.0863,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 10.58125,
+            "ci95": [
+              6.95068,
+              14.21182
+            ],
+            "simultaneous95": [
+              4.71123,
+              16.45127
+            ],
+            "dz": 0.20227
+          },
+          "reliability": {
+            "310": {
+              "target": 310,
+              "quotas": [
+                217,
+                93
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 787,
+              "lower": 0.9619,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 593,
+              "lower": 0.68436,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 512,
+              "lower": 0.579056,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 493,
+              "lower": 0.55479,
+              "passed": false
+            }
+          }
+        }
+      }
+    },
+    "supply+rework": {
+      "capital": 43000,
+      "locked_pressure_promise": 330,
+      "passed_all_pressure_targets": [
+        330
+      ],
+      "scenarios": {
+        "reference": {
+          "mean_four_shift_shortfall": 2482.81125,
+          "mean_abnormal_shift_2": [
+            617.93,
+            209.75375
+          ],
+          "mean_shift_cost": 5051.1283,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": null,
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 792,
+              "lower": 0.971208,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 762,
+              "lower": 0.920703,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 746,
+              "lower": 0.896309,
+              "passed": false
+            }
+          }
+        },
+        "late_receipts": {
+          "mean_four_shift_shortfall": 2489.8475,
+          "mean_abnormal_shift_2": [
+            616.08375,
+            209.29875
+          ],
+          "mean_shift_cost": 5050.7846,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 7.03625,
+            "ci95": [
+              4.64843,
+              9.42407
+            ],
+            "simultaneous95": [
+              3.17555,
+              10.89695
+            ],
+            "dz": 0.2045
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 789,
+              "lower": 0.965539,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 756,
+              "lower": 0.911442,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 741,
+              "lower": 0.888858,
+              "passed": false
+            }
+          }
+        },
+        "low_staffing": {
+          "mean_four_shift_shortfall": 2482.81125,
+          "mean_abnormal_shift_2": [
+            617.93,
+            209.75375
+          ],
+          "mean_shift_cost": 5051.1283,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "simultaneous95": [
+              0.0,
+              0.0
+            ],
+            "dz": null
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 792,
+              "lower": 0.971208,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 762,
+              "lower": 0.920703,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 746,
+              "lower": 0.896309,
+              "passed": false
+            }
+          }
+        },
+        "slower_repair": {
+          "mean_four_shift_shortfall": 2633.7925,
+          "mean_abnormal_shift_2": [
+            590.26625,
+            201.2375
+          ],
+          "mean_shift_cost": 5036.2496,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 150.98125,
+            "ci95": [
+              142.34829,
+              159.61421
+            ],
+            "simultaneous95": [
+              137.0232,
+              164.9393
+            ],
+            "dz": 1.21374
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 747,
+              "lower": 0.897808,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 659,
+              "lower": 0.772917,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 638,
+              "lower": 0.744409,
+              "passed": false
+            }
+          }
+        },
+        "combined": {
+          "mean_four_shift_shortfall": 2642.54875,
+          "mean_abnormal_shift_2": [
+            588.0975,
+            200.52625
+          ],
+          "mean_shift_cost": 5035.7608,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 159.7375,
+            "ci95": [
+              150.56718,
+              168.90782
+            ],
+            "simultaneous95": [
+              144.91063,
+              174.56437
+            ],
+            "dz": 1.20888
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 797,
+              "lower": 0.981644,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 738,
+              "lower": 0.88442,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 654,
+              "lower": 0.766097,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 637,
+              "lower": 0.74306,
+              "passed": false
+            }
+          }
+        }
+      }
+    },
+    "supply+assembly": {
+      "capital": 83000,
+      "locked_pressure_promise": 360,
+      "passed_all_pressure_targets": [
+        330,
+        360
+      ],
+      "scenarios": {
+        "reference": {
+          "mean_four_shift_shortfall": 1810.635,
+          "mean_abnormal_shift_2": [
+            788.97125,
+            282.9575
+          ],
+          "mean_shift_cost": 5459.9192,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": null,
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "360": {
+              "target": 360,
+              "quotas": [
+                252,
+                108
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 793,
+              "lower": 0.973172,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 781,
+              "lower": 0.951431,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 776,
+              "lower": 0.943067,
+              "passed": false
+            }
+          }
+        },
+        "late_receipts": {
+          "mean_four_shift_shortfall": 1862.78125,
+          "mean_abnormal_shift_2": [
+            776.715,
+            278.39875
+          ],
+          "mean_shift_cost": 5456.7304,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 52.14625,
+            "ci95": [
+              44.20044,
+              60.09206
+            ],
+            "simultaneous95": [
+              39.29921,
+              64.99329
+            ],
+            "dz": 0.45546
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "360": {
+              "target": 360,
+              "quotas": [
+                252,
+                108
+              ],
+              "hits": 796,
+              "lower": 0.9794,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 790,
+              "lower": 0.967397,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 767,
+              "lower": 0.92855,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 764,
+              "lower": 0.923826,
+              "passed": false
+            }
+          }
+        },
+        "low_staffing": {
+          "mean_four_shift_shortfall": 1972.15625,
+          "mean_abnormal_shift_2": [
+            747.78375,
+            266.20125
+          ],
+          "mean_shift_cost": 5449.8504,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 161.52125,
+            "ci95": [
+              142.95773,
+              180.08477
+            ],
+            "simultaneous95": [
+              131.50714,
+              191.53536
+            ],
+            "dz": 0.60385
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "360": {
+              "target": 360,
+              "quotas": [
+                252,
+                108
+              ],
+              "hits": 796,
+              "lower": 0.9794,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 777,
+              "lower": 0.94472,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 756,
+              "lower": 0.911442,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 745,
+              "lower": 0.894814,
+              "passed": false
+            }
+          }
+        },
+        "slower_repair": {
+          "mean_four_shift_shortfall": 1810.635,
+          "mean_abnormal_shift_2": [
+            788.97125,
+            282.9575
+          ],
+          "mean_shift_cost": 5459.9192,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "simultaneous95": [
+              0.0,
+              0.0
+            ],
+            "dz": null
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "360": {
+              "target": 360,
+              "quotas": [
+                252,
+                108
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 793,
+              "lower": 0.973172,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 781,
+              "lower": 0.951431,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 776,
+              "lower": 0.943067,
+              "passed": false
+            }
+          }
+        },
+        "combined": {
+          "mean_four_shift_shortfall": 2018.135,
+          "mean_abnormal_shift_2": [
+            737.36625,
+            261.73125
+          ],
+          "mean_shift_cost": 5446.9229,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 207.5,
+            "ci95": [
+              188.4256,
+              226.5744
+            ],
+            "simultaneous95": [
+              176.65988,
+              238.34012
+            ],
+            "dz": 0.75497
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "360": {
+              "target": 360,
+              "quotas": [
+                252,
+                108
+              ],
+              "hits": 794,
+              "lower": 0.975183,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 771,
+              "lower": 0.934931,
+              "passed": false
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 744,
+              "lower": 0.893321,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 736,
+              "lower": 0.881473,
+              "passed": false
+            }
+          }
+        }
+      }
+    },
+    "supply+assembly+rework": {
+      "capital": 108000,
+      "locked_pressure_promise": 620,
+      "passed_all_pressure_targets": [
+        330,
+        500,
+        620,
+        640
+      ],
+      "scenarios": {
+        "reference": {
+          "mean_four_shift_shortfall": 1567.97625,
+          "mean_abnormal_shift_2": [
+            832.38625,
+            299.1525
+          ],
+          "mean_shift_cost": 5531.045,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": null,
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "620": {
+              "target": 620,
+              "quotas": [
+                434,
+                186
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 795,
+              "lower": 0.977254,
+              "passed": true
+            }
+          }
+        },
+        "late_receipts": {
+          "mean_four_shift_shortfall": 1605.01625,
+          "mean_abnormal_shift_2": [
+            822.85125,
+            296.2375
+          ],
+          "mean_shift_cost": 5529.1187,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 37.04,
+            "ci95": [
+              31.60284,
+              42.47716
+            ],
+            "simultaneous95": [
+              28.24902,
+              45.83098
+            ],
+            "dz": 0.47278
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "620": {
+              "target": 620,
+              "quotas": [
+                434,
+                186
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 798,
+              "lower": 0.984028,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 795,
+              "lower": 0.977254,
+              "passed": true
+            }
+          }
+        },
+        "low_staffing": {
+          "mean_four_shift_shortfall": 1710.41125,
+          "mean_abnormal_shift_2": [
+            792.8775,
+            283.76
+          ],
+          "mean_shift_cost": 5523.2238,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 142.435,
+            "ci95": [
+              126.979,
+              157.891
+            ],
+            "simultaneous95": [
+              117.44524,
+              167.42476
+            ],
+            "dz": 0.63956
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "620": {
+              "target": 620,
+              "quotas": [
+                434,
+                186
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 796,
+              "lower": 0.9794,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 792,
+              "lower": 0.971208,
+              "passed": true
+            }
+          }
+        },
+        "slower_repair": {
+          "mean_four_shift_shortfall": 1674.0275,
+          "mean_abnormal_shift_2": [
+            813.00625,
+            292.10625
+          ],
+          "mean_shift_cost": 5520.915,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 106.05125,
+            "ci95": [
+              97.53965,
+              114.56285
+            ],
+            "simultaneous95": [
+              92.28941,
+              119.81309
+            ],
+            "dz": 0.8647
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.989686,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "620": {
+              "target": 620,
+              "quotas": [
+                434,
+                186
+              ],
+              "hits": 796,
+              "lower": 0.9794,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 795,
+              "lower": 0.977254,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 791,
+              "lower": 0.969286,
+              "passed": true
+            }
+          }
+        },
+        "combined": {
+          "mean_four_shift_shortfall": 1863.55125,
+          "mean_abnormal_shift_2": [
+            763.9475,
+            272.5775
+          ],
+          "mean_shift_cost": 5510.3575,
+          "ergonomic_passes": 800,
+          "paired_added_shortfall_vs_reference": {
+            "mean": 295.575,
+            "ci95": [
+              276.52914,
+              314.62086
+            ],
+            "simultaneous95": [
+              264.78103,
+              326.36897
+            ],
+            "dz": 1.07703
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 799,
+              "lower": 0.986633,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 795,
+              "lower": 0.977254,
+              "passed": true
+            },
+            "620": {
+              "target": 620,
+              "quotas": [
+                434,
+                186
+              ],
+              "hits": 789,
+              "lower": 0.965539,
+              "passed": true
+            },
+            "640": {
+              "target": 640,
+              "quotas": [
+                448,
+                192
+              ],
+              "hits": 782,
+              "lower": 0.953138,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 777,
+              "lower": 0.94472,
+              "passed": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "lowest_worst_case_cost_at_common_target": {
+    "330": "base",
+    "500": "assembly+rework",
+    "640": "supply+assembly+rework",
+    "650": null
+  },
+  "highest_verified_by_capital": {
+    "0": {
+      "target": 330,
+      "policy": "base"
+    },
+    "25000": {
+      "target": 330,
+      "policy": "base"
+    },
+    "50000": {
+      "target": 330,
+      "policy": "base"
+    },
+    "85000": {
+      "target": 360,
+      "policy": "supply+assembly"
+    },
+    "90000": {
+      "target": 500,
+      "policy": "assembly+rework"
+    },
+    "110000": {
+      "target": 640,
+      "policy": "supply+assembly+rework"
+    }
+  },
+  "uncompressed_evidence_sha256": "1b70531609488179ff6f95d348f5642c34a103c66639e77aa753507aea01b780"
+}

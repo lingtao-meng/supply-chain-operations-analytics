@@ -1,6 +1,8 @@
 """Verify published headline and report claims against named result fields."""
 
 import csv
+import gzip
+import hashlib
 import json
 import re
 from decimal import ROUND_HALF_UP, Decimal, localcontext
@@ -157,6 +159,25 @@ def verify():
     report(short, "有限资源。", mixed, "outcomes/rework/reliability/500", "target")
     for budget in (90000, 110000):
         report(doc, f"| {budget:,} 元 |", mixed, f"largest_tested_target_by_capital/{budget}", "target")
+    stress = "mixed_line_stress"
+    stress_doc = "MIXED_LINE_STRESS"
+    for policy, target, row in (("rework",500,"只改返工，500 件"),
+                                ("assembly+rework",500,"平行工位加返工，500 件"),
+                                ("supply+assembly+rework",640,"三项全改，640 件"),
+                                ("supply+assembly+rework",650,"三项全改，650 件")):
+        selector = f"outcomes/{policy}/scenarios"
+        claims_for_row = [fact(stress, selector, f"{name}/reliability/{target}/hits")+"/800"
+                          for name in ("reference","late_receipts","low_staffing","slower_repair","combined")]
+        claim(stress_doc, f"^| {row} |", *claims_for_row)
+    for budget in (85000,90000,110000):
+        report(stress_doc, f"^| {budget:,} 元 |", stress, f"highest_verified_by_capital/{budget}", "target")
+    report(stress_doc, "要求五种场景都守住", stress, "outcomes/assembly+rework/scenarios/reference",
+           ("mean_shift_cost", ",.2f"))
+    report(stress_doc, "按上一轮的基准工况", stress, "outcomes/supply+assembly+rework/scenarios/combined",
+           ("reliability/640/lower", ".2f", 100), ("reliability/650/lower", ".2f", 100))
+    expected_digest = read(f"{RESULTS}/{stress}.json")["uncompressed_evidence_sha256"]
+    if hashlib.sha256(gzip.decompress((ROOT/f"{RESULTS}/{stress}.csv.gz").read_bytes())).hexdigest() != expected_digest:
+        raise SystemExit(f"{stress}: evidence SHA-256 does not match the published summary")
     for i, seed in enumerate((714,715,716)):
         report("SMALL_GRAPH_VALIDATION",f"| DAG-{seed} |","small_graph_validation",f"cases/{i}",
                "work_bound",("paired_gain/mean",".2f"),("paired_gain/simultaneous95/0",".2f"),

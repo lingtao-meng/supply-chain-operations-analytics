@@ -125,4 +125,8 @@ test -s "$RUNNER_TEMP/new/decision_tornado.png"
 python manufacturing/mixed_line_decisions.py --output-dir "$RUNNER_TEMP/mixed-line"
 cmp manufacturing/results/mixed_line_decisions.json "$RUNNER_TEMP/mixed-line/mixed_line_decisions.json"
 diff -r manufacturing/results/mixed_line "$RUNNER_TEMP/mixed-line/mixed_line"
+python manufacturing/mixed_line_stress.py --output-dir "$RUNNER_TEMP/mixed-stress"
+cmp manufacturing/results/mixed_line_stress.json "$RUNNER_TEMP/mixed-stress/mixed_line_stress.json"
+diff <(gzip -dc manufacturing/results/mixed_line_stress.csv.gz) \
+  <(gzip -dc "$RUNNER_TEMP/mixed-stress/mixed_line_stress.csv.gz")
 echo "Manufacturing numerical results reproduced."
