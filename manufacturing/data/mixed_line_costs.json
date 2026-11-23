@@ -1,0 +1,19 @@
+{
+  "currency": "CNY",
+  "shifts_per_year": 250,
+  "investment_life_years": 3,
+  "assembly_hourly_rate": 38,
+  "parallel_operator_hourly_rate": 46,
+  "buffer_space_per_slot_year": 900,
+  "first_repair_per_completed_attempt": 6,
+  "first_recheck_per_completed_attempt": 2,
+  "second_repair_and_recheck_per_completed_attempt": 12,
+  "scrap_per_disposed_unit": 20,
+  "primary_station_downtime_per_minute": 8,
+  "supply_change_investment": 18000,
+  "parallel_station_investment": 65000,
+  "rework_fixture_investment": 25000,
+  "supply_change_extra_cost_per_shift": 90,
+  "parallel_maintenance_extra_cost_per_shift": 20,
+  "rework_fixture_extra_cost_per_shift": 15
+}

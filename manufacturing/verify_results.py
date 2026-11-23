@@ -106,7 +106,6 @@ def verify():
         selector = f"results/{policy}/reliability/{target}"
         promises.append(str(target))
         report("FACTORY_REBALANCE",anchor,"factory_rebalance",selector,"hits",("lower",".2f",100))
-    claim(short,"有限资源。",*promises)
     claim("CASE_BRIEF","优先排查上游堵塞",*promises)
     report("FACTORY_SIMULATION","综合方案平均多按期交付","factory_study",
            "results/ready_cover1_test1_early30/shifts/3/paired_delta_vs_baseline/on_time_good",
@@ -138,6 +137,26 @@ def verify():
     report("TRANSFER_VALIDATION","| 迁移原位置 | 第","transfer_validation","cases/0/results/0","design_capacity")
     report("DECISION_ECONOMICS","单件可比成本由","decision_economics","",
            "annual_savings",("payback_years",".2f"),("first_year_roi",".2f",-100))
+    mixed = "mixed_line_decisions"
+    doc = "MIXED_LINE_DECISIONS"
+    for policy, label in (("base", "原方案"), ("supply", "只改供料"), ("assembly", "只加平行工位"),
+                          ("rework", "只改返工"), ("supply+assembly", "供料＋平行工位"),
+                          ("supply+rework", "供料＋返工"), ("assembly+rework", "平行工位＋返工"),
+                          ("supply+assembly+rework", "三项全改")):
+        selector = f"outcomes/{policy}"
+        fields = [("mean_shift_3/a", ",.2f"), ("mean_shift_3/b", ",.2f")]
+        if policy != "base":
+            fields.extend((f"paired_four_shift_shortfall_reduction/{key}", ",.2f")
+                          for key in ("mean", "simultaneous95/0", "simultaneous95/1"))
+        report(doc, f"^| {label} |", mixed, selector, *fields)
+    for target, policy in ((330, "base"), (400, "rework"), (500, "rework")):
+        selector = f"outcomes/{policy}"
+        assert read(f"{RESULTS}/{mixed}.json")["cheapest_at_common_target"][str(target)] == policy
+        report(doc, f"| {target} 件 |", mixed, selector, f"reliability/{target}/hits",
+               (f"reliability/{target}/lower", ".2f", 100), ("mean_total_cost_per_shift", ",.2f"))
+    report(short, "有限资源。", mixed, "outcomes/rework/reliability/500", "target")
+    for budget in (90000, 110000):
+        report(doc, f"| {budget:,} 元 |", mixed, f"largest_tested_target_by_capital/{budget}", "target")
     for i, seed in enumerate((714,715,716)):
         report("SMALL_GRAPH_VALIDATION",f"| DAG-{seed} |","small_graph_validation",f"cases/{i}",
                "work_bound",("paired_gain/mean",".2f"),("paired_gain/simultaneous95/0",".2f"),
@@ -151,7 +170,8 @@ def verify():
 
     failures = []
     for path, anchor, tokens in claims:
-        lines = [line for line in read(path).splitlines() if anchor in line]
+        lines = [line for line in read(path).splitlines()
+                 if (line.startswith(anchor[1:]) if anchor.startswith("^") else anchor in line)]
         if len(lines) != 1:
             failures.append(f"{path}: anchor {anchor!r} occurs {len(lines)} times")
             continue
