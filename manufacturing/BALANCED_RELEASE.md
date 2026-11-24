@@ -54,3 +54,5 @@ diff <(gzip -dc manufacturing/results/balanced_release.csv.gz) <(gzip -dc reprod
 ```
 
 [逐轨迹压缩记录](results/balanced_release.csv.gz) · [配对区间与交付验收](results/balanced_release.json) · [实验入口](balanced_release_study.py)
+
+订单比例从 70:30 改为 50:50 或 80:20 时，参见[订单结构变化下的投料复验](ORDER_MIX.md)。

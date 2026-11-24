@@ -192,6 +192,48 @@ def verify():
     expected_digest = read(f"{RESULTS}/{release}.json")["uncompressed_evidence_sha256"]
     if hashlib.sha256(gzip.decompress((ROOT/f"{RESULTS}/{release}.csv.gz").read_bytes())).hexdigest() != expected_digest:
         raise SystemExit(f"{release}: evidence SHA-256 does not match the published summary")
+    mix_study = "order_mix"
+    for mix in ("50:50", "80:20"):
+        selector = f"outcomes/{mix.replace(':', '_')}/combined"
+        fixed_hits = fact(mix_study, f"{selector}/balanced_batch/reliability/600", "hits")
+        anchor = f"^| {mix} | {fixed_hits}/"
+        for rule in ("balanced_batch", "balanced_order_mix"):
+            report("ORDER_MIX", anchor, mix_study, f"{selector}/{rule}/reliability/600",
+                   "hits", ("lower", ".2f", 100))
+        for field, sign in (("short_a", 1 if mix == "50:50" else -1),
+                            ("short_b", -1 if mix == "50:50" else 1)):
+            report("ORDER_MIX", anchor, mix_study, f"{selector}/paired_order_mix_vs/balanced_batch/{field}",
+                   ("mean", ",.2f", sign), ("simultaneous95/0", ",.2f", sign), ("simultaneous95/1", ",.2f", sign))
+    expected_digest = read(f"{RESULTS}/{mix_study}.json")["uncompressed_evidence_sha256"]
+    if hashlib.sha256(gzip.decompress((ROOT/f"{RESULTS}/{mix_study}.csv.gz").read_bytes())).hexdigest() != expected_digest:
+        raise SystemExit(f"{mix_study}: evidence SHA-256 does not match the published summary")
+    constrained = "constrained_release"
+    report("CONSTRAINED_RELEASE", "设计阶段没有非基准规则", constrained, "holdout_families",
+           "target_family", "effect_family")
+    for mix, rule, target, anchor in (
+            ("70_30", "band_120_50", 650, "组合压力下，70:30"),
+            ("50_50", "band_120_50", 600, "50:50 的 600 件档"),
+            ("80_20", "band_120_20", 625, "80:20 的连批 120")):
+        selector = f"holdout_assessment/{mix}/{rule}/scenarios/combined"
+        report("CONSTRAINED_RELEASE", anchor, constrained, f"{selector}/reliability/{target}",
+               "target", "hits", ("lower", ".2f", 100))
+        if mix != "50_50":
+            report("CONSTRAINED_RELEASE", anchor, constrained, selector,
+                   ("effect_vs_ready/short_a/mean", ".2f"),
+                   ("effect_vs_ready/short_a/simultaneous95/1", ".2f"),
+                   ("effect_vs_ready/changeovers/mean", ".2f", -1))
+            report("CONSTRAINED_RELEASE", anchor, constrained, f"tolerances/{mix}", ("short_a", ".2f"))
+    for ratio in ("70:30", "80:20"):
+        mix = ratio.replace(":", "_")
+        report("CONSTRAINED_RELEASE", f"^| {ratio} | 齐料旧单优先 |", constrained,
+               f"holdout_assessment/{mix}/ready", "best_acceptable_target")
+    expected_digest = read(f"{RESULTS}/{constrained}.json")["uncompressed_evidence_sha256"]
+    if hashlib.sha256(gzip.decompress((ROOT/f"{RESULTS}/{constrained}.csv.gz").read_bytes())).hexdigest() != expected_digest:
+        raise SystemExit(f"{constrained}: evidence SHA-256 does not match the published summary")
+    for condition, label in (("reference", "原设定"), ("combined", "组合压力")):
+        report("CONSTRAINED_RELEASE", f"^| {label} |", "station_five_study", f"results/{condition}",
+               ("old_peak/maximum", ".2f"), ("new_peak/maximum", ".2f"),
+               "delivered", ("delivery_lower", ".2f", 100))
     for i, seed in enumerate((714,715,716)):
         report("SMALL_GRAPH_VALIDATION",f"| DAG-{seed} |","small_graph_validation",f"cases/{i}",
                "work_bound",("paired_gain/mean",".2f"),("paired_gain/simultaneous95/0",".2f"),

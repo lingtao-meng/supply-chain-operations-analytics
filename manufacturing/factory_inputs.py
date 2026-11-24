@@ -97,13 +97,16 @@ def staff_windows(rng: np.random.Generator) -> tuple[np.ndarray, np.ndarray]:
     return baseline, trained
 
 
-def sample(case: Case, plan: list[list[int]], seed: np.random.SeedSequence, *, task_blocks=None) -> Scenario:
+def sample(case: Case, plan: list[list[int]], seed: np.random.SeedSequence, *, task_blocks=None,
+           sku_counts=SKU_COUNTS) -> Scenario:
     """Generate one matched four-shift trajectory with job-linked quality and kits."""
+    if len(sku_counts) != 2 or sum(sku_counts) != LOT or any(n <= 0 or n % 5 for n in sku_counts):
+        raise ValueError("two positive SKU counts must sum to the lot and divide into five blocks")
     workload_seed, quality_seed, material_seed, staff_seed = seed.spawn(4)
     workload = np.random.default_rng(workload_seed)
     quality = np.random.default_rng(quality_seed)
     receipts = np.random.default_rng(material_seed)
-    sku = np.tile(np.repeat((0, 1), tuple(count // 5 for count in SKU_COUNTS)), 5)
+    sku = np.tile(np.repeat((0, 1), tuple(count // 5 for count in sku_counts)), 5)
     variant = np.asarray(SKU_B_STATION_FACTORS)
     work, kits, routes = [], [], []
     for shift in range(SHIFTS):

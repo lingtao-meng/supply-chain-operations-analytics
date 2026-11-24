@@ -17,7 +17,7 @@ from factory_capacity_plan import ORIGINAL_TARGET, design_promise
 from factory_dispatch_study import PLANT, SHIPPING
 from factory_floor import ACTIONS
 from factory_floor_study import ACTIONS_LIMIT, POSTURE_LIMIT, calendar, second_attempt
-from factory_inputs import ADVERSE, SHIFTS, SHIFT_SECONDS, load_case, sample
+from factory_inputs import ADVERSE, SHIFTS, SHIFT_SECONDS, SKU_COUNTS, load_case, sample
 from factory_rebalance import FLOOR, cohort_rows, update_cohort_stages
 from factory_receiving import ReceivingPlan, receive_kits
 from factory_shipping import dispatch
@@ -70,7 +70,7 @@ def cost_components(policy, rates, row):
     return operating, policy.capital(rates) / (annual_shifts * rates["investment_life_years"])
 
 
-def shift_measures(scenario, model, gates, windows, retries, staffed):
+def shift_measures(scenario, model, gates, windows, retries, staffed, *, load_detail=False):
     ready, routes, attempted = second_attempt(model.trace[:, END], scenario.routes, retries)
     good = (routes == FIRST_PASS) | (routes == REWORK_PASS)
     shipped = dispatch(ready, scenario.orders, good, SHIPPING["faster_loading"])
@@ -102,7 +102,12 @@ def shift_measures(scenario, model, gates, windows, retries, staffed):
         alt = np.bincount(scenario.sku[scheduled], minlength=2)
         counts = model.floor_stats[day, :, :2].copy()
         counts[3] -= alt
-        peak = max((counts * np.asarray(ACTIONS).T).sum(axis=1).max(), alt @ np.asarray(ACTIONS)[:, 3])/420
+        station_actions = (counts * np.asarray(ACTIONS).T).sum(axis=1)
+        all_actions = np.append(station_actions, alt @ np.asarray(ACTIONS)[:, 3])
+        peak = all_actions.max() / 420
+        if load_detail:
+            row["action_totals"] = all_actions.tolist()
+            row["station_five_b_units"] = int(counts[4, 1])
         posture = model.floor_stats[day, 4, 2] / 60
         stopped = np.maximum(0, np.minimum(windows[:, 1], right)-np.maximum(windows[:, 0], left)).sum()/60
         row.update(
@@ -130,9 +135,9 @@ class Pressure:
 
 
 def trial(case, plan, seed, *, pressure=Pressure(), policies=POLICIES, release_rule="ready", batch_size=80,
-          measure_release=False):
+          measure_release=False, sku_counts=SKU_COUNTS, order_mix_band=0, load_detail=False):
     base_seed, extra_seed, roster_seed = seed.spawn(3)
-    scenario = sample(case, plan, base_seed)
+    scenario = sample(case, plan, base_seed, sku_counts=sku_counts)
     extra = np.random.default_rng(extra_seed)
     windows = calendar(extra.integers(145, 345, 2), extra.integers(12, 31, 2), True)
     retries = extra.random((len(scenario.kits), 2))
@@ -149,11 +154,13 @@ def trial(case, plan, seed, *, pressure=Pressure(), policies=POLICIES, release_r
     result = {}
     for policy in policies:
         plant = replace(PLANT, kit_advance=0, kit_dispatch=release_rule, max_run=batch_size,
+                        order_mix_band=order_mix_band,
                         repair_seconds=pressure.improved_repair_seconds if policy.rework else 90)
         floor = replace(FLOOR, route_minutes=10) if policy.supply else FLOOR
         model = simulate(scenarios[policy.supply], plant, maintenance=windows, floor=floor,
                          parallel_available=staffed if policy.assembly else None, diagnose=True)
-        rows = shift_measures(scenario, model, gates[policy.supply], windows, retries, staffed)
+        rows = shift_measures(scenario, model, gates[policy.supply], windows, retries, staffed,
+                              load_detail=load_detail)
         if measure_release:
             for day, row in enumerate(rows):
                 row["entry_changeovers"] = int(model.changeovers[day, 0])
@@ -172,8 +179,10 @@ def adverse_units(history, key):
     return np.array([[[r["a"], r["b"]] for r in (h[key][i] for i in ADVERSE)] for h in history])
 
 
-def verify_target(adverse, target, alpha):
-    quotas = np.array([target*7//10, target*3//10])
+def verify_target(adverse, target, alpha, *, quotas=None):
+    if quotas is None:
+        quotas = (target*7//10, target*3//10)
+    quotas = np.asarray(quotas)
     hits = int(np.all(adverse >= quotas, axis=(1, 2)).sum())
     lower = beta.ppf(alpha, hits, len(adverse)-hits+1) if hits else 0.
     return dict(target=target, quotas=quotas.tolist(), hits=hits, lower=round(float(lower), 6),

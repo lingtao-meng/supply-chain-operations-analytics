@@ -1,0 +1,1853 @@
+{
+  "holdout": [
+    800,
+    2026112601
+  ],
+  "order_counts": {
+    "70_30": [
+      1295,
+      555
+    ],
+    "50_50": [
+      925,
+      925
+    ],
+    "80_20": [
+      1480,
+      370
+    ]
+  },
+  "resources": "assembly+rework",
+  "minimum_batch": 120,
+  "shortage_reference_total": 1650,
+  "common_commitment_targets": [
+    330,
+    420,
+    500,
+    600,
+    650
+  ],
+  "reliability_family": 90,
+  "paired_effect_family": 48,
+  "uncompressed_evidence_sha256": "fe9f65f07871902fd62144f74b02c7f950ada4e0a36f1d24f9e00b59c0d04291",
+  "outcomes": {
+    "70_30": {
+      "reference": {
+        "ready": {
+          "means": {
+            "a_first": 961.7975,
+            "b_first": 360.88625,
+            "a_second": 823.3075,
+            "b_second": 297.31625,
+            "short_a": 977.1725,
+            "short_b": 631.34125,
+            "longest_delay_min": 294.05,
+            "changeovers": 36.07125,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                294,
+                126
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                420,
+                180
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 796,
+              "lower": 0.980676,
+              "passed": true
+            }
+          },
+          "largest_passing_target": 650
+        },
+        "balanced_batch": {
+          "means": {
+            "a_first": 886.805,
+            "b_first": 433.6775,
+            "a_second": 747.84125,
+            "b_second": 373.46125,
+            "short_a": 1237.515,
+            "short_b": 349.925,
+            "longest_delay_min": 293.9,
+            "changeovers": 36.90625,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                294,
+                126
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                420,
+                180
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            }
+          },
+          "largest_passing_target": 650
+        },
+        "balanced_order_mix": {
+          "means": {
+            "a_first": 886.805,
+            "b_first": 433.6775,
+            "a_second": 747.84125,
+            "b_second": 373.46125,
+            "short_a": 1237.515,
+            "short_b": 349.925,
+            "longest_delay_min": 293.9,
+            "changeovers": 36.90625,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                294,
+                126
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                420,
+                180
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            }
+          },
+          "largest_passing_target": 650
+        },
+        "paired_order_mix_vs": {
+          "ready": {
+            "short_a": {
+              "mean": 260.3425,
+              "ci95": [
+                255.90775,
+                264.77725
+              ],
+              "simultaneous95": [
+                252.90705,
+                267.77795
+              ],
+              "dz": 4.07415
+            },
+            "short_b": {
+              "mean": -281.41625,
+              "ci95": [
+                -284.94503,
+                -277.88747
+              ],
+              "simultaneous95": [
+                -287.33271,
+                -275.49979
+              ],
+              "dz": -5.5346
+            },
+            "longest_delay_min": {
+              "mean": -0.15,
+              "ci95": [
+                -1.73657,
+                1.43657
+              ],
+              "simultaneous95": [
+                -2.81009,
+                2.51009
+              ],
+              "dz": -0.00656
+            },
+            "changeovers": {
+              "mean": 0.835,
+              "ci95": [
+                0.69989,
+                0.97011
+              ],
+              "simultaneous95": [
+                0.60847,
+                1.06153
+              ],
+              "dz": 0.42891
+            }
+          },
+          "balanced_batch": {
+            "short_a": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "simultaneous95": [
+                0.0,
+                0.0
+              ],
+              "dz": null
+            },
+            "short_b": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "simultaneous95": [
+                0.0,
+                0.0
+              ],
+              "dz": null
+            },
+            "longest_delay_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "simultaneous95": [
+                0.0,
+                0.0
+              ],
+              "dz": null
+            },
+            "changeovers": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "simultaneous95": [
+                0.0,
+                0.0
+              ],
+              "dz": null
+            }
+          }
+        }
+      },
+      "combined": {
+        "ready": {
+          "means": {
+            "a_first": 925.39,
+            "b_first": 347.15125,
+            "a_second": 745.67,
+            "b_second": 267.0675,
+            "short_a": 1216.90375,
+            "short_b": 729.83375,
+            "longest_delay_min": 331.11875,
+            "changeovers": 34.99625,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 799,
+              "lower": 0.987715,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                294,
+                126
+              ],
+              "hits": 786,
+              "lower": 0.961786,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 785,
+              "lower": 0.960049,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                420,
+                180
+              ],
+              "hits": 782,
+              "lower": 0.954929,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 764,
+              "lower": 0.926023,
+              "passed": false
+            }
+          },
+          "largest_passing_target": 600
+        },
+        "balanced_batch": {
+          "means": {
+            "a_first": 852.15625,
+            "b_first": 416.89375,
+            "a_second": 676.34875,
+            "b_second": 345.17625,
+            "short_a": 1446.1825,
+            "short_b": 439.0425,
+            "longest_delay_min": 329.36875,
+            "changeovers": 36.1725,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                294,
+                126
+              ],
+              "hits": 799,
+              "lower": 0.987715,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 797,
+              "lower": 0.982863,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                420,
+                180
+              ],
+              "hits": 790,
+              "lower": 0.968936,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 787,
+              "lower": 0.963542,
+              "passed": true
+            }
+          },
+          "largest_passing_target": 650
+        },
+        "balanced_order_mix": {
+          "means": {
+            "a_first": 852.15625,
+            "b_first": 416.89375,
+            "a_second": 676.34875,
+            "b_second": 345.17625,
+            "short_a": 1446.1825,
+            "short_b": 439.0425,
+            "longest_delay_min": 329.36875,
+            "changeovers": 36.1725,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                231,
+                99
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                294,
+                126
+              ],
+              "hits": 799,
+              "lower": 0.987715,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                350,
+                150
+              ],
+              "hits": 797,
+              "lower": 0.982863,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                420,
+                180
+              ],
+              "hits": 790,
+              "lower": 0.968936,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                455,
+                195
+              ],
+              "hits": 787,
+              "lower": 0.963542,
+              "passed": true
+            }
+          },
+          "largest_passing_target": 650
+        },
+        "paired_order_mix_vs": {
+          "ready": {
+            "short_a": {
+              "mean": 229.27875,
+              "ci95": [
+                222.48344,
+                236.07406
+              ],
+              "simultaneous95": [
+                217.88552,
+                240.67198
+              ],
+              "dz": 2.34162
+            },
+            "short_b": {
+              "mean": -290.79125,
+              "ci95": [
+                -294.99192,
+                -286.59058
+              ],
+              "simultaneous95": [
+                -297.83422,
+                -283.74828
+              ],
+              "dz": -4.80424
+            },
+            "longest_delay_min": {
+              "mean": -1.75,
+              "ci95": [
+                -3.82309,
+                0.32309
+              ],
+              "simultaneous95": [
+                -5.2258,
+                1.7258
+              ],
+              "dz": -0.05858
+            },
+            "changeovers": {
+              "mean": 1.17625,
+              "ci95": [
+                1.03346,
+                1.31904
+              ],
+              "simultaneous95": [
+                0.93685,
+                1.41565
+              ],
+              "dz": 0.57171
+            }
+          },
+          "balanced_batch": {
+            "short_a": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "simultaneous95": [
+                0.0,
+                0.0
+              ],
+              "dz": null
+            },
+            "short_b": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "simultaneous95": [
+                0.0,
+                0.0
+              ],
+              "dz": null
+            },
+            "longest_delay_min": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "simultaneous95": [
+                0.0,
+                0.0
+              ],
+              "dz": null
+            },
+            "changeovers": {
+              "mean": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "simultaneous95": [
+                0.0,
+                0.0
+              ],
+              "dz": null
+            }
+          }
+        }
+      }
+    },
+    "50_50": {
+      "reference": {
+        "ready": {
+          "means": {
+            "a_first": 691.6825,
+            "b_first": 605.085,
+            "a_second": 584.53875,
+            "b_second": 494.18625,
+            "short_a": 706.72125,
+            "short_b": 1057.99,
+            "longest_delay_min": 310.1,
+            "changeovers": 36.07375,
+            "ergo_pass": 0.99625
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                165,
+                165
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                210,
+                210
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                250,
+                250
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                300,
+                300
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                325,
+                325
+              ],
+              "hits": 799,
+              "lower": 0.987715,
+              "passed": true
+            }
+          },
+          "largest_passing_target": null
+        },
+        "balanced_batch": {
+          "means": {
+            "a_first": 844.435,
+            "b_first": 463.41125,
+            "a_second": 729.62625,
+            "b_second": 365.35375,
+            "short_a": 322.95125,
+            "short_b": 1456.74625,
+            "longest_delay_min": 304.7,
+            "changeovers": 34.68,
+            "ergo_pass": 0.9975
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                165,
+                165
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                210,
+                210
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                250,
+                250
+              ],
+              "hits": 793,
+              "lower": 0.974591,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                300,
+                300
+              ],
+              "hits": 784,
+              "lower": 0.958328,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                325,
+                325
+              ],
+              "hits": 718,
+              "lower": 0.858176,
+              "passed": false
+            }
+          },
+          "largest_passing_target": null
+        },
+        "balanced_order_mix": {
+          "means": {
+            "a_first": 657.5325,
+            "b_first": 631.98125,
+            "a_second": 555.2125,
+            "b_second": 515.0475,
+            "short_a": 794.53125,
+            "short_b": 959.35375,
+            "longest_delay_min": 312.95,
+            "changeovers": 55.115,
+            "ergo_pass": 0.9975
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                165,
+                165
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                210,
+                210
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                250,
+                250
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                300,
+                300
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                325,
+                325
+              ],
+              "hits": 799,
+              "lower": 0.987715,
+              "passed": true
+            }
+          },
+          "largest_passing_target": null
+        },
+        "paired_order_mix_vs": {
+          "ready": {
+            "short_a": {
+              "mean": 87.81,
+              "ci95": [
+                83.2097,
+                92.4103
+              ],
+              "simultaneous95": [
+                80.09699,
+                95.52301
+              ],
+              "dz": 1.3247
+            },
+            "short_b": {
+              "mean": -98.63625,
+              "ci95": [
+                -104.02634,
+                -93.24616
+              ],
+              "simultaneous95": [
+                -107.67344,
+                -89.59906
+              ],
+              "dz": -1.27
+            },
+            "longest_delay_min": {
+              "mean": 2.85,
+              "ci95": [
+                1.27579,
+                4.42421
+              ],
+              "simultaneous95": [
+                0.21063,
+                5.48937
+              ],
+              "dz": 0.12564
+            },
+            "changeovers": {
+              "mean": 19.04125,
+              "ci95": [
+                18.93256,
+                19.14994
+              ],
+              "simultaneous95": [
+                18.85902,
+                19.22348
+              ],
+              "dz": 12.15852
+            }
+          },
+          "balanced_batch": {
+            "short_a": {
+              "mean": 471.58,
+              "ci95": [
+                466.41001,
+                476.74999
+              ],
+              "simultaneous95": [
+                462.91183,
+                480.24817
+              ],
+              "dz": 6.33034
+            },
+            "short_b": {
+              "mean": -497.3925,
+              "ci95": [
+                -503.53011,
+                -491.25489
+              ],
+              "simultaneous95": [
+                -507.683,
+                -487.102
+              ],
+              "dz": -5.62421
+            },
+            "longest_delay_min": {
+              "mean": 8.25,
+              "ci95": [
+                6.02137,
+                10.47863
+              ],
+              "simultaneous95": [
+                4.51341,
+                11.98659
+              ],
+              "dz": 0.25691
+            },
+            "changeovers": {
+              "mean": 20.435,
+              "ci95": [
+                20.30114,
+                20.56886
+              ],
+              "simultaneous95": [
+                20.21056,
+                20.65944
+              ],
+              "dz": 10.59445
+            }
+          }
+        }
+      },
+      "combined": {
+        "ready": {
+          "means": {
+            "a_first": 671.65,
+            "b_first": 579.81125,
+            "a_second": 531.06875,
+            "b_second": 446.12125,
+            "short_a": 869.815,
+            "short_b": 1217.40625,
+            "longest_delay_min": 338.16875,
+            "changeovers": 35.1225,
+            "ergo_pass": 0.99875
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                165,
+                165
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                210,
+                210
+              ],
+              "hits": 792,
+              "lower": 0.97267,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                250,
+                250
+              ],
+              "hits": 785,
+              "lower": 0.960049,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                300,
+                300
+              ],
+              "hits": 778,
+              "lower": 0.948277,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                325,
+                325
+              ],
+              "hits": 764,
+              "lower": 0.926023,
+              "passed": false
+            }
+          },
+          "largest_passing_target": null
+        },
+        "balanced_batch": {
+          "means": {
+            "a_first": 819.0425,
+            "b_first": 444.62,
+            "a_second": 667.615,
+            "b_second": 343.40875,
+            "short_a": 477.24125,
+            "short_b": 1531.62625,
+            "longest_delay_min": 331.01875,
+            "changeovers": 33.91125,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                165,
+                165
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                210,
+                210
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                250,
+                250
+              ],
+              "hits": 748,
+              "lower": 0.901774,
+              "passed": false
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                300,
+                300
+              ],
+              "hits": 696,
+              "lower": 0.827176,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                325,
+                325
+              ],
+              "hits": 600,
+              "lower": 0.697263,
+              "passed": false
+            }
+          },
+          "largest_passing_target": 420
+        },
+        "balanced_order_mix": {
+          "means": {
+            "a_first": 632.795,
+            "b_first": 612.36875,
+            "a_second": 507.31875,
+            "b_second": 469.80625,
+            "short_a": 944.32125,
+            "short_b": 1097.7525,
+            "longest_delay_min": 337.675,
+            "changeovers": 53.6475,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                165,
+                165
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                210,
+                210
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                250,
+                250
+              ],
+              "hits": 790,
+              "lower": 0.968936,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                300,
+                300
+              ],
+              "hits": 785,
+              "lower": 0.960049,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                325,
+                325
+              ],
+              "hits": 766,
+              "lower": 0.929128,
+              "passed": false
+            }
+          },
+          "largest_passing_target": 600
+        },
+        "paired_order_mix_vs": {
+          "ready": {
+            "short_a": {
+              "mean": 74.50625,
+              "ci95": [
+                69.09193,
+                79.92057
+              ],
+              "simultaneous95": [
+                65.42843,
+                83.58407
+              ],
+              "dz": 0.95502
+            },
+            "short_b": {
+              "mean": -119.65375,
+              "ci95": [
+                -126.16022,
+                -113.14728
+              ],
+              "simultaneous95": [
+                -130.56271,
+                -108.74479
+              ],
+              "dz": -1.27627
+            },
+            "longest_delay_min": {
+              "mean": -0.49375,
+              "ci95": [
+                -2.31082,
+                1.32332
+              ],
+              "simultaneous95": [
+                -3.5403,
+                2.5528
+              ],
+              "dz": -0.01886
+            },
+            "changeovers": {
+              "mean": 18.525,
+              "ci95": [
+                18.41488,
+                18.63512
+              ],
+              "simultaneous95": [
+                18.34038,
+                18.70962
+              ],
+              "dz": 11.6754
+            }
+          },
+          "balanced_batch": {
+            "short_a": {
+              "mean": 467.08,
+              "ci95": [
+                460.84244,
+                473.31756
+              ],
+              "simultaneous95": [
+                456.62192,
+                477.53808
+              ],
+              "dz": 5.19683
+            },
+            "short_b": {
+              "mean": -433.87375,
+              "ci95": [
+                -442.23382,
+                -425.51368
+              ],
+              "simultaneous95": [
+                -447.89051,
+                -419.85699
+              ],
+              "dz": -3.60176
+            },
+            "longest_delay_min": {
+              "mean": 6.65625,
+              "ci95": [
+                4.4679,
+                8.8446
+              ],
+              "simultaneous95": [
+                2.9872,
+                10.3253
+              ],
+              "dz": 0.21109
+            },
+            "changeovers": {
+              "mean": 19.73625,
+              "ci95": [
+                19.58337,
+                19.88913
+              ],
+              "simultaneous95": [
+                19.47992,
+                19.99258
+              ],
+              "dz": 8.95923
+            }
+          }
+        }
+      }
+    },
+    "80_20": {
+      "reference": {
+        "ready": {
+          "means": {
+            "a_first": 1091.28125,
+            "b_first": 242.315,
+            "a_second": 939.98125,
+            "b_second": 198.37375,
+            "short_a": 1120.52125,
+            "short_b": 417.25125,
+            "longest_delay_min": 287.0,
+            "changeovers": 35.32,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                264,
+                66
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                336,
+                84
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                400,
+                100
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                480,
+                120
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                520,
+                130
+              ],
+              "hits": 795,
+              "lower": 0.978582,
+              "passed": true
+            }
+          },
+          "largest_passing_target": 650
+        },
+        "balanced_batch": {
+          "means": {
+            "a_first": 977.3625,
+            "b_first": 350.75875,
+            "a_second": 786.86375,
+            "b_second": 342.83875,
+            "short_a": 1612.84125,
+            "short_b": 18.98,
+            "longest_delay_min": 291.2,
+            "changeovers": 29.30625,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                264,
+                66
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                336,
+                84
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                400,
+                100
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                480,
+                120
+              ],
+              "hits": 798,
+              "lower": 0.985183,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                520,
+                130
+              ],
+              "hits": 794,
+              "lower": 0.976559,
+              "passed": true
+            }
+          },
+          "largest_passing_target": 650
+        },
+        "balanced_order_mix": {
+          "means": {
+            "a_first": 1029.305,
+            "b_first": 301.44375,
+            "a_second": 863.86625,
+            "b_second": 275.135,
+            "short_a": 1358.11625,
+            "short_b": 175.45875,
+            "longest_delay_min": 288.35,
+            "changeovers": 27.92875,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                264,
+                66
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                336,
+                84
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                400,
+                100
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                480,
+                120
+              ],
+              "hits": 799,
+              "lower": 0.987715,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                520,
+                130
+              ],
+              "hits": 797,
+              "lower": 0.982863,
+              "passed": true
+            }
+          },
+          "largest_passing_target": 650
+        },
+        "paired_order_mix_vs": {
+          "ready": {
+            "short_a": {
+              "mean": 237.595,
+              "ci95": [
+                232.47385,
+                242.71615
+              ],
+              "simultaneous95": [
+                229.00872,
+                246.18128
+              ],
+              "dz": 3.21982
+            },
+            "short_b": {
+              "mean": -241.7925,
+              "ci95": [
+                -245.38397,
+                -238.20103
+              ],
+              "simultaneous95": [
+                -247.81407,
+                -235.77093
+              ],
+              "dz": -4.67231
+            },
+            "longest_delay_min": {
+              "mean": 1.35,
+              "ci95": [
+                -0.48754,
+                3.18754
+              ],
+              "simultaneous95": [
+                -1.73088,
+                4.43088
+              ],
+              "dz": 0.05099
+            },
+            "changeovers": {
+              "mean": -7.39125,
+              "ci95": [
+                -7.52146,
+                -7.26104
+              ],
+              "simultaneous95": [
+                -7.60956,
+                -7.17294
+              ],
+              "dz": -3.93951
+            }
+          },
+          "balanced_batch": {
+            "short_a": {
+              "mean": -254.725,
+              "ci95": [
+                -259.05877,
+                -250.39123
+              ],
+              "simultaneous95": [
+                -261.99114,
+                -247.45886
+              ],
+              "dz": -4.07913
+            },
+            "short_b": {
+              "mean": 156.47875,
+              "ci95": [
+                153.36856,
+                159.58894
+              ],
+              "simultaneous95": [
+                151.26412,
+                161.69338
+              ],
+              "dz": 3.49165
+            },
+            "longest_delay_min": {
+              "mean": -2.85,
+              "ci95": [
+                -4.63117,
+                -1.06883
+              ],
+              "simultaneous95": [
+                -5.83637,
+                0.13637
+              ],
+              "dz": -0.11105
+            },
+            "changeovers": {
+              "mean": -1.3775,
+              "ci95": [
+                -1.45522,
+                -1.29978
+              ],
+              "simultaneous95": [
+                -1.5078,
+                -1.2472
+              ],
+              "dz": -1.23008
+            }
+          }
+        }
+      },
+      "combined": {
+        "ready": {
+          "means": {
+            "a_first": 1044.33375,
+            "b_first": 235.1875,
+            "a_second": 848.6225,
+            "b_second": 178.25875,
+            "short_a": 1405.78875,
+            "short_b": 481.175,
+            "longest_delay_min": 325.65,
+            "changeovers": 34.3175,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                264,
+                66
+              ],
+              "hits": 799,
+              "lower": 0.987715,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                336,
+                84
+              ],
+              "hits": 788,
+              "lower": 0.965317,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                400,
+                100
+              ],
+              "hits": 785,
+              "lower": 0.960049,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                480,
+                120
+              ],
+              "hits": 778,
+              "lower": 0.948277,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                520,
+                130
+              ],
+              "hits": 765,
+              "lower": 0.927573,
+              "passed": false
+            }
+          },
+          "largest_passing_target": 500
+        },
+        "balanced_batch": {
+          "means": {
+            "a_first": 924.18,
+            "b_first": 349.1775,
+            "a_second": 685.1275,
+            "b_second": 324.23,
+            "short_a": 1900.68125,
+            "short_b": 76.69875,
+            "longest_delay_min": 332.05625,
+            "changeovers": 28.115,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                264,
+                66
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                336,
+                84
+              ],
+              "hits": 797,
+              "lower": 0.982863,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                400,
+                100
+              ],
+              "hits": 791,
+              "lower": 0.970787,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                480,
+                120
+              ],
+              "hits": 768,
+              "lower": 0.932255,
+              "passed": false
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                520,
+                130
+              ],
+              "hits": 722,
+              "lower": 0.863888,
+              "passed": false
+            }
+          },
+          "largest_passing_target": 500
+        },
+        "balanced_order_mix": {
+          "means": {
+            "a_first": 977.09625,
+            "b_first": 297.92375,
+            "a_second": 772.71625,
+            "b_second": 251.5675,
+            "short_a": 1650.5825,
+            "short_b": 226.1225,
+            "longest_delay_min": 325.90625,
+            "changeovers": 27.45625,
+            "ergo_pass": 1.0
+          },
+          "reliability": {
+            "330": {
+              "target": 330,
+              "quotas": [
+                264,
+                66
+              ],
+              "hits": 800,
+              "lower": 0.990674,
+              "passed": true
+            },
+            "420": {
+              "target": 420,
+              "quotas": [
+                336,
+                84
+              ],
+              "hits": 799,
+              "lower": 0.987715,
+              "passed": true
+            },
+            "500": {
+              "target": 500,
+              "quotas": [
+                400,
+                100
+              ],
+              "hits": 799,
+              "lower": 0.987715,
+              "passed": true
+            },
+            "600": {
+              "target": 600,
+              "quotas": [
+                480,
+                120
+              ],
+              "hits": 786,
+              "lower": 0.961786,
+              "passed": true
+            },
+            "650": {
+              "target": 650,
+              "quotas": [
+                520,
+                130
+              ],
+              "hits": 768,
+              "lower": 0.932255,
+              "passed": false
+            }
+          },
+          "largest_passing_target": 600
+        },
+        "paired_order_mix_vs": {
+          "ready": {
+            "short_a": {
+              "mean": 244.79375,
+              "ci95": [
+                236.85362,
+                252.73388
+              ],
+              "simultaneous95": [
+                231.48107,
+                258.10643
+              ],
+              "dz": 2.13961
+            },
+            "short_b": {
+              "mean": -255.0525,
+              "ci95": [
+                -258.84124,
+                -251.26376
+              ],
+              "simultaneous95": [
+                -261.40482,
+                -248.70018
+              ],
+              "dz": -4.67193
+            },
+            "longest_delay_min": {
+              "mean": 0.25625,
+              "ci95": [
+                -1.80711,
+                2.31961
+              ],
+              "simultaneous95": [
+                -3.20324,
+                3.71574
+              ],
+              "dz": 0.00862
+            },
+            "changeovers": {
+              "mean": -6.86125,
+              "ci95": [
+                -7.01346,
+                -6.70904
+              ],
+              "simultaneous95": [
+                -7.11646,
+                -6.60604
+              ],
+              "dz": -3.12829
+            }
+          },
+          "balanced_batch": {
+            "short_a": {
+              "mean": -250.09875,
+              "ci95": [
+                -257.09669,
+                -243.10081
+              ],
+              "simultaneous95": [
+                -261.83171,
+                -238.36579
+              ],
+              "dz": -2.48029
+            },
+            "short_b": {
+              "mean": 149.42375,
+              "ci95": [
+                145.71515,
+                153.13235
+              ],
+              "simultaneous95": [
+                143.2058,
+                155.6417
+              ],
+              "dz": 2.79622
+            },
+            "longest_delay_min": {
+              "mean": -6.15,
+              "ci95": [
+                -8.21024,
+                -4.08976
+              ],
+              "simultaneous95": [
+                -9.60427,
+                -2.69573
+              ],
+              "dz": -0.20717
+            },
+            "changeovers": {
+              "mean": -0.65875,
+              "ci95": [
+                -0.73995,
+                -0.57755
+              ],
+              "simultaneous95": [
+                -0.7949,
+                -0.5226
+              ],
+              "dz": -0.56301
+            }
+          }
+        }
+      }
+    }
+  }
+}

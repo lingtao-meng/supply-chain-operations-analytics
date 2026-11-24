@@ -4,6 +4,10 @@
 
 [一页案例](CASE_BRIEF.md) · [五分钟演示](DEMO.md) · [实验地图与复现入口](EXPERIMENTS.md)
 
+![高负荷轨迹中第 5 工位动作调整前后的比较](../images/station_five.png)
+
+[动作频次的逐班诊断与独立验收](CONSTRAINED_RELEASE.md)
+
 ```mermaid
 flowchart LR
     A["排工 · 工序与先后关系"] --> B["班次 · 波动与产量"]

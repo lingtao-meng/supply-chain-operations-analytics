@@ -133,4 +133,12 @@ python manufacturing/balanced_release_study.py --output-dir "$RUNNER_TEMP/balanc
 cmp manufacturing/results/balanced_release.json "$RUNNER_TEMP/balanced-release/balanced_release.json"
 diff <(gzip -dc manufacturing/results/balanced_release.csv.gz) \
   <(gzip -dc "$RUNNER_TEMP/balanced-release/balanced_release.csv.gz")
+python manufacturing/order_mix_study.py --output-dir "$RUNNER_TEMP/order-mix"
+cmp manufacturing/results/order_mix.json "$RUNNER_TEMP/order-mix/order_mix.json"
+diff <(gzip -dc manufacturing/results/order_mix.csv.gz) \
+  <(gzip -dc "$RUNNER_TEMP/order-mix/order_mix.csv.gz")
+python manufacturing/constrained_release.py --output-dir "$RUNNER_TEMP/constrained-release"
+cmp manufacturing/results/constrained_release.json "$RUNNER_TEMP/constrained-release/constrained_release.json"
+diff <(gzip -dc manufacturing/results/constrained_release.csv.gz) \
+  <(gzip -dc "$RUNNER_TEMP/constrained-release/constrained_release.csv.gz")
 echo "Manufacturing numerical results reproduced."

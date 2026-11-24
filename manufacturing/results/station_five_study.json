@@ -1,0 +1,31 @@
+{
+  "seed": 2026112801,
+  "trials_per_condition": 400,
+  "target": 525,
+  "results": {
+    "reference": {
+      "delivered": 400,
+      "delivery_lower": 0.9908201954163347,
+      "old_peak": {
+        "breaches": 2,
+        "maximum": 42.226190476190474
+      },
+      "new_peak": {
+        "breaches": 0,
+        "maximum": 40.023809523809526
+      }
+    },
+    "combined": {
+      "delivered": 396,
+      "delivery_lower": 0.9745951990926638,
+      "old_peak": {
+        "breaches": 1,
+        "maximum": 42.226190476190474
+      },
+      "new_peak": {
+        "breaches": 0,
+        "maximum": 40.023809523809526
+      }
+    }
+  }
+}

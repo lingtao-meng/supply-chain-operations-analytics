@@ -12,7 +12,8 @@ from staggered_support import HISTORY, trigger
 
 ENTRY, ASSEMBLED, INSPECTED, HANDOFF, REPAIR_START, REPAIR_END, TEST_START, END, HELPER = range(9)
 SETUP_SECONDS = (24, 0, 0, 55, 0, 0, 32, 0)
-DISPATCH = {"fifo": 0, "ready": 1, "campaign": 2, "current_ready": 3, "reserve_old": 4, "balanced_batch": 5}
+DISPATCH = {"fifo": 0, "ready": 1, "campaign": 2, "current_ready": 3, "reserve_old": 4,
+            "balanced_batch": 5, "balanced_order_mix": 6}
 MAINTENANCE_STATION = 3
 
 
@@ -38,6 +39,7 @@ class Plant:
     max_run: int = 80
     repair_seconds: int = 90
     test_seconds: int = 30
+    order_mix_band: int = 0
 
     @property
     def waiting_places(self):
@@ -100,7 +102,8 @@ def _select(heads, free, orders, kits, last, run, max_run, rule, contested=0):
 
 
 @njit(cache=True)
-def _select_balanced(heads, free, orders, kits, last, run, batch, cohort_ids, released, previous_cohort):
+def _select_balanced(heads, free, orders, kits, last, run, batch, cohort_ids, released, previous_cohort,
+                     demand=None, order_mix_band=0):
     """Use only available kits and released counts; never bypass a ready older cohort."""
     a, b = heads
     if (a < 0 or b < 0 or orders[a] != orders[b]
@@ -109,10 +112,12 @@ def _select_balanced(heads, free, orders, kits, last, run, batch, cohort_ids, re
     cohort = cohort_ids[a]
     if last >= 0 and previous_cohort == cohort and run < batch:
         return heads[last], -1
-    # At a batch boundary, serve the SKU further behind the cohort's A:B release ratio of 7:3.
-    normalized_a = released[cohort, 0] * 3
-    normalized_b = released[cohort, 1] * 7
-    if normalized_a == normalized_b:
+    # Compare released fractions using integer arithmetic. The fixed rule targets 7:3.
+    ordered_a = 7 if demand is None else demand[cohort, 0]
+    ordered_b = 3 if demand is None else demand[cohort, 1]
+    normalized_a = released[cohort, 0] * ordered_b
+    normalized_b = released[cohort, 1] * ordered_a
+    if abs(normalized_a - normalized_b) <= order_mix_band * (ordered_a + ordered_b):
         return (heads[last] if last >= 0 and previous_cohort == cohort else min(a, b)), -1
     return (a if normalized_a < normalized_b else b), -1
 
@@ -130,7 +135,8 @@ def _start_outside_maintenance(begin, duration, maintenance):
 
 @njit(cache=True)
 def _line(work, sku, orders, kits, routes, windows, setup_times, waiting_places, transfer, return_bin,
-          testers, repair_seconds, test_seconds, rule, max_run, maintenance=None, parallel_available=None, floor=None, diagnose=False):
+          testers, repair_seconds, test_seconds, rule, max_run, maintenance=None, parallel_available=None,
+          floor=None, diagnose=False, order_mix_band=0):
     """Replay resources in processing order, keeping chronological clocks per stage."""
     jobs, stations = work.shape
     stream = (np.flatnonzero(sku == 0), np.flatnonzero(sku == 1))
@@ -190,14 +196,20 @@ def _line(work, sku, orders, kits, routes, windows, setup_times, waiting_places,
     previous, run, previous_cohort = -1, 0, -1
     cohort_ids = np.empty(0, dtype=np.int64)
     released_by_sku = np.zeros((0, 2), dtype=np.int64)
-    if rule == 5:
+    ordered_by_sku = None
+    if rule == 5 or rule == 6:
         cohorts = np.unique(orders)
         cohort_ids = np.searchsorted(cohorts, orders)
         released_by_sku = np.zeros((len(cohorts), 2), dtype=np.int64)
+        if rule == 6:
+            ordered_by_sku = np.zeros_like(released_by_sku)
+            for job in range(jobs):
+                ordered_by_sku[cohort_ids[job], sku[job]] += 1
     for index in range(jobs):
-        if rule == 5:
+        if rule == 5 or rule == 6:
             job, open_override = _select_balanced(heads, exits[0], orders, ready, previous, run,
-                                                  max_run, cohort_ids, released_by_sku, previous_cohort)
+                                                  max_run, cohort_ids, released_by_sku, previous_cohort,
+                                                  ordered_by_sku, order_mix_band)
         else:
             job, open_override = _select(heads, exits[0], orders, ready, previous, run, max_run, rule, contested)
         if open_override == -2:
@@ -357,7 +369,7 @@ def _line(work, sku, orders, kits, routes, windows, setup_times, waiting_places,
         trace[job, HANDOFF] = handoff
         trace[job, END] = finish
         exits[stations] = handoff
-        if rule == 5:
+        if rule == 5 or rule == 6:
             job_cohort = cohort_ids[job]
             released_by_sku[job_cohort, model] += 1
             run = run+1 if previous == model and previous_cohort == job_cohort else 1
@@ -407,6 +419,8 @@ def simulate(scenario, plant, maintenance=None, parallel_available=None, floor=N
         raise ValueError("transfer, return and planned kit advance times must be nonnegative")
     if plant.kit_dispatch not in DISPATCH:
         raise ValueError("unknown kit dispatch rule")
+    if plant.order_mix_band < 0 or (plant.order_mix_band and plant.kit_dispatch != "balanced_order_mix"):
+        raise ValueError("order_mix_band requires the order mix dispatch rule and must be nonnegative")
     if maintenance is not None:
         maintenance = np.asarray(maintenance, dtype=float).reshape(-1, 2)
         starts, ends = maintenance.T
@@ -437,6 +451,7 @@ def simulate(scenario, plant, maintenance=None, parallel_available=None, floor=N
             scenario.work, scenario.sku, scenario.orders, kits, scenario.routes, windows, setup,
             plant.waiting_places, plant.transfer, plant.return_bin, plant.testers, plant.repair_seconds,
             plant.test_seconds, DISPATCH[plant.kit_dispatch], plant.max_run, maintenance, parallel_available, floor_arrays, diagnose,
+            plant.order_mix_band,
         )
         return outputs, windows
 
