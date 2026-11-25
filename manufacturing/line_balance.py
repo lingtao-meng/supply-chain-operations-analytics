@@ -14,6 +14,12 @@ import numpy as np
 from scipy.optimize import Bounds, LinearConstraint, milp
 from scipy.sparse import lil_matrix
 
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from figure_style import format_figure  # noqa: E402
+
+
 ROOT = Path(__file__).resolve().parent
 METHODS = ("LCR", "RPW", "MILP")
 
@@ -244,6 +250,7 @@ def plot(cases: list[Case], summary: list[dict], assignments: list[dict], path: 
         handles, labels = axes[0, 0].get_legend_handles_labels()
         fig.legend(handles, labels, frameon=False, ncols=3, loc="lower center")
         fig.tight_layout(pad=2, rect=(0, 0.05, 1, 1))
+        format_figure(fig)
         fig.savefig(path, metadata={"Date": None})
         plt.close(fig)
 

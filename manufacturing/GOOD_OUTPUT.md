@@ -10,6 +10,8 @@ flowchart LR
     B -->|可返工| E["离线返工和复检"]
     E -->|复检合格| C
     E -->|复检不合格| D
+    classDef default fill:#fcfcfc,stroke:#536875,color:#202930,stroke-width:1px
+    linkStyle default stroke:#65737a,stroke-width:1.1px
 ```
 
 ## 比较口径

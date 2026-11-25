@@ -32,6 +32,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from figure_style import format_figure  # noqa: E402
+
+
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "results"
 IMAGES = ROOT / "images"
@@ -174,12 +179,12 @@ def plot(results: dict[str, dict], staffing: pd.DataFrame, images: Path) -> None
     on_time = [results[name]["on_time_rate"] * 100 for name in names]
     tardy = [results[name]["avg_tardiness"] for name in names]
     x = np.arange(len(names))
-    ax.bar(x - 0.2, on_time, width=0.4, color="#1f6f78", label="on-time %")
+    ax.bar(x - 0.2, on_time, width=0.4, color="#315b78", label="on-time %")
     ax.set_xticks(x, names)
     ax.set_ylabel("on-time rate (%)")
     ax.set_ylim(0, 105)
     ax2 = ax.twinx()
-    ax2.bar(x + 0.2, tardy, width=0.4, color="#d99a2b", label="avg tardiness (days)")
+    ax2.bar(x + 0.2, tardy, width=0.4, color="#a1774b", label="avg tardiness (days)")
     ax2.set_ylabel("avg tardiness (days)")
     ax.set_title("Dispatching rules under a daily capacity")
     ax.legend(loc="upper left", fontsize=7)
@@ -196,18 +201,20 @@ def plot(results: dict[str, dict], staffing: pd.DataFrame, images: Path) -> None
 
     ax4 = fig.add_subplot(grid[0, 2])
     monthly = staffing.set_index("day").resample("M").agg({"units": "mean", "workers_needed": "max"})
-    ax4.bar(monthly.index, monthly["units"], width=20, color="#2f5d8c", alpha=0.65, label="daily units (avg)")
+    ax4.bar(monthly.index, monthly["units"], width=20, color="#627d92", alpha=0.65, label="daily units (avg)")
     ax4.set_ylabel("units / day")
     ax4.set_xlabel("month")
     ax4.tick_params(axis="x", rotation=45, labelsize=7)
     ax5 = ax4.twinx()
-    ax5.plot(monthly.index, monthly["workers_needed"], color="#9b3b3b", marker="o", markersize=3, label="workers (max)")
+    ax5.plot(monthly.index, monthly["workers_needed"], color="#7c4642", marker="o", markersize=3, label="workers (max)")
     ax5.set_ylabel("workers needed")
     ax4.set_title("Staffing requirement (85% utilisation)")
     ax4.legend(loc="upper left", fontsize=7)
     ax5.legend(loc="upper right", fontsize=7)
 
-    fig.savefig(images / "ie_scheduling.png", dpi=150, bbox_inches="tight")
+    format_figure(fig)
+
+    fig.savefig(images / "ie_scheduling.png", dpi=260, bbox_inches="tight")
     plt.close(fig)
 
 

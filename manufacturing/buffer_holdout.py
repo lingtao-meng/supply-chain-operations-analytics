@@ -170,11 +170,11 @@ def write_timeline(path: Path, work: np.ndarray, report: dict) -> None:
     width, x_start, bin_minutes = 780, 110, 5
     pixels_per_minute = (width - x_start - 34) / (last - first)
     bar = pixels_per_minute * bin_minutes
-    colors = ("#2f725c", "#b34f27", "#c8d0d9", "#594480")
+    colors = ("#527186", "#af7b52", "#dce0e1", "#37383c")
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="324" viewBox="0 0 {width} 324">',
              '<rect width="100%" height="100%" fill="white"/>',
-             '<g font-family="sans-serif" font-size="13" fill="#263341">',
-             f'<text x="20" y="25" font-size="18" font-weight="bold">Jackson | Station {station + 1} '
+             '<g font-family="Georgia,serif" font-size="13" fill="#263341">',
+             f'<text x="20" y="25" font-size="18" font-weight="normal">Jackson | Station {station + 1} '
              f'outage, {start}-{start + length} min</text>']
     for column, (color, label) in enumerate(zip(colors, ("Processing", "Blocked", "Waiting", "Stopped"))):
         x = 110 + column * 135

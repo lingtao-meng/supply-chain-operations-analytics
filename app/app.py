@@ -11,6 +11,11 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import os, sys, hashlib
 
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from figure_style import format_plotly  # noqa: E402
+
 st.set_page_config(
     page_title="供应链运营分析平台",
     page_icon="📦",
@@ -21,7 +26,7 @@ st.set_page_config(
 # 自定义样式
 st.markdown("""
 <style>
-    .stMetric { border-left: 3px solid #1f77b4; padding-left: 10px; }
+    .stMetric { border-left: 3px solid #345b79; padding-left: 10px; }
     .stExpander { border: 1px solid #e0e0e0; border-radius: 8px; }
 </style>
 """, unsafe_allow_html=True)
@@ -187,10 +192,11 @@ def load_from_db():
     """从数据库加载分析就绪数据"""
     conn = sqlite3.connect(DB_PATH)
     df = pd.read_sql("""
-        SELECT f.*, s.shipping_mode,
+        SELECT f.*, dt.order_quarter, dt.order_weekday, s.shipping_mode,
                c.customer_segment, c.customer_country, c.market, c.order_region,
                p.product_name, p.category_name, p.department_name
         FROM fact_orders f
+        JOIN dim_date dt ON f.order_date=dt.order_date
         JOIN dim_shipping s  ON f.shipping_mode_id = s.shipping_mode_id
         JOIN dim_customer c  ON f.customer_id = c.customer_id
         JOIN dim_product p   ON f.product_card_id = p.product_card_id
@@ -363,14 +369,14 @@ if page == "📊 交付绩效":
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=monthly["year_month"], y=monthly["on_time_pct"],
             mode="lines+markers", name="月度准时率",
-            line=dict(color="#1f77b4", width=2), marker=dict(size=4)))
+            line=dict(color="#345b79", width=2), marker=dict(size=4)))
         fig.add_trace(go.Scatter(x=monthly["year_month"], y=monthly["rolling_3m"],
             mode="lines", name="3月滚动均值",
-            line=dict(color="#ff7f0e", width=3, dash="dash")))
+            line=dict(color="#8b795f", width=3, dash="dash")))
         fig.add_hline(y=50, line_dash="dot", line_color="gray", opacity=0.5)
         fig.update_layout(height=420, hovermode="x unified",
             legend=dict(orientation="h", y=1.08))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
     with right:
         st.subheader("运输方式排名")
@@ -378,12 +384,12 @@ if page == "📊 交付绩效":
             orders=("order_id","nunique"), ot=("on_time","mean")).reset_index()
         mode_s["ot"] *= 100
         mode_s = mode_s.sort_values("ot", ascending=True)
-        colors = ["#d62728" if v < 30 else "#ff7f0e" if v < 50 else "#2ca02c" for v in mode_s["ot"]]
+        colors = ["#986343" if v < 30 else "#8b795f" if v < 50 else "#486b76" for v in mode_s["ot"]]
         fig = go.Figure(go.Bar(y=mode_s["shipping_mode"], x=mode_s["ot"],
             orientation="h", text=mode_s["ot"].round(1).astype(str)+"%",
             textposition="outside", marker_color=colors))
         fig.update_layout(height=420, xaxis_title="准时率 (%)")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
     # 延迟等级分布
     st.subheader("延迟等级分布")
@@ -412,7 +418,7 @@ elif page == "🚚 运输与物流":
             labels={"avg_days":"平均交付天数","ot":"准时率 (%)"})
         fig.update_traces(textposition="top center")
         fig.update_layout(height=430, showlegend=False)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
     with c2:
         st.subheader("各市场区域 vs 全球均值")
@@ -422,21 +428,21 @@ elif page == "🚚 运输与物流":
         gavg = mk["ot"].mean()
         mk["gap"] = mk["ot"] - gavg
         mk = mk.sort_values("gap")
-        colors = ["#d62728" if v < 0 else "#2ca02c" for v in mk["gap"]]
+        colors = ["#986343" if v < 0 else "#486b76" for v in mk["gap"]]
         fig = go.Figure(go.Bar(y=mk["market"], x=mk["gap"], orientation="h",
-            text=mk["gap"].round(1).astype(str)+"%", marker_color=colors))
+            text=mk["gap"].round(1).astype(str)+" 个百分点", marker_color=colors))
         fig.add_vline(x=0, line_dash="dot", line_color="gray")
         fig.update_layout(height=430, xaxis_title=f"vs 全球均值 ({gavg:.1f}%)")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
     st.markdown("---")
     st.subheader("运输方式 × 市场 准时率热力图")
     pv = dff.pivot_table(values="on_time", index="shipping_mode", columns="market",
                           aggfunc="mean") * 100
     fig = px.imshow(pv.round(1), text_auto=".1f", aspect="auto",
-                    color_continuous_scale="RdYlGn", range_color=[0, 100])
+                    color_continuous_scale="Blues", range_color=[0, 100])
     fig.update_layout(height=380)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
 # ═══════════════════════════════════════════════════════
 # PAGE 3: 品类与市场
@@ -455,7 +461,7 @@ elif page == "🏷️ 品类与市场":
         fig = go.Figure(go.Bar(y=cs["category_name"], x=cs["ot"], orientation="h",
             text=cs["ot"].round(1).astype(str)+"%", textposition="outside"))
         fig.update_layout(height=550, xaxis_title="准时率 (%)")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
     with c2:
         st.subheader("品类收入贡献")
@@ -464,7 +470,7 @@ elif page == "🏷️ 品类与市场":
         fig = px.treemap(rv, path=["category_name"], values="order_total_value",
                          color="order_total_value", color_continuous_scale="Blues")
         fig.update_layout(height=550)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
     st.markdown("---")
     st.subheader("市场 × 品类 准时率热力图")
@@ -473,9 +479,9 @@ elif page == "🏷️ 品类与市场":
     top15 = dff["category_name"].value_counts().head(15).index
     mp = mp[[c for c in top15 if c in mp.columns]] * 100
     fig = px.imshow(mp.round(1), text_auto=".1f", aspect="auto",
-                    color_continuous_scale="RdYlGn", range_color=[0, 100])
+                    color_continuous_scale="Blues", range_color=[0, 100])
     fig.update_layout(height=420)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
 # ═══════════════════════════════════════════════════════
 # PAGE 4: 延迟根因
@@ -489,30 +495,31 @@ elif page == "🔍 延迟根因":
         st.subheader("延迟天数分布")
         delayed = dff[dff["is_delayed"] == 1]
         fig = px.histogram(delayed, x="delay_days", nbins=40,
-            labels={"delay_days":"延迟天数"}, color_discrete_sequence=["#d62728"])
+            labels={"delay_days":"延迟天数"}, color_discrete_sequence=["#986343"])
         fig.add_vline(x=delayed["delay_days"].median(), line_dash="dash",
             line_color="black", annotation_text=f"中位数: {delayed['delay_days'].median():.0f}天")
         fig.update_layout(height=400)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
     with c2:
         st.subheader("延迟贡献度 Pareto")
         dp = dff.groupby(["shipping_mode","market"]).agg(
             delayed=("is_delayed","sum"), total=("order_id","count")).reset_index()
+        total_delayed = dp["delayed"].sum()
         dp = dp.sort_values("delayed", ascending=False).head(15)
-        dp["cum"] = dp["delayed"].cumsum() / dp["delayed"].sum() * 100
+        dp["cum"] = dp["delayed"].cumsum() * 100 / total_delayed if total_delayed else 0
 
         fig = make_subplots(specs=[[{"secondary_y": True}]])
         fig.add_trace(go.Bar(
             x=dp["shipping_mode"]+" × "+dp["market"],
-            y=dp["delayed"], name="延迟数", marker_color="#d62728"))
+            y=dp["delayed"], name="延迟数", marker_color="#986343"))
         fig.add_trace(go.Scatter(
             x=dp["shipping_mode"]+" × "+dp["market"],
             y=dp["cum"], name="累计%", mode="lines+markers",
             line=dict(color="black", width=2), yaxis="y2"))
         fig.update_layout(height=400, xaxis=dict(tickangle=-45),
             yaxis2=dict(range=[0,110]), legend=dict(orientation="h", y=1.05))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
     st.markdown("---")
     c3, c4 = st.columns(2)
@@ -526,9 +533,9 @@ elif page == "🔍 延迟根因":
         fig = go.Figure(go.Bar(
             y=cm["category_name"]+" | "+cm["market"], x=cm["ot"],
             orientation="h", text=cm["ot"].round(1).astype(str)+"%",
-            textposition="outside", marker_color="#d62728"))
+            textposition="outside", marker_color="#986343"))
         fig.update_layout(height=480, xaxis_title="准时率 (%)")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
     with c4:
         st.subheader("各季度延迟率趋势")
@@ -543,7 +550,7 @@ elif page == "🔍 延迟根因":
                 mode="lines+markers", name=str(yr), line=dict(width=2)))
         fig.update_layout(height=480, xaxis=dict(title="季度", tickmode="linear", dtick=1),
             yaxis_title="准时率 (%)", legend=dict(orientation="h"))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
     # 相关性分析
     st.markdown("---")
@@ -581,12 +588,12 @@ elif page == "🔍 延迟根因":
             x=factor_df["准时率极差(%)"], y=factor_df["因素"],
             orientation="h", text=factor_df["准时率极差(%)"].astype(str)+"%",
             textposition="outside",
-            marker_color=["#d62728" if v > 20 else "#ff7f0e" if v > 10 else "#2ca02c"
+            marker_color=["#986343" if v > 20 else "#8b795f" if v > 10 else "#486b76"
                           for v in factor_df["准时率极差(%)"]]
         ))
         fig.update_layout(height=300, xaxis_title="准时率极差 (%)",
             title="各因素对准时率的影响强度（极差越大=影响越大）")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
 # ═══════════════════════════════════════════════════════
 # PAGE 5: 数据概览
@@ -619,7 +626,7 @@ elif page == "📐 数据概览":
             "delay_days","order_total_value","benefit_per_order"])
         fig = px.histogram(df_clean, x=num_col, nbins=50, marginal="box")
         fig.update_layout(height=350)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
     st.markdown("---")
     st.subheader("数据库 Schema")

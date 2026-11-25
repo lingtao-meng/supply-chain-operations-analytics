@@ -14,6 +14,12 @@ from line_balance import ROOT, reference_plans
 from optimize_buffers import workloads_for
 from shift_capacity import SHIFT_SECONDS, _flow_shop, lognormal_multiplier
 
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from figure_style import format_figure  # noqa: E402
+
+
 RUNS, BATCH, SEED = 300, 30, 2026112401
 GRID = {
     "task_cv": (10, 20, 30), "target": (1350, 1450, 1550),
@@ -190,7 +196,8 @@ def plot(rows,path):
     fig.suptitle("Single-factor sensitivity relative to the reference shift", x=.51, fontsize=15)
     axes[0].legend(handles=[Patch(color=color,label=label) for color,label in zip(colors,("Low","High"))],
                    loc="lower left", bbox_to_anchor=(0,1.07), ncol=2, frameon=False)
-    fig.savefig(path,dpi=145)
+    format_figure(fig)
+    fig.savefig(path,dpi=260)
     plt.close(fig)
 
 

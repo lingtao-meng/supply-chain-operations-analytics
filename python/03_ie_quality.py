@@ -31,6 +31,11 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from figure_style import format_figure  # noqa: E402
+
+
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "results"
 IMAGES = ROOT / "images"
@@ -142,12 +147,12 @@ def plot(chart: pd.DataFrame, cap: pd.DataFrame, par: pd.DataFrame, images: Path
 
     ax = axes[0]
     x = np.arange(len(chart))
-    ax.plot(x, chart["p"], color="#1f6f78", marker="o", markersize=3, label="late rate")
-    ax.plot(x, chart["ucl"], color="#9b3b3b", linestyle="--", linewidth=1, label="Laney UCL")
-    ax.plot(x, chart["lcl"], color="#9b3b3b", linestyle="--", linewidth=1, label="Laney LCL")
+    ax.plot(x, chart["p"], color="#315b78", marker="o", markersize=3, label="late rate")
+    ax.plot(x, chart["ucl"], color="#7c4642", linestyle="--", linewidth=1, label="Laney UCL")
+    ax.plot(x, chart["lcl"], color="#7c4642", linestyle="--", linewidth=1, label="Laney LCL")
     ax.axhline(chart["p"].mean(), color="#7c8a99", linestyle=":", linewidth=1, label="p̄")
     bad = chart[chart["out_of_control"]]
-    ax.scatter(bad.index, bad["p"], color="#9b3b3b", zorder=5, label="out of control")
+    ax.scatter(bad.index, bad["p"], color="#7c4642", zorder=5, label="out of control")
     step = max(1, len(chart) // 8)
     ax.set_xticks(x[::step], chart["period"][::step], rotation=45, ha="right", fontsize=7)
     ax.set_ylabel("late rate")
@@ -156,7 +161,7 @@ def plot(chart: pd.DataFrame, cap: pd.DataFrame, par: pd.DataFrame, images: Path
 
     ax2 = axes[1]
     view = cap.iloc[::-1]
-    ax2.barh(view["shipping_mode"], view["yield"] * 100, color="#1f6f78")
+    ax2.barh(view["shipping_mode"], view["yield"] * 100, color="#315b78")
     for i, (_, row) in enumerate(view.iterrows()):
         yield_rate = float(row["yield"])
         label = f"{yield_rate:.1%}"
@@ -168,15 +173,16 @@ def plot(chart: pd.DataFrame, cap: pd.DataFrame, par: pd.DataFrame, images: Path
     ax2.set_title("Process capability: transit vs promise")
 
     ax3 = axes[2]
-    ax3.bar(range(len(par)), par["share"] * 100, color="#2f5d8c")
-    ax3.plot(range(len(par)), par["cumulative_share"] * 100, color="#d99a2b", marker="o")
+    ax3.bar(range(len(par)), par["share"] * 100, color="#627d92")
+    ax3.plot(range(len(par)), par["cumulative_share"] * 100, color="#a1774b", marker="o")
     ax3.set_xticks(range(len(par)), par[par.columns[0]], rotation=30, ha="right", fontsize=8)
     ax3.set_ylabel("share of late orders (%)")
     ax3.set_title("Pareto of late orders by shipping mode")
-    ax3.axhline(80, color="#c9ced6", linestyle=":", linewidth=1)
+    ax3.axhline(80, color="#bac2c6", linestyle=":", linewidth=1)
 
     fig.tight_layout()
-    fig.savefig(images / "ie_quality.png", dpi=150)
+    format_figure(fig)
+    fig.savefig(images / "ie_quality.png", dpi=260)
     plt.close(fig)
 
 

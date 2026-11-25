@@ -4,7 +4,7 @@
 
 [一页案例](CASE_BRIEF.md) · [五分钟演示](DEMO.md) · [实验地图与复现入口](EXPERIMENTS.md)
 
-![两种混线工况下，第 5 工位动作调整前后的配对散点图](../images/station_five.png)
+![两种混线工况下，第 5 工位动作调整前后的累计分布图](../images/station_five.png)
 
 [动作频次的逐班诊断与独立验收](CONSTRAINED_RELEASE.md)
 
@@ -14,6 +14,8 @@ flowchart LR
     B --> C["缓冲 · 空间与阻塞"]
     C --> D["异常 · 停机与返工"]
     D --> E["工厂约束 · 人员、预算与交付"]
+    classDef default fill:#fcfcfc,stroke:#536875,color:#202930,stroke-width:1px
+    linkStyle default stroke:#65737a,stroke-width:1.1px
 ```
 
 - **静态排工。** Mitchell 节拍 15 时，最长工序优先需 9 个工位，整数规划需 8 个。工位数相同时，再比较最忙工位的负荷。[静态排工与结果](EXPERIMENTS.md#结果)

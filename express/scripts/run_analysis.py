@@ -18,6 +18,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from figure_style import format_figure  # noqa: E402
+
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
@@ -26,8 +31,8 @@ from src.hub import line_metrics, load_stations, simulate, with_operator  # noqa
 RESULTS = ROOT / "results"
 IMAGES = ROOT / "images"
 INK = "#2b2b2b"
-TEAL = "#1f6f78"
-AMBER = "#c9a227"
+TEAL = "#315b78"
+AMBER = "#92754b"
 RED = "#b23a48"
 MUTED = "#9aa6ad"
 GRID = "#e8e8e8"
@@ -92,7 +97,8 @@ def plot_yamazumi(base, improved, metrics_base, metrics_improved, images: Path) 
         for side in ("top", "right"):
             ax.spines[side].set_visible(False)
     fig.tight_layout()
-    fig.savefig(images / "yamazumi.png", dpi=160, bbox_inches="tight")
+    format_figure(fig)
+    fig.savefig(images / "yamazumi.png", dpi=260, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -126,7 +132,8 @@ def plot_scenarios(table: pd.DataFrame, images: Path) -> None:
         for side in ("top", "right"):
             ax.spines[side].set_visible(False)
     fig.tight_layout()
-    fig.savefig(images / "scenarios.png", dpi=160, bbox_inches="tight")
+    format_figure(fig)
+    fig.savefig(images / "scenarios.png", dpi=260, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -151,7 +158,8 @@ def plot_backlog(results: dict, images: Path) -> None:
         ax.spines[side].set_visible(False)
     ax.legend(fontsize=8)
     fig.tight_layout()
-    fig.savefig(images / "backlog.png", dpi=160, bbox_inches="tight")
+    format_figure(fig)
+    fig.savefig(images / "backlog.png", dpi=260, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -216,7 +224,8 @@ def plot_pareto(grid: pd.DataFrame, frontier: pd.DataFrame, images: Path) -> Non
         ax.spines[side].set_visible(False)
     ax.legend(fontsize=7)
     fig.tight_layout()
-    fig.savefig(images / "staffing_pareto.png", dpi=160, bbox_inches="tight")
+    format_figure(fig)
+    fig.savefig(images / "staffing_pareto.png", dpi=260, bbox_inches="tight")
     plt.close(fig)
 
 

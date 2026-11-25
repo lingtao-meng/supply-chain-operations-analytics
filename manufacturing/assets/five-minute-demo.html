@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>装配线改善 | 五分钟演示</title>
 <style>
-:root { color-scheme: light; font-family: system-ui, "PingFang SC", sans-serif; color:#172734; background:#eef3f3; }
+:root { color-scheme: light; font-family: Georgia, "Songti SC", "Noto Serif CJK SC", serif; color:#172734; background:#f7f7f5; }
 * { box-sizing:border-box }
 body { margin:0; }
 main { width:min(100% - 36px, 910px); margin:44px auto; }
@@ -12,24 +12,24 @@ h1 { font-size:clamp(29px,5vw,46px); line-height:1.12; margin:.35em 0 .65em; }
 h2 { margin:.25em 0 .35em; font-size:clamp(21px,3vw,32px); }
 small { color:#375c60; }
 nav { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0; }
-button { border:1px solid #a8bcbc; border-radius:6px; padding:.54em .85em; background:#fff; color:#172734; cursor:pointer; font:inherit; }
-button[aria-current="step"], #play { background:#154f4f; color:white; }
-section { background:#fff; border-radius:12px; padding:clamp(16px,4vw,38px); box-shadow:0 8px 30px #23454514; }
+button { border:1px solid #a8bcbc; border-radius:1px; padding:.54em .85em; background:#fff; color:#172734; cursor:pointer; font:inherit; }
+button[aria-current="step"], #play { background:#345366; color:white; }
+section { background:#fff; border:1px solid #d0d3d3; padding:clamp(16px,4vw,38px); box-shadow:none; }
 #description { line-height:1.7; margin-top:1.5em; }
 #visual { min-height:150px; padding-top:1em; }
 .lane { display:grid; grid-template-columns: minmax(84px,110px) 1fr; align-items:center; gap:10px; margin:1em 0; }
 .nodes { display:flex; gap:4px; }
 .nodes span { flex:1; min-width:0; height:31px; padding:7px 0; text-align:center; background:#e1ebec; color:#173d3e; border-radius:3px; }
 .nodes .spare { background:#fff; color:#657782; border:1px dashed #a6adad; }
-.meter { background:#e8eeef; border-radius:4px; height:29px; overflow:hidden; }
-.fill { height:100%; background:#17756b; color:white; font-size:14px; padding:5px 10px; white-space:nowrap; width:var(--width); transform-origin:left; animation:open .65s ease-out; }
-.fill.alt { background:#9f4a20; }
+.meter { background:#e8eeef; border-radius:0; height:29px; overflow:hidden; }
+.fill { height:100%; background:#395e74; color:white; font-size:14px; padding:5px 10px; white-space:nowrap; width:var(--width); transform-origin:left; animation:open .65s ease-out; }
+.fill.alt { background:#916546; }
 .queue { display:flex; gap:6px; margin:8px 0 20px; }
-.queue span { flex:1; text-align:center; padding:10px 0; border:1px solid #c5d5d5; border-radius:6px; font-size:14px; }
-.queue .blocked { color:#832d0b; background:#fce9dc; }
-.queue .buffer { color:#145b55; background:#d8efea; }
+.queue span { flex:1; text-align:center; padding:10px 0; border:1px solid #c5d5d5; border-radius:1px; font-size:14px; }
+.queue .blocked { color:#832d0b; background:#f0e7df; }
+.queue .buffer { color:#145b55; background:#e4ebed; }
 .controls { display:flex; gap:14px; align-items:center; margin-top:18px; }
-#timeline { flex:1; min-width:40px; accent-color:#154f4f; }
+#timeline { flex:1; min-width:40px; accent-color:#345366; }
 #clock { font-variant-numeric: tabular-nums; white-space:nowrap; }
 .note { font-size:.89rem; color:#496067; line-height:1.55; }
 @keyframes open { from { transform:scaleX(.06); opacity:.3 } to { transform:scaleX(1); opacity:1 } }
@@ -78,10 +78,10 @@ const nodes = count => "<div class='nodes'>" + Array.from({length:9}, (_, index)
 function draw(index) {
   if (index===0) return lane("最长工序优先", nodes(9)) + lane("整数规划", nodes(8));
   if (index===1) return "<div class='queue'><span>第 3 站</span><span class='buffer'>缓冲接件</span><span class='blocked'>第 4 站等待</span></div>" +
-    meter("设计最优", "1,590 件", 96) + meter("独立验收", "1,570 件", 95);
+    meter("设计最优", "1,590 件", 100) + meter("独立验收", "1,570 件", 1570/1590*100);
   if (index===2) return meter("原分工无缓冲", "214 / 300 班", 71.3, true) + meter("同分工加缓冲", "299 / 300 班", 99.7);
-  return meter("本班未开工", "约 1,032 件", 92, true) + lane("合格待发", "<div>约 17 件</div>") +
-    meter("加平行工位后", "承诺 400 件 / 班", 68);
+  return lane("本班未开工", "<div>约 1,032 件</div>") + lane("合格待发", "<div>约 17 件</div>") +
+    lane("加平行工位后", "<div>承诺 400 件 / 班</div>");
 }
 function render() {
   const sec = Math.min(Math.floor(position), 300);
