@@ -67,8 +67,20 @@ def verify():
     short = f"{DOCS}/README.md"
     claim("README.md", "Mitchell 节拍", *station_counts, *capacity)
     claim(short, "静态排工。", *station_counts)
+    benchmark = "assignment_benchmark"
+    for index, name in enumerate(("Jackson", "Mitchell", "Buxey", "Sawyer30")):
+        case = f"cases/{index}"
+        tokens = [fact(benchmark, case, "cycle")]
+        tokens.extend(fact(benchmark, f"{case}/profiles/{profile}", key)
+                      for key in ("stations", "peak_load") for profile in (0, 7))
+        claim("ASSIGNMENT_BENCHMARK", f"| {name} |", *tokens)
+    claim(short, "工序与工位约束。", fact(benchmark, "cases/1/profiles/0", "stations"),
+          *(fact(benchmark, f"cases/1/profiles/{profile}", "peak_load") for profile in (0, 7)))
     claim(short, "班产承诺。", *capacity)
     claim(short, "异常恢复。", *down_fractions)
+    for budget, anchor in ((1, "| 1 | 19 |"), (2, "| 2 | 189 |")):
+        report("ASSIGNMENT_BENCHMARK", anchor, benchmark, f"mitchell_time_reductions/budgets/{budget}",
+               "total_reduction", "candidates", "fewest_stations", "passing_count")
     claim("CERTIFIED_SEARCH", "| 3 | 1,569 |", *capacity)
     claim("CASE_BRIEF", "静态分工从", *station_counts)
     claim("CASE_BRIEF", "3 个缓冲位，设计班产", *capacity)

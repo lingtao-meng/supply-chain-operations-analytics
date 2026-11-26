@@ -174,7 +174,7 @@ python python/04_ie_scheduling.py --capacity 300   # 容量敏感性
 
 [一页案例](manufacturing/CASE_BRIEF.md) · [五分钟演示](manufacturing/DEMO.md) · [完整实验地图](manufacturing/EXPERIMENTS.md)
 
-Mitchell 节拍 15 时，最长工序优先需 9 个工位，整数规划需 8 个。在 3 个缓冲位的设计条件下，固定样本最优班产为 1,590 件，独立验收的计划量为 1,570 件。返工、停机和混线发运另设工况，成本及回收期按可替换的人民币费率测算。[制造项目主页](manufacturing/README.md)
+Mitchell 节拍 15 时，最长工序优先需 9 个工位，整数规划需 8 个。在 3 个缓冲位的设计条件下，固定样本最优班产为 1,590 件，独立验收的计划量为 1,570 件。返工、停机和混线发运另设工况，成本及回收期按可替换的人民币费率测算。[制造项目主页](manufacturing/README.md) · [公开约束与工序缩时](manufacturing/ASSIGNMENT_BENCHMARK.md)
 
 ## 快递分拣线 IE 模块
 
