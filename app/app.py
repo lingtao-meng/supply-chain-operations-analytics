@@ -252,105 +252,77 @@ with st.sidebar:
     st.metric("筛选后订单", f"{dff['order_id'].nunique():,}")
     st.metric("准时率", f"{dff['on_time'].mean()*100:.1f}%")
     st.metric("平均交付", f"{dff['days_shipping_real'].mean():.1f}天")
-    st.metric("收入风险", f"${dff.loc[dff['is_delayed']==1,'order_total_value'].sum():,.0f}")
+    st.metric("延迟订单行金额", f"${dff.loc[dff['is_delayed']==1,'order_total_value'].sum():,.0f}")
 
     st.markdown("---")
     page = st.radio("📋 导航", ["📊 交付绩效", "🚚 运输与物流",
-                                 "🏷️ 品类与市场", "🔍 延迟根因", "📐 数据概览"])
+                                 "🏷️ 品类与市场", "延迟分布", "📐 数据概览"])
 
 # ── KPI ───────────────────────────────────────────
 total_orders   = dff["order_id"].nunique()
 on_time_pct    = dff["on_time"].mean() * 100
 avg_days       = dff["days_shipping_real"].mean()
 delayed_orders = dff["is_delayed"].sum()
-revenue_risk   = dff.loc[dff["is_delayed"] == 1, "order_total_value"].sum()
+delayed_value  = dff.loc[dff["is_delayed"] == 1, "order_total_value"].sum()
 
-# ── 自动洞察生成 ──────────────────────────────────
 @st.cache_data
-def generate_insights(_dff):
-    """基于筛选后数据生成业务洞察文本"""
-    insights = []
+def selection_summary(rows):
+    """Report descriptive statistics for the current selection."""
+    summaries = []
+    for field, title in (("shipping_mode", "运输方式"), ("market", "市场")):
+        rates = rows.groupby(field)["on_time"].mean() * 100
+        if rates.empty:
+            continue
+        highest = rates.idxmax()
+        if len(rates) == 1:
+            text = f"{highest} 的准时率为 {rates[highest]:.1f}%。"
+        else:
+            lowest = rates.idxmin()
+            text = (f"{highest} 的准时率为 {rates[highest]:.1f}%，"
+                    f"{lowest} 为 {rates[lowest]:.1f}%，"
+                    f"最高与最低相差 {rates[highest] - rates[lowest]:.1f} 个百分点。")
+        summaries.append((title, text))
 
-    # 最佳/最差运输方式
-    mode_ot = _dff.groupby("shipping_mode")["on_time"].mean() * 100
-    best_mode = mode_ot.idxmax()
-    worst_mode = mode_ot.idxmin()
-    insights.append({
-        "title": "🚚 运输方式差异",
-        "text": f"**{best_mode}** 准时率最高（{mode_ot[best_mode]:.1f}%），**{worst_mode}** 最低（{mode_ot[worst_mode]:.1f}%），差距达 {mode_ot[best_mode]-mode_ot[worst_mode]:.1f} 个百分点。",
-        "action": f"建议审查 {worst_mode} 的SLA承诺是否合理，或优化其物流执行流程。"
-    })
+    delayed_rows = rows.loc[rows["is_delayed"].eq(1)]
+    if not delayed_rows.empty:
+        short_delay = delayed_rows["delay_days"].le(3).mean() * 100
+        summaries.append(("延迟天数", f"延迟订单行中，{short_delay:.1f}% 延迟 1–3 天。"))
 
-    # 市场差距
-    mkt_ot = _dff.groupby("market")["on_time"].mean() * 100
-    if len(mkt_ot) > 1:
-        top_mkt = mkt_ot.idxmax()
-        bottom_mkt = mkt_ot.idxmin()
-        gap = mkt_ot[top_mkt] - mkt_ot[bottom_mkt]
-        insights.append({
-            "title": "🌍 市场区域差距",
-            "text": f"**{top_mkt}** 准时率最高（{mkt_ot[top_mkt]:.1f}%），**{bottom_mkt}** 最低（{mkt_ot[bottom_mkt]:.1f}%），区域差距 {gap:.1f} 个百分点。",
-            "action": f"建议针对 {bottom_mkt} 市场评估物流基础设施瓶颈，考虑区域仓储或承运商切换。"
-        })
+    amount = rows["order_total_value"].sum()
+    if amount > 0:
+        delayed_amount = delayed_rows["order_total_value"].sum()
+        summaries.append(("延迟订单行金额",
+                          f"${delayed_amount:,.0f}，占当前样本金额的 {delayed_amount / amount:.1%}。"))
 
-    # 延迟集中度
-    delayed = _dff[_dff["is_delayed"] == 1]
-    if len(delayed) > 0:
-        pct_1_3 = (delayed["delay_days"] <= 3).mean() * 100
-        insights.append({
-            "title": "⏱️ 延迟集中度",
-            "text": f"延迟订单中 **{pct_1_3:.0f}%** 集中在1-3天范围内，属于轻微延迟。",
-            "action": "轻微延迟占主导说明流程优化空间大——可能通过改进分拣、打包或最后一公里配送来消除大部分延迟。" if pct_1_3 > 40 else "严重延迟占比较高，需排查系统性瓶颈。"
-        })
+    monthly_rates = rows.groupby("year_month")["on_time"].mean()
+    if len(monthly_rates) > 1:
+        recent = monthly_rates.iloc[-1]
+        earlier = monthly_rates.iloc[:-1].mean()
+        summaries.append(("月度比较",
+                          f"{monthly_rates.index[-1]} 的准时率为 {recent:.1%}，此前月均为 {earlier:.1%}。"))
+    return summaries
 
-    # 收入风险
-    at_risk = _dff.loc[_dff["is_delayed"] == 1, "order_total_value"].sum()
-    total = _dff["order_total_value"].sum()
-    if total > 0:
-        risk_pct = at_risk / total * 100
-        insights.append({
-            "title": "💰 收入风险",
-            "text": f"延迟订单涉及 **${at_risk:,.0f}** 收入（占总收入 {risk_pct:.1f}%），处于财务风险敞口。",
-            "action": f"若将准时率提升10个百分点，预计可回收约 ${at_risk * 0.1:,.0f} 的风险敞口。"
-        })
-
-    # 趋势判断
-    if "year_month" in _dff.columns:
-        recent = _dff[_dff["year_month"] >= _dff["year_month"].max()].groupby("year_month")["on_time"].mean().mean() * 100
-        earlier = _dff[_dff["year_month"] < _dff["year_month"].max()].groupby("year_month")["on_time"].mean().mean() * 100
-        if not np.isnan(recent) and not np.isnan(earlier):
-            direction = "上升" if recent > earlier else "下降"
-            insights.append({
-                "title": "📈 趋势判断",
-                "text": f"最近月度准时率均值为 **{recent:.1f}%**，较此前 **{earlier:.1f}%** {direction}了 {abs(recent-earlier):.1f} 个百分点。",
-                "action": "趋势向好，继续保持并扩大改善措施。" if direction == "上升" else "趋势恶化，需立即排查近期变更或外部因素。"
-            })
-
-    return insights
-
-auto_insights = generate_insights(dff)
 
 # ═══════════════════════════════════════════════════════
 # PAGE 1: 交付绩效
 # ═══════════════════════════════════════════════════════
 if page == "📊 交付绩效":
-    st.title("交付绩效 Overview")
+    st.title("交付绩效")
 
-    # 自动洞察面板
-    with st.expander("💡 自动洞察 — 基于当前筛选数据", expanded=True):
-        cols = st.columns(len(auto_insights))
-        for i, ins in enumerate(auto_insights):
-            with cols[i % len(cols)]:
-                st.markdown(f"**{ins['title']}**")
-                st.markdown(ins["text"])
-                st.caption(f"→ {ins['action']}")
+    summaries = selection_summary(dff)
+    if summaries:
+        with st.expander("当前筛选结果", expanded=True):
+            for column, (title, value) in zip(st.columns(len(summaries)), summaries):
+                with column:
+                    st.markdown(f"**{title}**")
+                    st.write(value)
 
     c1, c2, c3, c4, c5 = st.columns(5)
     c1.metric("总订单", f"{total_orders:,}")
     c2.metric("准时交付率", f"{on_time_pct:.1f}%",
               delta=f"{on_time_pct - 50:.1f}%" if on_time_pct > 50 else None)
     c3.metric("平均交付天数", f"{avg_days:.1f}天")
-    c4.metric("收入风险", f"${revenue_risk:,.0f}")
+    c4.metric("收入风险", f"${delayed_value:,.0f}")
     c5.metric("延迟订单行", f"{delayed_orders:,}")
 
     st.markdown("---")
@@ -448,7 +420,7 @@ elif page == "🚚 运输与物流":
 # PAGE 3: 品类与市场
 # ═══════════════════════════════════════════════════════
 elif page == "🏷️ 品类与市场":
-    st.title("品类与市场洞察")
+    st.title("品类与市场")
 
     c1, c2 = st.columns(2)
 
@@ -484,10 +456,10 @@ elif page == "🏷️ 品类与市场":
     st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
 # ═══════════════════════════════════════════════════════
-# PAGE 4: 延迟根因
+# PAGE 4: 延迟分布
 # ═══════════════════════════════════════════════════════
-elif page == "🔍 延迟根因":
-    st.title("延迟根因分析")
+elif page == "延迟分布":
+    st.title("延迟分布")
 
     c1, c2 = st.columns(2)
 
@@ -554,8 +526,8 @@ elif page == "🔍 延迟根因":
 
     # 相关性分析
     st.markdown("---")
-    st.subheader("🔬 延迟因素关联分析")
-    st.caption("按时率与各维度特征的交叉统计，识别最强延迟驱动因素")
+    st.subheader("各分组的准时率差异")
+    st.caption("极差为同一维度内最高和最低准时率之差，单位为百分点。")
 
     # 计算各维度的准时率差异（极差 = max - min）
     def compute_ot_range(group_col, df):
@@ -570,29 +542,29 @@ elif page == "🔍 延迟根因":
         best = max(dist, key=dist.get)
         worst = min(dist, key=dist.get)
         factor_rows.append({
-            "因素": label, "准时率极差(%)": round(rng, 1),
+            "因素": label, "准时率极差（百分点）": round(rng, 1),
             "最优": f"{best} ({dist[best]:.1f}%)",
             "最差": f"{worst} ({dist[worst]:.1f}%)",
-            "影响强度": "🔴 高" if rng > 20 else "🟡 中" if rng > 10 else "🟢 低"
+            "极差分档": "高" if rng > 20 else "中" if rng > 10 else "低"
         })
 
-    factor_df = pd.DataFrame(factor_rows).sort_values("准时率极差(%)", ascending=False)
+    factor_df = pd.DataFrame(factor_rows).sort_values("准时率极差（百分点）", ascending=False)
 
     c1, c2 = st.columns([1, 1])
     with c1:
         st.dataframe(factor_df, use_container_width=True, hide_index=True,
-            column_config={"影响强度": st.column_config.TextColumn(width="small")})
+            column_config={"极差分档": st.column_config.TextColumn(width="small")})
 
     with c2:
         fig = go.Figure(go.Bar(
-            x=factor_df["准时率极差(%)"], y=factor_df["因素"],
-            orientation="h", text=factor_df["准时率极差(%)"].astype(str)+"%",
+            x=factor_df["准时率极差（百分点）"], y=factor_df["因素"],
+            orientation="h", text=factor_df["准时率极差（百分点）"].astype(str),
             textposition="outside",
             marker_color=["#986343" if v > 20 else "#8b795f" if v > 10 else "#486b76"
-                          for v in factor_df["准时率极差(%)"]]
+                          for v in factor_df["准时率极差（百分点）"]]
         ))
-        fig.update_layout(height=300, xaxis_title="准时率极差 (%)",
-            title="各因素对准时率的影响强度（极差越大=影响越大）")
+        fig.update_layout(height=300, xaxis_title="准时率极差（百分点）",
+            title="各分组的样本准时率极差")
         st.plotly_chart(format_plotly(fig), use_container_width=True, theme=None)
 
 # ═══════════════════════════════════════════════════════
@@ -618,7 +590,7 @@ elif page == "📐 数据概览":
             st.dataframe(pd.DataFrame({"列": nulls.index, "缺失数": nulls.values, "缺失率%": (nulls/len(df_clean)*100).round(2)}),
                          use_container_width=True, hide_index=True)
         else:
-            st.success("✅ 所有列无缺失值")
+            st.success("所有列均无缺失值")
 
     with c2:
         st.subheader("数值列分布")

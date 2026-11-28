@@ -5,9 +5,9 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit)](https://streamlit.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![CI](https://github.com/lingtao-meng/supply-chain-operations-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/lingtao-meng/supply-chain-operations-analytics/actions/workflows/ci.yml)
 
-这个仓库包含三个方向：
+仓库包含三个案例。
 
-- **DataCo 运营分析**（根目录）：180K+ 订单，SQLite 星型模型、10 条 SQL、Streamlit 仪表板，加上 Laney p′、Ppk、Pareto 和派工仿真。
+- **DataCo 运营分析**（根目录）：180,519 条订单明细，SQLite 星型模型、10 条 SQL、Streamlit 仪表板，加上 Laney p′、Ppk、Pareto 和派工仿真。
 - **制造 IE 装配线与班次产能优化**（[`manufacturing/`](manufacturing/)）：用四套公开基准做工位分配、缓冲选址、班产验收和改线比较。
 - **快递中转场分拣线 IE**（`express/`）：五工位时间研究案例、山积图/线平衡、排队仿真、峰值用工和单票成本。
 
@@ -17,19 +17,13 @@
 
 ---
 
-## 做了什么
+## DataCo 运营分析
 
-数据清洗后用 SQLite 搭了一个星型模型（5 张维度表 + 1 张事实表），写了 10 条分析查询，最后用 Streamlit + Plotly 做了一个 5 页的交互仪表板。
+清洗后的数据存入 SQLite 星型模型。仓库提供 10 条 SQL 查询及使用 Streamlit 和 Plotly 的交互仪表板。
 
-仪表板跑起来之后能看出来一些有意思的东西。比如 First Class 这个运输方式，SLA 承诺 1 天送达，但实际上平均要 2 天，准时率是 0%——不是说它慢，是它的承诺不现实。Second Class 也好不到哪去，承诺 2 天，实际平均 3.9 天。Standard Class 反而是最靠谱的，说 4 天就 4 天，准时率 60%。
-
-超一半的延迟集中在 1-3 天，属于轻微延迟，不是大问题但量大，流程上优化一下应该见效很快。
-
-**五个市场的准时率全部落在 42.0%–43.2% 之间**（LATAM 42.0%、USCA 42.0%、Pacific Asia 42.7%、Europe 42.8%、Africa 43.2%），最大差距只有 1.2 个百分点。这是个比"某区域物流差"更重要的结论：**延迟是系统性的，不是区域性的——问题出在承诺参数（SLA）而不是某个市场的运输能力**。想靠"加强 LATAM 物流"解决 58% 的延迟，方向就错了。
-
-仪表板上有自动生成的文字洞察，会根据你选的筛选条件变化。比如只选某个年份和某个市场，它会告诉你这个范围内哪个运输方式最好、延迟集中在哪里、大概多少收入在风险敞口里。
-
----
+- First Class 的计划时效为 1 天，实际平均 2 天，样本准时率为 0%。Second Class 计划 2 天，实际平均约 3.9 天。Standard Class 计划 4 天，实际平均 4 天，准时率约 60%。
+- 超过一半的延迟集中在 1–3 天。五个市场的准时率分布在 42.0%–43.2%，最大差距约 1.2 个百分点。运输方式之间的差异更大。
+- 按年份、市场和运输方式筛选后，仪表板汇总准时率、延迟天数及延迟订单行的金额。
 
 ## 项目结构
 
@@ -45,7 +39,7 @@
 
 ---
 
-## 怎么跑
+## 运行
 
 ```bash
 git clone https://github.com/lingtao-meng/supply-chain-operations-analytics.git
@@ -73,7 +67,7 @@ bash setup.sh && streamlit run app/app.py
 
 数据集从 Kaggle 下载：[DataCo Supply Chain Dataset](https://www.kaggle.com/datasets/evilspirit05/datasupplychain)（93MB，180,519 条记录）。
 
-如果本地已经有这个数据集，App 启动时会自动找到它，不需要手动跑清洗脚本。
+App 启动时可通过 KaggleHub 下载数据，并在清洗后建库。
 
 ---
 
@@ -101,23 +95,23 @@ python tests/test_sql_queries.py
 | 交付绩效 | KPI 卡片、月度趋势折线、运输方式排名、延迟等级分布 |
 | 运输与物流 | 准时率 vs 交付天数散点、市场区域差距、运输×市场热力图 |
 | 品类与市场 | 品类准时率排名、收入树状图、品类×市场热力图 |
-| 延迟根因 | 延迟分布直方、Pareto 贡献图、因素关联强度、季度趋势 |
+| 延迟分布 | 延迟直方图、Pareto 图、分组准时率极差、季度趋势 |
 | 数据概览 | 缺失值报告、数值分布、Schema 图 |
 
-侧边栏有年份、运输方式、市场三个筛选器，全局联动。页面顶部有自动生成的文字洞察。筛选后的数据可以一键导出 CSV。
+侧边栏可按年份、运输方式和市场筛选。交付绩效页显示当前样本的统计摘要，筛选后的数据可导出为 CSV。
 
 ---
 
 ## 工业工程视角：过程质量与排程
 
-仪表板解决的是“发生了什么”。下面这两套东西想回答的是：过程到底稳不稳，以及单子该怎么排。
+过程质量部分比较月度迟到率和运输方式。排程部分在固定产能下比较各派工规则的交期表现及在制订单。
 
 ### 1. 过程质量：Laney p′ 控制图 + 过程能力 + Pareto
 
 ![IE 质量](images/ie_quality.png)
 
 - **Laney p′ 控制图**：月度迟到率 p̄ = 54.7%。用普通 p 图会有 **1 个点越界**；按过度离散校正
-  （Laney 因子 1.25）后 **0 个点越界**——不是过程失控，是大批量下二项分布的过度离散。
+  （Laney 因子 1.25）后 **0 个点越界**。
 - **过程能力**（USL = 承诺天数）：
 
 | 运输方式 | 承诺 | 平均实际 | 合格率 | Ppk | DPMO |
@@ -127,11 +121,10 @@ python tests/test_sql_queries.py
 | Second Class | 2 | 3.99 | 20.3% | −0.47 | 797,308 |
 | First Class | 1 | 2.00 | 0% | —（零方差） | 1,000,000 |
 
-First Class 承诺 1 天、实际永远是 2 天：不是能力波动，是**承诺本身不可达**；Second 的 Ppk = −0.47，
-过程中心离规格上限太远。这两个结论直接指向「改承诺参数」，而不是「加强某个市场的物流」。
+样本内 First Class 的实际时长固定为 2 天。Second Class 的 Ppk 为 −0.47，平均实际时长超过计划时效。
 
 - **Pareto**：迟到订单 43.4% 来自 Standard、28.4% Second、28.2% First，Same Day 为 0。
-  三类运输方式解释了 100% 的延迟，改善顺序很清楚。
+  Pareto 图按各运输方式的迟到订单行占比排序。
 
 ### 2. 排程仿真：规则、WIP、人力
 
@@ -147,8 +140,7 @@ First Class 承诺 1 天、实际永远是 2 天：不是能力波动，是**承
 | SPT | 94.2% | 0.28d | 10d | **53** | **0.47d** |
 | CR | **100%** | **0** | **0** | 144 | 1.26d |
 
-EDD/CR 能把准时率做到 100%，但 CR 的 WIP 更高；SPT 把 WIP 和流程时间砍半，却让大订单饿死
-（最大延迟 10 天）。**没有单一最优规则，取决于 KPI 是交期还是库存。**
+在该产能设定下，EDD 和 CR 的模拟准时率均为 100%。SPT 的平均在制订单和流程时间最少，最大延迟为 10 天。
 
 容量敏感性更能说明问题：
 
@@ -157,8 +149,7 @@ EDD/CR 能把准时率做到 100%，但 CR 的 WIP 更高；SPT 把 WIP 和流�
 | 348（p75） | 91.0% | 100% | 94.2% | 100% |
 | 300（−14%） | 39.5% | 38.5% | 93.1% | 38.5% |
 
-产能降 14%，除 SPT 外全部崩到 40% 以下——**排程规则救不了产能不足**；SPT 仍保持 93% 准时，
-但最大延迟 64 天，属于「平均好看、长尾更糟」。这时要么加班/扩产能，要么放宽承诺交期，而不是换派工规则。
+日处理能力降低约 14% 后，FCFS、EDD 和 CR 的模拟准时率均低于 40%。SPT 的准时率为 93.1%，最大延迟增至 64 天。
 
 人力：40 件/人/天、85% 利用率下，峰值需要 **12 人**，中位数 3.5 人；图 3 给出月度人力曲线。
 
@@ -180,14 +171,14 @@ Mitchell 节拍 15 时，最长工序优先需 9 个工位，整数规划需 8 �
 
 `express/` 是一个独立的分拣线案例：卸车 → 供包 → 扫描 → 分拣 → 装车，五工位、8 小时班次、基准 220 件/小时、峰值 286 件/小时。
 
-这是示例时间研究，不是顺丰现场实测；换成现场测时数据后，才能作为真实场地的结论。
+时间研究、到件率和用工依据案例设定，用于比较仿真方案。
 
 - 峰值基准的五分钟准时率为 18.9%，平均流程时间为 19.53 分钟。
 - 峰值供包增加一人后，五分钟准时率为 95.3%，单票成本由 0.758 美元升至 0.798 美元。
 
-详细结果、图和“怎么换现场数据”见 [`express/README.md`](express/README.md)。
+完整结果、图和数据替换步骤见 [`express/README.md`](express/README.md)。
 
-## 截图
+## 运营分析图表
 
 运营图库取已完成订单行。建库后运行 `python python/plot_operations.py` 可重绘下列八图。
 
@@ -202,21 +193,19 @@ Mitchell 节拍 15 时，最长工序优先需 9 个工位，整数规划需 8 �
 
 ## 数据质量与 KPI 断言
 
-`tests/test_kpis.py` 不只是"查询能跑"，而是断言**指标口径本身站得住**：
+`tests/test_kpis.py` 核对以下公式、事实表粒度和样本结果。
 
-- `delay_days = 实际 − 承诺`，与两列日期一致（ETL 没有符号错误）
-- `on_time = 1` 当且仅当 `delay_days ≤ 0`（标志位与数值不矛盾）
+- `delay_days = 实际 − 承诺`，与两列日期一致
+- `on_time = 1` 当且仅当 `delay_days ≤ 0`
 - 各运输方式准时率落在 [0, 100]，且事实表粒度是订单行（`fact_id` 唯一）
-- 五个市场的准时率极差 < 5pp（如果哪天数据里 LATAM 真的变差了，这个测试会失败，提醒你改的是 README 而不是测试）
-- First Class 准时率 < 1%、承诺 1 天但实际更久（README 的核心结论有测试兜底）
+- 五个市场的样本准时率极差低于 5 个百分点
+- First Class 准时率 < 1%，计划时效为 1 天且实际平均时长更长
 
 ```bash
 python tests/test_kpis.py        # 无需 pytest
 python tests/test_sql_syntax.py  # 用空库验证 DDL + 10 条查询的语法与列名
 pytest tests/ -q                 # 或按标准方式跑
 ```
-
-> `test_sql_syntax.py` 上线第一次跑就抓到个真 bug：Q10 里的 `COUNT(DISTINCT customer_id)` 在四表 join 后是**歧义列**，直接执行会报错。已修。
 
 ## 技术栈
 
